@@ -1,0 +1,156 @@
+﻿@model Ampbi.DataAccess.ViewModel.DashBoard
+@using System.Web.UI.WebControls
+
+
+<div class="col-md-6">
+    <header class="panel_header box-heading">
+        <h2 class="title pull-left">Company Information</h2>
+    </header>
+    <div class="content-body border-box">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-md-4">Company Name<span class="red">*</span></label>
+                <div class="col-md-8">
+                    @*<input type="text" class="form-control input-sm" id = "CompanyName" placeholder="Company Name" name="cname" required="required">*@
+                    @Html.TextBoxFor(u => u.companyRegModel.CompanyName, new { @id = "CompanyName", @class = "form-control input-sm", @placeholder = "Company Name", @required = "required", @name = "cname" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4">Contact Name<span class="red">*</span></label>
+                <div class="col-md-8">
+                    @*<input type="text" class="form-control input-sm" placeholder="Contact Name" name="cname" required="required">*@
+                    @Html.TextBoxFor(u => u.CompanyModel.ContactName, new { @id = "ContactName", @class = "form-control input-sm", @placeholder = "Contact Name", @required = "required", @name = "cname" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4">Contact Phone<span class="red">*</span></label>
+                <div class="col-md-8">
+                    @*<input type="text" class="form-control input-sm" placeholder="Contact Phone" name="cphone" required="required">*@
+                    @Html.TextBoxFor(u => u.companyRegModel.ContactPhone, new { @id = "ContactPhone", @class = "form-control input-sm", @placeholder = "Contact Phone", @required = "required", @name = "cphone" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4">Address1<span class="red">*</span></label>
+                <div class="col-md-8">
+                    @*<input type="text" class="form-control input-sm" placeholder="Address1" name="address1" required="required">*@
+                    @Html.TextBoxFor(u => u.companyRegModel.Address1, new { @id = "Address1", @class = "form-control input-sm", @placeholder = "Address1", @required = "required", @name = "address1" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4">Address2<span class="red">*</span></label>
+                <div class="col-md-8">
+                    @*<input type="text" class="form-control input-sm" placeholder="Address2" name="address2" required="required">*@
+                    @Html.TextBoxFor(u => u.companyRegModel.Address2, new { @id = "Address2", @class = "form-control input-sm", @placeholder = "Address2", @name = "address2" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4">City<span class="red">*</span></label>
+                <div class="col-md-8">
+                    @*<input type="text" class="form-control input-sm" placeholder="City" name="city" required="required">*@
+                    @Html.TextBoxFor(u => u.companyRegModel.City, new { @id = "City", @class = "form-control input-sm", @placeholder = "City", @required = "required", @name = "city" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label  col-md-4">State<span class="red">*</span></label>
+                <div class="col-md-8">
+                    @*<select required="required" class="form-control input-sm" name="State">
+                                                <option>Select State</option>
+                                            </select>*@
+                    @Html.DropDownListFor(u => u.companyRegModel.State, new SelectList(Model.lstAllStateNames, "statecode", "statename"), "Select", new { @id = "StateList", @class = "form-control input-sm", @required = "required" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4">Zip<span class="red">*</span></label>
+                <div class="col-md-8">
+                    @*<input type="text" class="form-control input-sm" maxlength="10" placeholder="Zip" name="zip" required="required">*@
+                    @Html.TextBoxFor(u => u.companyRegModel.Zip, new { @id = "compZip", @class = "form-control input-sm", @placeholder = "Zip", @required = "required", @maxlength = "10", @type = "zip", @name = "zip" })
+                </div>
+            </div>
+            <div class="form-group ">
+                <label class="control-label col-md-4">No of Employees <span class="red">*</span></label>
+                <div class="col-md-8">
+                    @*<select required="required" class="form-control input-sm" name="employees">
+                                                <option>Select</option>
+                                                <option>10</option>
+                                                <option>20</option>
+                                                <option>50</option>
+                                                <option>100</option>
+                                            </select>*@
+                    @Html.DropDownListFor(u => u.companyRegModel.NoOfEmployee, new SelectList(Model.LstNoOfEmpList, "ID", "Description"), "Select", new { @id = "Employee", @class = "form-control input-sm", @required = "required" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4">No of License <span class="red">*</span></label>
+                <div class="col-md-8">
+                    @*<select required="required" name="Licenses" class="form-control input-sm">
+                                                <option>Select</option>
+                                                <option>10</option>
+                                                <option>20</option>
+                                                <option>25</option>
+                                                <option>50</option>
+                                                <option>100</option>
+                                            </select>*@
+                    @Html.DropDownListFor(u => u.companyRegModel.NoOfLicence, new SelectList(Model.LstNoOfLicencesList, "ID", "Description"), "Select", new { @id = "Licence", @class = "form-control input-sm", @required = "required" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4">Preferred Contact Method <span class="red">*</span></label>
+                <div class="controls col-md-8">
+                    @*<select required="required" name="refered-contact-method" class="form-control input-sm">
+                                                <option>Select</option>
+                                                <option>Email</option>
+                                                <option>Friend</option>
+                                            </select>*@
+                    @Html.DropDownListFor(u => u.companyRegModel.PrefferedContactMethod, new SelectList(Model.LstNoOfPrefferedContact, "ID", "Description"), "Select", new { @id = "PrefferedContact", @class = "form-control input-sm", @required = "required" })
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="col-md-12 col-sm-12 page-footer-box clearfix">
+        <div class="pull-right col-md-offset-4">
+            <button class="btn btn-success input-sm" type="submit">Submit</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-6">
+    <header class="panel_header box-heading">
+        <h2 class="title pull-left">License  Info</h2>
+    </header>
+    <div class="content-body border-box" style="height: 406px;">
+        <div class="table-responsive">
+            <table id = "licencetbl" class="table table-striped mar0">
+                <thead>
+                    <tr>
+                        <th>Select</th>
+                        <th>License number</th>
+                        <th>Valid From</th>
+                        <th>Valid To</th>
+                        <th>Assigned to</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.licenceInfoModel != null)
+                    {
+                        int i=0;
+                        foreach (var item in Model.licenceInfoModel)
+                         {
+
+                             <tr>
+                                 <th align="center" valign="middle" scope="row">
+                                     @Html.RadioButtonFor(model => item.licencekey, item.CompanyGUID, new {@class = "radioBtnClass", @type = "radio", @ID = "gridradio" + @i})
+                                     @*<input name="" type="radio" value="">*@</th>
+                                 <td>@Html.DisplayFor(modelItem => item.ValidFromDate)</td>
+                                 <td>@Html.DisplayFor(modelItem => item.ValideToDate)</td>
+                                 <td>@Html.DisplayFor(modelItem => item.AssignedTo)</td>
+                             </tr>
+                         }
+                     i++;    
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

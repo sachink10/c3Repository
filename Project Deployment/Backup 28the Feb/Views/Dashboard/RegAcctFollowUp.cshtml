@@ -1,0 +1,362 @@
+﻿@using System.Web.UI.WebControls
+@model Ampbi.DataAccess.ViewModel.DashBoard
+@{
+    ViewBag.Title = "RegAcctFollowUp";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+@using (Html.BeginForm("RegAcctFollowUp", "DashBoard", new { name = "frm", id = "frm" }))
+{
+    <div class="page-container row-fluid">
+        <!-- START CONTENT -->
+        <section id="main-content" class="sidebar_shift sidebar_shift-reg">
+            <section class="wrapper wrap-box">
+                <div class="clearfix"></div>
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 mart10">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <section class="box mar0">
+                            <header class="panel_header box-heading">
+                                <h2 class="title pull-left">Account Registration Follow-up </h2>
+                            </header>
+                            <div class="content-body">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 pan0">
+                                        <div class="clearfix">
+                                            <div class="col-md-12">
+                                                <div class="table-responsive">
+                                                    <table id="example" class="table table-striped table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th width="3%" align="center" valign="middle" class="text-hide"></th>
+                                                                <th width="13%" data-field="price" data-sortable="true"><strong>Company Name</strong></th>
+                                                                <th width="11%"><strong>Contact Name</strong></th>
+                                                                <th width="11%"><strong>No of Licenses</strong></th>
+                                                                <th width="14%"><strong>Last Contact Date</strong></th>
+                                                                <th width="11%"><strong>Last Outcome</strong></th>
+                                                                <th width="15%"><strong>Last Contact Channel</strong> </th>
+                                                                <th width="12%"><strong>No of Attempts</strong></th>
+                                                                <th width="10%"><strong>Previous Notes</strong></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+
+                                                            @foreach (var item in Model.userRegModel)
+                                                            {
+
+                                                                int i = 0;  
+                                                                <tr>
+                                                                    <th align="center" valign="middle" scope="row">
+                                                                        @Html.RadioButtonFor(model => item.CompanyName, item.CompanyGUID, new { @class = "radioBtnClass", @type = "radio", @ID = "gridradio" + @i })
+                                                                        @*<input name="" type="radio" value="">*@</th>
+                                                                    <td>@Html.DisplayFor(modelItem => item.CompanyName)</td>
+                                                                    <td>@Html.DisplayFor(modelItem => item.ContactName)</td>
+                                                                    <td>@Html.DisplayFor(modelItem => item.NoofLicences)</td>
+                                                                    <td>@Html.DisplayFor(modelItem => item.LastContactDate)</td>
+                                                                    <td>@Html.DisplayFor(modelItem => item.LastOutcome)</td>
+                                                                    <td>@Html.DisplayFor(modelItem => item.LastContactChannel)</td>
+                                                                    <td>@Html.DisplayFor(modelItem => item.NoofAttempts)</td>
+                                                                    <td align="center" valign="middle"><a href="#">
+                                                                        <img src="~/Content/assets/images/view.png" width="32" height="10" alt=""></a></td>
+                                                                </tr>
+                                                                i++;
+                                                            }
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <hr>
+                                        <div class="clearfix mart10"></div>
+
+                                        <div id="companyInfo">
+                                            @Html.Partial("_PartialCompany", Model)
+                                        </div>
+                                        <div class="col-md-7">
+                                            <header class="panel_header box-heading">
+                                                <h2 class="title pull-left">Modules</h2>
+                                            </header>
+                                            <div class="content-body">
+                                                <div class="row">
+                                                    <form action="#" class="form-horizontal" id="modules">
+                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                            <div class="col-md-12">
+
+
+                                                                <div class="col-md-6 pad0">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label col-md-5 pull-left">Calls Dashboard </label>
+                                                                        <div class="col-md-7 pull-right">
+                                                                            <label class="col-md-6 pan0">
+                                                                                <input type="radio" name="calls" id="Callyes">
+                                                                                &nbsp; Yes
+                                                                            </label>
+                                                                            <label>
+                                                                                <input type="radio" name="calls" id="CallNo" checked="checked">
+                                                                                &nbsp;No
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 pad0">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label col-md-7 pull-left">Employess Performance</label>
+                                                                        <div class="col-md-5 pull-right">
+                                                                            <label class="col-md-6 pan0">
+                                                                                <input type="radio" name="Emp" id="Empyes">
+                                                                                @*@Html.RadioButton("value1", true, new { @ID = "Call1", @name = "calls" })*@
+                                                                                &nbsp; Yes
+                                                                            </label>
+                                                                            <label>
+                                                                                <input type="radio" name="Emp" id="EmpNo" checked="checked">
+                                                                                @*@Html.RadioButton("value1", true, new { @ID = "Call1", @name = "calls" })*@
+                                                                                &nbsp;No
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 pan0">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label col-md-5 pull-left">Ticket Dashboard</label>
+                                                                        <div class="col-md-7 pull-right">
+                                                                            <label class="col-md-6 pan0">
+                                                                                <input type="radio" name="Ticket" id="tickyest">
+                                                                                &nbsp; Yes
+                                                                            </label>
+                                                                            <label>
+                                                                                <input type="radio" name="Ticket" id="tickno" checked="checked">
+                                                                                &nbsp;No
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 pan0">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label col-md-7 pull-left">Appointments Dashboard</label>
+                                                                        <div class="col-md-5 pull-right">
+                                                                            <label class="col-md-6 pan0">
+                                                                                <input type="radio" name="appt" id="apptYes">
+                                                                                &nbsp; Yes
+                                                                            </label>
+                                                                            <label>
+                                                                                <input type="radio" name="appt" id="apptno" checked="checked">
+                                                                                &nbsp;No
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 pan0">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label col-md-5 pull-left">QA Dashboard</label>
+                                                                        <div class="col-md-7 pull-right">
+                                                                            <label class="col-md-6 pan0">
+                                                                                <input type="radio" name="QA" id="QAyes">
+                                                                                &nbsp; Yes
+                                                                            </label>
+                                                                            <label>
+                                                                                <input type="radio" name="QA" id="QANo" checked="checked">
+                                                                                &nbsp;No
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 pan0">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label col-md-7 pull-left">Knowledge Base</label>
+                                                                        <div class="col-md-5 pull-right">
+                                                                            <label class="col-md-6 pan0">
+                                                                                <input type="radio" name="know" id="knowyes">
+                                                                                &nbsp; Yes
+                                                                            </label>
+                                                                            <label>
+                                                                                <input type="radio" name="know" id="knowyno" checked="checked">
+                                                                                &nbsp;No
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 pan0">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label col-md-5 pull-left">Virtual Assistant</label>
+                                                                        <div class="col-md-7 pull-right">
+                                                                            <label class="col-md-6 pan0">
+                                                                                <input type="radio" name="virtual" id="viryes">
+                                                                                &nbsp; Yes
+                                                                            </label>
+                                                                            <label>
+                                                                                <input type="radio" name="virtual" id="virNo" checked="checked">
+                                                                                &nbsp;No
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix mart10"></div>
+                                            <div class="content-body bordert">
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-2 control-label">Out Come <span class="red">*</span></label>
+                                                        <div class="col-sm-10">
+                                                            @*<select required="required" class="form-control input-sm" name="out-come">
+                                                                <option>Select</option>
+                                                                <option>New</option>
+                                                                <option>In Process</option>
+                                                                <option>Not Interested</option>
+                                                                <option>Sold</option>
+                                                            </select>*@
+                                                            @Html.DropDownListFor(u => u.companyRegModel.LastOutCome, new SelectList(Model.LstNoOfRecStatusList, "ID", "Description"), new { @ID = "OutCome", @class = "form-control input-sm", @required = "required" })
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-2 control-label">Notes<span class="red">*</span></label>
+                                                        <div class="col-sm-10">
+                                                            @*<textarea name="notes" cols="10" rows="7" class="form-control" required="required"></textarea>*@
+                                                            @Html.TextAreaFor(u => u.companyRegModel.Notes, new { @id = "Notes", @class = "form-control", @name = "notes", @cols = "10", @rows = "7" })
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 page-footer-box clearfix">
+                                <div class="pull-right col-md-offset-4">
+                                    <button type="submit" class="btn btn-success input-sm" onclick=" UpdateRegistrationFollowUp();">Submit</button>
+                                    <button type="reset" class="btn btn-success input-sm">Cancel</button>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- END CONTENT -->
+
+    </div>
+   
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("input[type='radio']").on("click", function () {
+                var name = this.id;
+                if (name.indexOf("grid") >= 0) {
+                    $('#Notes').val('');
+                    $('#CallNo').prop('checked', true);
+                    $('#EmpNo').prop('checked', true)
+                    $('#tickno').prop('checked', true);
+                    $('#apptno').prop('checked', true);
+                    $('#QANo').prop('checked', true);   
+                    $('#knowyno').prop('checked', true);
+                    $('#virNo').prop('checked', true);
+                    $('#OutCome option:selected').text('Select');
+                    var selectedValue = $(this).val();
+                    $.ajax({
+                        url: '@Url.Action("GetCompanyDetails", "Dashboard")',
+                        cache: false,
+                        data: { 'selectedValue': selectedValue },
+
+                        success: function (result) {
+                            $('#companyInfo').html(result);
+                        },
+                        error: function (result) {
+                            alert('Cannot update selection values now!!');
+                        }
+                    })
+                };
+
+            })
+        });
+
+
+        function UpdateRegistrationFollowUp() {
+            //$("#example4").validate({
+            //    rules: {
+            //        "example4-email": {
+            //            required: true,
+            //            email: true
+            //        },  
+            //        "example4-password": {
+            //            required: true,
+            //            minlength: 5
+            //        } 
+            //    },
+            //    //perform an AJAX post to ajax.php
+
+            //});
+            var outcomevalue = $('#OutCome option:selected').text();
+
+            if (outcomevalue == "Select" || $('#Notes').val() == "") {
+                alert('Some mandatory field still emtpy or not selected');
+                return false;
+            }
+
+            var CallDash, ApptDash, TicketDash, VirtualDash, QADash, EmpDash, KnowbaseDash;
+
+            if ($('#Callyes').is(':checked')) { CallDash = 1; } else { CallDash = 0; };
+            if ($('#Empyes').is(':checked')) { EmpDash = 1; } else { EmpDash = 0; };
+            if ($('#tickyest').is(':checked')) { TicketDash = 1; } else { TicketDash = 0; };
+            if ($('#apptYes').is(':checked')) { ApptDash = 1; } else { ApptDash = 0; };
+            if ($('#QAyes').is(':checked')) { QADash = 1; } else { QADash = 0; };
+            if ($('#knowyes').is(':checked')) { KnowbaseDash = 1; } else { KnowbaseDash = 0; };
+            if ($('#viryes').is(':checked')) { VirtualDash = 1; } else { VirtualDash = 0; };
+            var model = {
+                "CompanyGuid": $('#CompanyGuid').val(),
+                "CompanyName": $('#CompanyName').val(),
+                "ContactName": $('#ContactName').val(),
+                "ContactPhone": $('#ContactPhone').val(),
+                "UserSeq": $('#UserSeq').val(),
+                "Address1": $('#Address1').val(),
+                "Address2": $('#Address2').val(),
+                "City": $('#City').val(),
+                "StateCode": $('#StateList').val(),
+                "Zip": $('#compZip').val(),
+                "Employee": $('#Employee').val(),
+                "Licence": $('#Licence').val(),
+                "PrefferedContact": $('#PrefferedContact').val(),
+                "trialRequest": $('#trialRequest').val(),
+                "StartDt": $('#TrialStartDate').val(),
+                "EndDt": $('#TrialEndDate').val(),
+                "LastOutCome": $('#OutCome').val(),
+                "NotesTxt": $('#Notes').val(),
+                "CallDash": CallDash,
+                "EmpDash": EmpDash,
+                "TicketDash": TicketDash,
+                "ApptDash": ApptDash,
+                "TrialDate": TicketDash,
+                "KnowbaseDash": KnowbaseDash,
+                "VirtualDash": VirtualDash,
+                "QADash": QADash
+            }
+
+            $.ajax({
+                type: "POST",
+                //url: hostAddress + "/ApprovalTask/CreateMetadata_Test",
+                url: "@Url.Action("RegAcctFollowUp", "Dashboard")",
+                data: '{ "model": ' + JSON.stringify(model) + '}',
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'text json',
+                async: false,
+                cache: false,
+                success: function (data) {
+                    if (data) { alert('Data updated successfully') }
+                    else { alert('Cannot update selection values now!!') };
+
+
+                },
+                error: function () {
+                    alert('Cannot update selection values now!!');
+                }
+            });
+
+        }
+
+    </script>
+}
+

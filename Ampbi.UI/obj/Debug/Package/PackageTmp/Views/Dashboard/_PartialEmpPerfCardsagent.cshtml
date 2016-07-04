@@ -1,0 +1,294 @@
+﻿@model Ampbi.DataAccess.ViewModel.DashBoard
+@using System.Web.UI.WebControls
+
+
+<div class="col-md-9" id="PerfCardDefault" style="max-height: 548px; overflow-y: auto;">
+    @if (Model.agentMyMetric != null)
+    {
+        foreach (var perfDetails in Model.agentMyMetric)
+        {
+
+            if (perfDetails.CardColor == "Green")
+            {
+                <div class="col-md-4 m-bottom">
+                            <div class="clearfix green-light">
+                              <div class="clearfix">
+                                <div style="width:50%; padding:0 0 0 10px; line-height:28px; color:#000;" class="pull-left">@perfDetails.KpiMetricName</div>
+                                <div style="width:50%; line-height:28px; color:#000;" class="pull-right">
+                                    <a style="color:#000;" href="@Url.Action("TeamComparision", "Dashboard")" ><strong>Team Rank -@perfDetails.teamrank </strong></a>                                  
+                                </div>
+                              </div>
+                              <div class="clearfix">
+                                <div class="pull-left emp-pic green-dark">
+                                    <a href="@perfDetails.KpiMetricName" data-toggle="modal" data-target="#my-metric" class="an-color change_status pull-right" style="margin:0 6px;" ><img id="@perfDetails.KpiMetricName" src="~/Content/assets/images/pic-card.png"></a></div>
+                                <div style="width:73%;" class="pull-right">
+                                  <div class="clearfix">
+                                    <div class="table-responsive">
+                                      <table class="table table-green">
+                                        <tbody><tr>
+                                          <td style="height:20px;">Goal</td>
+                                          <td>@perfDetails.Goal</td>
+                                        </tr>
+                                        <tr>
+                                          <td>Actual</td>
+                                          <td>@perfDetails.Actual</td>
+                                        </tr>
+                                        <tr>
+                                          <td>% to Goal</td>
+                                          <td>@perfDetails.Percenttogoal</td>
+                                        </tr>
+                                            <tr>
+                                          <td>Open Tasks</td>
+                                          <td>@perfDetails.OpenTasks</td>
+                                        </tr>
+                                            <tr>
+                                          <td>Completed Coachings</td>
+                                          <td>@perfDetails.Completedcoachings</td>
+                                        </tr>
+                                      </tbody></table>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>                            
+                            </div>
+                          </div>
+        @*<div class="col-md-4 padlr5">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr class="green-tdtd">
+                            <td width="96%" height="38" align="left" valign="middle"><strong>@perfDetails.KpiMetricName    ||<a href="@Url.Action("TeamComparision","Dashboard")" ><strong>Team Rank -@perfDetails.teamrank </strong></a></td>
+                            <td width="4%" align="right" valign="middle">
+                                <a href="@perfDetails.KpiMetricName" data-toggle="modal" data-target="#my-metric"  class="an-color change_status" ><i class="glyphicon glyphicon-modal-window" aria-hidden="true" id="@perfDetails.KpiMetricName"></i></a></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="green-tdtd1">
+                            <td height="32" align="left" valign="middle" scope="row">Goal</td>
+                            <td align="right" valign="middle">@perfDetails.Goal</td>
+                        </tr>
+                        <tr class="green-tdtd">
+                            <td height="32" align="left" valign="middle" scope="row">Actual</td>
+                            <td align="right" valign="middle">@perfDetails.Actual</td>
+                        </tr>
+                        <tr class="green-tdtd1">
+                            <td height="32" align="left" valign="middle" scope="row">Percentage to Goal</td>
+                            <td align="right" valign="middle">@perfDetails.Percenttogoal</td>
+                        </tr>
+                        <tr class="green-tdtd">
+                            <td height="34" align="left" valign="middle" scope="row">Open Tasks</td>
+                            <td align="right" valign="middle">@perfDetails.OpenTasks</td>
+                        </tr>
+                        <tr class="green-tdtd1">
+                            <td height="34" align="left" valign="middle" scope="row">Completed Coachings</td>
+                            <td align="right" valign="middle">@perfDetails.Completedcoachings</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>*@
+            }
+
+            if (perfDetails.CardColor == "Red")
+            {
+               <div class="col-md-4 m-bottom">
+                            <div class="clearfix orange-light">
+                              <div class="clearfix">
+                                <div style="width:50%; padding:0 0 0 10px; line-height:28px; color:#000;" class="pull-left">@perfDetails.KpiMetricName</div>
+                                <div style="width:50%; line-height:28px; color:#000;" class="pull-right">
+                                 <a style="color:#000;" href="@Url.Action("TeamComparision", "Dashboard")" ><strong>Team Rank -@perfDetails.teamrank </strong></a>
+                                </div>
+                              </div>
+                              <div class="clearfix">
+                                <div class="pull-left emp-pic orange-dark">                                    
+                                    <a href="@perfDetails.KpiMetricName" data-toggle="modal" data-target="#my-metric"  class="an-color change_status pull-right" style="margin:0 6px;" ><img id="@perfDetails.KpiMetricName" src="~/Content/assets/images/pic-card.png"> </a></div>
+                                <div style="width:73%;" class="pull-right">
+                                  <div class="clearfix">
+                                    <div class="table-responsive">
+                                      <table class="table table-orange">
+                                        <tbody><tr>
+                                          <td>Goal</td>
+                                          <td>@perfDetails.Goal</td>
+                                        </tr>
+                                        <tr>
+                                          <td>Actual</td>
+                                          <td>@perfDetails.Actual</td>
+                                        </tr>
+                                        <tr>
+                                          <td>% to Goal</td>
+                                          <td>@perfDetails.Percenttogoal</td>
+                                        </tr>
+                                             <tr>
+                                          <td>Open Tasks</td>
+                                          <td>@perfDetails.OpenTasks</td>
+                                        </tr>
+                                             <tr>
+                                          <td>Completed Coachings</td>
+                                          <td>@perfDetails.Completedcoachings</td>
+                                        </tr>
+                                      </tbody></table>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>                             
+                            </div>
+                          </div>
+        @*<div class="col-md-4 padlr5">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr class="red-tdtdh">
+                            <td width="96%" height="38" align="left" valign="middle"><strong>@perfDetails.KpiMetricName  ||  <a href="@Url.Action("TeamComparision","Dashboard")" ><strong> Team Rank -@perfDetails.teamrank </strong></a></strong></td>
+                            <td width="4%" align="right" valign="middle">
+                                <a href="@perfDetails.KpiMetricName" data-toggle="modal" data-target="#my-metric"  class="an-color change_status" ><i class="glyphicon glyphicon-modal-window" aria-hidden="true" id="@perfDetails.KpiMetricName"></i></a></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="red-tdtd1">
+                            <td height="32" align="left" valign="middle" scope="row">Goal</td>
+                            <td height="32" align="right" valign="middle">@perfDetails.Goal</td>
+                        </tr>
+                        <tr class="red-tdtd">
+                            <td height="32" align="left" valign="middle" scope="row">Actual</td>
+                            <td height="32" align="right" valign="middle">@perfDetails.Actual</td>
+                        </tr>
+                        <tr class="red-tdtd1">
+                            <td height="32" align="left" valign="middle" scope="row">Percentage to Goal</td>
+                            <td height="32" align="right" valign="middle">@perfDetails.Percenttogoal</td>
+                        </tr>
+                         <tr class="red-tdtd">
+                            <td height="34" align="left" valign="middle" scope="row">Open Tasks</td>
+                            <td align="right" valign="middle">@perfDetails.OpenTasks</td>
+                        </tr>
+                        <tr class="red-tdtd1">
+                            <td height="34" align="left" valign="middle" scope="row">Completed Coachings</td>
+                            <td align="right" valign="middle">@perfDetails.Completedcoachings</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>*@
+            }
+
+            if (perfDetails.CardColor == "Yellow")
+            {
+                <div class="col-md-4 m-bottom">
+                            <div class="clearfix yellow-light">
+                              <div class="clearfix">
+                                <div style="width:50%; padding:0 0 0 10px; line-height:28px; color:#000;" class="pull-left">@perfDetails.KpiMetricName</div>
+                                <div style="width:50%; line-height:28px; color:#000;" class="pull-right">
+                                    <a style="color:#000;" href="@Url.Action("TeamComparision", "Dashboard")" ><strong>Team Rank -@perfDetails.teamrank </strong></a>                                  
+                                </div>
+                              </div>
+                              <div class="clearfix">
+                                <div class="pull-left emp-pic yellow-dark">
+                                    <a href="@perfDetails.KpiMetricName" data-toggle="modal" data-target="#my-metric" class="an-color change_status pull-right" style="margin:0 6px;" ><img id="@perfDetails.KpiMetricName" src="~/Content/assets/images/pic-card.png"></a></div>
+                                <div style="width:73%;" class="pull-right">
+                                  <div class="clearfix">
+                                    <div class="table-responsive">
+                                      <table class="table table-yellow">
+                                        <tbody><tr>
+                                          <td style="height:20px;">Goal</td>
+                                          <td>>@perfDetails.Goal</td>
+                                        </tr>
+                                        <tr>
+                                          <td>Actual</td>
+                                          <td>@perfDetails.Actual</td>
+                                        </tr>
+                                        <tr>
+                                          <td>% to Goal</td>
+                                          <td>@perfDetails.Percenttogoal</td>
+                                        </tr>
+                                            <tr>
+                                          <td>Open Tasks</td>
+                                          <td>@perfDetails.OpenTasks</td>
+                                        </tr>
+                                            <tr>
+                                          <td>Completed Coachings</td>
+                                          <td>@perfDetails.Completedcoachings</td>
+                                        </tr>
+                                      </tbody></table>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>                            
+                            </div>
+                          </div>
+        
+        
+        @*<div class="col-md-4 padlr5">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr class="yellow-tdtd">
+                            <td width="96%" height="38" align="left" valign="middle"><strong>@perfDetails.KpiMetricName    || <a href="@Url.Action("TeamComparision", "Dashboard")" ><strong> Team Rank -@perfDetails.teamrank </strong></a></strong></td>
+                            <td width="4%" align="right" valign="middle">
+                               <a href="@perfDetails.KpiMetricName" data-toggle="modal" data-target="#my-metric"  class="an-color change_status" ><i class="glyphicon glyphicon-modal-window" aria-hidden="true" id="@perfDetails.KpiMetricName"></i></a></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="yellow-tdtd1">
+                            <td height="32" align="left" valign="middle" scope="row">Goal</td>
+                            <td align="right" valign="middle">@perfDetails.Goal</td>
+                        </tr>
+                        <tr class="yellow-tdtd">
+                            <td height="32" align="left" valign="middle" scope="row">Actual</td>
+                            <td align="right" valign="middle">@perfDetails.Actual</td>
+                        </tr>
+                        <tr class="yellow-tdtd1">
+                            <td height="32" align="left" valign="middle" scope="row">Percentage to Goal</td>
+                            <td align="right" valign="middle">@perfDetails.Percenttogoal</td>
+                        </tr>
+                        <tr class="yellow-tdtd">
+                            <td height="34" align="left" valign="middle" scope="row">Open Tasks</td>
+                            <td align="right" valign="middle">@perfDetails.OpenTasks</td>
+                        </tr>
+                        <tr class="yellow-tdtd1">
+                            <td height="34" align="left" valign="middle" scope="row">Completed Coachings</td>
+                            <td align="right" valign="middle">@perfDetails.Completedcoachings</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>*@
+            }
+        }
+    }
+</div>
+
+  <input name="Type" id="kpimetricid" type="hidden" />
+
+<div id="my-metric" class="modal fade" role="dialog">
+    <div class="modal-dialog box-width">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" id="KPIName"><span></span> </h4>
+            </div>
+            <div class="modal-body" id="container">
+                @*<img src="~/Content/assets/images/pie-chart2.png" alt="">*@
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("a.change_status").click(function () {
+            $('#kpimetricid').val($(this).attr('href'));
+
+            $('#KPIName span').text($(this).attr('href') + '  Comparison by Month to Goal');
+            //  alert(status_id);
+          bindGraph1();
+           //return false;
+        });
+    });
+
+    
+
+</script>

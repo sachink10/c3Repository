@@ -1,0 +1,227 @@
+﻿@model Ampbi.DataAccess.ViewModel.DashBoard
+@{
+    ViewBag.Title = "UserProfile";
+    Layout = "~/Views/Shared/_LayoutMain1.cshtml";
+}
+
+@Html.BeginForm("UserProfile", "Dashboard")
+{
+   
+<div class="page-container row-fluid">
+    <!-- START CONTENT -->
+    <section id="main-content" class="sidebar_shift sidebar_shift-reg">
+        <section class="wrapper wrap-box-user">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pan0 top-box-search">
+                <div class="page-title">
+                    <div class="col-md-4 pull-right mart10">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:right;">User Search</label>
+                                <div class="col-sm-8">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control input-sm" id="usrSearch" placeholder="User Search" />
+
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-info input-sm" type="button" id="search" onclick="SearchUserProfile();"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfixf marb20"></div>
+            <div class="col-md-12 col-sm-12 col-xs-12 pan0 mart30" id="companyProfile">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="col-md-12">
+                        <header class="panel_header box-heading">
+                            <h2 class="title pull-left">User Profile</h2>
+                        </header>
+                        <form class="form-horizontal">
+                            <div class="content-body border-box">
+                                <div class="form-group">
+                                    <label class="control-label col-md-3">Email <span class="red">*</span></label>
+                                    <div class="col-md-9">
+                                        <input type="email" class="form-control input-sm" id="txtEmail" placeholder="Email" name="email" readonly="true">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3">First Name<span class="red">*</span></label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control input-sm" id="txtFirstname" placeholder="First Name" name="fname" required="required">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3">Last Name<span class="red">*</span></label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control input-sm" id="txtLastname" placeholder="Last Name" name="lname" required="required">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3">Company Name<span class="red">*</span></label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control input-sm" id="txtcompanyname" placeholder="Company Name" name="cname" readonly="true">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3">User Type<span class="red">*</span></label>
+                                    <div class="col-md-9">
+                                        <select class="form-control input-sm" name="User-Type" id="OptSelect" required="required">
+                                            <option>Select</option>
+                                            <option value="1">Admin</option>
+                                            <option value="2">Principle</option>
+                                            <option value="3">User</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3">Licence Assigned<span class="red">*</span></label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control input-sm" id="txtlicence" placeholder="Licence Assigned" name="lassigned" readonly="true">
+                                    </div>
+                                </div>
+                                <div class="hero-unit">
+                                    <div class="input-daterange" id="datepicker">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3">Valid From<span class="red">*</span></label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control input-sm" id="txtValidFrom"   name="start" readonly="true"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label  col-md-3">Valid To<span class="red">*</span></label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control input-sm panlr5" id="txtValidTo"  name="end" readonly="true"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 page-footer-box clearfix">
+                                <div class="pull-right col-md-offset-4">
+                                    <button class="btn btn-success input-sm" onclick="UpdateUserProfile();" type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-12 mart30" id="licendash">
+                        <header class="panel_header box-heading">
+                            <h2 class="title pull-left">Licence Dashboard Access</h2>
+                        </header>
+                        <div class="content-body border-box">
+                            <div class="row">
+                                <form action="#" class="form-horizontal" id="modules">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <!--first Name-->
+                                        <div class="form-group">
+                                            <label class="control-label col-md-6 pull-left">Calls Dashboard </label>
+                                            <div class="col-md-4 pull-right">
+                                                <label class="col-md-6">
+                                                    <input type="radio" name="calls" id="optCallyes">
+                                                    &nbsp; Yes
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="calls" id="optCallNO" checked>
+                                                    &nbsp;No
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-6 pull-left">Ticket Dashboard</label>
+                                            <div class="col-md-4 pull-right">
+                                                <label class="col-md-6">
+                                                    <input type="radio" name="ticket" id="optTickYes">
+                                                    &nbsp; Yes
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="ticket" id="optTickNo" checked>
+                                                    &nbsp;No
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-6 pull-left">QA Dashboard</label>
+                                            <div class="col-md-4 pull-right">
+                                                <label class="col-md-6">
+                                                    <input type="radio" name="qa" id="optQAYes">
+                                                    &nbsp; Yes
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="qa" id="optQANo" checked>
+                                                    &nbsp;No
+                                                </label>
+                                            </div>
+                                        </div>
+                                          <div class="form-group">
+                                            <label class="control-label col-md-6 pull-left">Appointment Dashboard</label>
+                                            <div class="col-md-4 pull-right">
+                                                <label class="col-md-6">
+                                                    <input type="radio" name=appt" id="optApptYes">
+                                                    &nbsp; Yes
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="appt" id="optApptNo" checked>
+                                                    &nbsp;No
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-6 pull-left">Employess Performance</label>
+                                            <div class="col-md-4 pull-right">
+                                                <label class="col-md-6">
+                                                    <input type="radio" name="emp" id="optEmpYes">
+                                                    &nbsp; Yes
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="emp"  id="optEmpNo" checked>
+                                                    &nbsp;No
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-6 pull-left">Virtual Assistant</label>
+                                            <div class="col-md-4 pull-right">
+                                                <label class="col-md-6">
+                                                    <input type="radio" name="vir"  id="optVirYes">
+                                                    &nbsp; Yes
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="vir" id="optVirNo" checked>
+                                                    &nbsp;No
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-6 pull-left">Knowledge Base</label>
+                                            <div class="col-md-4 pull-right">
+                                                <label class="col-md-6">
+                                                    <input type="radio" name="know" id="optKnowYes">
+                                                    &nbsp; Yes
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="know" id="optKnowNo" checked>
+                                                    &nbsp;No
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <!--last Name-->
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </section>
+    </section>
+    <!-- END CONTENT -->
+   
+</div>
+
+<!-- END CONTAINER -->
+}

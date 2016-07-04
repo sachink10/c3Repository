@@ -1,0 +1,410 @@
+﻿@{
+    ViewBag.Title = "KnowledgeBase";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+@using (@Html.BeginForm("KnowledgeBase","Dashboard"))
+
+{
+    <!-- START CONTAINER -->
+    <div class="page-container row-fluid">
+        <!-- START CONTENT -->
+        <section id="main-content" class="sidebar_shift sidebar_shift-reg">
+            <section class="wrapper wrap-box-user">
+
+                <div class="clearfix"></div>
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 mart10">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <section class="box mar0">
+                            <header class="panel_header box-heading">
+                                <h2 class="title pull-left">Knowledge Base </h2>
+                                <div class="col-md-3 pull-right mart5">
+                                    <div id="imaginary_container">
+                                        <div class="input-group stylish-input-group">
+                                            <input type="text" placeholder="Search" class="form-control">
+                                            <span class="input-group-addon">
+                                                <button class="search-btn" type="submit">
+                                                    <span class="glyphicon glyphicon-search"></span>
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                            <div class="content-body">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px !important;">
+                                        <div class="clearfix">
+                                            <div class="knowledge-base-top">
+                                                <div class=" col-md-9">
+                                                    <ul class="nav nav-tabs know-align-box col-md-offset-6" role="tablist">
+                                                        <li role="presentation" class="active"><a href="#Trending" aria-controls="Trending" role="tab" data-toggle="tab">Trending</a></li>
+                                                        <li role="presentation"><a href="#Favorites" aria-controls="Favorites" role="tab" data-toggle="tab">Favorites</a></li>
+                                                        <li role="presentation"><a href="#Latest" aria-controls="Latest" role="tab" data-toggle="tab">Latest</a></li>
+                                                        <li role="presentation"><a href="#All" aria-controls="All" role="tab" data-toggle="tab">All</a></li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+
+                                            <!-- Tab panes -->
+                                            <div class="tab-content">
+                                                <div role="tabpanel" class="tab-pane active" id="Trending">
+                                                    <div class="panel-body" style="padding: 10px 0px;">
+                                                        <div class="table-responsive">
+                                                            <table class="table know-table table-striped">
+                                                                <tr bordercolor="#6b9efc" style="color: #6b9efc;">
+                                                                    <td width="2%" align="center" valign="middle">&nbsp;</td>
+                                                                    <td width="2%" align="center" valign="middle">&nbsp;</td>
+                                                                    <td width="2%" align="center" valign="middle">&nbsp;</td>
+                                                                    <td width="1%" align="center" valign="middle">&nbsp;</td>
+                                                                    <td width="17%" align="center" valign="middle"><strong>Name</strong></td>
+                                                                    <td width="46%" align="center" valign="middle"><strong>Description</strong></td>
+                                                                    <td width="3%" align="center" valign="middle"><strong>Type</strong></td>
+                                                                    <td width="8%" align="center" valign="middle"><strong>Rating</strong></td>
+                                                                    <td width="5%" align="center" valign="middle"><strong>Metric</strong></td>
+                                                                    <td width="12%" align="center" valign="middle"><strong>Reason Code</strong></td>
+                                                                    <td width="2%" align="center" valign="middle">&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" valign="middle">&nbsp;</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <input type="checkbox" name="checkbox" id="checkbox" /></td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/star.png" alt="" /></td>
+                                                                    <td align="center" valign="middle">21</td>
+                                                                    <td align="center" valign="middle">Proactive Next Steps</td>
+                                                                    <td align="center" valign="middle">How to actively take next steps on unforseen...</td>
+                                                                    <td align="center" valign="middle">txt</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/rating.png" /></td>
+                                                                    <td align="center" valign="middle">AHT</td>
+                                                                    <td align="center" valign="middle">AA, BB, ZZ</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" valign="middle">&nbsp;</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <input type="checkbox" name="checkbox2" id="checkbox" /></td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/star.png" alt="" /></td>
+                                                                    <td align="center" valign="middle">21</td>
+                                                                    <td align="center" valign="middle">Proactive Next Steps</td>
+                                                                    <td align="center" valign="middle">How to actively take next steps on unforseen...</td>
+                                                                    <td align="center" valign="middle">txt</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/rating.png" /></td>
+                                                                    <td align="center" valign="middle">AHT</td>
+                                                                    <td align="center" valign="middle">AA, BB, ZZ</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" valign="middle">&nbsp;</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <input type="checkbox" name="checkbox2" id="checkbox" /></td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/star.png" alt="" /></td>
+                                                                    <td align="center" valign="middle">21</td>
+                                                                    <td align="center" valign="middle">Proactive Next Steps</td>
+                                                                    <td align="center" valign="middle">How to actively take next steps on unforseen...</td>
+                                                                    <td align="center" valign="middle">txt</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/rating.png" /></td>
+                                                                    <td align="center" valign="middle">AHT</td>
+                                                                    <td align="center" valign="middle">AA, BB, ZZ</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" valign="middle">&nbsp;</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <input type="checkbox" name="checkbox2" id="checkbox" /></td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/star.png" alt="" /></td>
+                                                                    <td align="center" valign="middle">21</td>
+                                                                    <td align="center" valign="middle">Proactive Next Steps</td>
+                                                                    <td align="center" valign="middle">How to actively take next steps on unforseen...</td>
+                                                                    <td align="center" valign="middle">txt</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/rating.png" /></td>
+                                                                    <td align="center" valign="middle">AHT</td>
+                                                                    <td align="center" valign="middle">AA, BB, ZZ</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div role="tabpanel" class="tab-pane" id="Favorites">
+                                                    <div class="panel-body" style="padding: 10px 0px;">
+                                                        <div class="table-responsive">
+                                                            <table class="table know-table table-striped">
+                                                                <tr bordercolor="#6b9efc" style="color: #6b9efc;">
+                                                                    <td width="2%" align="center" valign="middle">&nbsp;</td>
+                                                                    <td width="2%" align="center" valign="middle">&nbsp;</td>
+                                                                    <td width="2%" align="center" valign="middle">&nbsp;</td>
+                                                                    <td width="1%" align="center" valign="middle">&nbsp;</td>
+                                                                    <td width="17%" align="center" valign="middle"><strong>Name</strong></td>
+                                                                    <td width="46%" align="center" valign="middle"><strong>Description</strong></td>
+                                                                    <td width="3%" align="center" valign="middle"><strong>Type</strong></td>
+                                                                    <td width="8%" align="center" valign="middle"><strong>Rating</strong></td>
+                                                                    <td width="5%" align="center" valign="middle"><strong>Metric</strong></td>
+                                                                    <td width="12%" align="center" valign="middle"><strong>Reason Code</strong></td>
+                                                                    <td width="2%" align="center" valign="middle">&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" valign="middle">&nbsp;</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <input type="checkbox" name="checkbox" id="checkbox" /></td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/star.png" alt="" /></td>
+                                                                    <td align="center" valign="middle">21</td>
+                                                                    <td align="center" valign="middle">Proactive Next Steps</td>
+                                                                    <td align="center" valign="middle">How to actively take next steps on unforseen...</td>
+                                                                    <td align="center" valign="middle">txt</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/rating.png" /></td>
+                                                                    <td align="center" valign="middle">AHT</td>
+                                                                    <td align="center" valign="middle">AA, BB, ZZ</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" valign="middle">&nbsp;</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <input type="checkbox" name="checkbox2" id="checkbox" /></td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/star.png" alt="" /></td>
+                                                                    <td align="center" valign="middle">21</td>
+                                                                    <td align="center" valign="middle">Proactive Next Steps</td>
+                                                                    <td align="center" valign="middle">How to actively take next steps on unforseen...</td>
+                                                                    <td align="center" valign="middle">txt</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/rating.png" /></td>
+                                                                    <td align="center" valign="middle">AHT</td>
+                                                                    <td align="center" valign="middle">AA, BB, ZZ</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" valign="middle">&nbsp;</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <input type="checkbox" name="checkbox2" id="checkbox" /></td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/star.png" alt="" /></td>
+                                                                    <td align="center" valign="middle">21</td>
+                                                                    <td align="center" valign="middle">Proactive Next Steps</td>
+                                                                    <td align="center" valign="middle">How to actively take next steps on unforseen...</td>
+                                                                    <td align="center" valign="middle">txt</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/rating.png" /></td>
+                                                                    <td align="center" valign="middle">AHT</td>
+                                                                    <td align="center" valign="middle">AA, BB, ZZ</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" valign="middle">&nbsp;</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <input type="checkbox" name="checkbox2" id="checkbox" /></td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/star.png" alt="" /></td>
+                                                                    <td align="center" valign="middle">21</td>
+                                                                    <td align="center" valign="middle">Proactive Next Steps</td>
+                                                                    <td align="center" valign="middle">How to actively take next steps on unforseen...</td>
+                                                                    <td align="center" valign="middle">txt</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/rating.png" /></td>
+                                                                    <td align="center" valign="middle">AHT</td>
+                                                                    <td align="center" valign="middle">AA, BB, ZZ</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div role="tabpanel" class="tab-pane" id="Latest">
+                                                    <div class="panel-body" style="padding: 10px 0px;">
+                                                        <div class="table-responsive">
+                                                            <table class="table know-table table-striped">
+                                                                <tr bordercolor="#6b9efc" style="color: #6b9efc;">
+                                                                    <td width="2%" align="center" valign="middle">&nbsp;</td>
+                                                                    <td width="2%" align="center" valign="middle">&nbsp;</td>
+                                                                    <td width="2%" align="center" valign="middle">&nbsp;</td>
+                                                                    <td width="1%" align="center" valign="middle">&nbsp;</td>
+                                                                    <td width="17%" align="center" valign="middle"><strong>Name</strong></td>
+                                                                    <td width="46%" align="center" valign="middle"><strong>Description</strong></td>
+                                                                    <td width="3%" align="center" valign="middle"><strong>Type</strong></td>
+                                                                    <td width="8%" align="center" valign="middle"><strong>Rating</strong></td>
+                                                                    <td width="5%" align="center" valign="middle"><strong>Metric</strong></td>
+                                                                    <td width="12%" align="center" valign="middle"><strong>Reason Code</strong></td>
+                                                                    <td width="2%" align="center" valign="middle">&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" valign="middle">&nbsp;</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <input type="checkbox" name="checkbox" id="checkbox" /></td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/star.png" alt="" /></td>
+                                                                    <td align="center" valign="middle">21</td>
+                                                                    <td align="center" valign="middle">Proactive Next Steps</td>
+                                                                    <td align="center" valign="middle">How to actively take next steps on unforseen...</td>
+                                                                    <td align="center" valign="middle">txt</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/rating.png" /></td>
+                                                                    <td align="center" valign="middle">AHT</td>
+                                                                    <td align="center" valign="middle">AA, BB, ZZ</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" valign="middle">&nbsp;</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <input type="checkbox" name="checkbox2" id="checkbox" /></td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/star.png" alt="" /></td>
+                                                                    <td align="center" valign="middle">21</td>
+                                                                    <td align="center" valign="middle">Proactive Next Steps</td>
+                                                                    <td align="center" valign="middle">How to actively take next steps on unforseen...</td>
+                                                                    <td align="center" valign="middle">txt</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/rating.png" /></td>
+                                                                    <td align="center" valign="middle">AHT</td>
+                                                                    <td align="center" valign="middle">AA, BB, ZZ</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" valign="middle">&nbsp;</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <input type="checkbox" name="checkbox2" id="checkbox" /></td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/star.png" alt="" /></td>
+                                                                    <td align="center" valign="middle">21</td>
+                                                                    <td align="center" valign="middle">Proactive Next Steps</td>
+                                                                    <td align="center" valign="middle">How to actively take next steps on unforseen...</td>
+                                                                    <td align="center" valign="middle">txt</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/rating.png" /></td>
+                                                                    <td align="center" valign="middle">AHT</td>
+                                                                    <td align="center" valign="middle">AA, BB, ZZ</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" valign="middle">&nbsp;</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <input type="checkbox" name="checkbox2" id="checkbox" /></td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/star.png" alt="" /></td>
+                                                                    <td align="center" valign="middle">21</td>
+                                                                    <td align="center" valign="middle">Proactive Next Steps</td>
+                                                                    <td align="center" valign="middle">How to actively take next steps on unforseen...</td>
+                                                                    <td align="center" valign="middle">txt</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/rating.png" /></td>
+                                                                    <td align="center" valign="middle">AHT</td>
+                                                                    <td align="center" valign="middle">AA, BB, ZZ</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div role="tabpanel" class="tab-pane" id="All">
+                                                    <div class="panel-body" style="padding: 10px 0px;">
+                                                        <div class="table-responsive">
+                                                            <table class="table know-table table-striped">
+                                                                <tr bordercolor="#6b9efc" style="color: #6b9efc;">
+                                                                    <td width="2%" align="center" valign="middle">&nbsp;</td>
+                                                                    <td width="2%" align="center" valign="middle">&nbsp;</td>
+                                                                    <td width="2%" align="center" valign="middle">&nbsp;</td>
+                                                                    <td width="1%" align="center" valign="middle">&nbsp;</td>
+                                                                    <td width="17%" align="center" valign="middle"><strong>Name</strong></td>
+                                                                    <td width="46%" align="center" valign="middle"><strong>Description</strong></td>
+                                                                    <td width="3%" align="center" valign="middle"><strong>Type</strong></td>
+                                                                    <td width="8%" align="center" valign="middle"><strong>Rating</strong></td>
+                                                                    <td width="5%" align="center" valign="middle"><strong>Metric</strong></td>
+                                                                    <td width="12%" align="center" valign="middle"><strong>Reason Code</strong></td>
+                                                                    <td width="2%" align="center" valign="middle">&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" valign="middle">&nbsp;</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <input type="checkbox" name="checkbox" id="checkbox" /></td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/star.png" alt="" /></td>
+                                                                    <td align="center" valign="middle">21</td>
+                                                                    <td align="center" valign="middle">Proactive Next Steps</td>
+                                                                    <td align="center" valign="middle">How to actively take next steps on unforseen...</td>
+                                                                    <td align="center" valign="middle">txt</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/rating.png" /></td>
+                                                                    <td align="center" valign="middle">AHT</td>
+                                                                    <td align="center" valign="middle">AA, BB, ZZ</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" valign="middle">&nbsp;</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <input type="checkbox" name="checkbox2" id="checkbox" /></td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/star.png" alt="" /></td>
+                                                                    <td align="center" valign="middle">21</td>
+                                                                    <td align="center" valign="middle">Proactive Next Steps</td>
+                                                                    <td align="center" valign="middle">How to actively take next steps on unforseen...</td>
+                                                                    <td align="center" valign="middle">txt</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/rating.png" /></td>
+                                                                    <td align="center" valign="middle">AHT</td>
+                                                                    <td align="center" valign="middle">AA, BB, ZZ</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" valign="middle">&nbsp;</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <input type="checkbox" name="checkbox2" id="checkbox" /></td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/star.png" alt="" /></td>
+                                                                    <td align="center" valign="middle">21</td>
+                                                                    <td align="center" valign="middle">Proactive Next Steps</td>
+                                                                    <td align="center" valign="middle">How to actively take next steps on unforseen...</td>
+                                                                    <td align="center" valign="middle">txt</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/rating.png" /></td>
+                                                                    <td align="center" valign="middle">AHT</td>
+                                                                    <td align="center" valign="middle">AA, BB, ZZ</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" valign="middle">&nbsp;</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <input type="checkbox" name="checkbox2" id="checkbox" /></td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/star.png" alt="" /></td>
+                                                                    <td align="center" valign="middle">21</td>
+                                                                    <td align="center" valign="middle">Proactive Next Steps</td>
+                                                                    <td align="center" valign="middle">How to actively take next steps on unforseen...</td>
+                                                                    <td align="center" valign="middle">txt</td>
+                                                                    <td align="center" valign="middle">
+                                                                        <img src="~/Content/assets/images/rating.png" /></td>
+                                                                    <td align="center" valign="middle">AHT</td>
+                                                                    <td align="center" valign="middle">AA, BB, ZZ</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div class="col-md-12 col-sm-12 page-footer-box clearfix">
+                  <div class="pull-right col-md-offset-4">
+                    <button type="submit" class="btn btn-success input-sm">Assign</button>
+                  </div>
+                </div>-->
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- END CONTENT -->
+
+    </div>
+    <!-- END CONTAINER --> 
+}

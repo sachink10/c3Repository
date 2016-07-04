@@ -1,0 +1,1705 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AmpbidevModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="AmpbidevModelStoreContainer">
+    <EntitySet Name="DIM_EMPLOYEE" EntityType="AmpbidevModel.Store.DIM_EMPLOYEE" store:Type="Tables" store:Schema="dbo" store:Name="DIM_EMPLOYEE">
+      <DefiningQuery>SELECT 
+      [DIM_EMPLOYEE].[Empid] AS [Empid], 
+      [DIM_EMPLOYEE].[Employeenumber] AS [Employeenumber], 
+      [DIM_EMPLOYEE].[LocationName] AS [LocationName], 
+      [DIM_EMPLOYEE].[Startdate] AS [Startdate], 
+      [DIM_EMPLOYEE].[EmployeeName] AS [EmployeeName], 
+      [DIM_EMPLOYEE].[employeeFirstname] AS [employeeFirstname], 
+      [DIM_EMPLOYEE].[employeeLastname] AS [employeeLastname], 
+      [DIM_EMPLOYEE].[mgr_lev1_id] AS [mgr_lev1_id], 
+      [DIM_EMPLOYEE].[mgr_lev2_id] AS [mgr_lev2_id], 
+      [DIM_EMPLOYEE].[mgr_lev3_id] AS [mgr_lev3_id], 
+      [DIM_EMPLOYEE].[mgr_lev4_id] AS [mgr_lev4_id], 
+      [DIM_EMPLOYEE].[mgr_lev5_id] AS [mgr_lev5_id], 
+      [DIM_EMPLOYEE].[mgr_lev1_name] AS [mgr_lev1_name], 
+      [DIM_EMPLOYEE].[mgr_lev2_name] AS [mgr_lev2_name], 
+      [DIM_EMPLOYEE].[mgr_lev3_name] AS [mgr_lev3_name], 
+      [DIM_EMPLOYEE].[mgr_lev4_name] AS [mgr_lev4_name], 
+      [DIM_EMPLOYEE].[mgr_lev5_name] AS [mgr_lev5_name], 
+      [DIM_EMPLOYEE].[project_number] AS [project_number], 
+      [DIM_EMPLOYEE].[job_id] AS [job_id], 
+      [DIM_EMPLOYEE].[Employeetitle] AS [Employeetitle], 
+      [DIM_EMPLOYEE].[employee_type] AS [employee_type], 
+      [DIM_EMPLOYEE].[assignment_status] AS [assignment_status], 
+      [DIM_EMPLOYEE].[hire_date] AS [hire_date], 
+      [DIM_EMPLOYEE].[term_date] AS [term_date], 
+      [DIM_EMPLOYEE].[leaving_code] AS [leaving_code], 
+      [DIM_EMPLOYEE].[leaving_reason] AS [leaving_reason], 
+      [DIM_EMPLOYEE].[employee_code] AS [employee_code], 
+      [DIM_EMPLOYEE].[companyGUID] AS [companyGUID], 
+      [DIM_EMPLOYEE].[EMAIL] AS [EMAIL]
+      FROM [dbo].[DIM_EMPLOYEE] AS [DIM_EMPLOYEE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="QA_Data_SummaryTable" EntityType="AmpbidevModel.Store.QA_Data_SummaryTable" store:Type="Tables" store:Schema="dbo" store:Name="QA_Data_SummaryTable">
+      <DefiningQuery>SELECT 
+      [QA_Data_SummaryTable].[RowId] AS [RowId], 
+      [QA_Data_SummaryTable].[TenantId] AS [TenantId], 
+      [QA_Data_SummaryTable].[Period] AS [Period], 
+      [QA_Data_SummaryTable].[Date] AS [Date], 
+      [QA_Data_SummaryTable].[Manager_Level_Id] AS [Manager_Level_Id], 
+      [QA_Data_SummaryTable].[employee_name] AS [employee_name], 
+      [QA_Data_SummaryTable].[Offset] AS [Offset], 
+      [QA_Data_SummaryTable].[ScoreValue] AS [ScoreValue], 
+      [QA_Data_SummaryTable].[AgentId] AS [AgentId], 
+      [QA_Data_SummaryTable].[QuestionId] AS [QuestionId], 
+      [QA_Data_SummaryTable].[Question] AS [Question], 
+      [QA_Data_SummaryTable].[Filter] AS [Filter], 
+      [QA_Data_SummaryTable].[companyguid] AS [companyguid]
+      FROM [dbo].[QA_Data_SummaryTable] AS [QA_Data_SummaryTable]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ref_LookupValues" EntityType="AmpbidevModel.Store.ref_LookupValues" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ref_LookupValues_Hist" EntityType="AmpbidevModel.Store.ref_LookupValues_Hist" store:Type="Tables" store:Schema="dbo" store:Name="ref_LookupValues_Hist">
+      <DefiningQuery>SELECT 
+      [ref_LookupValues_Hist].[Lkphistseqid] AS [Lkphistseqid], 
+      [ref_LookupValues_Hist].[Lkpseqid] AS [Lkpseqid], 
+      [ref_LookupValues_Hist].[Modulename] AS [Modulename], 
+      [ref_LookupValues_Hist].[Columnname] AS [Columnname], 
+      [ref_LookupValues_Hist].[ActualValue] AS [ActualValue], 
+      [ref_LookupValues_Hist].[active] AS [active], 
+      [ref_LookupValues_Hist].[StartDate] AS [StartDate], 
+      [ref_LookupValues_Hist].[EndDate] AS [EndDate], 
+      [ref_LookupValues_Hist].[Createdby] AS [Createdby], 
+      [ref_LookupValues_Hist].[CreatedOn] AS [CreatedOn], 
+      [ref_LookupValues_Hist].[Updatedby] AS [Updatedby], 
+      [ref_LookupValues_Hist].[Updatedon] AS [Updatedon], 
+      [ref_LookupValues_Hist].[Genericvarchar1] AS [Genericvarchar1], 
+      [ref_LookupValues_Hist].[Genericvarchar2] AS [Genericvarchar2], 
+      [ref_LookupValues_Hist].[Genericvarchar3] AS [Genericvarchar3], 
+      [ref_LookupValues_Hist].[GenericDate1] AS [GenericDate1], 
+      [ref_LookupValues_Hist].[GenericDate2] AS [GenericDate2], 
+      [ref_LookupValues_Hist].[GenericDate3] AS [GenericDate3], 
+      [ref_LookupValues_Hist].[Genericbit1] AS [Genericbit1], 
+      [ref_LookupValues_Hist].[Genericbit2] AS [Genericbit2], 
+      [ref_LookupValues_Hist].[Genericbit3] AS [Genericbit3], 
+      [ref_LookupValues_Hist].[GenericNumeric1] AS [GenericNumeric1], 
+      [ref_LookupValues_Hist].[GenericNumeric2] AS [GenericNumeric2], 
+      [ref_LookupValues_Hist].[GenericNumeric3] AS [GenericNumeric3], 
+      [ref_LookupValues_Hist].[displayorder] AS [displayorder], 
+      [ref_LookupValues_Hist].[finalaction] AS [finalaction], 
+      [ref_LookupValues_Hist].[WriteRecord] AS [WriteRecord]
+      FROM [dbo].[ref_LookupValues_Hist] AS [ref_LookupValues_Hist]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ref_Modules" EntityType="AmpbidevModel.Store.ref_Modules" store:Type="Tables" store:Schema="dbo" store:Name="ref_Modules">
+      <DefiningQuery>SELECT 
+      [ref_Modules].[Moduleid] AS [Moduleid], 
+      [ref_Modules].[ModuleName] AS [ModuleName], 
+      [ref_Modules].[Active] AS [Active], 
+      [ref_Modules].[StartDate] AS [StartDate], 
+      [ref_Modules].[EndDate] AS [EndDate], 
+      [ref_Modules].[DisplayOrder] AS [DisplayOrder], 
+      [ref_Modules].[DefaultModule] AS [DefaultModule]
+      FROM [dbo].[ref_Modules] AS [ref_Modules]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ref_Modules_hist" EntityType="AmpbidevModel.Store.ref_Modules_hist" store:Type="Tables" store:Schema="dbo" store:Name="ref_Modules_hist">
+      <DefiningQuery>SELECT 
+      [ref_Modules_hist].[ModuleHistid] AS [ModuleHistid], 
+      [ref_Modules_hist].[Moduleid] AS [Moduleid], 
+      [ref_Modules_hist].[ModuleName] AS [ModuleName], 
+      [ref_Modules_hist].[Active] AS [Active], 
+      [ref_Modules_hist].[StartDate] AS [StartDate], 
+      [ref_Modules_hist].[EndDate] AS [EndDate], 
+      [ref_Modules_hist].[DisplayOrder] AS [DisplayOrder], 
+      [ref_Modules_hist].[defaultmodule] AS [defaultmodule]
+      FROM [dbo].[ref_Modules_hist] AS [ref_Modules_hist]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ref_SecretQuestion" EntityType="AmpbidevModel.Store.ref_SecretQuestion" store:Type="Tables" store:Schema="dbo" store:Name="ref_SecretQuestion">
+      <DefiningQuery>SELECT 
+      [ref_SecretQuestion].[SecSeq] AS [SecSeq], 
+      [ref_SecretQuestion].[SecretQuestion] AS [SecretQuestion]
+      FROM [dbo].[ref_SecretQuestion] AS [ref_SecretQuestion]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ref_SecretQuestion_hist" EntityType="AmpbidevModel.Store.ref_SecretQuestion_hist" store:Type="Tables" store:Schema="dbo" store:Name="ref_SecretQuestion_hist">
+      <DefiningQuery>SELECT 
+      [ref_SecretQuestion_hist].[SecSeq] AS [SecSeq], 
+      [ref_SecretQuestion_hist].[SecretQuestion] AS [SecretQuestion]
+      FROM [dbo].[ref_SecretQuestion_hist] AS [ref_SecretQuestion_hist]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ref_UserType" EntityType="AmpbidevModel.Store.ref_UserType" store:Type="Tables" store:Schema="dbo" store:Name="ref_UserType">
+      <DefiningQuery>SELECT 
+      [ref_UserType].[UserTypeID] AS [UserTypeID], 
+      [ref_UserType].[UserTypeName] AS [UserTypeName]
+      FROM [dbo].[ref_UserType] AS [ref_UserType]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ref_UserType_hist" EntityType="AmpbidevModel.Store.ref_UserType_hist" store:Type="Tables" store:Schema="dbo" store:Name="ref_UserType_hist">
+      <DefiningQuery>SELECT 
+      [ref_UserType_hist].[UserTypeID] AS [UserTypeID], 
+      [ref_UserType_hist].[UserTypeName] AS [UserTypeName]
+      FROM [dbo].[ref_UserType_hist] AS [ref_UserType_hist]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="statelist" EntityType="AmpbidevModel.Store.statelist" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="statelist_hist" EntityType="AmpbidevModel.Store.statelist_hist" store:Type="Tables" store:Schema="dbo" store:Name="statelist_hist">
+      <DefiningQuery>SELECT 
+      [statelist_hist].[Statecodehistid] AS [Statecodehistid], 
+      [statelist_hist].[statecode] AS [statecode], 
+      [statelist_hist].[statename] AS [statename], 
+      [statelist_hist].[CreatedBy] AS [CreatedBy], 
+      [statelist_hist].[CreatedOn] AS [CreatedOn], 
+      [statelist_hist].[Updatedby] AS [Updatedby], 
+      [statelist_hist].[Updatedon] AS [Updatedon], 
+      [statelist_hist].[active] AS [active]
+      FROM [dbo].[statelist_hist] AS [statelist_hist]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="sysdiagrams" EntityType="AmpbidevModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Company" EntityType="AmpbidevModel.Store.tbl_Company" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Company_hist" EntityType="AmpbidevModel.Store.tbl_Company_hist" store:Type="Tables" store:Schema="dbo" store:Name="tbl_Company_hist">
+      <DefiningQuery>SELECT 
+      [tbl_Company_hist].[CompanyHistSeq] AS [CompanyHistSeq], 
+      [tbl_Company_hist].[CompanySeq] AS [CompanySeq], 
+      [tbl_Company_hist].[CompanyGUID] AS [CompanyGUID], 
+      [tbl_Company_hist].[CompanyName] AS [CompanyName], 
+      [tbl_Company_hist].[ContactName] AS [ContactName], 
+      [tbl_Company_hist].[ContactPhone] AS [ContactPhone], 
+      [tbl_Company_hist].[Address1] AS [Address1], 
+      [tbl_Company_hist].[Address2] AS [Address2], 
+      [tbl_Company_hist].[City] AS [City], 
+      [tbl_Company_hist].[State] AS [State], 
+      [tbl_Company_hist].[Zip] AS [Zip], 
+      [tbl_Company_hist].[NoofEmployee] AS [NoofEmployee], 
+      [tbl_Company_hist].[NoofLicence] AS [NoofLicence], 
+      [tbl_Company_hist].[TrialStartDate] AS [TrialStartDate], 
+      [tbl_Company_hist].[TrialEndDate] AS [TrialEndDate], 
+      [tbl_Company_hist].[CreatedDate] AS [CreatedDate], 
+      [tbl_Company_hist].[CreatedBy] AS [CreatedBy], 
+      [tbl_Company_hist].[UpdatedDate] AS [UpdatedDate], 
+      [tbl_Company_hist].[UpdatedBy] AS [UpdatedBy], 
+      [tbl_Company_hist].[PrefferedContactMethod] AS [PrefferedContactMethod]
+      FROM [dbo].[tbl_Company_hist] AS [tbl_Company_hist]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_CompanyChartInfo" EntityType="AmpbidevModel.Store.tbl_CompanyChartInfo" store:Type="Tables" store:Schema="dbo" store:Name="tbl_CompanyChartInfo">
+      <DefiningQuery>SELECT 
+      [tbl_CompanyChartInfo].[cciseq] AS [cciseq], 
+      [tbl_CompanyChartInfo].[CompanyGUID] AS [CompanyGUID], 
+      [tbl_CompanyChartInfo].[ModuleID] AS [ModuleID], 
+      [tbl_CompanyChartInfo].[Chart1] AS [Chart1], 
+      [tbl_CompanyChartInfo].[Chart1Name] AS [Chart1Name], 
+      [tbl_CompanyChartInfo].[Chart2] AS [Chart2], 
+      [tbl_CompanyChartInfo].[Chart2Name] AS [Chart2Name], 
+      [tbl_CompanyChartInfo].[Chart3] AS [Chart3], 
+      [tbl_CompanyChartInfo].[Chart3Name] AS [Chart3Name], 
+      [tbl_CompanyChartInfo].[Chart4] AS [Chart4], 
+      [tbl_CompanyChartInfo].[Chart4Name] AS [Chart4Name]
+      FROM [dbo].[tbl_CompanyChartInfo] AS [tbl_CompanyChartInfo]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_companymodule" EntityType="AmpbidevModel.Store.tbl_companymodule" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_companymodule_hist" EntityType="AmpbidevModel.Store.tbl_companymodule_hist" store:Type="Tables" store:Schema="dbo" store:Name="tbl_companymodule_hist">
+      <DefiningQuery>SELECT 
+      [tbl_companymodule_hist].[companymodulehistid] AS [companymodulehistid], 
+      [tbl_companymodule_hist].[companymoduleid] AS [companymoduleid], 
+      [tbl_companymodule_hist].[CompanyGUID] AS [CompanyGUID], 
+      [tbl_companymodule_hist].[moduleid] AS [moduleid], 
+      [tbl_companymodule_hist].[DisplayName] AS [DisplayName]
+      FROM [dbo].[tbl_companymodule_hist] AS [tbl_companymodule_hist]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_empperfdata" EntityType="AmpbidevModel.Store.tbl_empperfdata" store:Type="Tables" store:Schema="dbo" store:Name="tbl_empperfdata">
+      <DefiningQuery>SELECT 
+      [tbl_empperfdata].[CompanyGUID] AS [CompanyGUID], 
+      [tbl_empperfdata].[AgentID] AS [AgentID], 
+      [tbl_empperfdata].[MetricName] AS [MetricName], 
+      [tbl_empperfdata].[value] AS [value], 
+      [tbl_empperfdata].[goal] AS [goal], 
+      [tbl_empperfdata].[PercentageToGoal] AS [PercentageToGoal], 
+      [tbl_empperfdata].[Period] AS [Period], 
+      [tbl_empperfdata].[Current_Date] AS [Current_Date], 
+      [tbl_empperfdata].[Offset] AS [Offset], 
+      [tbl_empperfdata].[Tenure] AS [Tenure], 
+      [tbl_empperfdata].[Manager_Level_Id] AS [Manager_Level_Id], 
+      [tbl_empperfdata].[emp_last_name] AS [emp_last_name], 
+      [tbl_empperfdata].[emp_first_name] AS [emp_first_name], 
+      [tbl_empperfdata].[RowID] AS [RowID], 
+      [tbl_empperfdata].[employee_name] AS [employee_name]
+      FROM [dbo].[tbl_empperfdata] AS [tbl_empperfdata]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_fact_empperf_All" EntityType="AmpbidevModel.Store.tbl_fact_empperf_All" store:Type="Tables" store:Schema="dbo" store:Name="tbl_fact_empperf_All">
+      <DefiningQuery>SELECT 
+      [tbl_fact_empperf_All].[Tblid] AS [Tblid], 
+      [tbl_fact_empperf_All].[CompanyGUID] AS [CompanyGUID], 
+      [tbl_fact_empperf_All].[KPIMetricId] AS [KPIMetricId], 
+      [tbl_fact_empperf_All].[ReportDate] AS [ReportDate], 
+      [tbl_fact_empperf_All].[Email] AS [Email], 
+      [tbl_fact_empperf_All].[EmployeeNumber] AS [EmployeeNumber], 
+      [tbl_fact_empperf_All].[LastName] AS [LastName], 
+      [tbl_fact_empperf_All].[FirstName] AS [FirstName], 
+      [tbl_fact_empperf_All].[Title] AS [Title], 
+      [tbl_fact_empperf_All].[Goal] AS [Goal], 
+      [tbl_fact_empperf_All].[Actual] AS [Actual], 
+      [tbl_fact_empperf_All].[PerctoGoal] AS [PerctoGoal], 
+      [tbl_fact_empperf_All].[NoofTasks] AS [NoofTasks]
+      FROM [dbo].[tbl_fact_empperf_All] AS [tbl_fact_empperf_All]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_fact_empperf_Daily" EntityType="AmpbidevModel.Store.tbl_fact_empperf_Daily" store:Type="Tables" store:Schema="dbo" store:Name="tbl_fact_empperf_Daily">
+      <DefiningQuery>SELECT 
+      [tbl_fact_empperf_Daily].[Tblid] AS [Tblid], 
+      [tbl_fact_empperf_Daily].[CompanyGUID] AS [CompanyGUID], 
+      [tbl_fact_empperf_Daily].[KPIMetricId] AS [KPIMetricId], 
+      [tbl_fact_empperf_Daily].[RecDate] AS [RecDate], 
+      [tbl_fact_empperf_Daily].[Email] AS [Email], 
+      [tbl_fact_empperf_Daily].[EmployeeNumber] AS [EmployeeNumber], 
+      [tbl_fact_empperf_Daily].[LastName] AS [LastName], 
+      [tbl_fact_empperf_Daily].[FirstName] AS [FirstName], 
+      [tbl_fact_empperf_Daily].[Title] AS [Title], 
+      [tbl_fact_empperf_Daily].[Goal] AS [Goal], 
+      [tbl_fact_empperf_Daily].[Actual] AS [Actual], 
+      [tbl_fact_empperf_Daily].[PerctoGoal] AS [PerctoGoal], 
+      [tbl_fact_empperf_Daily].[NoofTasks] AS [NoofTasks]
+      FROM [dbo].[tbl_fact_empperf_Daily] AS [tbl_fact_empperf_Daily]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_fact_empperf_Intraday" EntityType="AmpbidevModel.Store.tbl_fact_empperf_Intraday" store:Type="Tables" store:Schema="dbo" store:Name="tbl_fact_empperf_Intraday">
+      <DefiningQuery>SELECT 
+      [tbl_fact_empperf_Intraday].[Tblid] AS [Tblid], 
+      [tbl_fact_empperf_Intraday].[CompanyGUID] AS [CompanyGUID], 
+      [tbl_fact_empperf_Intraday].[KPIMetricId] AS [KPIMetricId], 
+      [tbl_fact_empperf_Intraday].[ReportDate] AS [ReportDate], 
+      [tbl_fact_empperf_Intraday].[ReportHour] AS [ReportHour], 
+      [tbl_fact_empperf_Intraday].[Email] AS [Email], 
+      [tbl_fact_empperf_Intraday].[EmployeeNumber] AS [EmployeeNumber], 
+      [tbl_fact_empperf_Intraday].[LastName] AS [LastName], 
+      [tbl_fact_empperf_Intraday].[FirstName] AS [FirstName], 
+      [tbl_fact_empperf_Intraday].[Title] AS [Title], 
+      [tbl_fact_empperf_Intraday].[Goal] AS [Goal], 
+      [tbl_fact_empperf_Intraday].[Actual] AS [Actual], 
+      [tbl_fact_empperf_Intraday].[PerctoGoal] AS [PerctoGoal], 
+      [tbl_fact_empperf_Intraday].[NoofTasks] AS [NoofTasks]
+      FROM [dbo].[tbl_fact_empperf_Intraday] AS [tbl_fact_empperf_Intraday]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_fact_empperf_Monthly" EntityType="AmpbidevModel.Store.tbl_fact_empperf_Monthly" store:Type="Tables" store:Schema="dbo" store:Name="tbl_fact_empperf_Monthly">
+      <DefiningQuery>SELECT 
+      [tbl_fact_empperf_Monthly].[Tblid] AS [Tblid], 
+      [tbl_fact_empperf_Monthly].[CompanyGUID] AS [CompanyGUID], 
+      [tbl_fact_empperf_Monthly].[KPIMetricId] AS [KPIMetricId], 
+      [tbl_fact_empperf_Monthly].[RecMonth] AS [RecMonth], 
+      [tbl_fact_empperf_Monthly].[RecYear] AS [RecYear], 
+      [tbl_fact_empperf_Monthly].[Email] AS [Email], 
+      [tbl_fact_empperf_Monthly].[EmployeeNumber] AS [EmployeeNumber], 
+      [tbl_fact_empperf_Monthly].[LastName] AS [LastName], 
+      [tbl_fact_empperf_Monthly].[FirstName] AS [FirstName], 
+      [tbl_fact_empperf_Monthly].[Title] AS [Title], 
+      [tbl_fact_empperf_Monthly].[Goal] AS [Goal], 
+      [tbl_fact_empperf_Monthly].[Actual] AS [Actual], 
+      [tbl_fact_empperf_Monthly].[PerctoGoal] AS [PerctoGoal], 
+      [tbl_fact_empperf_Monthly].[NoofTasks] AS [NoofTasks]
+      FROM [dbo].[tbl_fact_empperf_Monthly] AS [tbl_fact_empperf_Monthly]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_fact_empperf_weekly" EntityType="AmpbidevModel.Store.tbl_fact_empperf_weekly" store:Type="Tables" store:Schema="dbo" store:Name="tbl_fact_empperf_weekly">
+      <DefiningQuery>SELECT 
+      [tbl_fact_empperf_weekly].[Tblid] AS [Tblid], 
+      [tbl_fact_empperf_weekly].[CompanyGUID] AS [CompanyGUID], 
+      [tbl_fact_empperf_weekly].[KPIMetricId] AS [KPIMetricId], 
+      [tbl_fact_empperf_weekly].[RecWeekStartDate] AS [RecWeekStartDate], 
+      [tbl_fact_empperf_weekly].[RecMonth] AS [RecMonth], 
+      [tbl_fact_empperf_weekly].[RecYear] AS [RecYear], 
+      [tbl_fact_empperf_weekly].[Email] AS [Email], 
+      [tbl_fact_empperf_weekly].[EmployeeNumber] AS [EmployeeNumber], 
+      [tbl_fact_empperf_weekly].[LastName] AS [LastName], 
+      [tbl_fact_empperf_weekly].[FirstName] AS [FirstName], 
+      [tbl_fact_empperf_weekly].[Title] AS [Title], 
+      [tbl_fact_empperf_weekly].[Goal] AS [Goal], 
+      [tbl_fact_empperf_weekly].[Actual] AS [Actual], 
+      [tbl_fact_empperf_weekly].[PerctoGoal] AS [PerctoGoal], 
+      [tbl_fact_empperf_weekly].[NoofTasks] AS [NoofTasks]
+      FROM [dbo].[tbl_fact_empperf_weekly] AS [tbl_fact_empperf_weekly]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_FactCalls_All" EntityType="AmpbidevModel.Store.tbl_FactCalls_All" store:Type="Tables" store:Schema="dbo" store:Name="tbl_FactCalls_All">
+      <DefiningQuery>SELECT 
+      [tbl_FactCalls_All].[TblId] AS [TblId], 
+      [tbl_FactCalls_All].[CompanyGUID] AS [CompanyGUID], 
+      [tbl_FactCalls_All].[SourceReferenceId] AS [SourceReferenceId], 
+      [tbl_FactCalls_All].[ContactDate] AS [ContactDate], 
+      [tbl_FactCalls_All].[SourceTimeZone] AS [SourceTimeZone], 
+      [tbl_FactCalls_All].[ContactDate_Est] AS [ContactDate_Est], 
+      [tbl_FactCalls_All].[ContactDate_Cst] AS [ContactDate_Cst], 
+      [tbl_FactCalls_All].[ContactDate_Mst] AS [ContactDate_Mst], 
+      [tbl_FactCalls_All].[ContactDate_Pst] AS [ContactDate_Pst], 
+      [tbl_FactCalls_All].[RecordCreatedby] AS [RecordCreatedby], 
+      [tbl_FactCalls_All].[Dnis] AS [Dnis], 
+      [tbl_FactCalls_All].[DnisDescription] AS [DnisDescription], 
+      [tbl_FactCalls_All].[DispositionLevelID1] AS [DispositionLevelID1], 
+      [tbl_FactCalls_All].[DispositionLevel1] AS [DispositionLevel1], 
+      [tbl_FactCalls_All].[DispositionLevelID2] AS [DispositionLevelID2], 
+      [tbl_FactCalls_All].[DispositionLevel2] AS [DispositionLevel2], 
+      [tbl_FactCalls_All].[DispositionLevelID3] AS [DispositionLevelID3], 
+      [tbl_FactCalls_All].[DispositionLevel3] AS [DispositionLevel3], 
+      [tbl_FactCalls_All].[Dealershipdid] AS [Dealershipdid], 
+      [tbl_FactCalls_All].[DealerName] AS [DealerName], 
+      [tbl_FactCalls_All].[Marketid] AS [Marketid], 
+      [tbl_FactCalls_All].[MarketName] AS [MarketName], 
+      [tbl_FactCalls_All].[LoadDate] AS [LoadDate], 
+      [tbl_FactCalls_All].[IntraDayprocessed] AS [IntraDayprocessed], 
+      [tbl_FactCalls_All].[DailyProcessed] AS [DailyProcessed], 
+      [tbl_FactCalls_All].[WklyProcessed] AS [WklyProcessed], 
+      [tbl_FactCalls_All].[MlyProcessed] AS [MlyProcessed], 
+      [tbl_FactCalls_All].[DispositionLevelID4] AS [DispositionLevelID4], 
+      [tbl_FactCalls_All].[DispositionLevel4] AS [DispositionLevel4]
+      FROM [dbo].[tbl_FactCalls_All] AS [tbl_FactCalls_All]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_FactCalls_Daily" EntityType="AmpbidevModel.Store.tbl_FactCalls_Daily" store:Type="Tables" store:Schema="dbo" store:Name="tbl_FactCalls_Daily">
+      <DefiningQuery>SELECT 
+      [tbl_FactCalls_Daily].[TblId] AS [TblId], 
+      [tbl_FactCalls_Daily].[CompanyGUID] AS [CompanyGUID], 
+      [tbl_FactCalls_Daily].[SourceReferenceId] AS [SourceReferenceId], 
+      [tbl_FactCalls_Daily].[ReportDate] AS [ReportDate], 
+      [tbl_FactCalls_Daily].[Dnis] AS [Dnis], 
+      [tbl_FactCalls_Daily].[DnisDescription] AS [DnisDescription], 
+      [tbl_FactCalls_Daily].[DispositionLevelID1] AS [DispositionLevelID1], 
+      [tbl_FactCalls_Daily].[DispositionLevel1] AS [DispositionLevel1], 
+      [tbl_FactCalls_Daily].[DispositionLevelID2] AS [DispositionLevelID2], 
+      [tbl_FactCalls_Daily].[DispositionLevel2] AS [DispositionLevel2], 
+      [tbl_FactCalls_Daily].[DispositionLevelID3] AS [DispositionLevelID3], 
+      [tbl_FactCalls_Daily].[DispositionLevel3] AS [DispositionLevel3], 
+      [tbl_FactCalls_Daily].[Dealershipdid] AS [Dealershipdid], 
+      [tbl_FactCalls_Daily].[DealerName] AS [DealerName], 
+      [tbl_FactCalls_Daily].[Marketid] AS [Marketid], 
+      [tbl_FactCalls_Daily].[MarketName] AS [MarketName], 
+      [tbl_FactCalls_Daily].[DispositionLevelID4] AS [DispositionLevelID4], 
+      [tbl_FactCalls_Daily].[DispositionLevel4] AS [DispositionLevel4]
+      FROM [dbo].[tbl_FactCalls_Daily] AS [tbl_FactCalls_Daily]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_FactCalls_Intraday" EntityType="AmpbidevModel.Store.tbl_FactCalls_Intraday" store:Type="Tables" store:Schema="dbo" store:Name="tbl_FactCalls_Intraday">
+      <DefiningQuery>SELECT 
+      [tbl_FactCalls_Intraday].[TblId] AS [TblId], 
+      [tbl_FactCalls_Intraday].[CompanyGUID] AS [CompanyGUID], 
+      [tbl_FactCalls_Intraday].[ReportDate] AS [ReportDate], 
+      [tbl_FactCalls_Intraday].[RecHour] AS [RecHour], 
+      [tbl_FactCalls_Intraday].[DispositionLevelID1] AS [DispositionLevelID1], 
+      [tbl_FactCalls_Intraday].[DispositionLevel1] AS [DispositionLevel1], 
+      [tbl_FactCalls_Intraday].[DispositionLevelID2] AS [DispositionLevelID2], 
+      [tbl_FactCalls_Intraday].[DispositionLevel2] AS [DispositionLevel2], 
+      [tbl_FactCalls_Intraday].[DispositionLevelID3] AS [DispositionLevelID3], 
+      [tbl_FactCalls_Intraday].[DispositionLevel3] AS [DispositionLevel3], 
+      [tbl_FactCalls_Intraday].[DispositionLevelID4] AS [DispositionLevelID4], 
+      [tbl_FactCalls_Intraday].[DispositionLevel4] AS [DispositionLevel4], 
+      [tbl_FactCalls_Intraday].[Dealershipdid] AS [Dealershipdid], 
+      [tbl_FactCalls_Intraday].[DealerName] AS [DealerName], 
+      [tbl_FactCalls_Intraday].[Marketid] AS [Marketid], 
+      [tbl_FactCalls_Intraday].[MarketName] AS [MarketName]
+      FROM [dbo].[tbl_FactCalls_Intraday] AS [tbl_FactCalls_Intraday]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_FactCalls_Monthly" EntityType="AmpbidevModel.Store.tbl_FactCalls_Monthly" store:Type="Tables" store:Schema="dbo" store:Name="tbl_FactCalls_Monthly">
+      <DefiningQuery>SELECT 
+      [tbl_FactCalls_Monthly].[TblId] AS [TblId], 
+      [tbl_FactCalls_Monthly].[CompanyGUID] AS [CompanyGUID], 
+      [tbl_FactCalls_Monthly].[SourceReferenceId] AS [SourceReferenceId], 
+      [tbl_FactCalls_Monthly].[RecMonth] AS [RecMonth], 
+      [tbl_FactCalls_Monthly].[RecYear] AS [RecYear], 
+      [tbl_FactCalls_Monthly].[RecMnthYear] AS [RecMnthYear], 
+      [tbl_FactCalls_Monthly].[Dnis] AS [Dnis], 
+      [tbl_FactCalls_Monthly].[DnisDescription] AS [DnisDescription], 
+      [tbl_FactCalls_Monthly].[DispositionLevelID1] AS [DispositionLevelID1], 
+      [tbl_FactCalls_Monthly].[DispositionLevel1] AS [DispositionLevel1], 
+      [tbl_FactCalls_Monthly].[DispositionLevelID2] AS [DispositionLevelID2], 
+      [tbl_FactCalls_Monthly].[DispositionLevel2] AS [DispositionLevel2], 
+      [tbl_FactCalls_Monthly].[DispositionLevelID3] AS [DispositionLevelID3], 
+      [tbl_FactCalls_Monthly].[DispositionLevel3] AS [DispositionLevel3], 
+      [tbl_FactCalls_Monthly].[Dealershipdid] AS [Dealershipdid], 
+      [tbl_FactCalls_Monthly].[DealerName] AS [DealerName], 
+      [tbl_FactCalls_Monthly].[Marketid] AS [Marketid], 
+      [tbl_FactCalls_Monthly].[MarketName] AS [MarketName], 
+      [tbl_FactCalls_Monthly].[DispositionLevelID4] AS [DispositionLevelID4], 
+      [tbl_FactCalls_Monthly].[DispositionLevel4] AS [DispositionLevel4]
+      FROM [dbo].[tbl_FactCalls_Monthly] AS [tbl_FactCalls_Monthly]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_FactCalls_Weekly" EntityType="AmpbidevModel.Store.tbl_FactCalls_Weekly" store:Type="Tables" store:Schema="dbo" store:Name="tbl_FactCalls_Weekly">
+      <DefiningQuery>SELECT 
+      [tbl_FactCalls_Weekly].[TblId] AS [TblId], 
+      [tbl_FactCalls_Weekly].[CompanyGUID] AS [CompanyGUID], 
+      [tbl_FactCalls_Weekly].[RecWeekStartDate] AS [RecWeekStartDate], 
+      [tbl_FactCalls_Weekly].[RecMonth] AS [RecMonth], 
+      [tbl_FactCalls_Weekly].[RecYear] AS [RecYear], 
+      [tbl_FactCalls_Weekly].[DispositionLevelID1] AS [DispositionLevelID1], 
+      [tbl_FactCalls_Weekly].[DispositionLevel1] AS [DispositionLevel1], 
+      [tbl_FactCalls_Weekly].[DispositionLevelID2] AS [DispositionLevelID2], 
+      [tbl_FactCalls_Weekly].[DispositionLevel2] AS [DispositionLevel2], 
+      [tbl_FactCalls_Weekly].[DispositionLevelID3] AS [DispositionLevelID3], 
+      [tbl_FactCalls_Weekly].[DispositionLevel3] AS [DispositionLevel3], 
+      [tbl_FactCalls_Weekly].[DispositionLevelID4] AS [DispositionLevelID4], 
+      [tbl_FactCalls_Weekly].[DispositionLevel4] AS [DispositionLevel4], 
+      [tbl_FactCalls_Weekly].[Dealershipdid] AS [Dealershipdid], 
+      [tbl_FactCalls_Weekly].[DealerName] AS [DealerName], 
+      [tbl_FactCalls_Weekly].[Marketid] AS [Marketid], 
+      [tbl_FactCalls_Weekly].[MarketName] AS [MarketName]
+      FROM [dbo].[tbl_FactCalls_Weekly] AS [tbl_FactCalls_Weekly]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_KPIMetric" EntityType="AmpbidevModel.Store.tbl_KPIMetric" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_KPIMetricGoal" EntityType="AmpbidevModel.Store.tbl_KPIMetricGoal" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_LicenceInfo" EntityType="AmpbidevModel.Store.tbl_LicenceInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_LicenceInfo_hist" EntityType="AmpbidevModel.Store.tbl_LicenceInfo_hist" store:Type="Tables" store:Schema="dbo" store:Name="tbl_LicenceInfo_hist">
+      <DefiningQuery>SELECT 
+      [tbl_LicenceInfo_hist].[Licencehistseq] AS [Licencehistseq], 
+      [tbl_LicenceInfo_hist].[Licenceseq] AS [Licenceseq], 
+      [tbl_LicenceInfo_hist].[LicenceKey] AS [LicenceKey], 
+      [tbl_LicenceInfo_hist].[CompanyGUID] AS [CompanyGUID], 
+      [tbl_LicenceInfo_hist].[StartDate] AS [StartDate], 
+      [tbl_LicenceInfo_hist].[ValidFromDate] AS [ValidFromDate], 
+      [tbl_LicenceInfo_hist].[ValidToDate] AS [ValidToDate], 
+      [tbl_LicenceInfo_hist].[AssignedTo] AS [AssignedTo], 
+      [tbl_LicenceInfo_hist].[Trial] AS [Trial], 
+      [tbl_LicenceInfo_hist].[TrialStartDate] AS [TrialStartDate], 
+      [tbl_LicenceInfo_hist].[TrialEndDate] AS [TrialEndDate]
+      FROM [dbo].[tbl_LicenceInfo_hist] AS [tbl_LicenceInfo_hist]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_licencemoduleInfo" EntityType="AmpbidevModel.Store.tbl_licencemoduleInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_licencemoduleInfo_hist" EntityType="AmpbidevModel.Store.tbl_licencemoduleInfo_hist" store:Type="Tables" store:Schema="dbo" store:Name="tbl_licencemoduleInfo_hist">
+      <DefiningQuery>SELECT 
+      [tbl_licencemoduleInfo_hist].[LicencemoduleseqHistid] AS [LicencemoduleseqHistid], 
+      [tbl_licencemoduleInfo_hist].[Licencemoduleseq] AS [Licencemoduleseq], 
+      [tbl_licencemoduleInfo_hist].[Licencekey] AS [Licencekey], 
+      [tbl_licencemoduleInfo_hist].[CompanyGUID] AS [CompanyGUID], 
+      [tbl_licencemoduleInfo_hist].[Moduleid] AS [Moduleid], 
+      [tbl_licencemoduleInfo_hist].[Active] AS [Active]
+      FROM [dbo].[tbl_licencemoduleInfo_hist] AS [tbl_licencemoduleInfo_hist]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_noofchartsbydbcompany" EntityType="AmpbidevModel.Store.tbl_noofchartsbydbcompany" store:Type="Tables" store:Schema="dbo" store:Name="tbl_noofchartsbydbcompany">
+      <DefiningQuery>SELECT 
+      [tbl_noofchartsbydbcompany].[tblseq] AS [tblseq], 
+      [tbl_noofchartsbydbcompany].[Modulename] AS [Modulename], 
+      [tbl_noofchartsbydbcompany].[NoOfCharts] AS [NoOfCharts], 
+      [tbl_noofchartsbydbcompany].[isactive] AS [isactive], 
+      [tbl_noofchartsbydbcompany].[companyGUID] AS [companyGUID], 
+      [tbl_noofchartsbydbcompany].[ChartDisplayName] AS [ChartDisplayName]
+      FROM [dbo].[tbl_noofchartsbydbcompany] AS [tbl_noofchartsbydbcompany]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_qaperfdata_Daily" EntityType="AmpbidevModel.Store.tbl_qaperfdata_Daily" store:Type="Tables" store:Schema="dbo" store:Name="tbl_qaperfdata_Daily">
+      <DefiningQuery>SELECT 
+      [tbl_qaperfdata_Daily].[tblid] AS [tblid], 
+      [tbl_qaperfdata_Daily].[companyguid] AS [companyguid], 
+      [tbl_qaperfdata_Daily].[question] AS [question], 
+      [tbl_qaperfdata_Daily].[EmployeeNumber] AS [EmployeeNumber], 
+      [tbl_qaperfdata_Daily].[Recdate] AS [Recdate], 
+      [tbl_qaperfdata_Daily].[Score] AS [Score], 
+      [tbl_qaperfdata_Daily].[employeename] AS [employeename]
+      FROM [dbo].[tbl_qaperfdata_Daily] AS [tbl_qaperfdata_Daily]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_qaperfdata_Intraday" EntityType="AmpbidevModel.Store.tbl_qaperfdata_Intraday" store:Type="Tables" store:Schema="dbo" store:Name="tbl_qaperfdata_Intraday">
+      <DefiningQuery>SELECT 
+      [tbl_qaperfdata_Intraday].[tblid] AS [tblid], 
+      [tbl_qaperfdata_Intraday].[companyguid] AS [companyguid], 
+      [tbl_qaperfdata_Intraday].[question] AS [question], 
+      [tbl_qaperfdata_Intraday].[EmployeeNumber] AS [EmployeeNumber], 
+      [tbl_qaperfdata_Intraday].[RecDate] AS [RecDate], 
+      [tbl_qaperfdata_Intraday].[RecHour] AS [RecHour], 
+      [tbl_qaperfdata_Intraday].[Score] AS [Score], 
+      [tbl_qaperfdata_Intraday].[employeename] AS [employeename]
+      FROM [dbo].[tbl_qaperfdata_Intraday] AS [tbl_qaperfdata_Intraday]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_qaperfdata_Monthly" EntityType="AmpbidevModel.Store.tbl_qaperfdata_Monthly" store:Type="Tables" store:Schema="dbo" store:Name="tbl_qaperfdata_Monthly">
+      <DefiningQuery>SELECT 
+      [tbl_qaperfdata_Monthly].[tblid] AS [tblid], 
+      [tbl_qaperfdata_Monthly].[companyguid] AS [companyguid], 
+      [tbl_qaperfdata_Monthly].[question] AS [question], 
+      [tbl_qaperfdata_Monthly].[EmployeeNumber] AS [EmployeeNumber], 
+      [tbl_qaperfdata_Monthly].[RecMonth] AS [RecMonth], 
+      [tbl_qaperfdata_Monthly].[Recyear] AS [Recyear], 
+      [tbl_qaperfdata_Monthly].[Recdate] AS [Recdate], 
+      [tbl_qaperfdata_Monthly].[Score] AS [Score], 
+      [tbl_qaperfdata_Monthly].[employeename] AS [employeename]
+      FROM [dbo].[tbl_qaperfdata_Monthly] AS [tbl_qaperfdata_Monthly]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_qaperfdata_Weekly" EntityType="AmpbidevModel.Store.tbl_qaperfdata_Weekly" store:Type="Tables" store:Schema="dbo" store:Name="tbl_qaperfdata_Weekly">
+      <DefiningQuery>SELECT 
+      [tbl_qaperfdata_Weekly].[tblid] AS [tblid], 
+      [tbl_qaperfdata_Weekly].[companyguid] AS [companyguid], 
+      [tbl_qaperfdata_Weekly].[question] AS [question], 
+      [tbl_qaperfdata_Weekly].[EmployeeNumber] AS [EmployeeNumber], 
+      [tbl_qaperfdata_Weekly].[RecWkStartDate] AS [RecWkStartDate], 
+      [tbl_qaperfdata_Weekly].[RecMonth] AS [RecMonth], 
+      [tbl_qaperfdata_Weekly].[RecYear] AS [RecYear], 
+      [tbl_qaperfdata_Weekly].[Score] AS [Score], 
+      [tbl_qaperfdata_Weekly].[employeename] AS [employeename]
+      FROM [dbo].[tbl_qaperfdata_Weekly] AS [tbl_qaperfdata_Weekly]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_selchartdispname" EntityType="AmpbidevModel.Store.tbl_selchartdispname" store:Type="Tables" store:Schema="dbo" store:Name="tbl_selchartdispname">
+      <DefiningQuery>SELECT 
+      [tbl_selchartdispname].[selchartdispnameseq] AS [selchartdispnameseq], 
+      [tbl_selchartdispname].[tblseq] AS [tblseq], 
+      [tbl_selchartdispname].[Chart1name] AS [Chart1name], 
+      [tbl_selchartdispname].[Chart2name] AS [Chart2name], 
+      [tbl_selchartdispname].[Chart3name] AS [Chart3name], 
+      [tbl_selchartdispname].[Chart4name] AS [Chart4name]
+      FROM [dbo].[tbl_selchartdispname] AS [tbl_selchartdispname]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_User" EntityType="AmpbidevModel.Store.tbl_User" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_User_hist" EntityType="AmpbidevModel.Store.tbl_User_hist" store:Type="Tables" store:Schema="dbo" store:Name="tbl_User_hist">
+      <DefiningQuery>SELECT 
+      [tbl_User_hist].[UserSeq] AS [UserSeq], 
+      [tbl_User_hist].[Email] AS [Email], 
+      [tbl_User_hist].[FirstName] AS [FirstName], 
+      [tbl_User_hist].[LastName] AS [LastName], 
+      [tbl_User_hist].[Password] AS [Password], 
+      [tbl_User_hist].[UserStatus] AS [UserStatus], 
+      [tbl_User_hist].[UserType] AS [UserType], 
+      [tbl_User_hist].[CompanyGuid] AS [CompanyGuid], 
+      [tbl_User_hist].[SecretQuestion1] AS [SecretQuestion1], 
+      [tbl_User_hist].[SecretAnswer1] AS [SecretAnswer1], 
+      [tbl_User_hist].[SecretQuestion2] AS [SecretQuestion2], 
+      [tbl_User_hist].[SecretAnswer2] AS [SecretAnswer2], 
+      [tbl_User_hist].[SecretQuestion3] AS [SecretQuestion3], 
+      [tbl_User_hist].[SecretAnswer3] AS [SecretAnswer3], 
+      [tbl_User_hist].[PasswordUpdatedDate] AS [PasswordUpdatedDate], 
+      [tbl_User_hist].[SecurityQuestionSet] AS [SecurityQuestionSet], 
+      [tbl_User_hist].[FstTimeLogin] AS [FstTimeLogin], 
+      [tbl_User_hist].[searchfield] AS [searchfield], 
+      [tbl_User_hist].[InternalExternalAccess] AS [InternalExternalAccess]
+      FROM [dbo].[tbl_User_hist] AS [tbl_User_hist]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_UserRegistration" EntityType="AmpbidevModel.Store.tbl_UserRegistration" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_UserRegistration_hist" EntityType="AmpbidevModel.Store.tbl_UserRegistration_hist" store:Type="Tables" store:Schema="dbo" store:Name="tbl_UserRegistration_hist">
+      <DefiningQuery>SELECT 
+      [tbl_UserRegistration_hist].[USRSeq] AS [USRSeq], 
+      [tbl_UserRegistration_hist].[Email] AS [Email], 
+      [tbl_UserRegistration_hist].[FirstName] AS [FirstName], 
+      [tbl_UserRegistration_hist].[LastName] AS [LastName], 
+      [tbl_UserRegistration_hist].[Password] AS [Password], 
+      [tbl_UserRegistration_hist].[CompanyName] AS [CompanyName], 
+      [tbl_UserRegistration_hist].[CompanyGUID] AS [CompanyGUID], 
+      [tbl_UserRegistration_hist].[Logo] AS [Logo], 
+      [tbl_UserRegistration_hist].[Address1] AS [Address1], 
+      [tbl_UserRegistration_hist].[Address2] AS [Address2], 
+      [tbl_UserRegistration_hist].[City] AS [City], 
+      [tbl_UserRegistration_hist].[State] AS [State], 
+      [tbl_UserRegistration_hist].[Zip] AS [Zip], 
+      [tbl_UserRegistration_hist].[ContactPhone] AS [ContactPhone], 
+      [tbl_UserRegistration_hist].[PrefferedContactMethod] AS [PrefferedContactMethod], 
+      [tbl_UserRegistration_hist].[NoOfEmployee] AS [NoOfEmployee], 
+      [tbl_UserRegistration_hist].[NoOfLicence] AS [NoOfLicence], 
+      [tbl_UserRegistration_hist].[CreatedDate] AS [CreatedDate], 
+      [tbl_UserRegistration_hist].[RecordStatus] AS [RecordStatus]
+      FROM [dbo].[tbl_UserRegistration_hist] AS [tbl_UserRegistration_hist]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_UserRegistrationFollowup" EntityType="AmpbidevModel.Store.tbl_UserRegistrationFollowup" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_UserRegistrationFollowup_hist" EntityType="AmpbidevModel.Store.tbl_UserRegistrationFollowup_hist" store:Type="Tables" store:Schema="dbo" store:Name="tbl_UserRegistrationFollowup_hist">
+      <DefiningQuery>SELECT 
+      [tbl_UserRegistrationFollowup_hist].[USRFLWPHistSeq] AS [USRFLWPHistSeq], 
+      [tbl_UserRegistrationFollowup_hist].[USRFLWPSeq] AS [USRFLWPSeq], 
+      [tbl_UserRegistrationFollowup_hist].[USRSeq] AS [USRSeq], 
+      [tbl_UserRegistrationFollowup_hist].[CompanyGUID] AS [CompanyGUID], 
+      [tbl_UserRegistrationFollowup_hist].[ContactDate] AS [ContactDate], 
+      [tbl_UserRegistrationFollowup_hist].[Notes] AS [Notes], 
+      [tbl_UserRegistrationFollowup_hist].[ContactedBy] AS [ContactedBy], 
+      [tbl_UserRegistrationFollowup_hist].[Contactedon] AS [Contactedon], 
+      [tbl_UserRegistrationFollowup_hist].[OutCome] AS [OutCome]
+      FROM [dbo].[tbl_UserRegistrationFollowup_hist] AS [tbl_UserRegistrationFollowup_hist]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.DIM_EMPLOYEE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="DIM_EMPLOYEE">
+    <Key>
+      <PropertyRef Name="Empid" />
+      <PropertyRef Name="Employeenumber" />
+    </Key>
+    <Property Name="Empid" Type="int" Nullable="false" />
+    <Property Name="Employeenumber" Type="float" Nullable="false" />
+    <Property Name="LocationName" Type="varchar" MaxLength="100" />
+    <Property Name="Startdate" Type="datetime" />
+    <Property Name="EmployeeName" Type="nvarchar" MaxLength="255" />
+    <Property Name="employeeFirstname" Type="nvarchar" MaxLength="100" />
+    <Property Name="employeeLastname" Type="nvarchar" MaxLength="100" />
+    <Property Name="mgr_lev1_id" Type="int" />
+    <Property Name="mgr_lev2_id" Type="int" />
+    <Property Name="mgr_lev3_id" Type="int" />
+    <Property Name="mgr_lev4_id" Type="int" />
+    <Property Name="mgr_lev5_id" Type="int" />
+    <Property Name="mgr_lev1_name" Type="nvarchar" MaxLength="255" />
+    <Property Name="mgr_lev2_name" Type="nvarchar" MaxLength="255" />
+    <Property Name="mgr_lev3_name" Type="nvarchar" MaxLength="255" />
+    <Property Name="mgr_lev4_name" Type="nvarchar" MaxLength="255" />
+    <Property Name="mgr_lev5_name" Type="nvarchar" MaxLength="255" />
+    <Property Name="project_number" Type="int" />
+    <Property Name="job_id" Type="int" />
+    <Property Name="Employeetitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="employee_type" Type="nvarchar" MaxLength="255" />
+    <Property Name="assignment_status" Type="nvarchar" MaxLength="255" />
+    <Property Name="hire_date" Type="datetime" />
+    <Property Name="term_date" Type="nvarchar" MaxLength="255" />
+    <Property Name="leaving_code" Type="nvarchar" MaxLength="255" />
+    <Property Name="leaving_reason" Type="nvarchar" MaxLength="255" />
+    <Property Name="employee_code" Type="varchar" MaxLength="250" />
+    <Property Name="companyGUID" Type="nvarchar" MaxLength="100" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.QA_Data_SummaryTable' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="QA_Data_SummaryTable">
+    <Key>
+      <PropertyRef Name="RowId" />
+    </Key>
+    <Property Name="RowId" Type="int" Nullable="false" />
+    <Property Name="TenantId" Type="int" />
+    <Property Name="Period" Type="varchar" MaxLength="50" />
+    <Property Name="Date" Type="smalldatetime" />
+    <Property Name="Manager_Level_Id" Type="int" />
+    <Property Name="employee_name" Type="nvarchar" MaxLength="511" />
+    <Property Name="Offset" Type="int" />
+    <Property Name="ScoreValue" Type="varchar" MaxLength="500" />
+    <Property Name="AgentId" Type="int" />
+    <Property Name="QuestionId" Type="int" />
+    <Property Name="Question" Type="nvarchar" MaxLength="500" />
+    <Property Name="Filter" Type="varchar" MaxLength="50" />
+    <Property Name="companyguid" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ref_LookupValues">
+    <Key>
+      <PropertyRef Name="Lkpseqid" />
+    </Key>
+    <Property Name="Lkpseqid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Modulename" Type="varchar" MaxLength="50" />
+    <Property Name="Columnname" Type="varchar" MaxLength="50" />
+    <Property Name="ActualValue" Type="varchar" MaxLength="50" />
+    <Property Name="active" Type="bit" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="Createdby" Type="varchar" MaxLength="25" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="Updatedby" Type="varchar" MaxLength="25" />
+    <Property Name="Updatedon" Type="datetime" />
+    <Property Name="Genericvarchar1" Type="varchar" MaxLength="100" />
+    <Property Name="Genericvarchar2" Type="varchar" MaxLength="100" />
+    <Property Name="Genericvarchar3" Type="varchar" MaxLength="100" />
+    <Property Name="GenericDate1" Type="datetime" />
+    <Property Name="GenericDate2" Type="datetime" />
+    <Property Name="GenericDate3" Type="datetime" />
+    <Property Name="Genericbit1" Type="bit" />
+    <Property Name="Genericbit2" Type="bit" />
+    <Property Name="Genericbit3" Type="bit" />
+    <Property Name="GenericNumeric1" Type="numeric" Precision="10" />
+    <Property Name="GenericNumeric2" Type="numeric" Precision="10" />
+    <Property Name="GenericNumeric3" Type="numeric" Precision="10" />
+    <Property Name="displayorder" Type="int" />
+    <Property Name="finalaction" Type="bit" />
+    <Property Name="WriteRecord" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.ref_LookupValues_Hist' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ref_LookupValues_Hist">
+    <Key>
+      <PropertyRef Name="Lkphistseqid" />
+      <PropertyRef Name="Lkpseqid" />
+    </Key>
+    <Property Name="Lkphistseqid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Lkpseqid" Type="int" Nullable="false" />
+    <Property Name="Modulename" Type="varchar" MaxLength="50" />
+    <Property Name="Columnname" Type="varchar" MaxLength="50" />
+    <Property Name="ActualValue" Type="varchar" MaxLength="50" />
+    <Property Name="active" Type="bit" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="Createdby" Type="varchar" MaxLength="25" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="Updatedby" Type="varchar" MaxLength="25" />
+    <Property Name="Updatedon" Type="datetime" />
+    <Property Name="Genericvarchar1" Type="varchar" MaxLength="100" />
+    <Property Name="Genericvarchar2" Type="varchar" MaxLength="100" />
+    <Property Name="Genericvarchar3" Type="varchar" MaxLength="100" />
+    <Property Name="GenericDate1" Type="datetime" />
+    <Property Name="GenericDate2" Type="datetime" />
+    <Property Name="GenericDate3" Type="datetime" />
+    <Property Name="Genericbit1" Type="bit" />
+    <Property Name="Genericbit2" Type="bit" />
+    <Property Name="Genericbit3" Type="bit" />
+    <Property Name="GenericNumeric1" Type="numeric" Precision="10" />
+    <Property Name="GenericNumeric2" Type="numeric" Precision="10" />
+    <Property Name="GenericNumeric3" Type="numeric" Precision="10" />
+    <Property Name="displayorder" Type="int" />
+    <Property Name="finalaction" Type="bit" />
+    <Property Name="WriteRecord" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.ref_Modules' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ref_Modules">
+    <Key>
+      <PropertyRef Name="Moduleid" />
+    </Key>
+    <Property Name="Moduleid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ModuleName" Type="varchar" MaxLength="100" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="DisplayOrder" Type="int" />
+    <Property Name="DefaultModule" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.ref_Modules_hist' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ref_Modules_hist">
+    <Key>
+      <PropertyRef Name="ModuleHistid" />
+    </Key>
+    <Property Name="ModuleHistid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Moduleid" Type="int" />
+    <Property Name="ModuleName" Type="varchar" MaxLength="100" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="DisplayOrder" Type="int" />
+    <Property Name="defaultmodule" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.ref_SecretQuestion' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ref_SecretQuestion">
+    <Key>
+      <PropertyRef Name="SecSeq" />
+    </Key>
+    <Property Name="SecSeq" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SecretQuestion" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.ref_SecretQuestion_hist' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ref_SecretQuestion_hist">
+    <Key>
+      <PropertyRef Name="SecSeq" />
+    </Key>
+    <Property Name="SecSeq" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SecretQuestion" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.ref_UserType' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ref_UserType">
+    <Key>
+      <PropertyRef Name="UserTypeID" />
+      <PropertyRef Name="UserTypeName" />
+    </Key>
+    <Property Name="UserTypeID" Type="int" Nullable="false" />
+    <Property Name="UserTypeName" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.ref_UserType_hist' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ref_UserType_hist">
+    <Key>
+      <PropertyRef Name="UserTypeID" />
+      <PropertyRef Name="UserTypeName" />
+    </Key>
+    <Property Name="UserTypeID" Type="int" Nullable="false" />
+    <Property Name="UserTypeName" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="statelist">
+    <Key>
+      <PropertyRef Name="statecode" />
+    </Key>
+    <Property Name="statecode" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="statename" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="25" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="Updatedby" Type="varchar" MaxLength="25" />
+    <Property Name="Updatedon" Type="datetime" />
+    <Property Name="active" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.statelist_hist' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="statelist_hist">
+    <Key>
+      <PropertyRef Name="Statecodehistid" />
+    </Key>
+    <Property Name="Statecodehistid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="statecode" Type="varchar" MaxLength="2" />
+    <Property Name="statename" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="25" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="Updatedby" Type="varchar" MaxLength="25" />
+    <Property Name="Updatedon" Type="datetime" />
+    <Property Name="active" Type="bit" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="tbl_Company">
+    <Key>
+      <PropertyRef Name="CompanySeq" />
+    </Key>
+    <Property Name="CompanySeq" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="nvarchar" MaxLength="100" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="500" />
+    <Property Name="ContactName" Type="varchar" MaxLength="200" />
+    <Property Name="ContactPhone" Type="varchar" MaxLength="10" />
+    <Property Name="Address1" Type="varchar" MaxLength="500" />
+    <Property Name="Address2" Type="varchar" MaxLength="500" />
+    <Property Name="City" Type="varchar" MaxLength="200" />
+    <Property Name="State" Type="varchar" MaxLength="200" />
+    <Property Name="Zip" Type="int" />
+    <Property Name="NoofEmployee" Type="int" />
+    <Property Name="NoofLicence" Type="int" />
+    <Property Name="TrialStartDate" Type="date" />
+    <Property Name="TrialEndDate" Type="date" />
+    <Property Name="CreatedDate" Type="date" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="200" />
+    <Property Name="UpdatedDate" Type="date" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="200" />
+    <Property Name="PrefferedContactMethod" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.tbl_Company_hist' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tbl_Company_hist">
+    <Key>
+      <PropertyRef Name="CompanyHistSeq" />
+      <PropertyRef Name="CompanySeq" />
+    </Key>
+    <Property Name="CompanyHistSeq" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CompanySeq" Type="int" Nullable="false" />
+    <Property Name="CompanyGUID" Type="nvarchar" MaxLength="100" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="500" />
+    <Property Name="ContactName" Type="varchar" MaxLength="200" />
+    <Property Name="ContactPhone" Type="varchar" MaxLength="10" />
+    <Property Name="Address1" Type="varchar" MaxLength="500" />
+    <Property Name="Address2" Type="varchar" MaxLength="500" />
+    <Property Name="City" Type="varchar" MaxLength="200" />
+    <Property Name="State" Type="varchar" MaxLength="200" />
+    <Property Name="Zip" Type="int" />
+    <Property Name="NoofEmployee" Type="int" />
+    <Property Name="NoofLicence" Type="int" />
+    <Property Name="TrialStartDate" Type="date" />
+    <Property Name="TrialEndDate" Type="date" />
+    <Property Name="CreatedDate" Type="date" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="200" />
+    <Property Name="UpdatedDate" Type="date" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="200" />
+    <Property Name="PrefferedContactMethod" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.tbl_CompanyChartInfo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tbl_CompanyChartInfo">
+    <Key>
+      <PropertyRef Name="cciseq" />
+      <PropertyRef Name="CompanyGUID" />
+      <PropertyRef Name="ModuleID" />
+    </Key>
+    <Property Name="cciseq" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="nvarchar" Nullable="false" MaxLength="70" />
+    <Property Name="ModuleID" Type="int" Nullable="false" />
+    <Property Name="Chart1" Type="bit" />
+    <Property Name="Chart1Name" Type="varchar" MaxLength="100" />
+    <Property Name="Chart2" Type="bit" />
+    <Property Name="Chart2Name" Type="varchar" MaxLength="100" />
+    <Property Name="Chart3" Type="bit" />
+    <Property Name="Chart3Name" Type="varchar" MaxLength="100" />
+    <Property Name="Chart4" Type="bit" />
+    <Property Name="Chart4Name" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tbl_companymodule">
+    <Key>
+      <PropertyRef Name="companymoduleid" />
+    </Key>
+    <Property Name="companymoduleid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="nvarchar" MaxLength="100" />
+    <Property Name="moduleid" Type="int" />
+    <Property Name="DisplayName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.tbl_companymodule_hist' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tbl_companymodule_hist">
+    <Key>
+      <PropertyRef Name="companymodulehistid" />
+    </Key>
+    <Property Name="companymodulehistid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="companymoduleid" Type="int" />
+    <Property Name="CompanyGUID" Type="nvarchar" MaxLength="100" />
+    <Property Name="moduleid" Type="int" />
+    <Property Name="DisplayName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.tbl_empperfdata' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tbl_empperfdata">
+    <Key>
+      <PropertyRef Name="CompanyGUID" />
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="CompanyGUID" Type="varchar" Nullable="false" MaxLength="36" />
+    <Property Name="AgentID" Type="int" />
+    <Property Name="MetricName" Type="varchar" MaxLength="50" />
+    <Property Name="value" Type="varchar" MaxLength="500" />
+    <Property Name="goal" Type="varchar" MaxLength="500" />
+    <Property Name="PercentageToGoal" Type="varchar" MaxLength="500" />
+    <Property Name="Period" Type="varchar" MaxLength="50" />
+    <Property Name="Current_Date" Type="date" />
+    <Property Name="Offset" Type="int" />
+    <Property Name="Tenure" Type="varchar" MaxLength="50" />
+    <Property Name="Manager_Level_Id" Type="int" />
+    <Property Name="emp_last_name" Type="varchar" MaxLength="100" />
+    <Property Name="emp_first_name" Type="nvarchar" MaxLength="255" />
+    <Property Name="RowID" Type="int" Nullable="false" />
+    <Property Name="employee_name" Type="nvarchar" MaxLength="511" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.tbl_fact_empperf_All' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tbl_fact_empperf_All">
+    <Key>
+      <PropertyRef Name="Tblid" />
+      <PropertyRef Name="KPIMetricId" />
+    </Key>
+    <Property Name="Tblid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="nvarchar" MaxLength="100" />
+    <Property Name="KPIMetricId" Type="int" Nullable="false" />
+    <Property Name="ReportDate" Type="datetime" />
+    <Property Name="Email" Type="varchar" MaxLength="200" />
+    <Property Name="EmployeeNumber" Type="int" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="100" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Goal" Type="int" />
+    <Property Name="Actual" Type="int" />
+    <Property Name="PerctoGoal" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="NoofTasks" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.tbl_fact_empperf_Daily' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tbl_fact_empperf_Daily">
+    <Key>
+      <PropertyRef Name="Tblid" />
+      <PropertyRef Name="KPIMetricId" />
+    </Key>
+    <Property Name="Tblid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="nvarchar" MaxLength="100" />
+    <Property Name="KPIMetricId" Type="int" Nullable="false" />
+    <Property Name="RecDate" Type="datetime" />
+    <Property Name="Email" Type="varchar" MaxLength="200" />
+    <Property Name="EmployeeNumber" Type="int" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="100" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Goal" Type="int" />
+    <Property Name="Actual" Type="int" />
+    <Property Name="PerctoGoal" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="NoofTasks" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.tbl_fact_empperf_Intraday' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tbl_fact_empperf_Intraday">
+    <Key>
+      <PropertyRef Name="Tblid" />
+      <PropertyRef Name="KPIMetricId" />
+    </Key>
+    <Property Name="Tblid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="nvarchar" MaxLength="100" />
+    <Property Name="KPIMetricId" Type="int" Nullable="false" />
+    <Property Name="ReportDate" Type="datetime" />
+    <Property Name="ReportHour" Type="varchar" MaxLength="4" />
+    <Property Name="Email" Type="varchar" MaxLength="200" />
+    <Property Name="EmployeeNumber" Type="int" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="100" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Goal" Type="int" />
+    <Property Name="Actual" Type="int" />
+    <Property Name="PerctoGoal" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="NoofTasks" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.tbl_fact_empperf_Monthly' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tbl_fact_empperf_Monthly">
+    <Key>
+      <PropertyRef Name="Tblid" />
+      <PropertyRef Name="KPIMetricId" />
+    </Key>
+    <Property Name="Tblid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="nvarchar" MaxLength="100" />
+    <Property Name="KPIMetricId" Type="int" Nullable="false" />
+    <Property Name="RecMonth" Type="numeric" Precision="4" />
+    <Property Name="RecYear" Type="varchar" MaxLength="6" />
+    <Property Name="Email" Type="varchar" MaxLength="200" />
+    <Property Name="EmployeeNumber" Type="int" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="100" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Goal" Type="int" />
+    <Property Name="Actual" Type="int" />
+    <Property Name="PerctoGoal" Type="varchar" MaxLength="50" />
+    <Property Name="NoofTasks" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.tbl_fact_empperf_weekly' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tbl_fact_empperf_weekly">
+    <Key>
+      <PropertyRef Name="Tblid" />
+      <PropertyRef Name="KPIMetricId" />
+    </Key>
+    <Property Name="Tblid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="nvarchar" MaxLength="100" />
+    <Property Name="KPIMetricId" Type="int" Nullable="false" />
+    <Property Name="RecWeekStartDate" Type="datetime" />
+    <Property Name="RecMonth" Type="numeric" Precision="4" />
+    <Property Name="RecYear" Type="varchar" MaxLength="6" />
+    <Property Name="Email" Type="varchar" MaxLength="200" />
+    <Property Name="EmployeeNumber" Type="int" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="100" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Goal" Type="int" />
+    <Property Name="Actual" Type="int" />
+    <Property Name="PerctoGoal" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="NoofTasks" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.tbl_FactCalls_All' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tbl_FactCalls_All">
+    <Key>
+      <PropertyRef Name="TblId" />
+    </Key>
+    <Property Name="TblId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="nvarchar" MaxLength="200" />
+    <Property Name="SourceReferenceId" Type="int" />
+    <Property Name="ContactDate" Type="datetime" />
+    <Property Name="SourceTimeZone" Type="varchar" MaxLength="3" />
+    <Property Name="ContactDate_Est" Type="datetime" />
+    <Property Name="ContactDate_Cst" Type="datetime" />
+    <Property Name="ContactDate_Mst" Type="datetime" />
+    <Property Name="ContactDate_Pst" Type="datetime" />
+    <Property Name="RecordCreatedby" Type="varchar" MaxLength="100" />
+    <Property Name="Dnis" Type="varchar" MaxLength="20" />
+    <Property Name="DnisDescription" Type="varchar" MaxLength="100" />
+    <Property Name="DispositionLevelID1" Type="int" />
+    <Property Name="DispositionLevel1" Type="varchar" MaxLength="100" />
+    <Property Name="DispositionLevelID2" Type="int" />
+    <Property Name="DispositionLevel2" Type="varchar" MaxLength="100" />
+    <Property Name="DispositionLevelID3" Type="int" />
+    <Property Name="DispositionLevel3" Type="varchar" MaxLength="100" />
+    <Property Name="Dealershipdid" Type="int" />
+    <Property Name="DealerName" Type="varchar" MaxLength="100" />
+    <Property Name="Marketid" Type="int" />
+    <Property Name="MarketName" Type="varchar" MaxLength="100" />
+    <Property Name="LoadDate" Type="datetime" />
+    <Property Name="IntraDayprocessed" Type="bit" />
+    <Property Name="DailyProcessed" Type="bit" />
+    <Property Name="WklyProcessed" Type="bit" />
+    <Property Name="MlyProcessed" Type="bit" />
+    <Property Name="DispositionLevelID4" Type="int" />
+    <Property Name="DispositionLevel4" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.tbl_FactCalls_Daily' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tbl_FactCalls_Daily">
+    <Key>
+      <PropertyRef Name="TblId" />
+    </Key>
+    <Property Name="TblId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="nvarchar" MaxLength="200" />
+    <Property Name="SourceReferenceId" Type="int" />
+    <Property Name="ReportDate" Type="datetime" />
+    <Property Name="Dnis" Type="varchar" MaxLength="20" />
+    <Property Name="DnisDescription" Type="varchar" MaxLength="100" />
+    <Property Name="DispositionLevelID1" Type="int" />
+    <Property Name="DispositionLevel1" Type="varchar" MaxLength="100" />
+    <Property Name="DispositionLevelID2" Type="int" />
+    <Property Name="DispositionLevel2" Type="varchar" MaxLength="100" />
+    <Property Name="DispositionLevelID3" Type="int" />
+    <Property Name="DispositionLevel3" Type="varchar" MaxLength="100" />
+    <Property Name="Dealershipdid" Type="int" />
+    <Property Name="DealerName" Type="varchar" MaxLength="100" />
+    <Property Name="Marketid" Type="int" />
+    <Property Name="MarketName" Type="varchar" MaxLength="100" />
+    <Property Name="DispositionLevelID4" Type="int" />
+    <Property Name="DispositionLevel4" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.tbl_FactCalls_Intraday' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tbl_FactCalls_Intraday">
+    <Key>
+      <PropertyRef Name="TblId" />
+    </Key>
+    <Property Name="TblId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="nvarchar" MaxLength="200" />
+    <Property Name="ReportDate" Type="datetime" />
+    <Property Name="RecHour" Type="varchar" MaxLength="4" />
+    <Property Name="DispositionLevelID1" Type="int" />
+    <Property Name="DispositionLevel1" Type="varchar" MaxLength="100" />
+    <Property Name="DispositionLevelID2" Type="int" />
+    <Property Name="DispositionLevel2" Type="varchar" MaxLength="100" />
+    <Property Name="DispositionLevelID3" Type="int" />
+    <Property Name="DispositionLevel3" Type="varchar" MaxLength="100" />
+    <Property Name="DispositionLevelID4" Type="int" />
+    <Property Name="DispositionLevel4" Type="varchar" MaxLength="100" />
+    <Property Name="Dealershipdid" Type="int" />
+    <Property Name="DealerName" Type="varchar" MaxLength="100" />
+    <Property Name="Marketid" Type="int" />
+    <Property Name="MarketName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.tbl_FactCalls_Monthly' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tbl_FactCalls_Monthly">
+    <Key>
+      <PropertyRef Name="TblId" />
+    </Key>
+    <Property Name="TblId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="nvarchar" MaxLength="200" />
+    <Property Name="SourceReferenceId" Type="int" />
+    <Property Name="RecMonth" Type="numeric" Precision="2" />
+    <Property Name="RecYear" Type="numeric" Precision="4" />
+    <Property Name="RecMnthYear" Type="varchar" MaxLength="6" />
+    <Property Name="Dnis" Type="varchar" MaxLength="20" />
+    <Property Name="DnisDescription" Type="varchar" MaxLength="100" />
+    <Property Name="DispositionLevelID1" Type="int" />
+    <Property Name="DispositionLevel1" Type="varchar" MaxLength="100" />
+    <Property Name="DispositionLevelID2" Type="int" />
+    <Property Name="DispositionLevel2" Type="varchar" MaxLength="100" />
+    <Property Name="DispositionLevelID3" Type="int" />
+    <Property Name="DispositionLevel3" Type="varchar" MaxLength="100" />
+    <Property Name="Dealershipdid" Type="int" />
+    <Property Name="DealerName" Type="varchar" MaxLength="100" />
+    <Property Name="Marketid" Type="int" />
+    <Property Name="MarketName" Type="varchar" MaxLength="100" />
+    <Property Name="DispositionLevelID4" Type="int" />
+    <Property Name="DispositionLevel4" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.tbl_FactCalls_Weekly' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tbl_FactCalls_Weekly">
+    <Key>
+      <PropertyRef Name="TblId" />
+    </Key>
+    <Property Name="TblId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="nvarchar" MaxLength="200" />
+    <Property Name="RecWeekStartDate" Type="datetime" />
+    <Property Name="RecMonth" Type="numeric" Precision="2" />
+    <Property Name="RecYear" Type="numeric" Precision="4" />
+    <Property Name="DispositionLevelID1" Type="int" />
+    <Property Name="DispositionLevel1" Type="varchar" MaxLength="100" />
+    <Property Name="DispositionLevelID2" Type="int" />
+    <Property Name="DispositionLevel2" Type="varchar" MaxLength="100" />
+    <Property Name="DispositionLevelID3" Type="int" />
+    <Property Name="DispositionLevel3" Type="varchar" MaxLength="100" />
+    <Property Name="DispositionLevelID4" Type="int" />
+    <Property Name="DispositionLevel4" Type="varchar" MaxLength="100" />
+    <Property Name="Dealershipdid" Type="int" />
+    <Property Name="DealerName" Type="varchar" MaxLength="100" />
+    <Property Name="Marketid" Type="int" />
+    <Property Name="MarketName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tbl_KPIMetric">
+    <Key>
+      <PropertyRef Name="KPIMetricId" />
+    </Key>
+    <Property Name="KPIMetricId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="companyguid" Type="nvarchar" MaxLength="100" />
+    <Property Name="KPIMetricName" Type="varchar" MaxLength="250" />
+    <Property Name="ShortName" Type="varchar" MaxLength="250" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="displayorder" Type="int" />
+    <Property Name="InternalExternalAccess" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="tbl_KPIMetricGoal">
+    <Key>
+      <PropertyRef Name="CompanyGuid" />
+    </Key>
+    <Property Name="CompanyGuid" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="KPIMetricId" Type="int" />
+    <Property Name="Goal" Type="int" />
+    <Property Name="CoachingColorbelowGoal" Type="varchar" MaxLength="30" />
+    <Property Name="CoachingColormeetGoal" Type="varchar" MaxLength="40" />
+    <Property Name="CoachingColorAboveGoal" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_LicenceInfo">
+    <Key>
+      <PropertyRef Name="Licenceseq" />
+    </Key>
+    <Property Name="Licenceseq" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LicenceKey" Type="varchar" MaxLength="50" />
+    <Property Name="CompanyGUID" Type="nvarchar" MaxLength="100" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="ValidFromDate" Type="date" />
+    <Property Name="ValideToDate" Type="date" />
+    <Property Name="AssignedTo" Type="varchar" MaxLength="200" />
+    <Property Name="Trial" Type="bit" />
+    <Property Name="TrialStartDate" Type="datetime" />
+    <Property Name="TrialEndDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.tbl_LicenceInfo_hist' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tbl_LicenceInfo_hist">
+    <Key>
+      <PropertyRef Name="Licencehistseq" />
+    </Key>
+    <Property Name="Licencehistseq" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Licenceseq" Type="int" />
+    <Property Name="LicenceKey" Type="varchar" MaxLength="50" />
+    <Property Name="CompanyGUID" Type="nvarchar" MaxLength="100" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="ValidFromDate" Type="date" />
+    <Property Name="ValidToDate" Type="date" />
+    <Property Name="AssignedTo" Type="varchar" MaxLength="200" />
+    <Property Name="Trial" Type="bit" />
+    <Property Name="TrialStartDate" Type="datetime" />
+    <Property Name="TrialEndDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_licencemoduleInfo">
+    <Key>
+      <PropertyRef Name="Licencemoduleseq" />
+    </Key>
+    <Property Name="Licencemoduleseq" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Licencekey" Type="varchar" MaxLength="50" />
+    <Property Name="CompanyGUID" Type="nvarchar" MaxLength="100" />
+    <Property Name="Moduleid" Type="int" />
+    <Property Name="Active" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.tbl_licencemoduleInfo_hist' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tbl_licencemoduleInfo_hist">
+    <Key>
+      <PropertyRef Name="LicencemoduleseqHistid" />
+    </Key>
+    <Property Name="LicencemoduleseqHistid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Licencemoduleseq" Type="int" />
+    <Property Name="Licencekey" Type="varchar" MaxLength="50" />
+    <Property Name="CompanyGUID" Type="nvarchar" MaxLength="100" />
+    <Property Name="Moduleid" Type="int" />
+    <Property Name="Active" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.tbl_noofchartsbydbcompany' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tbl_noofchartsbydbcompany">
+    <Key>
+      <PropertyRef Name="tblseq" />
+    </Key>
+    <Property Name="tblseq" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Modulename" Type="varchar" MaxLength="100" />
+    <Property Name="NoOfCharts" Type="int" />
+    <Property Name="isactive" Type="bit" />
+    <Property Name="companyGUID" Type="nvarchar" MaxLength="100" />
+    <Property Name="ChartDisplayName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.tbl_qaperfdata_Daily' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tbl_qaperfdata_Daily">
+    <Key>
+      <PropertyRef Name="tblid" />
+      <PropertyRef Name="companyguid" />
+    </Key>
+    <Property Name="tblid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="companyguid" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="question" Type="nvarchar" MaxLength="255" />
+    <Property Name="EmployeeNumber" Type="int" />
+    <Property Name="Recdate" Type="datetime" />
+    <Property Name="Score" Type="numeric" Precision="5" />
+    <Property Name="employeename" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.tbl_qaperfdata_Intraday' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tbl_qaperfdata_Intraday">
+    <Key>
+      <PropertyRef Name="tblid" />
+      <PropertyRef Name="companyguid" />
+    </Key>
+    <Property Name="tblid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="companyguid" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="question" Type="nvarchar" MaxLength="255" />
+    <Property Name="EmployeeNumber" Type="int" />
+    <Property Name="RecDate" Type="datetime" />
+    <Property Name="RecHour" Type="varchar" MaxLength="4" />
+    <Property Name="Score" Type="numeric" Precision="5" />
+    <Property Name="employeename" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.tbl_qaperfdata_Monthly' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tbl_qaperfdata_Monthly">
+    <Key>
+      <PropertyRef Name="tblid" />
+      <PropertyRef Name="companyguid" />
+    </Key>
+    <Property Name="tblid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="companyguid" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="question" Type="nvarchar" MaxLength="255" />
+    <Property Name="EmployeeNumber" Type="int" />
+    <Property Name="RecMonth" Type="varchar" MaxLength="3" />
+    <Property Name="Recyear" Type="varchar" MaxLength="4" />
+    <Property Name="Recdate" Type="datetime" />
+    <Property Name="Score" Type="numeric" Precision="5" />
+    <Property Name="employeename" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.tbl_qaperfdata_Weekly' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tbl_qaperfdata_Weekly">
+    <Key>
+      <PropertyRef Name="tblid" />
+      <PropertyRef Name="companyguid" />
+    </Key>
+    <Property Name="tblid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="companyguid" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="question" Type="nvarchar" MaxLength="255" />
+    <Property Name="EmployeeNumber" Type="int" />
+    <Property Name="RecWkStartDate" Type="datetime" />
+    <Property Name="RecMonth" Type="varchar" MaxLength="3" />
+    <Property Name="RecYear" Type="varchar" MaxLength="4" />
+    <Property Name="Score" Type="numeric" Precision="5" />
+    <Property Name="employeename" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.tbl_selchartdispname' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tbl_selchartdispname">
+    <Key>
+      <PropertyRef Name="selchartdispnameseq" />
+      <PropertyRef Name="tblseq" />
+    </Key>
+    <Property Name="selchartdispnameseq" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="tblseq" Type="int" Nullable="false" />
+    <Property Name="Chart1name" Type="varchar" MaxLength="30" />
+    <Property Name="Chart2name" Type="varchar" MaxLength="30" />
+    <Property Name="Chart3name" Type="varchar" MaxLength="30" />
+    <Property Name="Chart4name" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="tbl_User">
+    <Key>
+      <PropertyRef Name="UserSeq" />
+    </Key>
+    <Property Name="UserSeq" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="varchar" MaxLength="200" />
+    <Property Name="FirstName" Type="varchar" MaxLength="200" />
+    <Property Name="LastName" Type="varchar" MaxLength="200" />
+    <Property Name="Password" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserStatus" Type="varchar" MaxLength="10" />
+    <Property Name="UserType" Type="int" />
+    <Property Name="CompanyGuid" Type="nvarchar" MaxLength="100" />
+    <Property Name="SecretQuestion1" Type="int" />
+    <Property Name="SecretAnswer1" Type="varchar" MaxLength="200" />
+    <Property Name="SecretQuestion2" Type="int" />
+    <Property Name="SecretAnswer2" Type="varchar" MaxLength="200" />
+    <Property Name="SecretQuestion3" Type="int" />
+    <Property Name="SecretAnswer3" Type="varchar" MaxLength="200" />
+    <Property Name="PasswordUpdatedDate" Type="date" />
+    <Property Name="SecurityQuestionSet" Type="bit" />
+    <Property Name="FstTimeLogin" Type="bit" />
+    <Property Name="searchfield" Type="varchar" MaxLength="200" />
+    <Property Name="InternalExternalAccess" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.tbl_User_hist' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tbl_User_hist">
+    <Key>
+      <PropertyRef Name="UserSeq" />
+    </Key>
+    <Property Name="UserSeq" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="varchar" MaxLength="200" />
+    <Property Name="FirstName" Type="varchar" MaxLength="200" />
+    <Property Name="LastName" Type="varchar" MaxLength="200" />
+    <Property Name="Password" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserStatus" Type="bit" />
+    <Property Name="UserType" Type="int" />
+    <Property Name="CompanyGuid" Type="nvarchar" MaxLength="100" />
+    <Property Name="SecretQuestion1" Type="int" />
+    <Property Name="SecretAnswer1" Type="varchar" MaxLength="200" />
+    <Property Name="SecretQuestion2" Type="int" />
+    <Property Name="SecretAnswer2" Type="varchar" MaxLength="200" />
+    <Property Name="SecretQuestion3" Type="int" />
+    <Property Name="SecretAnswer3" Type="varchar" MaxLength="200" />
+    <Property Name="PasswordUpdatedDate" Type="date" />
+    <Property Name="SecurityQuestionSet" Type="bit" />
+    <Property Name="FstTimeLogin" Type="bit" />
+    <Property Name="searchfield" Type="varchar" MaxLength="200" />
+    <Property Name="InternalExternalAccess" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="tbl_UserRegistration">
+    <Key>
+      <PropertyRef Name="USRSeq" />
+    </Key>
+    <Property Name="USRSeq" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="varchar" Nullable="false" MaxLength="300" />
+    <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="LastName" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="CompanyName" Type="varchar" Nullable="false" MaxLength="300" />
+    <Property Name="CompanyGUID" Type="nvarchar" MaxLength="200" />
+    <Property Name="Logo" Type="image" />
+    <Property Name="Address1" Type="varchar" MaxLength="300" />
+    <Property Name="Address2" Type="varchar" MaxLength="300" />
+    <Property Name="City" Type="varchar" MaxLength="100" />
+    <Property Name="State" Type="varchar" MaxLength="100" />
+    <Property Name="Zip" Type="int" />
+    <Property Name="ContactPhone" Type="varchar" MaxLength="100" />
+    <Property Name="PrefferedContactMethod" Type="varchar" MaxLength="200" />
+    <Property Name="NoOfEmployee" Type="int" />
+    <Property Name="NoOfLicence" Type="int" />
+    <Property Name="CreatedDate" Type="date" />
+    <Property Name="RecordStatus" Type="varchar" MaxLength="5" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.tbl_UserRegistration_hist' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tbl_UserRegistration_hist">
+    <Key>
+      <PropertyRef Name="USRSeq" />
+      <PropertyRef Name="Email" />
+      <PropertyRef Name="FirstName" />
+      <PropertyRef Name="LastName" />
+      <PropertyRef Name="Password" />
+      <PropertyRef Name="CompanyName" />
+    </Key>
+    <Property Name="USRSeq" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="varchar" Nullable="false" MaxLength="300" />
+    <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="LastName" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="CompanyName" Type="varchar" Nullable="false" MaxLength="300" />
+    <Property Name="CompanyGUID" Type="nvarchar" MaxLength="200" />
+    <Property Name="Logo" Type="image" />
+    <Property Name="Address1" Type="varchar" MaxLength="300" />
+    <Property Name="Address2" Type="varchar" MaxLength="300" />
+    <Property Name="City" Type="varchar" MaxLength="100" />
+    <Property Name="State" Type="varchar" MaxLength="100" />
+    <Property Name="Zip" Type="int" />
+    <Property Name="ContactPhone" Type="varchar" MaxLength="100" />
+    <Property Name="PrefferedContactMethod" Type="varchar" MaxLength="200" />
+    <Property Name="NoOfEmployee" Type="int" />
+    <Property Name="NoOfLicence" Type="int" />
+    <Property Name="CreatedDate" Type="date" />
+    <Property Name="RecordStatus" Type="varchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="tbl_UserRegistrationFollowup">
+    <Key>
+      <PropertyRef Name="USRFLWPSeq" />
+    </Key>
+    <Property Name="USRFLWPSeq" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="USRSeq" Type="int" Nullable="false" />
+    <Property Name="CompanyGUID" Type="nvarchar" MaxLength="200" />
+    <Property Name="ContactDate" Type="date" />
+    <Property Name="Notes" Type="varchar" MaxLength="1000" />
+    <Property Name="ContactedBy" Type="varchar" MaxLength="200" />
+    <Property Name="Contactedon" Type="datetime" />
+    <Property Name="OutCome" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DB_9D55E2_ampbidev.dbo.tbl_UserRegistrationFollowup_hist' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tbl_UserRegistrationFollowup_hist">
+    <Key>
+      <PropertyRef Name="USRFLWPHistSeq" />
+      <PropertyRef Name="USRFLWPSeq" />
+      <PropertyRef Name="USRSeq" />
+    </Key>
+    <Property Name="USRFLWPHistSeq" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="USRFLWPSeq" Type="int" Nullable="false" />
+    <Property Name="USRSeq" Type="int" Nullable="false" />
+    <Property Name="CompanyGUID" Type="nvarchar" MaxLength="200" />
+    <Property Name="ContactDate" Type="date" />
+    <Property Name="Notes" Type="varchar" MaxLength="1000" />
+    <Property Name="ContactedBy" Type="varchar" MaxLength="200" />
+    <Property Name="Contactedon" Type="datetime" />
+    <Property Name="OutCome" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="fn_getName" ReturnType="varchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="par1" Type="nvarchar" Mode="In" />
+    <Parameter Name="par2" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="getRegistrationFollowUpGridRecord" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="InitCap" ReturnType="varchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="InputString" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="LPAD" ReturnType="varchar(max)" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="string" Type="varchar(max)" Mode="In" />
+    <Parameter Name="length" Type="int" Mode="In" />
+    <Parameter Name="pad" Type="char" Mode="In" />
+  </Function>
+  <Function Name="RPAD" ReturnType="varchar(max)" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="string" Type="varchar(max)" Mode="In" />
+    <Parameter Name="length" Type="int" Mode="In" />
+    <Parameter Name="pad" Type="char" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_callsdashboard_dlydata" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompanyGUID" Type="nvarchar" Mode="In" />
+    <Parameter Name="chartno" Type="int" Mode="In" />
+    <Parameter Name="Dealername" Type="varchar" Mode="In" />
+    <Parameter Name="MarketName" Type="varchar" Mode="In" />
+    <Parameter Name="Displevel1" Type="varchar" Mode="In" />
+    <Parameter Name="Displevel2" Type="varchar" Mode="In" />
+    <Parameter Name="Displevel3" Type="varchar" Mode="In" />
+    <Parameter Name="ReportDate" Type="date" Mode="In" />
+    <Parameter Name="Disposition" Type="varchar" Mode="InOut" />
+    <Parameter Name="DispCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_callsdashboard_Intraday" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompanyGUID" Type="nvarchar" Mode="In" />
+    <Parameter Name="chartno" Type="int" Mode="In" />
+    <Parameter Name="Dealername" Type="varchar" Mode="In" />
+    <Parameter Name="MarketName" Type="varchar" Mode="In" />
+    <Parameter Name="Displevel1" Type="varchar" Mode="In" />
+    <Parameter Name="Displevel2" Type="varchar" Mode="In" />
+    <Parameter Name="Displevel3" Type="varchar" Mode="In" />
+    <Parameter Name="ReportHour" Type="varchar" Mode="In" />
+    <Parameter Name="ReportDate" Type="date" Mode="In" />
+    <Parameter Name="Disposition" Type="varchar" Mode="InOut" />
+    <Parameter Name="DispCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_callsdashboard_listofvalues" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompanyGUID" Type="nvarchar" Mode="In" />
+    <Parameter Name="Type" Type="varchar" Mode="In" />
+    <Parameter Name="Dealername" Type="varchar" Mode="In" />
+    <Parameter Name="dispid" Type="int" Mode="InOut" />
+    <Parameter Name="Displayvalue" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="sp_callsdashboard_mlydata" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompanyGUID" Type="nvarchar" Mode="In" />
+    <Parameter Name="chartno" Type="int" Mode="In" />
+    <Parameter Name="Dealername" Type="varchar" Mode="In" />
+    <Parameter Name="MarketName" Type="varchar" Mode="In" />
+    <Parameter Name="Displevel1" Type="varchar" Mode="In" />
+    <Parameter Name="Displevel2" Type="varchar" Mode="In" />
+    <Parameter Name="Displevel3" Type="varchar" Mode="In" />
+    <Parameter Name="ReportMonth" Type="int" Mode="In" />
+    <Parameter Name="ReportYear" Type="int" Mode="In" />
+    <Parameter Name="Disposition" Type="varchar" Mode="InOut" />
+    <Parameter Name="DispCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_callsdashboard_wkydata" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompanyGUID" Type="nvarchar" Mode="In" />
+    <Parameter Name="chartno" Type="int" Mode="In" />
+    <Parameter Name="Dealername" Type="varchar" Mode="In" />
+    <Parameter Name="MarketName" Type="varchar" Mode="In" />
+    <Parameter Name="Displevel1" Type="varchar" Mode="In" />
+    <Parameter Name="Displevel2" Type="varchar" Mode="In" />
+    <Parameter Name="Displevel3" Type="varchar" Mode="In" />
+    <Parameter Name="WkStartdate" Type="date" Mode="In" />
+    <Parameter Name="Disposition" Type="varchar" Mode="InOut" />
+    <Parameter Name="DispCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_callsdb_callcount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Selection" Type="varchar" Mode="In" />
+    <Parameter Name="CompanyGUID" Type="nvarchar" Mode="In" />
+    <Parameter Name="ReportDate" Type="int" Mode="In" />
+    <Parameter Name="ReportMonth" Type="int" Mode="In" />
+    <Parameter Name="ReportYear" Type="int" Mode="In" />
+    <Parameter Name="ReportHour" Type="int" Mode="In" />
+    <Parameter Name="TotalCallswithDisposition" Type="int" Mode="InOut" />
+    <Parameter Name="TotalCalls" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="Sp_CheckUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+    <Parameter Name="Password" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_companyprofile_listofvalues" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompanyGUID" Type="nvarchar" Mode="In" />
+    <Parameter Name="Type" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Sp_EmailExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_getEmployeePerformance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="email" Type="nvarchar" Mode="In" />
+    <Parameter Name="kpi" Type="varchar" Mode="In" />
+    <Parameter Name="recmonth" Type="int" Mode="In" />
+    <Parameter Name="recyear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_getEmployeePerformance_Daily" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="email" Type="nvarchar" Mode="In" />
+    <Parameter Name="kpi" Type="varchar" Mode="In" />
+    <Parameter Name="recdate" Type="date" Mode="In" />
+  </Function>
+  <Function Name="sp_getEmployeePerformance_Intraday" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="email" Type="nvarchar" Mode="In" />
+    <Parameter Name="kpi" Type="varchar" Mode="In" />
+    <Parameter Name="ReportHour" Type="varchar" Mode="In" />
+    <Parameter Name="ReportDate" Type="date" Mode="In" />
+  </Function>
+  <Function Name="sp_getEmployeePerformance_Monthly" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="email" Type="nvarchar" Mode="In" />
+    <Parameter Name="kpi" Type="varchar" Mode="In" />
+    <Parameter Name="recmonth" Type="varchar" Mode="In" />
+    <Parameter Name="recyear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_getEmployeePerformance_Weekly" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="email" Type="nvarchar" Mode="In" />
+    <Parameter Name="kpi" Type="varchar" Mode="In" />
+    <Parameter Name="WkStartdate" Type="date" Mode="In" />
+  </Function>
+  <Function Name="sp_getKPIMenu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="companyguid" Type="nvarchar" Mode="In" />
+    <Parameter Name="InternalExternal" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_getlistofvalues" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Modulename" Type="varchar" Mode="In" />
+    <Parameter Name="Columnname" Type="varchar" Mode="In" />
+    <Parameter Name="lkpseqid" Type="int" Mode="InOut" />
+    <Parameter Name="Description" Type="varchar" Mode="InOut" />
+    <Parameter Name="FinalAction" Type="bit" Mode="InOut" />
+    <Parameter Name="writerecord" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="sp_getslidervalues" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="interval" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_QADBListofValues" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompanyGUID" Type="nvarchar" Mode="In" />
+    <Parameter Name="Type" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_qaperf_mlydata" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompanyGUID" Type="nvarchar" Mode="In" />
+    <Parameter Name="employeename" Type="varchar" Mode="In" />
+    <Parameter Name="question" Type="varchar" Mode="In" />
+    <Parameter Name="reportmonth" Type="int" Mode="In" />
+    <Parameter Name="reportyear" Type="int" Mode="In" />
+    <Parameter Name="chartno" Type="int" Mode="In" />
+    <Parameter Name="Displevel1" Type="varchar" Mode="In" />
+    <Parameter Name="Displevel2" Type="varchar" Mode="In" />
+    <Parameter Name="Displevel3" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="TRIM" ReturnType="varchar(max)" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="string" Type="varchar(max)" Mode="In" />
+  </Function>
+</Schema>

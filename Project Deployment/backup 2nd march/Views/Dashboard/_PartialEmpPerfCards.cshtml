@@ -1,0 +1,93 @@
+﻿@model Ampbi.DataAccess.ViewModel.DashBoard
+@using System.Web.UI.WebControls
+
+
+<div class="col-md-9" id="PerfCardDefault">
+    @if (Model.empIndPerfCard != null)
+    {
+        foreach (var perfDetails in Model.empIndPerfCard)
+        {
+            <div class="col-md-3 padlr5">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr class="red-t">
+                                <td width="96%" align="left">@perfDetails.KPIMetricName</td>
+                                <td width="4%" align="right">
+                                    <a href="#" data-toggle="popover"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="red-td">
+                                <td align="left" scope="row">Goal</td>
+                                <td align="right">@perfDetails.goal</td>
+                            </tr>
+                            <tr class="red-t">
+                                <td align="left" scope="row">Achieved</td>
+                                <td align="right">@perfDetails.actual</td>
+                            </tr>
+                            <tr class="red-td">
+                                <td align="left" scope="row">Coachings</td>
+                                <td align="right">@perfDetails.coachings</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+    }
+</div>
+
+@*<div role="tabpanel" class="tab-pane" id="Organization">
+    <div class="col-md-3 padlr5">
+        <div class="main-box-emp box-sky">
+            <div class="clearfix box-sky-heading">
+                <h5 class="pull-left">Int Set 2/19</h5>
+                <p class="pull-right anchor-icon"><a href="#"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></p>
+                <ul class="average">
+                    <li><span>Me</span></li>
+                    <li>
+                        <div class="color-persent-sky"></div>
+                        <span>Average</span></li>
+                    <li>
+                        <div class="color-persent-sky"></div>
+                        <span>Best</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 padlr5">
+        <div class="main-box-emp box-pink">
+            <div class="clearfix box-pink-heading">
+                <h5 class="pull-left">Int Set 2/19</h5>
+                <p class="pull-right anchor-icon"><a href="#"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></p>
+                <ul class="average">
+                    <li><span>Me</span></li>
+                    <li>
+                        <div class="color-persent-pink"></div>
+                        <span>Average</span></li>
+                    <li>
+                        <div class="color-persent-pink"></div>
+                        <span>Best</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 padlr5">
+        <div class="main-box-emp box-sky">
+            <div class="clearfix box-sky-heading">
+                <h5 class="pull-left">Int Set 2/19</h5>
+                <p class="pull-right anchor-icon"><a href="#"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></p>
+                <ul class="average">
+                    <li><span>Me</span></li>
+                    <li>
+                        <div class="color-persent-sky"></div>
+                        <span>Average</span></li>
+                    <li>
+                        <div class="color-persent-sky"></div>
+                        <span>Best</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>*@

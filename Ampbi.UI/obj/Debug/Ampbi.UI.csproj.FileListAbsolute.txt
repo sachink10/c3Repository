@@ -1,0 +1,944 @@
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\Ampbi.UI.dll
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\Ampbi.UI.pdb
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\Ampbi.Business.dll
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\Ampbi.DataAccess.dll
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\Antlr3.Runtime.dll
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\EntityFramework.dll
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\EntityFramework.SqlServer.dll
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\Microsoft.Web.Infrastructure.dll
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\Newtonsoft.Json.dll
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\System.Net.Http.Formatting.dll
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\System.Web.Http.dll
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\System.Web.Mvc.dll
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\System.Web.Optimization.dll
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\System.Web.Providers.dll
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\System.Web.Razor.dll
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Deployment.dll
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\System.Web.WebPages.dll
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Razor.dll
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\WebGrease.dll
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\AutoMapper.dll
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\Ampbi.Business.pdb
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\Ampbi.DataAccess.pdb
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\EntityFramework.xml
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\EntityFramework.SqlServer.xml
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\Newtonsoft.Json.xml
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\System.Net.Http.Formatting.xml
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\System.Web.Http.xml
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\System.Web.Mvc.xml
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\System.Web.Razor.xml
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\System.Web.WebPages.xml
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Deployment.xml
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Razor.xml
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\bin\AutoMapper.xml
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.csprojResolveAssemblyReference.cache
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.dll
+D:\Personal\Ampbi_Final\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.pdb
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\Ampbi.UI.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\Ampbi.UI.pdb
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\Ampbi.Business.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\Ampbi.DataAccess.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\Antlr3.Runtime.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\EntityFramework.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\EntityFramework.SqlServer.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\Newtonsoft.Json.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\System.Net.Http.Formatting.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\System.Web.Http.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\System.Web.Mvc.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\System.Web.Optimization.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\System.Web.Providers.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\System.Web.Razor.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Deployment.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Razor.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\WebGrease.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\AutoMapper.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\Ampbi.Business.pdb
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\Ampbi.DataAccess.pdb
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\EntityFramework.xml
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\EntityFramework.SqlServer.xml
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\Newtonsoft.Json.xml
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\System.Net.Http.Formatting.xml
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\System.Web.Http.xml
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\System.Web.Mvc.xml
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\System.Web.Razor.xml
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.xml
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Deployment.xml
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Razor.xml
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\bin\AutoMapper.xml
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.csprojResolveAssemblyReference.cache
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.pdb
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Ampbi.UI.dll
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Ampbi.UI.pdb
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Ampbi.Business.dll
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Ampbi.DataAccess.dll
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Antlr3.Runtime.dll
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\EntityFramework.dll
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\EntityFramework.SqlServer.dll
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Microsoft.Web.Infrastructure.dll
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Newtonsoft.Json.dll
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Net.Http.Formatting.dll
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Http.dll
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Mvc.dll
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Optimization.dll
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Providers.dll
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Razor.dll
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Deployment.dll
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.dll
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Razor.dll
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\WebGrease.dll
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\AutoMapper.dll
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Ampbi.Business.pdb
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Ampbi.DataAccess.pdb
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\EntityFramework.xml
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\EntityFramework.SqlServer.xml
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Newtonsoft.Json.xml
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Net.Http.Formatting.xml
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Http.xml
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Mvc.xml
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Razor.xml
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.xml
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Deployment.xml
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Razor.xml
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\AutoMapper.xml
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.csprojResolveAssemblyReference.cache
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.dll
+E:\Projects\Personal\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.pdb
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Ampbi.UI.dll
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Ampbi.UI.pdb
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Ampbi.Business.dll
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Ampbi.DataAccess.dll
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Antlr3.Runtime.dll
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\EntityFramework.dll
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\EntityFramework.SqlServer.dll
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Microsoft.Web.Infrastructure.dll
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Newtonsoft.Json.dll
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Net.Http.Formatting.dll
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Http.dll
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Mvc.dll
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Optimization.dll
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Providers.dll
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Razor.dll
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Deployment.dll
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.dll
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Razor.dll
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\WebGrease.dll
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\AutoMapper.dll
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Ampbi.Business.pdb
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Ampbi.DataAccess.pdb
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\EntityFramework.xml
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\EntityFramework.SqlServer.xml
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Newtonsoft.Json.xml
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Net.Http.Formatting.xml
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Http.xml
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Mvc.xml
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Razor.xml
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.xml
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Deployment.xml
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Razor.xml
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\AutoMapper.xml
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.csprojResolveAssemblyReference.cache
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.dll
+D:\Personal\Ampbi\10282015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.pdb
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Ampbi.UI.dll
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Ampbi.UI.pdb
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Ampbi.Business.dll
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Ampbi.DataAccess.dll
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Antlr3.Runtime.dll
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\EntityFramework.dll
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\EntityFramework.SqlServer.dll
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Microsoft.Web.Infrastructure.dll
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Newtonsoft.Json.dll
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Net.Http.Formatting.dll
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Http.dll
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Mvc.dll
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Optimization.dll
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Providers.dll
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Razor.dll
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Deployment.dll
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.dll
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Razor.dll
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\WebGrease.dll
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\AutoMapper.dll
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Ampbi.Business.pdb
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Ampbi.DataAccess.pdb
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\EntityFramework.xml
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\EntityFramework.SqlServer.xml
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Newtonsoft.Json.xml
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Net.Http.Formatting.xml
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Http.xml
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Mvc.xml
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Razor.xml
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.xml
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Deployment.xml
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Razor.xml
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\bin\AutoMapper.xml
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.csprojResolveAssemblyReference.cache
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.dll
+E:\Projects\Personal\Ampbi\10292015\Ampbi10282015\Ampbi10282015\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.pdb
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Ampbi.UI.dll
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Ampbi.UI.pdb
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Ampbi.Business.dll
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Ampbi.DataAccess.dll
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Antlr3.Runtime.dll
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\EntityFramework.dll
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\EntityFramework.SqlServer.dll
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Microsoft.Web.Infrastructure.dll
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Newtonsoft.Json.dll
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Net.Http.Formatting.dll
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Http.dll
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Mvc.dll
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Optimization.dll
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Providers.dll
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Razor.dll
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Deployment.dll
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.dll
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Razor.dll
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\WebGrease.dll
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\AutoMapper.dll
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Ampbi.Business.pdb
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Ampbi.DataAccess.pdb
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\EntityFramework.xml
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\EntityFramework.SqlServer.xml
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\Newtonsoft.Json.xml
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Net.Http.Formatting.xml
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Http.xml
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Mvc.xml
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.Razor.xml
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.xml
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Deployment.xml
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Razor.xml
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\bin\AutoMapper.xml
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.csprojResolveAssemblyReference.cache
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.dll
+D:\Personal\Ampbi\10292015\Ampbi10292015\Ampbi10282015\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.pdb
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\Ampbi.UI.dll
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\Ampbi.UI.pdb
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\Ampbi.Business.dll
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\Ampbi.DataAccess.dll
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\Antlr3.Runtime.dll
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\EntityFramework.dll
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\EntityFramework.SqlServer.dll
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\Newtonsoft.Json.dll
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Net.Http.Formatting.dll
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.Http.dll
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.Mvc.dll
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.Optimization.dll
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.Providers.dll
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.Razor.dll
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Deployment.dll
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.dll
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Razor.dll
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\WebGrease.dll
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\AutoMapper.dll
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\Ampbi.Business.pdb
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\Ampbi.DataAccess.pdb
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\EntityFramework.xml
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\EntityFramework.SqlServer.xml
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\Newtonsoft.Json.xml
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Net.Http.Formatting.xml
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.Http.xml
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.Mvc.xml
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.Razor.xml
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.xml
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Deployment.xml
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Razor.xml
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\bin\AutoMapper.xml
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.csprojResolveAssemblyReference.cache
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.dll
+C:\CRM\Ampbi10292015\Ampbi10292015\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.pdb
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\Ampbi.UI.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\Ampbi.UI.pdb
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\Ampbi.Business.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\Ampbi.DataAccess.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\Antlr3.Runtime.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\EntityFramework.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\EntityFramework.SqlServer.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\Newtonsoft.Json.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Net.Http.Formatting.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.Http.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.Mvc.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.Optimization.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.Providers.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.Razor.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Deployment.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Razor.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\WebGrease.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\AutoMapper.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\Ampbi.Business.pdb
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\Ampbi.DataAccess.pdb
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\EntityFramework.xml
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\EntityFramework.SqlServer.xml
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\Newtonsoft.Json.xml
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Net.Http.Formatting.xml
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.Http.xml
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.Mvc.xml
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.Razor.xml
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.xml
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Deployment.xml
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Razor.xml
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\AutoMapper.xml
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.csprojResolveAssemblyReference.cache
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.pdb
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\SRVTextToImage.dll
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\Ampbi.UI.dll
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\Ampbi.UI.pdb
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\Ampbi.Business.dll
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\Ampbi.DataAccess.dll
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\Antlr3.Runtime.dll
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\EntityFramework.dll
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\EntityFramework.SqlServer.dll
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\Newtonsoft.Json.dll
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Net.Http.Formatting.dll
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.Http.dll
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.Mvc.dll
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.Optimization.dll
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.Providers.dll
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.Razor.dll
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Deployment.dll
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.dll
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Razor.dll
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\WebGrease.dll
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\AutoMapper.dll
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\Ampbi.Business.pdb
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\Ampbi.DataAccess.pdb
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\EntityFramework.xml
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\EntityFramework.SqlServer.xml
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\Newtonsoft.Json.xml
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Net.Http.Formatting.xml
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.Http.xml
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.Mvc.xml
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.Razor.xml
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.xml
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Deployment.xml
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\System.Web.WebPages.Razor.xml
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\bin\AutoMapper.xml
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.csprojResolveAssemblyReference.cache
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.dll
+C:\CRM\Main Development\Main Development\Ampbi10292015\Ampbi\Ampbi.UI\obj\Debug\Ampbi.UI.pdb
+C:\CRM\Main Development\Ampbi.UI\bin\Ampbi.UI.dll
+C:\CRM\Main Development\Ampbi.UI\bin\Ampbi.UI.pdb
+C:\CRM\Main Development\Ampbi.UI\bin\Ampbi.Business.dll
+C:\CRM\Main Development\Ampbi.UI\bin\Ampbi.DataAccess.dll
+C:\CRM\Main Development\Ampbi.UI\bin\Antlr3.Runtime.dll
+C:\CRM\Main Development\Ampbi.UI\bin\EntityFramework.dll
+C:\CRM\Main Development\Ampbi.UI\bin\EntityFramework.SqlServer.dll
+C:\CRM\Main Development\Ampbi.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\CRM\Main Development\Ampbi.UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\CRM\Main Development\Ampbi.UI\bin\Newtonsoft.Json.dll
+C:\CRM\Main Development\Ampbi.UI\bin\SRVTextToImage.dll
+C:\CRM\Main Development\Ampbi.UI\bin\System.Net.Http.Formatting.dll
+C:\CRM\Main Development\Ampbi.UI\bin\System.Web.Http.dll
+C:\CRM\Main Development\Ampbi.UI\bin\System.Web.Mvc.dll
+C:\CRM\Main Development\Ampbi.UI\bin\System.Web.Optimization.dll
+C:\CRM\Main Development\Ampbi.UI\bin\System.Web.Providers.dll
+C:\CRM\Main Development\Ampbi.UI\bin\System.Web.Razor.dll
+C:\CRM\Main Development\Ampbi.UI\bin\System.Web.WebPages.Deployment.dll
+C:\CRM\Main Development\Ampbi.UI\bin\System.Web.WebPages.dll
+C:\CRM\Main Development\Ampbi.UI\bin\System.Web.WebPages.Razor.dll
+C:\CRM\Main Development\Ampbi.UI\bin\WebGrease.dll
+C:\CRM\Main Development\Ampbi.UI\bin\AutoMapper.dll
+C:\CRM\Main Development\Ampbi.UI\bin\Ampbi.Business.pdb
+C:\CRM\Main Development\Ampbi.UI\bin\Ampbi.DataAccess.pdb
+C:\CRM\Main Development\Ampbi.UI\bin\EntityFramework.xml
+C:\CRM\Main Development\Ampbi.UI\bin\EntityFramework.SqlServer.xml
+C:\CRM\Main Development\Ampbi.UI\bin\Newtonsoft.Json.xml
+C:\CRM\Main Development\Ampbi.UI\bin\System.Net.Http.Formatting.xml
+C:\CRM\Main Development\Ampbi.UI\bin\System.Web.Http.xml
+C:\CRM\Main Development\Ampbi.UI\bin\System.Web.Mvc.xml
+C:\CRM\Main Development\Ampbi.UI\bin\System.Web.Razor.xml
+C:\CRM\Main Development\Ampbi.UI\bin\System.Web.WebPages.xml
+C:\CRM\Main Development\Ampbi.UI\bin\System.Web.WebPages.Deployment.xml
+C:\CRM\Main Development\Ampbi.UI\bin\System.Web.WebPages.Razor.xml
+C:\CRM\Main Development\Ampbi.UI\bin\AutoMapper.xml
+C:\CRM\Main Development\Ampbi.UI\obj\Debug\Ampbi.UI.csprojResolveAssemblyReference.cache
+C:\CRM\Main Development\Ampbi.UI\obj\Debug\Ampbi.UI.dll
+C:\CRM\Main Development\Ampbi.UI\obj\Debug\Ampbi.UI.pdb
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\Ampbi.UI.dll
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\Ampbi.UI.pdb
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\Ampbi.Business.dll
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\Ampbi.DataAccess.dll
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\Antlr3.Runtime.dll
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\EntityFramework.dll
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\EntityFramework.SqlServer.dll
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\Microsoft.Web.Infrastructure.dll
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\Newtonsoft.Json.dll
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\System.Net.Http.Formatting.dll
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\System.Web.Http.dll
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\System.Web.Mvc.dll
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\System.Web.Optimization.dll
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\System.Web.Providers.dll
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\System.Web.Razor.dll
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\System.Web.WebPages.Deployment.dll
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\System.Web.WebPages.dll
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\System.Web.WebPages.Razor.dll
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\WebGrease.dll
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\AutoMapper.dll
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\Ampbi.Business.pdb
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\Ampbi.DataAccess.pdb
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\EntityFramework.xml
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\EntityFramework.SqlServer.xml
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\Newtonsoft.Json.xml
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\System.Net.Http.Formatting.xml
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\System.Web.Http.xml
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\System.Web.Mvc.xml
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\System.Web.Razor.xml
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\System.Web.WebPages.xml
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\System.Web.WebPages.Deployment.xml
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\System.Web.WebPages.Razor.xml
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\bin\AutoMapper.xml
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\obj\Debug\Ampbi.UI.csprojResolveAssemblyReference.cache
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\obj\Debug\Ampbi.UI.dll
+D:\XiMedicaPOC\06112015\XiMedicaPOC\Main Development\Ampbi.UI\obj\Debug\Ampbi.UI.pdb
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\Ampbi.UI.dll
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\Ampbi.UI.pdb
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\Ampbi.Business.dll
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\Ampbi.DataAccess.dll
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\Antlr3.Runtime.dll
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\EntityFramework.dll
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\EntityFramework.SqlServer.dll
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\Microsoft.Web.Infrastructure.dll
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\Newtonsoft.Json.dll
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\System.Net.Http.Formatting.dll
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\System.Web.Helpers.dll
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\System.Web.Http.dll
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\System.Web.Mvc.dll
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\System.Web.Optimization.dll
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\System.Web.Providers.dll
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\System.Web.Razor.dll
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\System.Web.WebPages.Deployment.dll
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\System.Web.WebPages.dll
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\System.Web.WebPages.Razor.dll
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\WebGrease.dll
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\AutoMapper.dll
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\Ampbi.Business.pdb
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\Ampbi.DataAccess.pdb
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\EntityFramework.xml
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\EntityFramework.SqlServer.xml
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\Newtonsoft.Json.xml
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\System.Net.Http.Formatting.xml
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\System.Web.Helpers.xml
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\System.Web.Http.xml
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\System.Web.Mvc.xml
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\System.Web.Razor.xml
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\System.Web.WebPages.xml
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\System.Web.WebPages.Deployment.xml
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\System.Web.WebPages.Razor.xml
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\bin\AutoMapper.xml
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\obj\Debug\Ampbi.UI.csprojResolveAssemblyReference.cache
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\obj\Debug\Ampbi.UI.dll
+D:\Personal\Ampbi\11072015\Updated_Sachin\Main Development\Ampbi.UI\obj\Debug\Ampbi.UI.pdb
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\Ampbi.UI.dll
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\Ampbi.UI.pdb
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\Ampbi.Business.dll
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\Ampbi.DataAccess.dll
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\Antlr3.Runtime.dll
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\EntityFramework.dll
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\EntityFramework.SqlServer.dll
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\Newtonsoft.Json.dll
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\SRVTextToImage.dll
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\System.Net.Http.Formatting.dll
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\System.Web.Helpers.dll
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\System.Web.Http.dll
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\System.Web.Mvc.dll
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\System.Web.Optimization.dll
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\System.Web.Providers.dll
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\System.Web.Razor.dll
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\System.Web.WebPages.Deployment.dll
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\System.Web.WebPages.dll
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\System.Web.WebPages.Razor.dll
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\WebGrease.dll
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\AutoMapper.dll
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\Ampbi.Business.pdb
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\Ampbi.DataAccess.pdb
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\EntityFramework.xml
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\EntityFramework.SqlServer.xml
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\Newtonsoft.Json.xml
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\System.Net.Http.Formatting.xml
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\System.Web.Helpers.xml
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\System.Web.Http.xml
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\System.Web.Mvc.xml
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\System.Web.Razor.xml
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\System.Web.WebPages.xml
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\System.Web.WebPages.Deployment.xml
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\System.Web.WebPages.Razor.xml
+C:\CRM\Main Development\Main Development\Ampbi.UI\bin\AutoMapper.xml
+C:\CRM\Main Development\Main Development\Ampbi.UI\obj\Debug\Ampbi.UI.csprojResolveAssemblyReference.cache
+C:\CRM\Main Development\Main Development\Ampbi.UI\obj\Debug\Ampbi.UI.dll
+C:\CRM\Main Development\Main Development\Ampbi.UI\obj\Debug\Ampbi.UI.pdb
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\Ampbi.UI.dll
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\Ampbi.UI.pdb
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\Ampbi.Business.dll
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\Ampbi.DataAccess.dll
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\Antlr3.Runtime.dll
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\EntityFramework.dll
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\EntityFramework.SqlServer.dll
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\Newtonsoft.Json.dll
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\System.Net.Http.Formatting.dll
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\System.Web.Helpers.dll
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\System.Web.Http.dll
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\System.Web.Optimization.dll
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\System.Web.Providers.dll
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\System.Web.Razor.dll
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.dll
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Razor.dll
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\WebGrease.dll
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\AutoMapper.dll
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\Ampbi.Business.pdb
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\Ampbi.DataAccess.pdb
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\EntityFramework.xml
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\EntityFramework.SqlServer.xml
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\Newtonsoft.Json.xml
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\System.Net.Http.Formatting.xml
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\System.Web.Helpers.xml
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\System.Web.Http.xml
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\System.Web.Razor.xml
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.xml
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Razor.xml
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\bin\AutoMapper.xml
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.csprojResolveAssemblyReference.cache
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.dll
+C:\Users\home\Desktop\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.pdb
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\Ampbi.UI.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\Ampbi.UI.pdb
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\Ampbi.Business.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\Ampbi.DataAccess.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\Antlr3.Runtime.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\EntityFramework.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\EntityFramework.SqlServer.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\Newtonsoft.Json.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Net.Http.Formatting.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.Helpers.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.Http.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.Mvc.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.Optimization.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.Providers.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.Razor.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Deployment.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Razor.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\WebGrease.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\AutoMapper.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\Ampbi.Business.pdb
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\Ampbi.DataAccess.pdb
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\EntityFramework.xml
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\EntityFramework.SqlServer.xml
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\Newtonsoft.Json.xml
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Net.Http.Formatting.xml
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.Helpers.xml
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.Http.xml
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.Mvc.xml
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.Razor.xml
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.xml
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Deployment.xml
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Razor.xml
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\bin\AutoMapper.xml
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.csprojResolveAssemblyReference.cache
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.pdb
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\Ampbi.UI.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\Ampbi.UI.pdb
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\Ampbi.Business.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\Ampbi.DataAccess.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\Antlr3.Runtime.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\EntityFramework.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\EntityFramework.SqlServer.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\Newtonsoft.Json.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\SRVTextToImage.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\System.Net.Http.Formatting.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\System.Web.Helpers.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\System.Web.Http.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\System.Web.Mvc.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\System.Web.Optimization.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\System.Web.Providers.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\System.Web.Razor.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Deployment.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Razor.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\WebGrease.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\AutoMapper.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\Ampbi.Business.pdb
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\Ampbi.DataAccess.pdb
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\EntityFramework.xml
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\EntityFramework.SqlServer.xml
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\Newtonsoft.Json.xml
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\System.Net.Http.Formatting.xml
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\System.Web.Helpers.xml
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\System.Web.Http.xml
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\System.Web.Mvc.xml
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\System.Web.Razor.xml
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.xml
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Deployment.xml
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Razor.xml
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\bin\AutoMapper.xml
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.csprojResolveAssemblyReference.cache
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.pdb
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\Ampbi.UI.dll
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\Ampbi.UI.pdb
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\Ampbi.Business.dll
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\Ampbi.DataAccess.dll
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\Antlr3.Runtime.dll
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\EntityFramework.dll
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\EntityFramework.SqlServer.dll
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\Newtonsoft.Json.dll
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Net.Http.Formatting.dll
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.Helpers.dll
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.Http.dll
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.Optimization.dll
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.Providers.dll
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.Razor.dll
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.dll
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Razor.dll
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\WebGrease.dll
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\AutoMapper.dll
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\Ampbi.Business.pdb
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\Ampbi.DataAccess.pdb
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\EntityFramework.xml
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\EntityFramework.SqlServer.xml
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\Newtonsoft.Json.xml
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Net.Http.Formatting.xml
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.Helpers.xml
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.Http.xml
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.Razor.xml
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.xml
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Razor.xml
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\AutoMapper.xml
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.csprojResolveAssemblyReference.cache
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.dll
+C:\Users\home\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.pdb
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\Ampbi.UI.dll
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\Ampbi.UI.pdb
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\Ampbi.Business.dll
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\Ampbi.DataAccess.dll
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\Antlr3.Runtime.dll
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\EntityFramework.dll
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\EntityFramework.SqlServer.dll
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\Newtonsoft.Json.dll
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Net.Http.Formatting.dll
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.Helpers.dll
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.Http.dll
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.Mvc.dll
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.Optimization.dll
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.Providers.dll
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.Razor.dll
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.dll
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Razor.dll
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\WebGrease.dll
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\AutoMapper.dll
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\Ampbi.Business.pdb
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\Ampbi.DataAccess.pdb
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\EntityFramework.xml
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\EntityFramework.SqlServer.xml
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\Newtonsoft.Json.xml
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Net.Http.Formatting.xml
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.Helpers.xml
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.Http.xml
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.Mvc.xml
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.Razor.xml
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.xml
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Razor.xml
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\bin\AutoMapper.xml
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.csprojResolveAssemblyReference.cache
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.dll
+C:\Users\610053304\Desktop\AMPBICRM_3rd Feb 2016\AMPBICRM_3rd Feb 2016\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.pdb
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\Ampbi.UI.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\Ampbi.UI.pdb
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\Ampbi.Business.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\Ampbi.DataAccess.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\Antlr3.Runtime.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\EntityFramework.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\EntityFramework.SqlServer.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\Newtonsoft.Json.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\SRVTextToImage.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\System.Net.Http.Formatting.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\System.Web.Helpers.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\System.Web.Http.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\System.Web.Mvc.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\System.Web.Optimization.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\System.Web.Providers.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\System.Web.Razor.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Deployment.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Razor.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\WebGrease.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\AutoMapper.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\Ampbi.Business.pdb
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\Ampbi.DataAccess.pdb
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\EntityFramework.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\EntityFramework.SqlServer.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\Newtonsoft.Json.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\System.Net.Http.Formatting.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\System.Web.Helpers.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\System.Web.Http.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\System.Web.Mvc.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\System.Web.Razor.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Deployment.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Razor.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\bin\AutoMapper.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.csprojResolveAssemblyReference.cache
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.pdb
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\Ampbi.UI.dll
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\Ampbi.UI.pdb
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\Ampbi.Business.dll
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\Ampbi.DataAccess.dll
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\Antlr3.Runtime.dll
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\EntityFramework.dll
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\EntityFramework.SqlServer.dll
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\Microsoft.Web.Infrastructure.dll
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\Newtonsoft.Json.dll
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\PagedList.dll
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\PagedList.Mvc.dll
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\System.Net.Http.Formatting.dll
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\System.Web.Helpers.dll
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\System.Web.Http.dll
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\System.Web.Optimization.dll
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\System.Web.Providers.dll
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\System.Web.Razor.dll
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Deployment.dll
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.dll
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Razor.dll
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\WebGrease.dll
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\AutoMapper.dll
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\Ampbi.Business.pdb
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\Ampbi.DataAccess.pdb
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\EntityFramework.xml
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\EntityFramework.SqlServer.xml
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\Newtonsoft.Json.xml
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\PagedList.xml
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\PagedList.Mvc.xml
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\System.Net.Http.Formatting.xml
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\System.Web.Helpers.xml
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\System.Web.Http.xml
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\System.Web.Razor.xml
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.xml
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Deployment.xml
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Razor.xml
+E:\ampbimarch\AMPBICRM\Ampbi.UI\bin\AutoMapper.xml
+E:\ampbimarch\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.csprojResolveAssemblyReference.cache
+E:\ampbimarch\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.dll
+E:\ampbimarch\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.pdb
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.csprojResolveAssemblyReference.cache
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\Ampbi.UI.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\Ampbi.UI.pdb
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\Ampbi.Business.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\Ampbi.DataAccess.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\Antlr3.Runtime.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\EntityFramework.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\EntityFramework.SqlServer.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\Newtonsoft.Json.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\PagedList.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\PagedList.Mvc.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Net.Http.Formatting.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.Helpers.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.Http.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.Mvc.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.Optimization.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.Providers.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.Razor.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Deployment.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Razor.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\WebGrease.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\AutoMapper.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\Ampbi.Business.pdb
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\Ampbi.DataAccess.pdb
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\EntityFramework.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\EntityFramework.SqlServer.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\Newtonsoft.Json.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\PagedList.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\PagedList.Mvc.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Net.Http.Formatting.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.Helpers.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.Http.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.Mvc.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.Razor.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Deployment.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Razor.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\bin\AutoMapper.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.pdb
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\Ampbi.UI.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\Ampbi.UI.pdb
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\Ampbi.Business.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\Ampbi.DataAccess.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\Antlr3.Runtime.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\EntityFramework.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\EntityFramework.SqlServer.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\Newtonsoft.Json.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\PagedList.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\PagedList.Mvc.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\System.Net.Http.Formatting.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\System.Web.Helpers.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\System.Web.Http.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\System.Web.Mvc.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\System.Web.Optimization.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\System.Web.Providers.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\System.Web.Razor.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Deployment.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Razor.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\WebGrease.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\AutoMapper.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\Ampbi.Business.pdb
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\Ampbi.DataAccess.pdb
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\EntityFramework.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\EntityFramework.SqlServer.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\Newtonsoft.Json.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\PagedList.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\PagedList.Mvc.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\System.Net.Http.Formatting.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\System.Web.Helpers.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\System.Web.Http.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\System.Web.Mvc.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\System.Web.Razor.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Deployment.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Razor.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\AutoMapper.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.csprojResolveAssemblyReference.cache
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.pdb
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.csproj.ResolveComReference.cache
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\EPPlus.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\ExcelLibrary.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile\AMPBICRM\Ampbi.UI\bin\ExcelLibrary.pdb
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\Ampbi.UI.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\Ampbi.UI.pdb
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\Ampbi.Business.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\Ampbi.DataAccess.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\Antlr3.Runtime.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\EntityFramework.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\EntityFramework.SqlServer.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\ExcelLibrary.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\Newtonsoft.Json.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\PagedList.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\PagedList.Mvc.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\System.Net.Http.Formatting.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.Helpers.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.Http.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.Mvc.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.Optimization.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.Providers.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.Razor.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Deployment.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Razor.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\WebGrease.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\AutoMapper.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\Ampbi.Business.pdb
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\Ampbi.DataAccess.pdb
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\ExcelLibrary.pdb
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\EntityFramework.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\EntityFramework.SqlServer.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\EPPlus.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\Newtonsoft.Json.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\PagedList.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\PagedList.Mvc.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\System.Net.Http.Formatting.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.Helpers.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.Http.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.Mvc.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.Razor.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Deployment.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Razor.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\bin\AutoMapper.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.csprojResolveAssemblyReference.cache
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.csproj.ResolveComReference.cache
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_Everifile - UAT\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.pdb
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\Ampbi.UI.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\Ampbi.UI.pdb
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\Ampbi.Business.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\Ampbi.DataAccess.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\Antlr3.Runtime.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\EntityFramework.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\EntityFramework.SqlServer.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\ExcelLibrary.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\Newtonsoft.Json.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\PagedList.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\PagedList.Mvc.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\System.Net.Http.Formatting.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.Helpers.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.Http.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.Optimization.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.Providers.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.Razor.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Deployment.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Razor.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\WebGrease.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\AutoMapper.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\Ampbi.Business.pdb
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\Ampbi.DataAccess.pdb
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\ExcelLibrary.pdb
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\EntityFramework.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\EntityFramework.SqlServer.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\Newtonsoft.Json.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\PagedList.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\PagedList.Mvc.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\System.Net.Http.Formatting.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.Helpers.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.Http.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.Razor.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Deployment.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.WebPages.Razor.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\AutoMapper.xml
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.csprojResolveAssemblyReference.cache
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.csproj.ResolveComReference.cache
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\obj\Debug\Ampbi.UI.pdb
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.Mvc.dll
+C:\CRM\TFS\AMPBICRM_PRODUCTION\AMPBICRM_C3 - UAT\AMPBICRM\Ampbi.UI\bin\System.Web.Mvc.xml

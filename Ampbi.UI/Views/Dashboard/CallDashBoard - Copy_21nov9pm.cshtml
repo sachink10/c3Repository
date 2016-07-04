@@ -1,0 +1,1570 @@
+﻿@model Ampbi.DataAccess.ViewModel.DashBoard
+@{
+    ViewBag.Title = "CallDashBoard";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+@using (Html.BeginForm("CallDashBoard", "DashBoard"))
+{
+    <!-- START CONTAINER -->
+    <div class="page-container row-fluid">
+        <!-- START CONTENT -->
+        <section id="main-content" class="sidebar_shift sidebar_shift-reg">
+            <section class="wrapper wrap-box">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pan0 top-box-search">
+                    <div class="page-title">
+                        <div class="tab-content pull-left col-md-8 col-sm-12 col-xs-12 mart10">
+
+                            <!--Intraday-->
+
+                            <div role="tabpanel" class="tab-pane" id="Intraday">
+                                <div class="pull-left"><strong class="fonts24" id="IntradayID"></strong></div>
+                                <div class="clearfix">
+                                    <input id="ex4" data-slider-id='ex1Slider' type="text" data-slider-min="-13" data-slider-max="0" data-slider-value="0" data-slider-step="1" />
+                                </div>
+                            </div>
+
+                            <!--Daily-->
+
+                            <div role="tabpanel" class="tab-pane active" id="Daily">
+                                <div class="pull-left"><strong class="fonts24" id="DailyID"></strong></div>
+                                <div class="clearfix">
+                                    <input id="ex3" data-slider-id='ex1Slider'  type="text" data-slider-min="-13" data-slider-max="0" data-slider-value="0" data-slider-step="1">
+                                </div>
+                            </div>
+
+                            <!--Weekly-->
+
+                            <div role="tabpanel" class="tab-pane" id="Weekly">
+                                <div class="pull-left"><strong class="fonts24" id="WeekID">Weekly</strong></div>
+                                <div class="clearfix">
+                                    <input id="ex2" data-slider-id='ex1Slider'  type="text" data-slider-min="-12" data-slider-max="0" data-slider-value="0" data-slider-step="1" />
+                                </div>
+                            </div>
+
+                            <!--Month-->
+
+                            <div role="tabpanel" class="tab-pane" id="Month">
+                                <div class="pull-left"><strong class="fonts24" id="MonthID"></strong></div>
+                                <div class="clearfix">
+                                    <input id="ex1" data-slider-id='ex1Slider'  data-slider-min="-13" data-slider-max="0" data-slider-value="0" data-slider-step="1" />
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <nav class="navbar-default" role="navigation">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbarCollapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                            </div>
+                            <div class="pull-right">
+                                <ul class="nav navbar-nav navbar-right btn-group nav-tabs" role="tablist">
+                                    <li role="presentation"><a style="margin: 0px;" href="#Intraday" aria-controls="Intraday" onclick="getIntraday();" role="tab" data-toggle="tab" id="btnIntraday">Intraday</a></li>
+                                    <li role="presentation" class="active"><a style="margin: 0px;" href="#Daily" aria-controls="Daily" role="tab" data-toggle="tab" id="btnDaily">Daily</a></li>
+                                    <li role="presentation"><a style="margin: 0px;" href="#Weekly" aria-controls="Weekly" onclick="GetWeekINfo();" role="tab" data-toggle="tab" id="btnWeekly">Weekly</a></li>
+                                    <li role="presentation"><a style="margin: 0px;" href="#Month" aria-controls="Month" role="tab" onclick="GetMonthINfo();" data-toggle="tab" id="btnMonth">Month</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 mart10">
+                    <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                        <div class="tile-counter bg-orange border-box-call">
+                            <div id="dispositionCalls" class="content">
+                                <h5 data-to="3304" data-from="1001" data-speed="3000" class="number_counter start_timer counted text-color">Calls with Disposition <span id="dispositionCallsText" class="text-color"></span></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                        <div class="tile-counter bg-orange border-box-call">
+                            <div id="totalCalls" class="content">
+                                <h5 data-to="7504" data-from="1001" data-speed="3000" class="number_counter start_timer counted text-color">Total Calls <span class="text-color" id="totalCallsText"></span></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+                <ul id="draggablePanelList" class="list-unstyled col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <li class="panel panel-info col-md-6">
+                        <section class="box mart20">
+                            <header class="panel_header box-heading">
+                                <!--<h2 class="title pull-left">Calls</h2>-->
+                                <div class="pull-left col-md-3 pantb20">
+                                    @* <select class="select-box input-sm">
+                                        <option>Chart Type</option>
+                                        <option>Pie</option>
+                                        <option>Stacked</option>
+                                        <option>Donut</option>
+                                    </select>*@
+                                    @*<select id="chartType" class="select-box input-sm">
+                                        <option value="0">Select</option>
+                                        <option value="pie">Pie</option>
+                                        <option value="column" selected>Stacked</option>
+                                        <option value="line">line</option>
+                                    </select>*@
+                                    @Html.DropDownList("ChartName", new SelectList(Model.LstNoOfCallDashboardChartTypes, "Genericvarchar1", "Description"), new { @ID = "chartType", @class = "select-box input-sm" })
+                                </div>
+                                <div class="pull-left col-md-6 pantb20 text-color-whiite">@Model.getCompanyChartInfo.Chart1Name </div>
+                                <div class="pull-right col-md-3 pantb20">
+                                    <select class="select-box input-sm" id="chart1Export">
+                                        <option>Export</option>
+                                        <option>PDF</option>
+                                        <option>PNG</option>
+                                        <option>Excel</option>
+                                    </select>
+                                </div>
+                                <div class="pull-right"></div>
+                            </header>
+                            <div class="content-body" style="height: 300px;">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 pan0">
+                                        <div class="clearfix">
+                                            <div class="col-md-4"></div>
+                                            <div class="col-md-5">
+                                                <div class="col-md-12 clearfix marb10">
+                                                    @*<select class="select-box input-sm">
+                                                        <option>ALL-Dealerships</option>
+                                                        <option>ALL-Dealerships1</option>
+                                                        <option>ALL-Dealerships2</option>
+                                                    </select>*@
+                                                    @Html.DropDownListFor(u => u.callsBoardValues, new SelectList(Model.LstDelears, "DisplayOrder", "Name"), new { @ID = "delearshipselection", @class = "select-box input-sm" })
+                                                </div>
+                                                <div class="clearfix">
+                                                    <div class="col-md-12">
+                                                        <div id="carousel">
+                                                            <div id="buttons">
+                                                                <a href="#" id="prev">
+                                                                    <img src="~/Content/assets/images/arrow-1.png" id="btnprev" alt=""></a> <a href="#" id="next">
+                                                                        <img src="~/Content/assets/images/arrow-2.png" onclick="NextRecord();" id="btnnext" alt=""></a>
+                                                            </div>
+                                                            <div id="slides">
+
+
+                                                                @Html.DropDownListFor(u => u.callsBoardValues, new SelectList(Model.LstMarkets, "DisplayOrder", "Name"), new { @ID = "ddlMarkets", @class = "select-box input-sm" })
+
+
+                                                                @*<select class="select-box input-sm" id="ddlMarkets">
+                                                                    <option>All Markets</option>
+                                                                </select>*@
+                                                                @*@{
+                                                                if (@Model.LstMarkets != null)
+                                                                {
+                                                                    @Html.DropDownListFor(u => u.callsBoardValues, new SelectList(Model.LstMarkets, "DisplayOrder", "Name"), new { @ID = "ddlMarkets", @class = "select-box input-sm" })
+                                                                }
+                                                                else
+                                                                {
+                                                                    <select class="select-box input-sm" id="ddlMarkets">
+                                                                        <option>All Markets</option>
+                                                                    </select>
+                                                                }                                                                
+                                                                }*@
+
+                                                            </div>
+                                                            @*<div id="slides">
+                                                                <ul>
+                                                                    <li>
+                                                                        <select class="select-box input-sm">
+                                                                            <option>All Marketing Campaigns</option>
+                                                                            <option>All Marketing Campaigns1</option>
+                                                                            <option>All Marketing Campaigns2</option>
+                                                                        </select>
+                                                                    </li>
+                                                                    <li>
+                                                                        <select class="select-box input-sm">
+                                                                            <option>All Dealerships</option>
+                                                                            <option>All Dealerships1</option>
+                                                                            <option>All Dealerships2</option>
+                                                                        </select>
+                                                                    </li>
+                                                                    <li>
+                                                                        <select class="select-box input-sm">
+                                                                            <option>All Dealerships</option>
+                                                                            <option>All Dealerships1</option>
+                                                                            <option>All Dealerships2</option>
+                                                                        </select>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>*@
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3"></div>
+                                        </div>
+                                        <div id="container" class="sm-device col-lg-12 col-md-12 col-sm-12 col-xs-12 pic-width mart20">
+                                            @*<img src="~/Content/assets/images/pie-chart.png" alt="">*@
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </li>
+                    <li class="panel panel-info col-md-6">
+                        <section class="box mart20">
+                            <header class="panel_header box-heading">
+                                <div class="pull-left col-md-3 pantb20">
+                                    @* <select id="chartType2" class="select-box input-sm">
+                                        <option value="0">Select</option>
+                                        <option value="pie">Pie</option>
+                                        <option value="column">Stacked</option>
+                                        <option value="line">line</option>
+                                    </select>*@
+                                    @Html.DropDownList("ChartName", new SelectList(Model.LstNoOfCallDashboardChartTypes, "Genericvarchar1", "Description"), new { @ID = "chartType2", @class = "select-box input-sm" })
+                                </div>
+                                <div class="pull-left col-md-6 pantb20 text-color-whiite">@Model.getCompanyChartInfo.Chart2Name</div>
+                                <div class="pull-right col-md-3 pantb20">
+                                    <select class="select-box input-sm" id="chart2Export">
+                                        <option>Export</option>
+                                        <option>PDF</option>
+                                        <option>PNG</option>
+                                        <option>Excel</option>
+
+                                    </select>
+                                </div>
+                            </header>
+                            <div class="content-body" style="height: 300px;">
+                                <div class="row">
+                                    <div id="container2" class="col-lg-3 col-md-3 col-sm-12 col-xs-12 col-md-offset-2 col-lg-offset-2 mart10 pic-width">
+                                        @*<img src="~/Content/assets/images/pie-chart1.png" alt="">*@
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </li>
+                    <li class="panel panel-info col-md-6">
+                        <section class="box mart20">
+                            <header class="panel_header box-heading">
+                                <div class="pull-left col-md-3 pantb20">
+                                    @*<select id="chartType3" class="select-box input-sm">
+                                        <option value="0">Select</option>
+                                        <option value="pie">Pie</option>
+                                        <option value="column">Stacked</option>
+                                        <option value="line">line</option>
+                                    </select>*@
+                                    @Html.DropDownList("ChartName", new SelectList(Model.LstNoOfCallDashboardChartTypes, "Genericvarchar1", "Description"), new { @ID = "chartType3", @class = "select-box input-sm" })
+                                </div>
+                                <div class="pull-left col-md-6 pantb20 text-color-whiite">@Model.getCompanyChartInfo.Chart3Name</div>
+                                <div class="pull-right col-md-3 pantb20">
+                                    <select class="select-box input-sm" id="chart3Export">
+                                        <option>Export</option>
+                                        <option>PDF</option>
+                                        <option>PNG</option>
+                                        <option>Excel</option>
+
+                                    </select>
+                                </div>
+                            </header>
+                            <div class="content-body" style="height: 300px;">
+                                <div class="row">
+                                    <div id="container3" class="col-lg-3 col-md-3 col-sm-12 col-xs-12 col-md-offset-2 col-lg-offset-2 mart10 pic-width">
+                                        @*<img src="~/Content/assets/images/pie-chart1.png" alt="">*@
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </li>
+                    <li class="panel panel-info col-md-6">
+                        <section class="box mart20">
+                            <header class="panel_header box-heading">
+                                <div class="pull-left col-md-3 pantb20">
+                                    @*<select id="chartType4" class="select-box input-sm">
+                                        <option value="0">Select</option>
+                                        <option value="pie">Pie</option>
+                                        <option value="column">Stacked</option>
+                                        <option value="line">line</option>
+                                    </select>*@
+                                    @Html.DropDownList("ChartName", new SelectList(Model.LstNoOfCallDashboardChartTypes, "Genericvarchar1", "Description"), new { @ID = "chartType4", @class = "select-box input-sm" })
+                                </div>
+                                <div class="pull-left col-md-6 pantb20 text-color-whiite">@Model.getCompanyChartInfo.Chart4Name</div>
+                                <div class="pull-right col-md-3 pantb20">
+                                    <select class="select-box input-sm" id="chart4Export">
+                                        <option>Export</option>
+                                        <option>PDF</option>
+                                        <option>PNG</option>
+                                        <option>Excel</option>
+
+                                    </select>
+                                </div>
+                            </header>
+                            <div class="content-body" style="height: 300px;">
+                                <div class="row">
+                                    <div id="container4" class="col-lg-3 col-md-3 col-sm-12 col-xs-12 mart10 pic-width">
+                                        @* <img src="~/Content/assets/images/NoData.PNG" alt="">*@
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </section>
+        </section>
+        <!-- END CONTENT -->
+        <input name="hdnSrvtDtime" id="hdnSrvtDtime" type="hidden">
+        <input name="Type" id="typeID" type="hidden" />
+        <input name="Type" id="marketvalue" type="hidden" />
+    </div>@*
+    
+    <script>
+        $(function () {
+            var id = "ddlMarkets";
+            $('#' + id).after("<ul id='temp' />")
+                .children("option").each(function () {
+                    $("#temp").append("i>");
+                })
+                .end().remove();
+            $('#temp').attr("id", id);
+        });
+    </script>*@
+   
+    <!-- END CONTAINER --> 
+        
+    <script>
+
+        $(document).ready(function () {
+            var d = new Date();
+
+            var month = d.getMonth() + 1;
+            var day = d.getDate();
+            var year = d.getFullYear();
+            var hr = d.getHours();
+            var mi = d.getMinutes();
+            var sec = d.getSeconds();
+
+            $('#hdnSrvtDtime').val(year + ',' + month + ',' + day + ',' + hr + ',' + mi + ',' + sec);
+
+           
+
+        });
+
+
+
+        setInterval(function () { SonicDashboard_getDate(); }, 250);
+        function SonicDashboard_getDate(slider, type) {
+            var servrDat = $("#hdnSrvtDtime").val();
+
+
+            var sliderVal = $("#" + slider).val();;
+            if (servrDat != '') {
+
+
+
+                var mySplitResult = servrDat.split(",");
+                var a = new Date(mySplitResult[0], (mySplitResult[1] - 1).toString(), mySplitResult[2], mySplitResult[3], mySplitResult[4], mySplitResult[5]);
+                //var selected = $("input[type='radio'][name='radio-choice-h-230']:checked");
+                var mydate;
+                switch (type) {
+
+                    case 'MONTHLY':
+                        $('#typeID').val('M');
+                        mydate = a.addMonths(parseInt(sliderVal));
+                        $("#MonthID").html(mydate.toString('MMM yyyy'));
+                        //$("#hdnDateSelected").val(mydate.toString('MM/dd/yyyy'));
+                        break;
+
+                    case 'DAILY':
+
+                        $('#typeID').val('D');
+                        var dt = a.addDays(sliderVal);
+                        var dy = dt.toString('d');
+                        var mt = dt.toString('MMM');
+                        var yr = dt.toString('yyyy');
+                        //$("#hdnDateSelected").val(dt.toString('MM/dd/yyyy'));
+                        $('#DailyID').html((mt + ' ' + dy + ' ' + yr).toString('MMM/d/yyyy'));
+                        //if (((dy.substring(dy.length, 1) == '1') && (dy != '11')) || (dy == '1')) {
+                        //    $("#LblDaily").text(dy + 'st ' + mt + ' ' + yr);
+                        //}
+
+                        //else if (((dy.substring(dy.length, 1) == '2') && (dy != '12')) || (dy == '2')) {
+                        //    $("#LblDaily").text(dy + 'nd ' + mt + ' ' + yr);
+                        //}
+                        //else if (((dy.substring(dy.length, 1) == '3') && (dy != '13')) || (dy == '3')) {
+                        //    $("#LblDaily").text(dy + 'rd ' + mt + ' ' + yr);
+                        //}
+                        //else {
+                        //    $("#LblDaily").text(dy + 'th ' + mt + ' ' + yr);
+                        //}
+                        break;
+
+                    case 'WEEKLY':
+                        $('#typeID').val('W');
+                        var dt;
+                        if (sliderVal == 0) {
+                            dt = a;
+                        }
+                        else {
+                            dt = a.sunday();
+                            dt.addWeeks(sliderVal);
+                        }
+
+                        var dy = dt.toString('d');
+                        var mt = dt.toString('MMM');
+                        var yr = dt.toString('yyyy');
+                        //$("#hdnDateSelected").val(dt.toString('MM/dd/yyyy'));
+                        $("#WeekID").html(mt + ' ' + dy + ' ' + yr);
+                        //if (((dy.substring(dy.length, 0) == '1') || (dy.substring(dy.length, 1) == '1') && (dy != '11'))) {
+                        //    $("#LblDaily").text(dy + 'st ' + mt + ' ' + yr);
+                        //}
+
+                        //else if (((dy.substring(dy.length, 0) == '2') || (dy.substring(dy.length, 1) == '2') && (dy != '12'))) {
+                        //    $("#LblDaily").text(dy + 'nd ' + mt + ' ' + yr);
+                        //}
+                        //else if (((dy.substring(dy.length, 0) == '3') || (dy.substring(dy.length, 1) == '3') && (dy != '13'))) {
+                        //    $("#LblDaily").text(dy + 'rd ' + mt + ' ' + yr);
+                        //}
+                        //else {
+                        //    $("#LblDaily").text(dy + 'th ' + mt + ' ' + yr);
+                        //}
+
+                        break;
+
+                    case 'INTRADAY':
+                        $('#typeID').val('I');
+                        var dt = a.addHours(sliderVal);
+                        var dy = dt.toString('d');
+                        var mt = dt.toString('MMM');
+                        var yr = dt.toString('yyyy');
+                        var hr = dt.toString('h');
+                        var tt = dt.toString('tt');
+                        var hour = dt.toString('hh');
+                        if (tt == "PM" && hour < 12) {
+                            hour = parseInt(hour) + 12;
+                        }
+                        $("#hdnDateSelected").val(dt.toString('MM/dd/yyyy') + " " + hour + ":" + dt.toString('mm') + ":" + dt.toString('ss'));
+                        if (hr == 0) { hr = 12; }
+
+                        $('#IntradayID').html(hr + ' ' + tt + ' ' + mt + ' ' + dy + ' ' + yr);
+                        //if (((dy.substring(dy.length, 1) == '1') && (dy != '11')) || (dy == '1')) {
+                        //    $("#LblDaily").text(hr + ' ' + tt + ' ' + dy + 'st ' + mt + ' ' + yr);
+                        //}
+
+                        //else if (((dy.substring(dy.length, 1) == '2') && (dy != '12')) || (dy == '2')) {
+                        //    $("#LblDaily").text(hr + ' ' + tt + ' ' + dy + 'nd ' + mt + ' ' + yr);
+                        //}
+                        //else if (((dy.substring(dy.length, 1) == '3') && (dy != '13')) || (dy == '3')) {
+                        //    $("#LblDaily").text(hr + ' ' + tt + ' ' + dy + 'rd ' + mt + ' ' + yr);
+                        //}
+                        //else {
+                        //    $("#LblDaily").text(hr + ' ' + tt + ' ' + dy + 'th ' + mt + ' ' + yr);
+                        //}
+                        break;
+                }
+            }
+        }
+
+
+
+
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            var sliderValue = $('#ex1').val();
+            var d = new Date();
+            getDaily();
+            LoadValuewithGraph('D');
+           
+
+
+            //Type: -
+            //D= Daily
+            //W=Weekly
+            //I = Intraday
+            //M = Monthly
+
+            //btnMonth load the graph
+            $("#btnMonth").on("click", function () {
+                SonicDashboard_getDate('ex1', 'MONTHLY');
+                LoadValuewithGraph('M');
+            });
+            $("#btnWeekly").on("click", function () {
+                SonicDashboard_getDate('ex2', 'WEEKLY');
+                LoadValuewithGraph('W');
+            });
+            $("#btnDaily").on("click", function () {
+                SonicDashboard_getDate('ex3', 'DAILY');
+                LoadValuewithGraph('D');
+            });
+            $("#btnIntraday").on("click", function () {
+                SonicDashboard_getDate('ex4', 'INTRADAY');
+                LoadValuewithGraph('I');
+            });
+            ///Change event of Slider
+            $('#ex1').on('change', function () {
+                SonicDashboard_getDate('ex1', 'MONTHLY');
+                LoadValuewithGraph('M');
+            });
+            $('#ex2').on('change', function () {
+                SonicDashboard_getDate('ex2', 'WEEKLY');
+                LoadValuewithGraph('W');
+            });
+            $('#ex3').on('change',function(){
+                SonicDashboard_getDate('ex3', 'DAILY');
+                LoadValuewithGraph('D');
+            });
+            $('#ex4').on('change', function () {
+                SonicDashboard_getDate('ex4', 'INTRADAY');
+                LoadValuewithGraph('I');
+            });
+
+
+
+
+            //Dealership Drop down on Change load the graph
+            $("#delearshipselection").change(function () {
+                var selectedDealerVal = $("#delearshipselection option:selected").text();
+                $('#container2').hide();
+                $('#container3').hide();
+                $('#container4').hide();
+                var slidervalue;
+                var T = $('#typeID').val();
+                if (T == 'D') {
+                    slidervalue = $('#DailyID').html();
+                }
+                if (T == 'W') {
+                    slidervalue = $('#WeekID').html();
+                }
+                if (T == 'M') {
+                    slidervalue = $('#MonthID').html();
+                }
+                if (T == 'I') {
+                    slidervalue = $('#IntradayID').html();
+                    //alert(slidervalue);
+                }
+               
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("bindMarketData", "Dashboard")',
+                    cache: false,
+                    dataType: "json",
+                    data: { 'selectedDealerVal': selectedDealerVal, 'sliderValue': slidervalue, 'Type': T },
+                    success: function (data) {
+                        $('#marketvalue').val(data);
+                        $('#ddlMarkets').empty();
+                        $.each(data.LstMarkets, function (i) {
+                            $('#ddlMarkets').append($('<option />').val(this.DisplayOrder).text(this.Name));
+                        });
+                        
+                        LoadValuewithGraph(T);
+
+                    },
+                    error: function (result) {
+                        alert('Cannot update selection values now!!');
+                    }
+                })
+            });
+
+
+            //Market Drop down on Change load the graph
+            $("#ddlMarkets").change(function () {
+                var selectedMarketVal = $("#ddlMarkets option:selected").text();
+                var selectedDealerVal = $("#delearshipselection option:selected").text();
+                $('#container2').hide();
+                $('#container3').hide();
+                $('#container4').hide();
+                @*$.ajax({
+                    type: "POST",
+                    url: '@Url.Action("bindcharData", "Dashboard")',
+                    cache: false,
+                    dataType: "json",
+                    data: { 'selectedMarketVal': selectedMarketVal, 'selectedDealerVal': selectedDealerVal },
+                    success: function (data) {
+                        bindGraph1();
+                    },
+                    error: function (result) {
+                        alert('Cannot update selection values now!!');
+                    }
+                })*@
+                var T = $('#typeID').val();
+                LoadValuewithGraph(T);
+               
+            });
+
+
+            $("#btnnext").click(function () {
+                var nextElement = $('#ddlMarkets > option:selected').next('option');
+                if (nextElement.length > 0) {
+                    $('#ddlMarkets > option:selected').removeAttr('selected').next('option').attr('selected', 'selected');
+                    var T = $('#typeID').val();
+                    LoadValuewithGraph(T);
+
+                }
+            });
+
+
+            $("#btnprev").click(function () {
+                var nextElement = $('#ddlMarkets > option:selected').prev('option');
+                if (nextElement.length > 0) {
+                    $('#ddlMarkets > option:selected').removeAttr('selected').prev('option').attr('selected', 'selected');
+                    var T = $('#typeID').val();
+                    LoadValuewithGraph(T);
+                }
+            });
+
+
+            //Type: -
+            //D= Daily
+            //W=Weekly
+            //I = Intraday
+            //M = Monthly
+            function LoadValuewithGraph(type) {
+                $('#container2').hide();
+                $('#container3').hide();
+                $('#container4').hide();
+                var slidervalue;
+                if (type == 'D') {
+                    slidervalue = $('#DailyID').html();
+                }
+                if (type == 'W') {
+                    slidervalue = $('#WeekID').html();
+                }
+                if (type == 'M') {
+                    slidervalue = $('#MonthID').html();
+                }
+                if (type == 'I') {
+                    slidervalue = $('#IntradayID').html();
+                    //alert(slidervalue);
+                }
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("GetMonthlyData", "Dashboard")',
+                    cache: false,
+                    data: { 'sliderValue': slidervalue, 'Type': type },
+                    success: function (data) {
+                        if (data.totalCallsCount[0].TotalCallswithDisposition == null) {
+                            $('#dispositionCalls #dispositionCallsText').text(0);
+                        }
+                        else {
+                            $('#dispositionCalls #dispositionCallsText').text(data.totalCallsCount[0].TotalCallswithDisposition);
+                        }
+                        if (data.totalCallsCount[0].TotalCallswithDisposition == null) {
+                            $('#totalCalls #totalCallsText').text(0);
+                        }
+                        else {
+                            $('#totalCalls #totalCallsText').text(data.totalCallsCount[0].TotalCalls);
+                        }
+
+                        bindGraph1(type, slidervalue);
+
+                    },
+                    error: function (result) {
+                        alert('Cannot update selection values now!!');
+                    }
+                })
+
+            }
+            function bindGraph1(type,sliderval) {
+                var selectedMarketVal = $("#ddlMarkets option:selected").text();
+                var selectedDealerVal = $("#delearshipselection option:selected").text();
+               
+              
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("bindcharData", "Dashboard")',
+                    cache: false,
+                    dataType: "json",
+                    data: { 'selectedDealerVal': selectedDealerVal, 'sliderValue': sliderval, 'selectedMarketVal': selectedMarketVal,'type': type },
+                    success: function (data) {
+
+                        var processed_json = new Array();
+                        @*  if (data.length == 0) {
+                            $('#container').append("<img src=@Url.Content("~/Content/assets/images/NoData.PNG") alt=''/>");
+                             return;
+                         }*@
+                        for (i = 0; i < data.length; i++) {
+                            processed_json.push([data[i].Disposition, parseInt(data[i].DispCount)]);
+                        }
+                        var options = {
+                            chart: {
+
+                                events: {
+                                    drilldown: function (e) {
+                                        if (!e.seriesOptions) {
+                                            var chart = this;
+                                            // Show the loading label
+                                            //chart.showLoading('Loading ...');
+                                            setTimeout(function () {
+                                                chart.hideLoading();
+                                                chart.addSeriesAsDrilldown(e.point, series);
+                                            }, 1000);
+                                        }
+                                    }
+                                },
+                                //plotBorderWidth: 1,                               
+                                height: 200,
+                            },
+                            title: {
+                                text: '',
+
+                            },
+                            //
+                            subtitle: {
+                                //   text: 'Subtitle'
+                            },
+                            //
+                            xAxis: {
+                                //   type: 'category',
+                            },
+
+                            plotOptions: {
+                                series: {
+                                    name: "Call reasons",
+                                    cursor: 'pointer',
+                                    point: {
+                                        events: {
+                                            click: function () {
+                                                var charttype = $('#chartType').val();
+
+                                                var T = $('#typeID').val();
+                                                bindGraphdisposition1(this.name, charttype,T);
+                                            }
+                                        }
+                                    }
+                                },
+
+                                pie:
+                                {
+                                    innerSize: 60,
+                                    depth: 25
+                                },
+
+                                column: {
+                                    stacking: 'normal',
+                                    dataLabels: {
+                                        enabled: true,
+                                        color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                                        style: {
+                                            textShadow: '0 0 3px black'
+                                        }
+                                    }
+                                }
+                            },
+
+
+                            //
+                            series: [{
+                                //name: 'Case',
+                                colorByPoint: true,
+                                data: processed_json
+                            }],
+                            credits: {
+                                enabled: false
+                            },
+                            navigation: {
+                                buttonOptions: {
+                                    enabled: false
+                                }
+                            },
+                            exportButton: {
+                                enabled: false
+                            },
+                            //
+                            drilldown: {
+                                series: []
+                            }
+
+                        };
+
+
+
+                        // Column chart
+                        options.chart.renderTo = 'container';
+                        options.chart.Width = "100";
+                        options.chart.Height = "100";
+                        options.chart.type = $('#chartType').val();
+                        var chart1 = new Highcharts.Chart(options);
+
+                        $('#chart1Export').change(function () {
+                            var type = this.value;
+
+                            var chart = $('#container').highcharts();
+                            if (type == "JPEG") {
+                                chart.exportChart({ type: "application/jpg" });
+                            }
+                            if (type == "PNG") {
+                                chart.exportChart({ type: "application/png" });
+                            }
+                            if (type == "PDF") {
+                                chart.exportChart({ type: "application/pdf" });
+                            }
+
+
+                        });
+
+
+
+                        $("#chartType").change(function () {
+                            var type = this.value;
+                            if (type !== '0') {
+                                if (type == "column") {
+
+                                    options.chart.renderTo = 'container';
+                                    options.chart.type = 'column';
+                                    var chart1 = new Highcharts.Chart(options);
+                                }
+                                else if (type == "bar") {
+                                    options.chart.renderTo = 'container';
+                                    options.chart.type = 'bar';
+                                    var chart1 = new Highcharts.Chart(options);
+                                }
+                                else if (type == "pie") {
+                                    options.chart.renderTo = 'container';
+                                    options.chart.type = 'pie';
+                                    var chart1 = new Highcharts.Chart(options);
+                                }
+                                else if (type == "line") {
+                                    options.chart.renderTo = 'container';
+                                    options.chart.type = 'line';
+                                    var chart1 = new Highcharts.Chart(options);
+                                }
+                            }
+                        });
+                    },
+                    error: function (result) {
+                        alert('Cannot update selection values now!!');
+                    }
+                })
+
+
+            }
+
+
+
+            function bindGraphdisposition1(selectedChartDispVal1, charttype, type) {
+                $('#container2').show();
+                var slidervalue;
+                if (type == 'D') {
+                    slidervalue = $('#DailyID').html();
+                }
+                if (type == 'W') {
+                    slidervalue = $('#WeekID').html();
+                }
+                if (type == 'M') {
+                    slidervalue = $('#MonthID').html();
+                }
+                if (type == 'I') {
+                    slidervalue = $('#IntradayID').html();
+                    //alert(slidervalue);
+                }
+              
+               
+                var selectedMarketVal = $("#ddlMarkets option:selected").text();
+                var selectedDealerVal = $("#delearshipselection option:selected").text();
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("bindcharDatadispositionlvl1", "Dashboard")',
+                    cache: false,
+                    dataType: "json",
+                    data: { 'selectedDealerVal': selectedDealerVal, 'sliderValue1':slidervalue, 'selectedMarketVal': selectedMarketVal, 'selectedChartDispVal1': selectedChartDispVal1,'leveltype': type },
+                    success: function (data) {
+                        
+                        var processed_json = new Array();
+                        @* if (data.length == 0) {
+                            $('#container2').append("<img src=@Url.Content("~/Content/assets/images/NoData.PNG") alt=''/>");
+                             return;
+                         }*@
+                        for (i = 0; i < data.length; i++) {
+                            processed_json.push([data[i].Disposition, parseInt(data[i].DispCount)]);
+                        }
+
+                        var options = {
+                            chart: {
+
+                                events: {
+                                    drilldown: function (e) {
+                                        if (!e.seriesOptions) {
+                                            var chart = this;
+                                            // Show the loading label
+                                            //chart.showLoading('Loading ...');
+                                            setTimeout(function () {
+                                                chart.hideLoading();
+                                                chart.addSeriesAsDrilldown(e.point, series);
+                                            }, 1000);
+                                        }
+                                    }
+                                },
+                                //plotBorderWidth: 1,
+                                //width: 370,
+                                height: 220,
+                            },
+
+
+
+
+                            title: {
+                                text: '',
+
+                            },
+                            //
+                            subtitle: {
+                                //   text: 'Subtitle'
+                            },
+                            //
+                            xAxis: {
+                                //   type: 'category',
+                            },
+                            //
+                            //  yAxis: {
+
+                            //   title: {
+                            //          margin: 2,
+                            //          text: 'No. of user'
+                            //     },
+                            //  },
+                            //
+                            //  legend: {
+                            //  enabled: true,
+                            //   },
+                            //
+                            plotOptions: {
+                                series: {
+                                    name: "Call reasons",
+                                    cursor: 'pointer',
+                                    point: {
+                                        events: {
+                                            click: function () {
+                                                var charttype = $('#chartType').val();
+                                                //$('#container3').hide();
+                                                //$("#container3 img").remove()
+                                                var T = $('#typeID').val();
+                                                bindGraphdisposition2(this.name, charttype,T);
+                                            }
+                                        }
+                                    }
+                                },
+                                //series:
+                                //    {
+                                //        pointPadding: 0.2,
+                                //        borderWidth: 0,
+                                //        dataLabels: {
+                                //            enabled: true
+                                //        }
+                                //    },
+                                pie:
+                                {
+
+                                    innerSize: 60,
+                                    depth: 25
+
+                                },
+
+                                column: {
+                                    stacking: 'normal',
+                                    dataLabels: {
+                                        enabled: true,
+                                        color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                                        style: {
+                                            textShadow: '0 0 3px black'
+                                        }
+                                    }
+                                }
+                            },
+
+
+                            //
+                            series: [{
+                                //name: 'Case',
+                                colorByPoint: true,
+
+                                data: processed_json
+                            }],
+                            navigation: {
+                                buttonOptions: {
+                                    enabled: false
+                                }
+                            },
+                            credits: {
+                                enabled: false
+                            },
+                            exportButton: {
+                                enabled: false
+                            },
+                            //
+                            drilldown: {
+                                series: []
+                            }
+
+                        };
+
+
+
+                        // Column chart
+                        options.chart.renderTo = 'container2';
+                        options.chart.Width = "100";
+                        options.chart.Height = "100";
+                        options.chart.type = charttype;
+                        var chart1 = new Highcharts.Chart(options);
+
+                        $('#chart2Export').change(function () {
+                            var type = this.value;
+
+                            var chart = $('#container2').highcharts();
+                            if (type == "JPEG") {
+                                chart.exportChart({ type: "application/jpg" });
+                            }
+                            if (type == "PNG") {
+                                chart.exportChart({ type: "application/png" });
+                            }
+                            if (type == "PDF") {
+                                chart.exportChart({ type: "application/pdf" });
+                            }
+
+
+                        });
+
+
+                        $("#chartType2").change(function () {
+                            var type = this.value;
+                            if (type !== '0') {
+                                if (type == "column") {
+
+                                    options.chart.renderTo = 'container2';
+                                    options.chart.type = 'column';
+                                    var chart1 = new Highcharts.Chart(options);
+                                }
+                                else if (type == "bar") {
+                                    options.chart.renderTo = 'container2';
+                                    options.chart.type = 'bar';
+                                    var chart1 = new Highcharts.Chart(options);
+                                }
+                                else if (type == "pie") {
+                                    options.chart.renderTo = 'container2';
+                                    options.chart.type = 'pie';
+                                    var chart1 = new Highcharts.Chart(options);
+                                }
+                                else if (type == "line") {
+                                    options.chart.renderTo = 'container2';
+                                    options.chart.type = 'line';
+                                    var chart1 = new Highcharts.Chart(options);
+                                }
+                            }
+                        });
+                    },
+                    error: function (result) {
+                        alert('Cannot update selection values now!!');
+                    }
+                })
+
+
+            }
+
+
+
+            function bindGraphdisposition2(selectedChartDispVal2, charttype, type) {
+                $('#container3').show();
+                $('#chartType3').val(charttype);
+                var selectedMarketVal = $("#ddlMarkets option:selected").text();
+                var selectedDealerVal = $("#delearshipselection option:selected").text();
+               
+                var slidervalue;
+                if (type == 'D') {
+                    slidervalue = $('#DailyID').html();
+                }
+                if (type == 'W') {
+                    slidervalue = $('#WeekID').html();
+                }
+                if (type == 'M') {
+                    slidervalue = $('#MonthID').html();
+                }
+                if (type == 'I') {
+                    slidervalue = $('#IntradayID').html();
+                    //alert(slidervalue);
+                }
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("bindcharDatadispositionlvl2", "Dashboard")',
+                    cache: false,
+                    dataType: "json",
+                    data: { 'selectedDealerVal': selectedDealerVal, 'sliderValue': slidervalue, 'selectedMarketVal': selectedMarketVal, 'selectedChartDispVal2': selectedChartDispVal2,'secondlevel':type },
+                    success: function (data) {
+
+                        var processed_json = new Array();
+                        @*  if (data.length == 0) {
+                            $('#container3').append("<img src=@Url.Content("~/Content/assets/images/NoData.PNG") alt=''/>");
+                            return;
+                        }*@
+                        for (i = 0; i < data.length; i++) {
+                            processed_json.push([data[i].Disposition, parseInt(data[i].DispCount)]);
+                        }
+
+                        var options = {
+                            chart: {
+
+                                events: {
+                                    drilldown: function (e) {
+                                        if (!e.seriesOptions) {
+                                            var chart = this;
+                                            // Show the loading label
+                                            //chart.showLoading('Loading ...');
+                                            setTimeout(function () {
+                                                chart.hideLoading();
+                                                chart.addSeriesAsDrilldown(e.point, series);
+                                            }, 1000);
+                                        }
+                                    }
+                                },
+                                //plotBorderWidth: 1,
+                                //width: 370,
+                                height: 220,
+                            },
+
+
+
+
+                            title: {
+                                text: '',
+
+                            },
+                            //
+                            subtitle: {
+                                //   text: 'Subtitle'
+                            },
+                            //
+                            xAxis: {
+                                //   type: 'category',
+                            },
+                            //
+                            //  yAxis: {
+
+                            //   title: {
+                            //          margin: 2,
+                            //          text: 'No. of user'
+                            //     },
+                            //  },
+                            //
+                            //  legend: {
+                            //  enabled: true,
+                            //   },
+                            //
+                            plotOptions: {
+                                series: {
+                                    name: "Call reasons",
+                                    cursor: 'pointer',
+                                    point: {
+                                        events: {
+                                            click: function () {
+                                                var charttype = $('#chartType').val();
+                                                var T = $('#typeID').val();
+                                                bindGraphdisposition3(this.name, charttype, T);
+                                            }
+                                        }
+                                    }
+                                },
+                                //series:
+                                //    {
+                                //        pointPadding: 0.2,
+                                //        borderWidth: 0,
+                                //        dataLabels: {
+                                //            enabled: true
+                                //        }
+                                //    },
+                                pie:
+                                {
+
+                                    innerSize: 60,
+                                    depth: 25
+
+                                },
+
+                                column: {
+                                    stacking: 'normal',
+                                    dataLabels: {
+                                        enabled: true,
+                                        color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                                        style: {
+                                            textShadow: '0 0 3px black'
+                                        }
+                                    }
+                                }
+                            },
+
+
+                            //
+                            series: [{
+                                //name: 'Case',
+                                colorByPoint: true,
+                                data: processed_json
+                            }],
+                            navigation: {
+                                buttonOptions: {
+                                    enabled: false
+                                }
+                            },
+                            credits: {
+                                enabled: false
+                            },
+                            exportButton: {
+                                enabled: false
+                            },
+                            //
+                            drilldown: {
+                                series: []
+                            }
+
+                        };
+
+
+
+                        // Column chart
+                        options.chart.renderTo = 'container3';
+                        options.chart.Width = "100";
+                        options.chart.Height = "100";
+                        options.chart.type = charttype;
+                        //if (options.series.length >= 1) {
+                        var chart1 = new Highcharts.Chart(options);
+                        @*  }
+                        else {
+                            $('#container3').append("<img id=img3 src=@Url.Content("~/Content/assets/images/NoData.PNG") alt=''/>");
+                        };*@
+
+                        $('#chart3Export').change(function () {
+                            var type = this.value;
+
+                            var chart = $('#container3').highcharts();
+                            if (type == "JPEG") {
+                                chart.exportChart({ type: "application/jpg" });
+                            }
+                            if (type == "PNG") {
+                                chart.exportChart({ type: "application/png" });
+                            }
+                            if (type == "PDF") {
+                                chart.exportChart({ type: "application/pdf" });
+                            }
+
+
+                        });
+
+
+                        $("#chartType3").change(function () {
+                            var type = this.value;
+                            if (type !== '0') {
+                                if (type == "column") {
+
+                                    options.chart.renderTo = 'container3';
+                                    options.chart.type = 'column';
+                                    var chart1 = new Highcharts.Chart(options);
+                                }
+                                else if (type == "bar") {
+                                    options.chart.renderTo = 'container3';
+                                    options.chart.type = 'bar';
+                                    var chart1 = new Highcharts.Chart(options);
+                                }
+                                else if (type == "pie") {
+                                    options.chart.renderTo = 'container3';
+                                    options.chart.type = 'pie';
+                                    var chart1 = new Highcharts.Chart(options);
+                                }
+                                else if (type == "line") {
+                                    options.chart.renderTo = 'container3';
+                                    options.chart.type = 'line';
+                                    var chart1 = new Highcharts.Chart(options);
+                                }
+                            }
+                        });
+                    },
+                    error: function (result) {
+                        alert('Cannot update selection values now!!');
+                    }
+                })
+            }
+            function bindGraphdisposition3(selectedChartDispVal3, charttype, type) {
+                $('#container4').show();
+                $('#chartType4').val(charttype);
+                var selectedMarketVal = $("#ddlMarkets option:selected").text();
+                var selectedDealerVal = $("#delearshipselection option:selected").text();
+             
+                var slidervalue;
+                if (type == 'D') {
+                    slidervalue = $('#DailyID').html();
+                }
+                if (type == 'W') {
+                    slidervalue = $('#WeekID').html();
+                }
+                if (type == 'M') {
+                    slidervalue = $('#MonthID').html();
+                }
+                if (type == 'I') {
+                    slidervalue = $('#IntradayID').html();
+                    //alert(slidervalue);
+                }
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("bindcharDatadispositionlvl3", "Dashboard")',
+                    cache: false,
+                    dataType: "json",
+                    data: { 'selectedDealerVal': selectedDealerVal, 'sliderValue': slidervalue, 'selectedMarketVal': selectedMarketVal, 'selectedChartDispVal3': selectedChartDispVal3, 'Thirdlevel': type },
+                    success: function (data) {
+
+                        var processed_json = new Array();
+                        @*  if (data.length == 0) {
+                            $('#container4').append("<img src=@Url.Content("~/Content/assets/images/NoData.PNG") alt=''/>");
+                             return;
+                         }*@
+                        for (i = 0; i < data.length; i++) {
+                            processed_json.push([data[i].Disposition, parseInt(data[i].DispCount)]);
+                        }
+
+                        var options = {
+                            chart: {
+
+                                events: {
+                                    drilldown: function (e) {
+                                        if (!e.seriesOptions) {
+                                            var chart = this;
+                                            // Show the loading label
+                                            //chart.showLoading('Loading ...');
+                                            setTimeout(function () {
+                                                chart.hideLoading();
+                                                chart.addSeriesAsDrilldown(e.point, series);
+                                            }, 1000);
+                                        }
+                                    }
+                                },
+                                //plotBorderWidth: 1,
+                                //width: 370,
+                                height: 220,
+                            },
+                            title: {
+                                text: '',
+
+                            },
+                            //
+                            subtitle: {
+                                //   text: 'Subtitle'
+                            },
+                            //
+                            xAxis: {
+                                //   type: 'category',
+                            },
+                            //
+                            //  yAxis: {
+
+                            //   title: {
+                            //          margin: 2,
+                            //          text: 'No. of user'
+                            //     },
+                            //  },
+                            //
+                            //  legend: {
+                            //  enabled: true,
+                            //   },
+                            //
+                            plotOptions: {
+                                series: {
+                                    name: "Call reasons",
+                                    cursor: 'pointer',
+                                    point: {
+                                        events: {
+                                            click: function () {
+
+
+
+
+
+                                            }
+                                        }
+                                    }
+                                },
+                                //series:
+                                //    {
+                                //        pointPadding: 0.2,
+                                //        borderWidth: 0,
+                                //        dataLabels: {
+                                //            enabled: true
+                                //        }
+                                //    },
+                                pie:
+                                {
+
+                                    innerSize: 60,
+                                    depth: 25
+
+                                },
+
+                                column: {
+                                    stacking: 'normal',
+                                    dataLabels: {
+                                        enabled: true,
+                                        color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                                        style: {
+                                            textShadow: '0 0 3px black'
+                                        }
+                                    }
+                                }
+                            },
+
+
+                            //
+                            series: [{
+                                //name: 'Case',
+                                colorByPoint: true,
+                                data: processed_json
+                            }],
+                            navigation: {
+                                buttonOptions: {
+                                    enabled: false
+                                }
+                            },
+                            credits: {
+                                enabled: false
+                            },
+                            exportButton: {
+                                enabled: false
+                            },
+                            //
+                            drilldown: {
+                                series: []
+                            }
+
+                        };
+
+
+
+                        // Column chart
+                        options.chart.renderTo = 'container4';
+                        options.chart.Width = "100";
+                        options.chart.Height = "100";
+                        options.chart.type = charttype;
+                        var chart1 = new Highcharts.Chart(options);
+
+
+                        $('#chart4Export').change(function () {
+                            var type = this.value;
+
+                            var chart = $('#container4').highcharts();
+                            if (type == "JPEG") {
+                                chart.exportChart({ type: "application/jpg" });
+                            }
+                            if (type == "PNG") {
+                                chart.exportChart({ type: "application/png" });
+                            }
+                            if (type == "PDF") {
+                                chart.exportChart({ type: "application/pdf" });
+                            }
+                            //if (type == "Excel") {
+                            //    chart.exportChart({ type: "application/xls" });
+                            //}
+
+
+                        });
+
+                        $("#chartType4").change(function () {
+                            var type = this.value;
+                            if (type !== '0') {
+                                if (type == "column") {
+
+                                    options.chart.renderTo = 'container4';
+                                    options.chart.type = 'column';
+                                    var chart1 = new Highcharts.Chart(options);
+                                }
+                                else if (type == "bar") {
+                                    options.chart.renderTo = 'container4';
+                                    options.chart.type = 'bar';
+                                    var chart1 = new Highcharts.Chart(options);
+                                }
+                                else if (type == "pie") {
+                                    options.chart.renderTo = 'container4';
+                                    options.chart.type = 'pie';
+                                    var chart1 = new Highcharts.Chart(options);
+                                }
+                                else if (type == "line") {
+                                    options.chart.renderTo = 'container4';
+                                    options.chart.type = 'line';
+                                    var chart1 = new Highcharts.Chart(options);
+                                }
+                            }
+                        });
+                    },
+                    error: function (result) {
+                        alert('Cannot update selection values now!!');
+                    }
+                })
+
+
+            }
+           
+        });
+        
+        function GetMonthINfo() {
+            SonicDashboard_getDate('ex1', 'MONTHLY');
+            
+        };
+
+        function GetWeekINfo() {
+            SonicDashboard_getDate('ex2', 'WEEKLY');
+        };
+
+        function getDaily() {
+            SonicDashboard_getDate('ex3', 'DAILY');
+            
+        };
+        function getIntraday() {
+            SonicDashboard_getDate('ex4', 'INTRADAY');
+        };
+    </script>
+    
+    <script>
+
+        
+
+        $(document).ready(function () {
+
+            $("#btnnext").click(function () {
+                var nextElement = $('#ddlMarkets > option:selected').next('option');
+                if (nextElement.length > 0) {
+                    $('#ddlMarkets > option:selected').removeAttr('selected').next('option').attr('selected', 'selected');
+                }
+            });
+
+
+            $("#btnprev").click(function () {
+                var nextElement = $('#ddlMarkets > option:selected').prev('option');
+                if (nextElement.length > 0) {
+                    $('#ddlMarkets > option:selected').removeAttr('selected').prev('option').attr('selected', 'selected');
+                }
+            });
+            //var speed = 5000000;
+            //var run = setInterval('rotate()', speed);
+            //var item_width = $('#slides .li-box').outerWidth();
+            //var left_value = item_width * (-1);
+            //$('#slides .li-box:first').before($('#slides .li-box:last'));
+            //$('#slides .ul-box').css({ 'left': left_value });
+            //$('#prev').click(function () {
+            //    var left_indent = parseInt($('#slides .ul-box').css('left')) + item_width;
+            //    $('#slides .ul-box:not(:animated)').animate({ 'left': left_indent }, 200, function () {
+            //        $('#slides .li-box:first').before($('#slides .li-box:last'));
+            //        $('#slides .ul-box').css({ 'left': left_value });
+            //    });
+            //    return false;
+            //});
+            //$('#next').click(function () {
+            //    var left_indent = parseInt($('#slides .ul-box').css('left')) - item_width;
+            //    $('#slides .ul-box:not(:animated)').animate({ 'left': left_indent }, 200, function () {
+            //        $('#slides .li-box:last').after($('#slides .li-box:first'));
+            //        $('#slides .ul-box').css({ 'left': left_value });
+            //    });
+            //    return false;
+            //});
+
+
+            $('#slides').hover(
+                function () {
+                    clearInterval(run);
+                },
+                function () {
+                    run = setInterval('rotate()', speed);
+                }
+            );
+
+        });
+    </script> 
+    
+    
+
+}
+

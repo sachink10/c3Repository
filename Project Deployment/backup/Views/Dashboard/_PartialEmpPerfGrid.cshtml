@@ -1,0 +1,106 @@
+﻿@model Ampbi.DataAccess.ViewModel.DashBoard
+@using System.Web.UI.WebControls
+
+
+<ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active" id="CoachingHist"><a href="#CoachingHist1" aria-controls="CoachingHist1" role="tab" data-toggle="tab">Coaching Hstory</a></li>
+    <li role="presentation" id="TrningHist"><a href="#TrningHist1" aria-controls="TrningHist1" role="tab" data-toggle="tab">Training History</a></li>
+    <li role="presentation"><a href="#Task" aria-controls="Task" role="tab" data-toggle="tab">Task</a></li>
+
+</ul>
+
+<div class="tab-content">
+    
+    <div role="tabpanel" class="tab-pane" id="CoachingHist1">
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <tbody>
+                    <tr class="blue-t">
+                        <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-ok" aria-hidden="true"></i></th>
+                        <td align="center" valign="middle">Date </td>
+                        <td align="center" valign="middle">Matric(s)</td>
+                        <td align="center" valign="middle">Reason</td>
+                        <td align="center" valign="middle">Goal</td>
+                        <td align="center" valign="middle">Commitment</td>
+                        <td align="center" valign="middle">Actual</td>
+                        <td align="right"><i class="glyphicon glyphicon-volume-up" aria-hidden="true"></i></td>
+                    </tr>
+                    @if (Model.empIndGridList != null)
+                    {
+                        if (Model.empIndGridList.Count != 0)
+                        {
+                            foreach (var item in Model.empIndGridList)
+                            {
+                        <tr class="red-tdt">
+                            <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></th>
+                            <td align="center" valign="middle">@Html.DisplayFor(modelItem => item.coachingassigneddate)</td>
+                            <td align="center" valign="middle">@Html.DisplayFor(modelItem => item.KPIMetricName)</td>
+                            <td align="center" valign="middle">@Html.DisplayFor(modelItem => item.Reason)</td>
+                            <td align="center" valign="middle">@Html.DisplayFor(modelItem => item.Goal)</td>
+                            <td align="center" valign="middle">@Html.DisplayFor(modelItem => item.commitment)</td>
+                            <td align="center" valign="middle">@Html.DisplayFor(modelItem => item.Actual)</td>
+                            <td align="right"><i class="glyphicon glyphicon-play-circle" aria-hidden="true"></i></td>
+                        </tr>
+                            }
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div role="tabpanel" class="tab-pane active" id="TrningHist1"> 
+       <div class="table-responsive">
+            <table class="table table-bordered">
+                <tbody>
+                    <tr class="blue-t">
+                        <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-ok" aria-hidden="true"></i></th>
+                        <td align="center" valign="middle">Targeted Completion Date </td>
+                        <td align="center" valign="middle">Date Assigned</td>
+                        <td align="center" valign="middle">Actual Completion Date</td>
+                        <td align="center" valign="middle">Article Name</td>
+                        <td align="center" valign="middle">Associated Metric</td>
+                        <td align="right"><i class="glyphicon glyphicon-volume-up" aria-hidden="true"></i></td>
+                    </tr>
+                    @if (Model.empIndGridTrainingList != null)
+                    {
+                        if (Model.empIndGridTrainingList.Count != 0)
+                        {
+                            foreach (var item in Model.empIndGridTrainingList)
+                            {
+                        <tr class="red-tdt">
+                            @*<th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></th>*@
+                             <th align="center" valign="middle" scope="row">
+                            <td>@Html.DisplayFor(modelItem => item.TargetedCompletionDate)</td>
+                            <td>@Html.DisplayFor(modelItem => item.CoachingAssignedDate)</td>
+                            <td>@Html.DisplayFor(modelItem => item.ActualCompletionDate)</td>
+                            <td>@Html.DisplayFor(modelItem => item.ArticleName)</td>
+                            <td>@Html.DisplayFor(modelItem => item.AssociatedMetric)</td>
+                            <td><i class="glyphicon glyphicon-play-circle" aria-hidden="true"></i></td>
+                        </tr>
+                            }
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="Task">3
+        @*<div class="table-responsive">
+            <table width="100%" class="table table-bordered">
+                <tbody>
+                    <tr class="blue-t">
+                        <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-ok" aria-hidden="true"></i></th>
+                        <td align="center" valign="middle">Date </td>
+                        <td align="center" valign="middle">Matric(s)</td>
+                        <td align="center" valign="middle">Reason</td>
+                        <td align="center" valign="middle">Goal</td>
+                        <td align="center" valign="middle">Commitment</td>
+                        <td align="center" valign="middle">Actual</td>
+                        <td align="right"><i class="glyphicon glyphicon-volume-up" aria-hidden="true"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>*@
+    </div>
+</div>
+

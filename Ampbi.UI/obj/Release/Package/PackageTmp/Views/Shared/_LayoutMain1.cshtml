@@ -1,0 +1,569 @@
+﻿@model Ampbi.DataAccess.ViewModel.DashBoard
+@using Ampbi.UI.Utilities
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta charset="utf-8" />
+    <title>Account Registration Follow-up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- CORE CSS FRAMEWORK - START -->
+    <link href="~/Content/assets/css/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="~/Content/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/assets/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/assets/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/assets/css/animate.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="~/Content/assets/css/dataTables.bootstrap.min.css">
+    <link href="~/Content/assets/css/datepicker.css" rel="stylesheet">
+    <link href="~/Content/assets/css/bootstrap-slider.css" rel="stylesheet">
+    <!-- CORE CSS FRAMEWORK - END -->
+    <!-- CORE CSS TEMPLATE - START -->
+    <link href="~/Content/assets/css/style.css" rel="stylesheet" type="text/css" />
+    <!-- CORE CSS TEMPLATE - END -->
+
+
+
+</head>
+<body class="login">
+    <!-- START TOPBAR -->
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid header-top-box ">
+            <div class="logo-top pull-left">
+                <a href="#">
+                    <img src="~/Content/assets/images/logo-sign.png" alt=""></a>
+            </div>
+            <ul class="nav navbar-nav navbar-right navbar-nav-right pull-right user-login" style="margin: 0px; padding: 0px;">
+                <li class="dropdown pull-right">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <img src="~/Content/assets/images/user.png" alt="">
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Change Password</a></li>
+                        <li>@Html.MenuLinkBootstrap("Log out", "LogOut", "Dashboard")</li>
+                    </ul>
+                </li>
+                <li class="pull-right" style="margin: 0 5px 0 0px;"><a href="#">
+                    <label>@Session["UserName"].ToString()</label></a></li>
+            </ul>
+
+            @*<ul class="nav navbar-nav navbar-right pull-right hidden-sm hidden-xs">
+                <li><a href="#"><label>@Session["UserName"].ToString()</label></a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <img src="~/Content/assets/images/user.png" alt="">
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Change Password</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>*@
+            @*<div class="pull-right admin-icon">
+               
+               <a href="#">
+                    <img src="~/Content/assets/images/user.png" alt=""></a
+            </div>>*@
+        </div>
+        <div class="container-fluid nav-box sml-bnt">
+            <div class="navbar-header pull-left btn-menu">
+                <button type="button" class="navbar-toggle collapsed pull-left btn-left-menu" style="margin-left: 15px;" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse nav-w-box pull-left">
+                <ul class="nav navbar-nav nav-active" style="margin: 0px !important">
+                    @{
+                        string[] menu = @Ampbi.DataAccess.ViewModel.DashBoard.mainMenuItem.Split(',');
+                    }
+                    @for (int i = 0; i < menu.Count(); i++)
+                    {
+
+                        if (menu[i] == "Administration")
+                        {
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administration <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.MenuLinkBootstrap("Subscription Requests - Follow up", "RegAcctFollowUp", "Dashboard")@*<a href="#">Subscription Requests - Follow up</a>*@</li>
+                                <li>@Html.MenuLinkBootstrap("Company Profile", "CompanyProfile", "Dashboard")</li>
+                                <li>@Html.MenuLinkBootstrap("User Profile", "UserProfile", "Dashboard")</li>
+                                @* <li><a href="#">Change Password</a></li>*@
+                                <li>@Html.MenuLinkBootstrap("KPI Metrics", "KPI", "Dashboard")@* <a href="#">KPI Metrics</a>*@</li>
+                                <li><a href="#">Data Load - Employee</a></li>
+                                <li><a href="#">Data Load - Call Dashboard</a></li>
+                                <li><a href="#">Data Load - QA Dashboard</a></li>
+                                <li><a href="#">Data Load - Appointments</a></li>
+                                <li><a href="#">Data Load – Tickets</a></li>
+                                <li><a href="#">Data Load – Knowledge Base</a></li>
+
+                            </ul>
+                        </li>
+                        }
+                        if (menu[i] == "Calls Dashboard")
+                        {
+                        <li>@Html.MenuLinkBootstrap("Call dashboard", "CallDashBoard", "Dashboard")</li>
+                        }
+                        if (menu[i] == "Appointments Dashboard")
+                        {
+                        <li>@Html.MenuLinkBootstrap("Appointments dashboard", "ApptDashBoard", "Dashboard")@*<a href="appointments-dashboard.html">Appointments Dashboard</a>*@</li>
+                        }
+                        if (menu[i] == "QA Dashboard")
+                        {
+                        
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">QA Dashboard <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.MenuLinkBootstrap("Goal Vs Actual", "QADashBoard_New", "Dashboard")@*<a href="qa-dashboard.html">QA Dashboard</a>*@</li>
+                                <li>@Html.MenuLinkBootstrap("QA Scores", "QADashBoard_New1", "Dashboard")</li>
+                                <li>@Html.MenuLinkBootstrap("QA Behavioral", "QADashBoard_New2", "Dashboard")</li>
+                            </ul>
+                        </li>   
+                            
+                        
+                        }
+                        if (menu[i] == "Employee Performance")
+                        {
+                        <li>@Html.MenuLinkBootstrap("Employee Performance", "EmployeePerformance", "Dashboard") @*<a href="employee-performance.html">Employee Performance</a>*@</li>
+                        }
+                        if (menu[i] == "Virtual Assistant")
+                        {
+                        <li>@Html.MenuLinkBootstrap("Virtual Assistant", "VirtualAssistant", "Dashboard")@*<a href="#">Virtual Assistant</a>*@</li>
+                        }
+                        if (menu[i] == "Ticket Dashboard")
+                        {
+                        <li><a href="#">Ticket Dashboard</a></li>
+                        }
+                        if (menu[i] == "Performance Dashboard")
+                        {
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Performance Dashboard <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.MenuLinkBootstrap("Utilization", "Utilization", "Dashboard")@*<a href="qa-dashboard.html">QA Dashboard</a>*@</li>
+                                @* <li>@Html.MenuLinkBootstrap("QA Scores", "QADashBoard_New1", "Dashboard")</li>
+                                <li>@Html.MenuLinkBootstrap("QA Behavioral", "QADashBoard_New2", "Dashboard")</li>*@
+                            </ul>
+                        </li>   
+                            
+                        
+                        }
+                        if (menu[i] == "Knowledge Base")
+                        {
+                        <li>@Html.MenuLinkBootstrap("Knowledge Base", "KnowledgeBase", "Dashboard")   @*<a href="#">Knowledge Base</a>*@</li>
+                        }
+                        if (menu[i] == "DISC Assessment")
+                        {
+                        <li><a class="back-none" href="#">DISC Assessment</a></li>
+                        }
+
+                    }
+                </ul>
+            </div>
+            @*<div class="col-md-2 pull-right hidden-sm hidden-xs pad pan0">
+                <ul class="smile-mood pull-right">
+                    @if (!string.IsNullOrEmpty(Ampbi.DataAccess.ViewModel.DashBoard.modiIconPath))
+                    {
+                        <li><a href="#">
+
+                            <img src="@Url.Content(Ampbi.DataAccess.ViewModel.DashBoard.modiIconPath)" alt=""></a></li>
+                    }
+                </ul>
+            </div>*@
+            <div class="pull-right pad pan0">
+                <ul class="smile-mood smile-mood1 pull-right">
+
+                    @if (Ampbi.DataAccess.ViewModel.DashBoard.modiIconPath == "active-green")
+                    {<li><a class="active-red" href="#"></a></li>}
+                    else
+                    {
+                        <li><a class="red" href="#"></a></li>}
+                    @if (Ampbi.DataAccess.ViewModel.DashBoard.modiIconPath == "active-yellow")
+                    {<li><a class="active-yellow" href="#"></a></li>}
+                    else
+                    {
+                        <li><a class="yellow" href="#"></a></li>}
+                    @if (Ampbi.DataAccess.ViewModel.DashBoard.modiIconPath == "active-red")
+                    {<li><a class="active-green" href="#"></a></li>}
+                    else
+                    {
+                        <li><a class="green" href="#"></a></li>}
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <!-- END TOPBAR -->
+    <!-- START CONTAINER -->
+
+    @RenderBody()
+
+    <!-- END CONTAINER -->
+    <!-- START FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">Copyright © 2016</p>
+        </div>
+    </footer>
+    <!-- END FOOTER -->
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header box-heading">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="title modal-title" id="myModalLabel">Previous Notes</h4>
+                </div>
+                <div class="modal-body model-box-acc">
+                    <p style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CORE JS FRAMEWORK - START -->
+    <script src="~/Content/assets/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+    <script src="~/Content/assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="~/Content/assets/js/bootstrap-datepicker.js"></script>
+    <script src="~/Content/assets/js/jquery.dataTables.min.js"></script>
+    <script src="~/Content/assets/js/dataTables.bootstrap.min.js"></script>
+    <script type='text/javascript' src="~/Content/assets/js/bootstrap-slider.js"></script>
+    <!-- CORE JS FRAMEWORK - END -->
+    <!-- CORE TEMPLATE JS - START -->
+    <!-- CORE TEMPLATE JS - START -->
+    <script src="~/Content/assets/js/scripts.js" type="text/javascript"></script>
+    <!-- END CORE TEMPLATE JS - END -->
+    <!--<script src="assets/js/scripts.js" type="text/javascript"></script> -->
+    <!-- END CORE TEMPLATE JS - END -->
+
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('#myModal').modal('show');
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            var speed = 5000000;
+            var run = setInterval('rotate()', speed);
+            var item_width = $('#slides li').outerWidth();
+            var left_value = item_width * (-1);
+            $('#slides li:first').before($('#slides li:last'));
+            $('#slides ul').css({ 'left': left_value });
+            $('#prev').click(function () {
+                var left_indent = parseInt($('#slides ul').css('left')) + item_width;
+                $('#slides ul:not(:animated)').animate({ 'left': left_indent }, 200, function () {
+                    $('#slides li:first').before($('#slides li:last'));
+                    $('#slides ul').css({ 'left': left_value });
+                });
+                return false;
+            });
+            $('#next').click(function () {
+                var left_indent = parseInt($('#slides ul').css('left')) - item_width;
+                $('#slides ul:not(:animated)').animate({ 'left': left_indent }, 200, function () {
+                    $('#slides li:last').after($('#slides li:first'));
+                    $('#slides ul').css({ 'left': left_value });
+                });
+                return false;
+            });
+            $('#slides').hover(
+                function () {
+                    clearInterval(run);
+                },
+                function () {
+                    run = setInterval('rotate()', speed);
+                }
+            );
+
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("input[type='radio']").on("click", function () {
+                var name = this.id;
+                if (name.indexOf("grid") >= 0) {
+                    var selectedValue = $(this).val();
+                    $.ajax({
+                        url: '@Url.Action("GetCompanyDetails", "Dashboard")',
+                        cache: false,
+                        data: { 'selectedValue': selectedValue },
+
+                        success: function (result) {
+                            $('#companyInfo').html(result);
+                        },
+                        error: function (result) {
+                            alert('Cannot update selection values now!!');
+                        }
+                    })
+                };
+
+            })
+        });
+    </script>
+
+    <script>
+        function UpdateRegistrationFollowUp() {
+            var CallDash, ApptDash, TicketDash, VirtualDash, QADash, EmpDash, KnowbaseDash;
+
+            if ($('#Callyes').is(':checked')) { CallDash = 1; } else { CallDash = 0; };
+            if ($('#Empyes').is(':checked')) { EmpDash = 1; } else { EmpDash = 0; };
+            if ($('#tickyest').is(':checked')) { TicketDash = 1; } else { TicketDash = 0; };
+            if ($('#apptYes').is(':checked')) { ApptDash = 1; } else { ApptDash = 0; };
+            if ($('#QAyes').is(':checked')) { QADash = 1; } else { QADash = 0; };
+            if ($('#knowyes').is(':checked')) { KnowbaseDash = 1; } else { KnowbaseDash = 0; };
+            if ($('#viryes').is(':checked')) { VirtualDash = 1; } else { VirtualDash = 0; };
+            var model = {
+                "CompanyGuid": $('#CompanyGuid').val(),
+                "CompanyName": $('#CompanyName').val(),
+                "ContactName": $('#ContactName').val(),
+                "ContactPhone": $('#ContactPhone').val(),
+                "UserSeq": $('#UserSeq').val(),
+                "Address1": $('#Address1').val(),
+                "Address2": $('#Address2').val(),
+                "City": $('#City').val(),
+                "StateCode": $('#StateList').val(),
+                "Zip": $('#compZip').val(),
+                "Employee": $('#Employee').val(),
+                "Licence": $('#Licence').val(),
+                "PrefferedContact": $('#PrefferedContact').val(),
+                "trialRequest": $('#trialRequest').val(),
+                "StartDt": $('#TrialStartDate').val(),
+                "EndDt": $('#TrialEndDate').val(),
+                "LastOutCome": $('#OutCome option:selected').text(),
+                "NotesTxt": $('#Notes').val(),
+                "CallDash": CallDash,
+                "EmpDash": EmpDash,
+                "TicketDash": TicketDash,
+                "ApptDash": ApptDash,
+                "TrialDate": TicketDash,
+                "KnowbaseDash": KnowbaseDash,
+                "VirtualDash": VirtualDash,
+                "QADash": QADash
+            }
+
+            $.ajax({
+                type: "POST",
+                //url: hostAddress + "/ApprovalTask/CreateMetadata_Test",
+                url: "@Url.Action("UserProfilePost", "DashBoard")",
+                data: '{ "model": ' + JSON.stringify(model) + '}',
+                contentType: 'application/json; charset=utf-8',
+                dataType: "json",
+                async: false,
+                success: function (data) {
+                    if (data) {
+                        window.location = response.url;
+
+                    }
+                },
+                error: function () {
+                    '@Url.Action("RegAcctFollowUp", "Dashboard")'
+                }
+            });
+
+        }
+
+    </script>
+    @*  //UserProfile Screeen Page*@
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('#usrSearch').click(function () {
+                $.ajax({
+                    url: '@Url.Action("GetUser", "Dashboard")',
+                    cache: false,
+                    success: function (mg) {
+                        $('#usrSearch').autocomplete({
+                            source: mg,
+                            autoFocus: true,
+                            minLength: 0,
+                            scroll: true,
+                        }).click(function () {
+                            $(this).autocomplete("search", "");
+                        });
+                        select
+                    },
+                    error: function () {
+                        alert('Error while adding the value into the database. Please contact administrator.');
+                    }
+                });
+            });
+        });
+
+    </script>
+
+    <script>
+
+
+        function SearchUserProfile() {
+            var SearchValue = $('#usrSearch').val()
+            $.ajax({
+                type: "POST",
+                //url: hostAddress + "/ApprovalTask/CreateMetadata_Test",
+                url: "@Url.Action("GetUserdetailFromSearch", "DashBoard")",
+                data: '{ "searchId": ' + JSON.stringify(SearchValue) + '}',
+                contentType: 'application/json; charset=utf-8',
+                dataType: "json",
+                async: false,
+                success: function (data) {
+                    $('#txtEmail').val(data.Email);
+                    $('#txtFirstname').val(data.FirstName);
+                    $('#txtLastname').val(data.LastName);
+                    $('#txtcompanyname').val(data.CompanyName);
+                    $('#OptSelect').val(data.UserTypeID);
+                    if (data.LicenceAssigned == "") {
+                        $("#licendash").hide().css("visibility", "hidden");
+                        $('#txtlicence').val("There is no licence assigned to this user");
+                    }
+                    else {
+                        $("#txtlicence").val(data.LicenceAssigned);
+                        $("#txtValidFrom").val(data.ValidFrom);
+                        $("#txtValidTo").val(data.ValidTo);
+                        if (data.CallDash == 1)
+                            $('#optCallyes').prop('checked', true);
+                        if (data.TicketDash == 1)
+                            $('#optTickYes').prop('checked', true);
+                        if (data.QADash == 1)
+                            $('#optQAYes').prop('checked', true);
+                        if (data.ApptDash == 1)
+                            $('#optApptYes').prop('checked', true);
+                        if (data.EmpDash == 1)
+                            $('#optEmpYes').prop('checked', true);
+                        if (data.VirtualDash == 1)
+                            $('#optVirYes').prop('checked', true);
+                        if (data.KnowbaseDash == 1)
+                            $('#optKnowYes').prop('checked', true);
+                    };
+                },
+                error: function () {
+
+                }
+            });
+
+        }
+
+        function UpdateUserProfile() {
+            if ($('#optCallyes').is(':checked')) { CallDash = 1; } else { CallDash = 0; };
+            if ($('#optEmpYes').is(':checked')) { EmpDash = 1; } else { EmpDash = 0; };
+            if ($('#optTickYes').is(':checked')) { TicketDash = 1; } else { TicketDash = 0; };
+            if ($('#optApptYes').is(':checked')) { ApptDash = 1; } else { ApptDash = 0; };
+            if ($('#optQAYes').is(':checked')) { QADash = 1; } else { QADash = 0; };
+            if ($('#optKnowYes').is(':checked')) { KnowbaseDash = 1; } else { KnowbaseDash = 0; };
+            if ($('#optVirYes').is(':checked')) { VirtualDash = 1; } else { VirtualDash = 0; };
+            var model = {
+                "Email": $('#txtEmail').val(),
+                "FirstName": $('#txtFirstname').val(),
+                "LastName": $('#txtLastname').val(),
+                "UserTypeID": $('#OptSelect').val(),
+                "CallDash": CallDash,
+                "EmpDash": EmpDash,
+                "TicketDash": TicketDash,
+                "ApptDash": ApptDash,
+                "KnowbaseDash": KnowbaseDash,
+                "VirtualDash": VirtualDash,
+                "QADash": QADash
+            };
+            $.ajax({
+                type: "POST",
+                //url: hostAddress + "/ApprovalTask/CreateMetadata_Test",
+                url: "@Url.Action("UserProfilePost", "DashBoard")",
+                data: '{ "model": ' + JSON.stringify(model) + '}',
+                contentType: 'application/json; charset=utf-8',
+                dataType: "json",
+                async: false,
+                success: function (data) {
+                    if (data) {
+                        alert('Data updated successfully')
+                        window.location = response.url;
+                    }
+                },
+                error: function () {
+                    '@Url.Action("UserProfile", "Dashboard")'
+                }
+            });
+        }
+    </script>
+
+
+
+    <script>
+        //$(document).ready(function () {
+        //    $('#example').DataTable();
+        //    $('.input-daterange').datepicker({
+        //        todayBtn: "linked"
+        //    });
+        //});
+    </script>
+
+
+
+
+    <script type="text/javascript">
+        function loadCompanyName() {
+            $.ajax({
+                url: '@Url.Action("GetCompany", "Dashboard")',
+                cache: false,
+                success: function (mg) {
+                    $('#compSearch').autocomplete({
+                        source: mg,
+                        autoFocus: true,
+                        minLength: 0,
+                        scroll: true,
+                    }).click(function () {
+                        $(this).autocomplete("search", "");
+                    });
+
+                },
+                error: function () {
+                    alert('Error while adding the value into the database. Please contact administrator.');
+                }
+            });
+        };
+
+        function SearchCompanyProfile() {
+            var SearchValue = $('#compSearch').val();
+            $.ajax({
+
+                //url: hostAddress + "/ApprovalTask/CreateMetadata_Test",
+                url: '@Url.Action("GetCompanySearchFromSearch", "DashBoard")',
+                data: { 'companyname': SearchValue },
+                success: function (data) {
+                    ('#CompanyName').val('sdfdf');
+                    // alert(data);
+                },
+                error: function () {
+                    alert('error');
+                }
+            });
+
+        }
+
+    </script>
+
+    <script type="text/javascript">
+        function loadProgramName() {
+            $.ajax({
+                url: '@Url.Action("GetProgramNameForEmployeePerf", "DashBoard")',
+                cache: false,
+                success: function (mg) {
+                    $('#ProgramName').autocomplete({
+                        source: mg,
+                        autoFocus: true,
+                        minLength: 0,
+                        scroll: true,
+                    }).click(function () {
+                        $(this).autocomplete("search", "");
+                    });
+
+                },
+                error: function () {
+                    alert('Error while adding the value into the database. Please contact administrator.');
+                }
+            });
+        };
+    </script>
+
+
+
+      <script type="text/javascript" src="~/Content/assets/js/jquery.quick.pagination.min.js"></script>
+</body>
+</html>

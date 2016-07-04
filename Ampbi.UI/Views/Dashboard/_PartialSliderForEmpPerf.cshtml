@@ -1,0 +1,56 @@
+﻿<div class="page-title">
+    <div class="tab-content pull-left col-md-8 col-sm-12 col-xs-12 mart10">
+
+        <!--Intraday-->
+
+        @*  <div role="tabpanel" class="tab-pane" id="Intraday">
+                                <div class="pull-left"><strong class="fonts24" id="IntradayID"></strong></div>
+                                <div class="clearfix">
+                                    <input id="ex4" data-slider-id='ex1Slider' type="text" data-slider-min="-13" data-slider-max="0" data-slider-value="0" data-slider-step="1" />
+                                </div>
+                            </div>*@
+
+        <!--Daily-->
+
+        <div role="tabpanel" class="tab-pane active" id="Daily">
+            <div class="pull-left"><strong class="fonts24" id="DailyID"></strong></div>
+            <div class="clearfix">
+                <input id="ex3" data-slider-id='ex1Slider' type="text" data-slider-min="-13" data-slider-max="0" data-slider-value="-1" data-slider-step="1">
+            </div>
+        </div>
+
+        <!--Weekly-->
+
+        <div role="tabpanel" class="tab-pane" id="Weekly">
+            <div class="pull-left"><strong class="fonts24" id="WeekID"></strong></div>
+            <div class="clearfix">
+                <input id="ex2" data-slider-id='ex1Slider' type="text" data-slider-min="-12" data-slider-max="0" data-slider-value="0" data-slider-step="1" />
+            </div>
+        </div>
+
+        <!--Month-->
+
+        <div role="tabpanel" class="tab-pane" id="Month">
+            <div class="pull-left"><strong class="fonts24" id="MonthID"></strong></div>
+            <div class="clearfix">
+                <input id="ex1" data-slider-id='ex1Slider' data-slider-min="-13" data-slider-max="0" data-slider-value="0" data-slider-step="1" />
+            </div>
+        </div>
+
+
+    </div>
+    <nav class="navbar-default" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbarCollapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        </div>
+        <div class="pull-right">
+            <ul class="nav navbar-nav navbar-right btn-group nav-tabs" role="tablist">
+                @*<li role="presentation"><a style="margin: 0px;" href="#Intraday" aria-controls="Intraday" onclick="getIntraday();" role="tab" data-toggle="tab" id="btnIntraday">Intraday</a></li>*@
+                <li role="presentation" class="active"><a style="margin: 0px;" href="#Daily" aria-controls="Daily" role="tab" data-toggle="tab" id="btnDaily">Daily</a></li>
+                <li role="presentation"><a style="margin: 0px;" href="#Weekly" aria-controls="Weekly" onclick="GetWeekINfo();" role="tab" data-toggle="tab" id="btnWeekly">Weekly</a></li>
+                <li role="presentation"><a style="margin: 0px;" href="#Month" aria-controls="Month" role="tab" onclick="GetMonthINfo();" data-toggle="tab" id="btnMonth">Month</a></li>
+            </ul>
+        </div>
+    </nav>
+
+</div>

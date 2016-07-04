@@ -1,0 +1,727 @@
+﻿@using System.Web.UI.HtmlControls
+@model Ampbi.DataAccess.ViewModel.DashBoard
+
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+@using (@Html.BeginForm("TeamComparision", "DashBoard"))
+{
+
+    <!-- START CONTAINER -->
+    <div class="page-container row-fluid">
+        <!-- START CONTENT -->
+        <section id="main-content" class="sidebar_shift sidebar_shift-reg">
+            <section class="wrapper wrap-box">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pan0 top-box-search">
+                    <div class="page-title">
+                        <div class="tab-content pull-left col-md-8 col-sm-12 col-xs-12 mart10">
+
+                            <!--Intraday-->
+
+                            @*  <div role="tabpanel" class="tab-pane" id="Intraday">
+                                <div class="pull-left"><strong class="fonts24" id="IntradayID"></strong></div>
+                                <div class="clearfix">
+                                    <input id="ex4" data-slider-id='ex1Slider' type="text" data-slider-min="-13" data-slider-max="0" data-slider-value="0" data-slider-step="1" />
+                                </div>
+                            </div>*@
+
+                            <!--Daily-->
+
+                            <div role="tabpanel" class="tab-pane active" id="Daily">
+                                <div class="pull-left"><strong class="fonts24" id="DailyID"></strong></div>
+                                <div class="clearfix">
+                                    <input id="ex3" data-slider-id='ex1Slider' type="text" data-slider-min="-13" data-slider-max="0" data-slider-value="-1" data-slider-step="1">
+                                </div>
+                            </div>
+
+                            <!--Weekly-->
+
+                            <div role="tabpanel" class="tab-pane" id="Weekly">
+                                <div class="pull-left"><strong class="fonts24" id="WeekID"></strong></div>
+                                <div class="clearfix">
+                                    <input id="ex2" data-slider-id='ex1Slider' type="text" data-slider-min="-12" data-slider-max="0" data-slider-value="0" data-slider-step="1" />
+                                </div>
+                            </div>
+
+                            <!--Month-->
+
+                            <div role="tabpanel" class="tab-pane" id="Month">
+                                <div class="pull-left"><strong class="fonts24" id="MonthID"></strong></div>
+                                <div class="clearfix">
+                                    <input id="ex1" data-slider-id='ex1Slider' data-slider-min="-13" data-slider-max="0" data-slider-value="0" data-slider-step="1" />
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <nav class="navbar-default" role="navigation">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbarCollapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                            </div>
+                            <div class="pull-right">
+                                <ul class="nav navbar-nav navbar-right btn-group nav-tabs" role="tablist">
+                                    @*<li role="presentation"><a style="margin: 0px;" href="#Intraday" aria-controls="Intraday" onclick="getIntraday();" role="tab" data-toggle="tab" id="btnIntraday">Intraday</a></li>*@
+                                    <li role="presentation" class="active"><a style="margin: 0px;" href="#Daily" aria-controls="Daily" role="tab" data-toggle="tab" id="btnDaily">Daily</a></li>
+                                    <li role="presentation"><a style="margin: 0px;" href="#Weekly" aria-controls="Weekly" onclick="GetWeekINfo();" role="tab" data-toggle="tab" id="btnWeekly">Weekly</a></li>
+                                    <li role="presentation"><a style="margin: 0px;" href="#Month" aria-controls="Month" role="tab" onclick="GetMonthINfo();" data-toggle="tab" id="btnMonth">Month</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 mart20">
+                    <div class="col-md-12">
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="Organization">
+
+
+                                @foreach (var item in Model.getTeamComp)
+                                {
+
+                                    if (item.cardcolor == "BLUE")
+                                    { 
+                                 
+                                    <div class="col-md-3 padlr5" style="margin-bottom: 10px;">
+                                        <div class="main-box-emp box-blue">
+                                            <div class="clearfix box-blue-heading">
+                                                <h5 class="pull-left">@item.Metricname</h5>
+                                                <p class="pull-right anchor-icon"><a href="#"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></p>
+                                                <ul class="average">
+                                                    <li>
+                                                        <div class="color-persent-sky" style="@item.Me%;"></div>
+                                                        <span>Me</span></li>
+                                                    <li>
+                                                        <div class="color-persent-sky" style="width: @item.TeamAverage + %;"></div>
+                                                        <span>Average</span></li>
+                                                    <li>
+                                                        <div class="color-persent-sky" style="width: @item.TeamBest + %;"></div>
+                                                        <span>Best</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    }
+
+                                    if (item.cardcolor == "GREEN")
+                                    {
+                                    <div class="col-md-3 padlr5" style="margin-bottom: 10px;">
+                                        <div class="main-box-emp box-sky">
+                                            <div class="clearfix box-sky-heading">
+                                                <h5 class="pull-left">@item.Metricname</h5>
+                                                <p class="pull-right anchor-icon"><a href="#"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></p>
+                                                <ul class="average">
+                                                    <li>
+                                                        <div class="color-persent-sky" style="width: @item.Me%;"></div>
+                                                        <span>Me</span></li>
+                                                    <li>
+                                                        <div class="color-persent-sky" style="width: @item.TeamAverage%;"></div>
+                                                        <span>Average</span></li>
+                                                    <li>
+                                                        <div class="color-persent-sky" style="width: @item.TeamBest%;"></div>
+                                                        <span>Best</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    }
+
+                                    if (item.cardcolor == "YELLOW")
+                                    {
+                                    <div class="col-md-3 padlr5" style="margin-bottom: 10px;">
+                                        <div class="main-box-emp box-yellow">
+                                            <div class="clearfix box-yellow-heading">
+                                                <h5 class="pull-left">@item.Metricname</h5>
+                                                <p class="pull-right anchor-icon"><a href="#"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></p>
+                                                <ul class="average">
+                                                    <li>
+                                                        <div class="color-persent-sky" style="@item.Me%;"></div>
+                                                        <span>Me</span></li>
+                                                    <li>
+                                                        <div class="color-persent-sky" style="width: @item.TeamAverage%;"></div>
+                                                        <span>Average</span></li>
+                                                    <li>
+                                                        <div class="color-persent-sky" style="width: @item.TeamBest%;"></div>
+                                                        <span>Best</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    }
+
+                                    if (item.cardcolor == "RED" || item.cardcolor == "PINK")
+                                    {
+                                    <div class="col-md-3 padlr5" style="margin-bottom: 10px;">
+                                        <div class="main-box-emp box-pink">
+                                            <div class="clearfix box-pink-heading">
+                                                <h5 class="pull-left">@item.Metricname</h5>
+                                                <p class="pull-right anchor-icon"><a href="#"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></p>
+                                                 <ul class="average">
+                                                    <li>
+                                                        <div class="color-persent-sky" style="@item.Me%;"></div>
+                                                        <span>Me</span></li>
+                                                    <li>
+                                                        <div class="color-persent-sky" style="width: @item.TeamAverage%;"></div>
+                                                        <span>Average</span></li>
+                                                    <li>
+                                                        <div class="color-persent-sky" style="width: @item.TeamBest%;"></div>
+                                                        <span>Best</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    }
+
+                                }
+
+                                @*  <div class="col-md-3 padlr5" style="margin-bottom: 10px;">
+                                    <div class="main-box-emp box-blue">
+                                        <div class="clearfix box-blue-heading">
+                                            <h5 class="pull-left">Int Show 1/14</h5>
+                                            <p class="pull-right anchor-icon"><a href="#"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></p>
+                                            <ul class="average">
+                                                <li>
+                                                    <div class="color-persent-blue" style="width: 5%;"></div>
+                                                    <span>Me</span></li>
+                                                <li>
+                                                    <div class="color-persent-blue" style="width: 20%;"></div>
+                                                    <span>Average</span></li>
+                                                <li>
+                                                    <div class="color-persent-blue" style="width: 30%;"></div>
+                                                    <span>Best</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-3 padlr5" style="margin-bottom: 10px;">
+                                    <div class="main-box-emp box-sky">
+                                        <div class="clearfix box-sky-heading">
+                                            <h5 class="pull-left">Chat Set 2/14</h5>
+                                            <p class="pull-right anchor-icon"><a href="#"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></p>
+                                            <ul class="average">
+                                                <li>
+                                                    <div class="color-persent-sky" style="width: 5%;"></div>
+                                                    <span>Me</span></li>
+                                                <li>
+                                                    <div class="color-persent-sky" style="width: 20%;"></div>
+                                                    <span>Average</span></li>
+                                                <li>
+                                                    <div class="color-persent-sky" style="width: 30%;"></div>
+                                                    <span>Best</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="col-md-3 padlr5" style="margin-bottom: 10px;">
+                                    <div class="main-box-emp box-yellow">
+                                        <div class="clearfix box-yellow-heading">
+                                            <h5 class="pull-left">Chat Show 1/14</h5>
+                                            <p class="pull-right anchor-icon"><a href="#"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></p>
+                                            <ul class="average">
+                                                <li>
+                                                    <div class="color-persent-blue" style="width: 5%;"></div>
+                                                    <span>Me</span></li>
+                                                <li>
+                                                    <div class="color-persent-blue" style="width: 20%;"></div>
+                                                    <span>Average</span></li>
+                                                <li>
+                                                    <div class="color-persent-blue" style="width: 30%;"></div>
+                                                    <span>Best</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 padlr5" style="margin-bottom: 10px;">
+                                    <div class="main-box-emp box-sky">
+                                        <div class="clearfix box-sky-heading">
+                                            <h5 class="pull-left">Int Set 2/14</h5>
+                                            <p class="pull-right anchor-icon"><a href="#"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></p>
+                                            <ul class="average">
+                                                <li>
+                                                    <div class="color-persent-sky" style="width: 5%;"></div>
+                                                    <span>Me</span></li>
+                                                <li>
+                                                    <div class="color-persent-sky" style="width: 20%;"></div>
+                                                    <span>Average</span></li>
+                                                <li>
+                                                    <div class="color-persent-sky" style="width: 30%;"></div>
+                                                    <span>Best</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>*@
+
+
+                                @*
+                                <div class="col-md-3 padlr5" style="margin-bottom: 10px;">
+                                    <div class="main-box-emp box-pink">
+                                        <div class="clearfix box-pink-heading">
+                                            <h5 class="pull-left">Phone Set 2/14</h5>
+                                            <p class="pull-right anchor-icon"><a href="#"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></p>
+                                            <ul class="average">
+                                                <li>
+                                                    <div class="color-persent-pink" style="width: 5%;"></div>
+                                                    <span>Me</span></li>
+                                                <li>
+                                                    <div class="color-persent-pink" style="width: 20%;"></div>
+                                                    <span>Average</span></li>
+                                                <li>
+                                                    <div class="color-persent-pink" style="width: 30%;"></div>
+                                                    <span>Best</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @if (Model.getTeamComp.Count != 0)
+                {
+
+                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 mart20" id="tblCoaching">
+
+                        @*     -----------------------------------------Code for Grid-----------------------------------------*@
+
+
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 mart20">
+                            <ul class="nav nav-tabs text-color" role="tablist">
+                                <li role="presentation" class="active"><a href="#Coaching" aria-controls="Coaching" role="tab" data-toggle="tab">Coaching History</a></li>
+                                <li role="presentation"><a href="#Training" aria-controls="Training" role="tab" data-toggle="tab">Training History</a></li>
+                                <li role="presentation"><a href="#Task" aria-controls="Task" role="tab" data-toggle="tab">Task</a></li>
+
+                            </ul>
+
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="Coaching">
+                                    <div class="table-responsive">
+                                        <table width="100%" class="table table-bordered">
+                                            <tbody>
+                                                <tr class="blue-t">
+                                                    <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-ok" aria-hidden="true"></i></th>
+                                                    <td align="center" valign="middle">Date </td>
+                                                    <td align="center" valign="middle">Matric(s)</td>
+                                                    <td align="center" valign="middle">Reason</td>
+                                                    <td align="center" valign="middle">Goal</td>
+                                                    <td align="center" valign="middle">Commitment</td>
+                                                    <td align="center" valign="middle">Actual</td>
+                                                    <td align="right"><i class="glyphicon glyphicon-volume-up" aria-hidden="true"></i></td>
+                                                </tr>
+                                                @foreach (var item in Model.getCoachingGrid)
+                                                {
+                                                    <tr class="red-tdt">
+                                                        <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></th>
+                                                        <td align="center" valign="middle">@item.coachingassigneddate</td>
+                                                        <td align="center" valign="middle">@item.KPIMetricName</td>
+                                                        <td align="center" valign="middle"@item.Reason></td>
+                                                        <td align="center" valign="middle">@item.Goal</td>
+                                                        <td align="center" valign="middle">@item.Commitment</td>
+                                                        <td align="center" valign="middle">@item.Actual</td>
+                                                        <td align="right"><i class="glyphicon glyphicon-play-circle" aria-hidden="true"></i></td>
+                                                    </tr>
+                                                }
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="Training">
+                                    <div class="table-responsive">
+                                        <table width="100%" class="table table-bordered">
+                                            <tbody>
+                                                <tr class="blue-t">
+                                                    <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-ok" aria-hidden="true"></i></th>
+                                                    <td align="center" valign="middle">Targeted Completion Date </td>
+                                                    <td align="center" valign="middle">Date Assigned</td>
+                                                    <td align="center" valign="middle">Actual Completion Date</td>
+                                                    <td align="center" valign="middle">Article Name</td>
+                                                    <td align="center" valign="middle">Associated Metric</td>
+                                                    <td align="right"><i class="glyphicon glyphicon-volume-up" aria-hidden="true"></i></td>
+                                                </tr>
+
+                                                @foreach (var item in Model.getTrainingGrid)
+                                                {
+                                                    <tr class="red-tdt">
+                                                        <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></th>
+                                                        <td align="center" valign="middle">@item.TargetedCompletionDate</td>
+                                                        <td align="center" valign="middle">@item.CoachingAssignedDate</td>
+                                                        <td align="center" valign="middle">@item.ActualCompletionDate</td>
+                                                        <td align="center" valign="middle">@item.articlename</td>
+                                                        <td align="center" valign="middle">@item.AssociatedMetric</td>
+
+                                                        <td align="right"><i class="glyphicon glyphicon-play-circle" aria-hidden="true"></i></td>
+                                                    </tr>
+                                                }
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="Task">
+                                    <div class="table-responsive">
+                                        <table width="100%" class="table table-bordered">
+                                            <tbody>
+                                                <tr class="blue-t">
+                                                    <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-ok" aria-hidden="true"></i></th>
+                                                    <td align="center" valign="middle">Date </td>
+                                                    <td align="center" valign="middle">Matric(s)</td>
+                                                    <td align="center" valign="middle">Reason</td>
+                                                    <td align="center" valign="middle">Goal</td>
+                                                    <td align="center" valign="middle">Commitment</td>
+                                                    <td align="center" valign="middle">Actual</td>
+                                                    <td align="right"><i class="glyphicon glyphicon-volume-up" aria-hidden="true"></i></td>
+                                                </tr>
+                                                <tr class="red-tdt">
+                                                    <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></th>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="right"><i class="glyphicon glyphicon-play-circle" aria-hidden="true"></i></td>
+                                                </tr>
+                                                <tr class="red-tdt">
+                                                    <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></th>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="right"><i class="glyphicon glyphicon-play-circle" aria-hidden="true"></i></td>
+                                                </tr>
+                                                <tr class="red-tdt">
+                                                    <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></th>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="right"><i class="glyphicon glyphicon-play-circle" aria-hidden="true"></i></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+                        @* @Html.Partial("_PartialEmpPerfGrid", Model)*@
+
+
+                    </div>
+
+                }
+
+            </section>
+        </section>
+        <!-- END CONTENT -->
+
+    </div>
+    <!-- END CONTAINER -->
+    
+
+}
+<script>
+
+    $(document).ready(function () {
+
+
+
+        var d = new Date();
+
+        var month = d.getMonth() + 1;
+        var day = d.getDate();
+        var year = d.getFullYear();
+        var hr = d.getHours();
+        var mi = d.getMinutes();
+        var sec = d.getSeconds();
+        $('#hdnSrvtDtime').val(year + ',' + month + ',' + day + ',' + hr + ',' + mi + ',' + sec);
+
+        //if ($('#T').val() == "M") {
+        //    GetMonthINfo();
+        //    alert('df');
+        //}
+        //else {
+
+        //    alert('daily');
+        //}
+
+        getDaily();
+
+        $("#btnMonth").on("click", function () {
+            SonicDashboard_getDate('ex1', 'MONTHLY');
+
+        });
+        $("#btnWeekly").on("click", function () {
+            SonicDashboard_getDate('ex2', 'WEEKLY');
+
+        });
+        $("#btnDaily").on("click", function () {
+            SonicDashboard_getDate('ex3', 'DAILY');
+
+        });
+        $("#btnIntraday").on("click", function () {
+            SonicDashboard_getDate('ex4', 'INTRADAY');
+
+
+        });
+        ///Change event of Slider
+        $('#ex1').on('change', function () {
+            SonicDashboard_getDate('ex1', 'MONTHLY');
+
+        });
+        $('#ex2').on('change', function () {
+            SonicDashboard_getDate('ex2', 'WEEKLY');
+
+        });
+        $('#ex3').on('change', function () {
+            SonicDashboard_getDate('ex3', 'DAILY');
+            IndividualScreen();
+
+        });
+        $('#ex4').on('change', function () {
+            SonicDashboard_getDate('ex4', 'INTRADAY');
+
+        });
+    });
+    setInterval(function () { SonicDashboard_getDate(); }, 250);
+    function SonicDashboard_getDate(slider, type) {
+
+        //if ($('#T').val() == "M") {
+        //    type = "MONTHLY";
+        //   // alert('df');
+        //}
+
+        var servrDat = $("#hdnSrvtDtime").val();
+        var sliderVal = $("#" + slider).val();;
+        if (servrDat != '') {
+            var mySplitResult = servrDat.split(",");
+            var a = new Date(mySplitResult[0], (mySplitResult[1] - 1).toString(), mySplitResult[2], mySplitResult[3], mySplitResult[4], mySplitResult[5]);
+            //var selected = $("input[type='radio'][name='radio-choice-h-230']:checked");
+            var mydate;
+            switch (type) {
+                case 'MONTHLY':
+                    $('#typeID').val('M');
+                    // alert('Montly');
+                    mydate = a.addMonths(parseInt(sliderVal));
+                    $("#MonthID").html(mydate.toString('MMM yyyy'));
+                    //$("#hdnDateSelected").val(mydate.toString('MM/dd/yyyy'));
+                    break;
+                case 'DAILY':
+                    $('#typeID').val('D');
+                    var dt = a.addDays(sliderVal);
+                    var dy = dt.toString('d');
+                    var mt = dt.toString('MMM');
+                    var yr = dt.toString('yyyy');
+                    //$("#hdnDateSelected").val(dt.toString('MM/dd/yyyy'));
+                    $('#DailyID').html((mt + ' ' + dy + ' ' + yr).toString('MMM/d/yyyy'));
+                    break;
+                case 'WEEKLY':
+                    $('#typeID').val('W');
+                    var dt;
+                    if (sliderVal == 0) {
+                        dt = a;
+                    }
+                    else {
+                        dt = a.sunday();
+                        dt.addWeeks(sliderVal);
+                    }
+                    var dy = dt.toString('d');
+                    var mt = dt.toString('MMM');
+                    var yr = dt.toString('yyyy');
+                    //$("#hdnDateSelected").val(dt.toString('MM/dd/yyyy'));
+                    $("#WeekID").html(mt + ' ' + dy + ' ' + yr);
+                    break;
+
+                case 'INTRADAY':
+                    $('#typeID').val('I');
+                    var dt = a.addHours(sliderVal);
+                    var dy = dt.toString('d');
+                    var mt = dt.toString('MMM');
+                    var yr = dt.toString('yyyy');
+                    var hr = dt.toString('h');
+                    var tt = dt.toString('tt');
+                    var hour = dt.toString('hh');
+                    if (tt == "PM" && hour < 12) {
+                        hour = parseInt(hour) + 12;
+                    }
+                    $("#hdnDateSelected").val(dt.toString('MM/dd/yyyy') + " " + hour + ":" + dt.toString('mm') + ":" + dt.toString('ss'));
+                    if (hr == 0) { hr = 12; }
+                    $('#IntradayID').html(hr + ' ' + tt + ' ' + mt + ' ' + dy + ' ' + yr);
+                    break;
+            }
+        }
+    }
+
+
+    function GetMonthINfo() {
+        SonicDashboard_getDate('ex1', 'MONTHLY');
+
+    };
+
+    function GetWeekINfo() {
+        SonicDashboard_getDate('ex2', 'WEEKLY');
+    };
+
+    function getDaily() {
+        SonicDashboard_getDate('ex3', 'DAILY');
+
+
+    };
+    function getIntraday() {
+        SonicDashboard_getDate('ex4', 'INTRADAY');
+    };
+
+
+    function IndividualScreen() {
+        var slidervalue;
+        var T = $('#typeID').val();
+        if (T == 'D') {
+            slidervalue = $('#DailyID').html();
+
+        }
+        if (T == 'W') {
+            slidervalue = $('#WeekID').html();
+        }
+        if (T == 'M') {
+            slidervalue = $('#MonthID').html();
+        }
+        if (T == 'I') {
+            slidervalue = $('#IntradayID').html();
+        }
+
+        $.ajax({
+            //url: hostAddress + "/ApprovalTask/CreateMetadata_Test",
+            url: '@Url.Action("IndividualEmpPerf", "DashBoard")',
+            data: { 'email': '', 'sliderValue': slidervalue, 'type': T },
+            success: function (Data) {
+                //  $('#EmpPerfGridCoaching').html(data);
+
+            },
+            error: function (result) {
+                alert('Cannot update selection values now!!');
+            }
+        });
+
+    }
+    @* $.ajax({
+                type: "POST",
+                url: '@Url.Action("IndividualEmpPerf", "Dashboard")',
+                cache: false,
+                dataType: "json",
+                data: { 'email': '', 'sliderValue': sliderValue, 'type': T },
+                success: function (data) {
+                //url: hostAddress + "/ApprovalTask/CreateMetadata_Test",
+                //url: "../DashBoard/IndividualEmpPerf",
+                //data: { 'email': 'df', 'sliderValue': sliderValue, 'type': T },
+              
+
+                    alert('success');
+                },
+                error: function (result) {
+                    alert('Cannot update selection values now!!');
+                }
+            });*@
+
+
+    @*  $("#CoachingHist").on("click", function () {
+            $.ajax({
+                //url: hostAddress + "/ApprovalTask/CreateMetadata_Test",
+                url: '@Url.Action("bindCoachingGridPerformance", "DashBoard")',
+                success: function (data) {
+                    $('#EmpPerfGridCoaching').html(data);
+
+                },
+                error: function (result) {
+                    alert('Cannot update selection values now!!');
+                }
+            });
+        });*@
+
+
+
+
+    @*      $("#TrningHist").on("click", function () {
+            $.ajax({
+                //url: hostAddress + "/ApprovalTask/CreateMetadata_Test",
+                url: '@Url.Action("bindTrainingGridPerformance", "DashBoard")',
+                     success: function (data) {
+                         $('#EmpPerfGridCoaching').html(data);
+                     },
+                     error: function (result) {
+                         alert('Cannot update selection values now!!');
+                     }
+                 });
+             });*@
+
+
+    @*  $("#teamComp").on("click", function () {
+                 $.ajax({
+                     //url: hostAddress + "/ApprovalTask/CreateMetadata_Test",
+                     url: '@Url.Action("bindTrainingGridPerformance", "DashBoard")',
+                success: function (data) {
+                    $('#PerfCardDefault').hide();
+                    $('#Organization').hide();
+                    $('#EmpPerfCards').html(data);
+                },
+                error: function (result) {
+                    alert('Cannot update selection values now!!');
+                }
+            });
+        });*@
+
+</script>
+<script>
+    jQuery(function () {
+        jQuery('#myTab a:last').tab('show')
+    })
+</script>
+<style>
+    ul.text-color li a {
+        color: #000 !important;
+    }
+
+        ul.text-color li a:hover {
+            color: #000 !important;
+        }
+
+    ul.text-color li.active {
+        color: #fff !important;
+        background: #014d88 !important;
+    }
+
+        ul.text-color li.active a {
+            color: #fff !important;
+        }
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('[data-toggle="popover"]').popover({
+            placement: 'left',
+            html: true,
+            content: '<button style="width:200px; margin-bottom:10px; font-size:12px; font-weight:normal;" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Coach Now</button><br> <button style="width:200px; margin-bottom:10px; font-size:12px; font-weight:normal;" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Schedule Coaching Session</button> <br><button style="width:200px; font-size:12px; font-weight:normal;" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Assign Training</button> '
+        });
+        $(document).on("click", ".popover .close", function () {
+            $(this).parents(".popover").popover('hide');
+        });
+    });
+</script>
+}

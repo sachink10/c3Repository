@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8F264ADE-1519-4636-855C-D1039095CBAF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ampbi.DataAccess</RootNamespace>
+    <AssemblyName>Ampbi.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgentSummary.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AmpbiDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AmpbiDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AmpbiDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AmpbiDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AmpbiDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="dim_employee.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dim_Employee1.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dim_Employee_Details1.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTOModels\AdminRegistrationModel.cs" />
+    <Compile Include="DTOModels\AgentComparisonChartPopup.cs" />
+    <Compile Include="DTOModels\AppLogModel.cs" />
+    <Compile Include="DTOModels\Callsboard.cs" />
+    <Compile Include="DTOModels\ChartDetailModel.cs" />
+    <Compile Include="DTOModels\ChimesAgentmymetrics.cs" />
+    <Compile Include="DTOModels\chimesAgentTeamComparision.cs" />
+    <Compile Include="DTOModels\chimetrendchart1.cs" />
+    <Compile Include="DTOModels\CompanyChartInfoModel.cs" />
+    <Compile Include="DTOModels\CompanyModel.cs" />
+    <Compile Include="DTOModels\EmployeeIndividualPerformanceObjects.cs" />
+    <Compile Include="DTOModels\EmployeePerformaceCard.cs" />
+    <Compile Include="DTOModels\EmployeePerformanceCount.cs" />
+    <Compile Include="DTOModels\EmployeePerformanceObjects.cs" />
+    <Compile Include="DTOModels\FirstTimeLoginModel.cs" />
+    <Compile Include="DTOModels\ForgotPasswordModel.cs" />
+    <Compile Include="DTOModels\IndividualPerformanceCard.cs" />
+    <Compile Include="DTOModels\IndividualPerformanceCardGridDetails.cs" />
+    <Compile Include="DTOModels\IndividualPerformanceCardGridTrainingDetails.cs" />
+    <Compile Include="DTOModels\IndividualPerformanceCardOtherDetails.cs" />
+    <Compile Include="DTOModels\KPIMetricModel.cs" />
+    <Compile Include="DTOModels\LicenceInfoModel.cs" />
+    <Compile Include="DTOModels\LoginModel.cs" />
+    <Compile Include="DTOModels\LookupValuesModel.cs" />
+    <Compile Include="DTOModels\modulesModel.cs" />
+    <Compile Include="DTOModels\MoodiTransModel.cs" />
+    <Compile Include="DTOModels\QADashboardChartResultModel.cs" />
+    <Compile Include="DTOModels\QADashboardListModel.cs" />
+    <Compile Include="DTOModels\RegistrationFollowUpUpdateModel.cs" />
+    <Compile Include="DTOModels\SecretQuestionModel.cs" />
+    <Compile Include="DTOModels\Statelist.cs" />
+    <Compile Include="DTOModels\UserFollowUpModel.cs" />
+    <Compile Include="DTOModels\UserProfileUpdate.cs" />
+    <Compile Include="DTOModels\UserRegistrationModel.cs" />
+    <Compile Include="DTOModels\UserSettingModel.cs" />
+    <Compile Include="DTOModels\UserTypeModel.cs" />
+    <Compile Include="DynamicParameterList.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\DbContextExtensions.cs" />
+    <Compile Include="getRegistrationFollowUpGridRecord_Result.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GoalData.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ref_charts_axislabels.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ref_LookupValues.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ref_Modules.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ref_programlist.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ref_SecretQuestion.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ref_UserType.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_c3_perfdb_uessurvey1_Result.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_c3_perfdb_uessurvey3charts2_bkp_Result.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_c3_perfdb_uessurvey3charts2_goal_Result.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_c3_perfdb_uessurvey3charts2_Result.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_c3_perfdb_uessurvey3chrts_goal_Result.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_c3_perfdb_uessurvey3chrts_Result.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_c3_perfdb_uessurvey_Result.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_companyprofile_listofvalues_Result.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_dispmoduleaccess_Result.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_getchartaxislabels_Result.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_getKPIMenu_Result.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_getlistofvalues_Result.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_getParameterlistforAgent_Result.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_getParameterlist_fortrend_Result.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_getParameterlist_Result.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_getprogram_Result.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_pfdb_trendchart_daily_drilldown_Result.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_pfdb_trendchart_daily_Result.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_pfdb_trendchart_monthly_drilldown_Result.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_pfdb_trendchart_monthly_Result.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_pfdb_trendchart_weekly_drilldown_Result.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_pfdb_trendchart_weekly_Result.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="statelist.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Stg_Dim_Employee.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SurveyQuestion.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_AppLog.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_coaching.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Company.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_CompanyChartInfo.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_companymodule.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_empcomparision.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_empperfdata.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_FactCalls_All.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_FactCalls_Daily.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_FactCalls_Intraday.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_FactCalls_Monthly.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_FactCalls_Weekly.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_fact_empperf_All.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_fact_empperf_Daily.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_fact_empperf_Intraday.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_fact_empperf_Monthly.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_fact_empperf_weekly.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_KPIMetric.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_KPIMetricGoal.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_LicenceInfo.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_licencemoduleInfo.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_moodicontransaction.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_noofchartsbydbcompany.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_User.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_UserRegistration.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_UserRegistrationFollowup.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="temptrendchartview.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="t_temp.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UesSurveyData.cs">
+      <DependentUpon>AmpbiDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\DashBoard.cs" />
+    <Compile Include="ViewModel\Registration.cs" />
+    <Compile Include="ViewModel\UserSecrect.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="AmpbiDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AmpbiDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="AmpbiDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AmpbiDB.edmx</DependentUpon>
+      <LastGenOutput>AmpbiDB.Context.cs</LastGenOutput>
+    </None>
+    <None Include="AmpbiDB.edmx.diagram">
+      <DependentUpon>AmpbiDB.edmx</DependentUpon>
+    </None>
+    <None Include="AmpbiDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AmpbiDB.edmx</DependentUpon>
+      <LastGenOutput>AmpbiDB.cs</LastGenOutput>
+    </None>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\PagedList.css" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

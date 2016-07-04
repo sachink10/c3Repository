@@ -1,0 +1,245 @@
+﻿@{
+    ViewBag.Title = "User Settings";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+@using (@Html.BeginForm("UserSettings", "DashBoard"))
+{
+   <!-- START CONTAINER -->
+<div class="page-container row-fluid"> 
+  <!-- START CONTENT -->
+  <section id="main-content" class="sidebar_shift sidebar_shift-reg">
+    <section class="wrapper wrap-box-user">
+    
+      <div class="clearfixf marb20"></div>
+      <div class="col-md-12 col-sm-12 col-xs-12 pan0 mart30">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <div class="col-md-12">
+          <header class="panel_header box-heading">
+            <h2 class="title pull-left">User Profile - Update</h2>
+          </header>
+          <form class="form-horizontal" >
+            <div class="content-body border-box pull-left">
+            <div class="form-group form-box">
+                <label class="control-label col-md-3">Company <span class="red">*</span></label>
+                <div class="col-md-9">
+                  <input type="text" class="form-control input-sm" placeholder="Company" name="Company" id="CompanyName" disabled >
+                </div>
+              </div>
+            <div class="form-group form-box">
+                <label class="control-label col-md-3">Email <span class="red">*</span></label>
+             <div class="col-md-9">
+                  <input type="email" class="form-control input-sm" placeholder="Email" name="email" id="Email" disabled>
+                </div>
+              </div>
+              <div class="form-group form-box">
+                <label class="control-label col-md-3">First Name<span class="red">*</span></label>
+                <div class="col-md-9">
+                  <input type="text" class="form-control input-sm" placeholder="First Name" name="fname" id="Fname" disabled>
+                </div>
+              </div>
+              <div class="form-group form-box">
+                <label class="control-label col-md-3">Last Name<span class="red">*</span></label>
+                <div class="col-md-9">
+                  <input type="text" class="form-control input-sm" placeholder="Last Name" name="lname" id="Lname" disabled>
+                </div>
+              </div>
+              <div class="form-group form-box">
+                <label class="control-label col-md-3">Employee Number<span class="red">*</span></label>
+                <div class="col-md-9">
+                  <input type="text" class="form-control input-sm" placeholder="Employee Number" name="cname" id="EmpNumber" disabled>
+                </div>
+              </div>
+              <div class="form-group form-box">
+                <label class="control-label col-md-3">Title<span class="red">*</span></label>
+                <div class="col-md-9">
+                  <input type="text" class="form-control input-sm" placeholder="Title" name="Title" id="Title" disabled>
+                </div>
+              </div>
+              <div class="form-group form-box">
+                <label class="control-label col-md-3">Supervisor<span class="red">*</span></label>
+                <div class="col-md-9">
+                  <input type="text" class="form-control input-sm" placeholder="Supervisor" name="Supervisor" id="Supervisor" disabled>
+                </div>
+              </div>
+              <div class="form-group form-box">
+                <label class="control-label col-md-3">Location<span class="red">*</span></label>
+                <div class="col-md-9">
+                  <input type="text" class="form-control input-sm" placeholder="Location" name="Location" id="Location" disabled>
+                </div>
+              </div>
+              
+              <div class="form-group form-box">
+                 <label class="control-label col-md-3">Picture<span class="red">*</span></label>
+                <div class="col-md-9">
+                  <input id="fileUpload" type="file" /><br />
+                  <div id="image-holder"> </div>
+                </div>
+                  
+            </div>
+            
+            </div>
+              <div class="col-md-12 col-sm-12 page-footer-box clearfix">
+              <div class="pull-right col-md-offset-4">
+               <button class="btn btn-success input-sm" type="submit">Cancel</button>
+
+                   @*<button class="btn btn-success input-sm" type="submit">Submit</button>*@
+               <input type="button" class="btn btn-success input-sm" id="UpdateData" value="Submit"  onclick="SubmitData();"/>
+              </div>
+            </div>
+          </form>
+        </div>        
+        </div>
+       <div class="col-md-3"></div>
+      </div>
+    </section>
+  </section>
+  <!-- END CONTENT --> 
+  
+</div>
+<!-- END CONTAINER --> 
+    
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $.ajax({
+                type: "GET",
+                url: '@Url.Action("GetUserData", "Dashboard")',
+                //data: '{ "model": ' + JSON.stringify(model) + '}',
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'text json',
+                //async: false,
+                //cache: false,
+                success: function (data) {
+                    $("#CompanyName").val(data.Company);
+                    $("#Email").val(data.Email);
+                    $("#Fname").val(data.FirstName);
+                    $("#Lname").val(data.LastName);
+                    $("#EmpNumber").val(data.ENumber);
+
+                    $("#Title").val(data.Title);
+                    $("#Supervisor").val(data.Supervisor);
+                    $("#Location").val(data.Location);
+                },
+                error: function () {
+                    alert('Cannot update selection values now!!insertlog');
+                }
+            })
+
+        });
+
+        function SubmitData() {
+
+
+            var data = new FormData();
+            var files = $("#fileUpload").get(0).files;
+            if (files.length > 0) {
+                data.append("pic", files[0]);
+            }
+            $.ajax({
+                url: '@Url.Action("UpdateUserData", "Dashboard")',
+                type: "POST",
+                processData: false,
+                contentType: false,
+                data: data,
+                success: function (response) {
+                    //code after success
+                    if (response) {
+                        alert('Image successfully Upload');
+                    }
+                    else {
+                        alert('Due to connectivity not able to upload the image try after sometime!!!!');
+                    }
+
+                },
+                error: function (er) {
+                    alert(er);
+                }
+
+            });
+
+
+           @* var fd = new FormData();
+            var files = $("#fileUpload").get(0).files;
+
+            if (files.lenght > 0) {
+                fd.append("pic", files[0]);
+            }
+
+            var model = {
+                "Company": $('#CompanyName').val(),
+                "Email": $('#Email').val(),
+                "FirstName": $('#Fname').val(),
+                "LastName": $('#Lname').val(),
+                "ENumber": $('#EmpNumber').val(),
+                "Title": $('#Title').val(),
+                "Supervisor": $('#Supervisor').val(),
+                "Location": $('#Location').val(),
+                "Image": files,
+                "imagepath": $('#fileUpload').val()
+            };
+            $.ajax({
+                type: "Post",
+                url: '@Url.Action("UpdateUserData", "Dashboard")',
+                data: '{ "model": ' + JSON.stringify(fd) + '}',
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'text json',
+                //async: false,
+                //cache: false,
+                success: function (data) {
+
+                },
+                error: function () {
+                    alert('Cannot update selection values now!!insertlog');
+                }
+            });*@
+        }
+
+        //$("#UpdateData").click(function()
+        //{
+        //    alert($('#fileUpload').val());
+
+        //});
+
+        //$("#fileUpload").on('change', function () {
+
+        //    if (typeof (FileReader) != "undefined") {
+
+        //        var fileUpload = document.getElementById("fileUpload");
+        //        if (typeof (fileUpload.files) != "undefined") {
+        //            var size = parseFloat(fileUpload.files[0].size / 1024).toFixed(2);
+        //            alert(size + " KB.");
+        //        } else {
+        //            alert("This browser does not support HTML5.");
+        //        }
+
+        //        var image_holder = $("#image-holder");
+        //        image_holder.empty();
+
+        //        var reader = new FileReader();
+        //        reader.onload = function (e) {
+        //            $("<img />", {
+        //                "src": e.target.result,
+        //                "class": "thumb-image"
+        //            }).appendTo(image_holder);
+
+        //        }
+        //        image_holder.show();
+        //        reader.readAsDataURL($(this)[0].files[0]);
+        //    } else {
+        //        alert("This browser does not support FileReader.");
+        //    }
+        //});
+
+        //function Upload() {
+        //    var fileUpload = document.getElementById("fileUpload");
+        //    if (typeof (fileUpload.files) != "undefined") {
+        //        var size = parseFloat(fileUpload.files[0].size / 1024).toFixed(2);
+        //        alert(size + " KB.");
+        //    } else {
+        //        alert("This browser does not support HTML5.");
+        //    }
+        //}
+</script>
+}

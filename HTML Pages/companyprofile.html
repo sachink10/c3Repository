@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<meta charset="utf-8" />
+<title>Company Profiile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta content="" name="description" />
+<meta content="" name="author" />
+<!-- CORE CSS FRAMEWORK - START -->
+<link href="assets/css/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="assets/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+<link href="assets/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="assets/css/animate.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="assets/css/dataTables.bootstrap.min.css">
+<link href="assets/css/datepicker.css" rel="stylesheet">
+<!-- CORE CSS FRAMEWORK - END -->
+<!-- CORE CSS TEMPLATE - START -->
+<link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
+<!-- CORE CSS TEMPLATE - END -->
+</head>
+<body class="login">
+<!-- START TOPBAR -->
+<nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid header-top-box">
+    <div class="logo-top pull-left"><a href="#"><img src="assets/images/logo-sign.png" alt=""></a></div>
+    <div class="pull-right admin-icon"><a href="#"><img src="assets/images/user.png" alt=""></a></div>
+  </div>
+          <div class="container-fluid nav-box">
+    <div class="navbar-header">
+              <div class="col-md-12 pull-left hidden-md hidden-lg container-box">
+        <ul class="nav navbar-nav pull-left col-xs-9 pad0 mar0">
+                  <li><a class="user-name" href="#">John Smith</a></li>
+                  <li><a class="user-mood" href="#"><i class="fa fa-smile-o"></i></a></li>                  
+                </ul>
+      </div>
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            </div>
+    <div id="navbar" class="navbar-collapse collapse col-md-9">
+              <ul class="nav navbar-nav">
+        <li><a href="administration.html">Administration</a></li>
+        <li><a href="calls-dashboard.html">Calls Dashboard</a></li>
+        <li><a href="appointments-dashboard.html">Appointments Dashboard</a></li>
+        <li><a href="qa-dashboard.html">QA Dashboard</a></li>
+        <li><a href="employee-performance.html">Employee Performance</a></li>
+        <li><a href="virtual-assistant.html">Virtual Assistant</a></li>
+        <li><a href="ticket-dashboard.html">Ticket Dashboard</a></li>
+        <li><a class="back-none" href="knowledge-base.html">Knowledge Base</a></li>
+      </ul>
+            </div>
+    <div class="col-md-2 pull-right hidden-sm hidden-xs pad pan0">
+              <ul class="smile-mood pull-right">
+        <li><a href="#"><img src="assets/images/smile1.png" alt=""></a></li>
+      </ul>
+            </div>
+  </div>
+        </nav>
+<!-- END TOPBAR --> 
+<!-- START CONTAINER -->
+<div class="page-container row-fluid"> 
+  <!-- START CONTENT -->
+  <section id="main-content" class="sidebar_shift sidebar_shift-reg">
+    <section class="wrapper wrap-box">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pan0 top-box-search">
+        <div class="page-title">
+          <div class="col-md-3 pull-right mart10">
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label class="control-label col-sm-5">Company Search</label>
+                <div class="col-sm-7">
+                  <div class="input-group">
+                    <input type="text" class="form-control input-sm" placeholder="Company Search" />
+                    <span class="input-group-btn">
+                    <button class="btn btn-info input-sm" type="button"> <i class="glyphicon glyphicon-search"></i> </button>
+                    </span> </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="clearfixf marb20"></div>       
+      <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 mart10">
+        <div class="col-md-12 col-sm-12 col-xs-12 pan0">
+                  <div class="clearfix">
+                    <div class="col-md-6">
+                      <header class="panel_header box-heading">
+                        <h2 class="title pull-left">Company Information</h2>
+                      </header>
+                      <div class="content-body border-box">
+                        <div class="form-horizontal" >
+                          <div class="form-group">
+                            <label class="control-label col-md-4">Company Name<span class="red">*</span></label>
+                            <div class="col-md-8">
+                              <input type="text" class="form-control input-sm" placeholder="Company Name" name="cname" required="required">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label col-md-4">Contact Name<span class="red">*</span></label>
+                            <div class="col-md-8">
+                              <input type="text" class="form-control input-sm" placeholder="Contact Name" name="cname" required="required">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label col-md-4">Contact Phone<span class="red">*</span></label>
+                            <div class="col-md-8">
+                              <input type="text" class="form-control input-sm" placeholder="Contact Phone" name="cphone" required="required">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label col-md-4">Address1<span class="red">*</span></label>
+                            <div class="col-md-8">
+                              <input type="text" class="form-control input-sm" placeholder="Address1" name="address1" required="required">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label col-md-4">Address2<span class="red">*</span></label>
+                            <div class="col-md-8">
+                              <input type="text" class="form-control input-sm" placeholder="Address2" name="address2" required="required">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label col-md-4">City<span class="red">*</span></label>
+                            <div class="col-md-8">
+                              <input type="text" class="form-control input-sm" placeholder="City" name="city" required="required">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label  col-md-4">State<span class="red">*</span></label>
+                            <div class="col-md-8">
+                              <select required="required" class="form-control input-sm" name="State">
+                                <option>Select State</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label col-md-4">Zip<span class="red">*</span></label>
+                            <div class="col-md-8">
+                              <input type="text" class="form-control input-sm" maxlength="10" placeholder="Zip" name="zip" required="required">
+                            </div>
+                          </div>
+                          <div class="form-group ">
+                            <label class="control-label col-md-4">No of Employees <span class="red">*</span></label>
+                            <div class="col-md-8">
+                              <select required="required" class="form-control input-sm" name="employees">
+                                <option>Select</option>
+                                <option>10</option>
+                                <option>20</option>
+                                <option>50</option>
+                                <option>100</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label col-md-4">No of Licenses <span class="red">*</span></label>
+                            <div class="col-md-8">
+                              <select required="required" name="Licenses" class="form-control input-sm">
+                                <option>Select</option>
+                                <option>10</option>
+                                <option>20</option>
+                                <option>25</option>
+                                <option>50</option>
+                                <option>100</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label col-md-4">Preferred Contact Method <span class="red">*</span></label>
+                            <div class="controls col-md-8">
+                              <select required="required" name="refered-contact-method" class="form-control input-sm">
+                                <option>Select</option>
+                                <option>Email</option>
+                                <option>Friend</option>                                
+                              </select>
+                            </div>
+                          </div>
+                          
+                          
+                        </div>
+                      </div>
+                      <div class="col-md-12 col-sm-12 page-footer-box clearfix">
+                  <div class="pull-right col-md-offset-4">
+                    <button class="btn btn-success input-sm" type="submit">Submit</button>
+                  </div>
+                </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <header class="panel_header box-heading">
+                        <h2 class="title pull-left">License  Info</h2>
+                      </header>
+                      <div class="content-body border-box" style="height:406px;">
+                      <div class="table-responsive">
+                        <table class="table table-striped mar0">
+                          <thead>
+                            <tr>
+                              <th>Id</th>
+                              <th>License</th>
+                              <th>Valid From</th>
+                              <th>Valid To</th>
+                              <th>Assigned to</th>                              
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row"><input name="idname" type="radio" value=""></th>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              
+                            </tr>
+                            <tr>
+                              <th scope="row"><input name="idname" type="radio" value=""></th>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><input name="idname" type="radio" value=""></th>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><input name="" type="radio" value=""></th>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><input name="idname" type="radio" value=""></th>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><input name="idname" type="radio" value=""></th>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><input name="idname" type="radio" value=""></th>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><input name="idname" type="radio" value=""></th>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><input name="idname" type="radio" value="" /></th>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><input name="idname" type="radio" value="" /></th>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><input name="idname" type="radio" value="" /></th>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><input name="idname" type="radio" value="" /></th>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                            </tr>
+                            
+                          </tbody>
+                        </table>
+                      </div>
+                      </div>
+                    </div>
+                    </div>
+                  
+                  <div class="clearfix mart30"></div>
+                    <div class="col-md-6">
+                    <header class="panel_header box-heading">
+                        <h2 class="title pull-left">User</h2>
+                      </header>
+                    <div class="content-body border-box">
+                      <div class="table-responsive">
+                        <table class="table table-striped mar0">
+                          <thead>
+                            <tr>
+                              <th>Id</th>
+                              <th>Email</th>
+                              <th>First Name</th>
+                              <th>Last Name</th>
+                              <th>User Type</th>                              
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row"><input name="" type="checkbox" value=""></th>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              
+                            </tr>
+                            <tr>
+                              <th scope="row"><input name="" type="checkbox" value=""></th>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><input name="" type="checkbox" value=""></th>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><input name="" type="checkbox" value=""></th>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><input name="" type="checkbox" value=""></th>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                              <td>Table cell</td>
+                            </tr>
+                            
+                          </tbody>
+                        </table>
+                     
+                      </div>
+                      
+                      </div>
+                      <div class="col-md-12 col-sm-12 page-footer-box clearfix">
+                  <div class="pull-right col-md-offset-4">
+                    <button class="btn btn-success input-sm" type="submit">Assign</button>
+                  </div>
+                </div>
+                    </div>
+                    <div class="col-md-6">
+                      <header class="panel_header box-heading">
+                        <h2 class="title pull-left">License  Dashboard Access</h2>
+                      </header>
+                      <div class="content-body border-box" style="height:247px;">
+                        <div class="row">
+                          <form action="#" class="form-horizontal" id="modules">
+                            <div class="col-md-12 col-sm-12 col-xs-12">                               
+                              <!--first Name-->
+                              <div class="form-group">
+                                <label class="control-label col-md-6 pull-left">Calls Dashboard </label>
+                                <div class="col-md-4 pull-right">
+                                  <label class="col-md-6">
+                                    <input type="radio" name="calls" checked>
+                                    &nbsp; Yes </label>
+                                  <label>
+                                    <input type="radio" name="calls">
+                                    &nbsp;No </label>                                  
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="control-label col-md-6 pull-left">Ticket Dashboard</label>
+                                <div class="col-md-4 pull-right">
+                                  <label class="col-md-6" >
+                                    <input type="radio" name="ticket" checked>
+                                    &nbsp; Yes </label>
+                                  <label>
+                                    <input type="radio" name="ticket">
+                                    &nbsp;No </label>                                  
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="control-label col-md-6 pull-left">QA Dashboard</label>
+                                <div class="col-md-4 pull-right">
+                                  <label class="col-md-6">
+                                    <input type="radio" name="qa" checked>
+                                    &nbsp; Yes </label>
+                                  <label>
+                                    <input type="radio" name="qa">
+                                    &nbsp;No </label>                                   
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="control-label col-md-6 pull-left">Employess Performance</label>
+                                <div class="col-md-4 pull-right">
+                                  <label class="col-md-6">
+                                    <input type="radio" name="emp" checked>
+                                    &nbsp; Yes </label>
+                                  <label>
+                                    <input type="radio" name="emp">
+                                    &nbsp;No </label>                                 
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="control-label col-md-6 pull-left">Virtual Assistant</label>
+                                <div class="col-md-4 pull-right">
+                                  <label class="col-md-6">
+                                    <input type="radio" name="vir" checked>
+                                    &nbsp; Yes </label>
+                                  <label>
+                                    <input type="radio" name="vir">
+                                    &nbsp;No </label>                                  
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="control-label col-md-6 pull-left">Knowledge Base</label>
+                                <div class="col-md-4 pull-right">
+                                  <label class="col-md-6">
+                                    <input type="radio" name="know" checked>
+                                    &nbsp; Yes </label>
+                                  <label>
+                                    <input type="radio" name="know">
+                                    &nbsp;No </label>                                  
+                                </div>
+                              </div>
+                              
+                              <!--last Name--> 
+                              
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  
+                </div>
+      </div>
+    </section>
+  </section>
+  <!-- END CONTENT --> 
+  
+</div>
+<!-- END CONTAINER --> 
+<!-- START FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <p class="text-muted">Copyright © 2015</p>
+  </div>
+</footer>
+<!-- END FOOTER --> 
+
+<!-- CORE JS FRAMEWORK - START --> 
+<script src="assets/js/jquery-1.11.2.min.js" type="text/javascript"></script> 
+<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/js/bootstrap-datepicker.js"></script>
+<script src="assets/js/jquery.dataTables.min.js"></script>
+<script src="assets/js/dataTables.bootstrap.min.js"></script>
+<!-- CORE JS FRAMEWORK - END --> 
+<!-- CORE TEMPLATE JS - START --> 
+<script src="assets/js/scripts.js" type="text/javascript"></script> 
+<!-- END CORE TEMPLATE JS - END -->
+
+</body>
+</html>

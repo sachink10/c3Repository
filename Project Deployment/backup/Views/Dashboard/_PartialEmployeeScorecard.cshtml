@@ -1,0 +1,221 @@
+﻿@model Ampbi.DataAccess.ViewModel.DashBoard
+@using System.Web.UI.WebControls
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active simplePagerContainer" id="IntSet">
+        <div class="panel-body">
+
+            <ul >
+                @if (Model.employeePerformanceCardList != null)
+                {
+                    foreach (var tabMetric in Model.employeePerformanceCardList)
+                    {
+                        if (Convert.ToDecimal(tabMetric.perctoGoal) >= 100)
+                        {
+                      
+                    <li>
+                        <div class="col-md-3 m-bottom">
+                            <div class="clearfix green-light round-corner-emp">
+                                <div class="clearfix">
+                                    <div class="pull-left" style="width: 50%; padding: 0 0 0 10px; border-right: #000 solid 1px; line-height: 28px; color: #000;">
+                                        @*@Html.ActionLink(tabMetric.FirstName + "," + tabMetric.LastName, "", "Dashboard")*@
+                                        @*@Html.ActionLink(tabMetric.FirstName, "IndividualEmpPerf", "Dashboard", new { @id = tabMetric.email, @anc = "1", @class = "test" }, null)*@
+                                        <a href="@Url.Action("IndividualEmpPerf", "Dashboard", new { email = "@tabMetric.email" })">
+                                            <div style="text-decoration:underline;cursor: pointer; cursor: hand;" itemid = "@tabMetric.email">@tabMetric.FirstName @tabMetric.LastName</div>
+                                        </a>
+                                    </div>
+                                    <div class="pull-right" style="width: 50%; line-height: 28px; color: #000;">
+                                        <ul class="days-plus">
+                                            <li>0</li>
+                                            <li>0</li>
+                                            <li>#Days</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="pull-left emp-pic green-dark">
+                                        <img src="~/Content/assets/images/pic.png">
+                                    </div>
+                                    <div class="pull-right" style="width: 57%;">
+                                        <div class="clearfix">
+                                            <div class="table-responsive">
+                                                <table class="table table-green">
+                                                    <tr>
+                                                        <td>Goal</td>
+                                                        <td>@tabMetric.Goal</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Actual</td>
+                                                        <td>@tabMetric.Actual</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>% to Goal</td>
+                                                        <td>@tabMetric.perctoGoal</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="pull-left" style="width: 50%; padding: 0 0 0 10px; text-align: left; line-height: 28px; color: #000;">TASKS</div>
+                                    <div class="pull-right" style="width: 50%; padding: 0 10px 0 0; text-align: right; line-height: 28px; color: #000;">@tabMetric.NoOfTasks</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                           
+                        }
+
+                        if (Convert.ToDecimal(tabMetric.perctoGoal) <= 100 && Convert.ToDecimal(tabMetric.perctoGoal) >= 80)
+                        {
+                       
+                    <li>
+                        <div class="col-md-3 m-bottom">
+                            <div class="clearfix yellow-light">
+                                <div class="clearfix">
+                                    <div class="pull-left" style="width: 50%; padding: 0 0 0 10px; border-right: #000 solid 1px; line-height: 28px; color: #000;">
+                                        @*@Html.ActionLink(tabMetric.FirstName, "", "Dashboard")*@
+                                        @*@Html.ActionLink(tabMetric.FirstName, "IndividualEmpPerf", "Dashboard", new { @id = tabMetric.email, @anc = "1", @class = "test" }, null)*@
+                                        <a href="@Url.Action("IndividualEmpPerf", "Dashboard", new { email = @tabMetric.email })">
+                                            <div style="text-decoration:underline;cursor: pointer; cursor: hand;" itemid = "@tabMetric.email" >@tabMetric.FirstName @tabMetric.LastName</div>
+                                    </div>
+                                    <div class="pull-right" style="width: 50%; line-height: 28px; color: #000;">
+                                        <ul class="days-plus">
+                                            <li>0</li>
+                                            <li>0</li>
+                                            <li>#Days</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="pull-left emp-pic yellow-dark">
+                                        <img src="~/Content/assets/images/pic1.png">
+                                    </div>
+                                    <div class="pull-right" style="width: 73%;">
+                                        <div class="clearfix">
+                                            <div class="table-responsive">
+                                                <table class="table table-yellow">
+                                                    <tr>
+                                                        <td>Goal</td>
+                                                        <td>@tabMetric.Goal</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Actual</td>
+                                                        <td>@tabMetric.Actual</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>% to Goal</td>
+                                                        <td>@tabMetric.perctoGoal</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="pull-left" style="width: 50%; padding: 0 0 0 10px; text-align: left; line-height: 28px; color: #000;">TASKS</div>
+                                    <div class="pull-right" style="width: 50%; padding: 0 10px 0 0; text-align: right; line-height: 28px; color: #000;">@tabMetric.NoOfTasks</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                                     
+                        }
+
+                        if (Convert.ToDecimal(tabMetric.perctoGoal) <= 80)
+                        {
+                       
+                    <li>
+
+                        <div class="col-md-3 m-bottom">
+                            <div class="clearfix orange-light">
+                                <div class="clearfix">
+                                    <div class="pull-left" style="width: 50%; padding: 0 0 0 10px; border-right: #000 solid 1px; line-height: 28px; color: #000;">
+                                        @*@Html.ActionLink(tabMetric.FirstName, "IndividualEmpPerf", "Dashboard", new { @id = tabMetric.email, @anc = "1", @class = "test" }, null)*@
+                                        <a href="@Url.Action("IndividualEmpPerf", "Dashboard", new { email = @tabMetric.email })">
+                                            <div style="text-decoration:underline;cursor: pointer; cursor: hand;" itemid = "@tabMetric.email">@tabMetric.FirstName @tabMetric.LastName</div>
+                                        </a>
+                                    </div>
+                                    <div class="pull-right" style="width: 50%; line-height: 28px; color: #000;">
+                                        <ul class="days-plus">
+                                            <li>0</li>
+                                            <li>0</li>
+                                            <li>#Days</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="pull-left emp-pic orange-dark">
+                                        <img src="~/Content/assets/images/pic.png">
+                                    </div>
+                                    <div class="pull-right" style="width: 73%;">
+                                        <div class="clearfix">
+                                            <div class="table-responsive">
+                                                <table class="table table-orange">
+                                                    <tr>
+                                                        <td>Goal</td>
+                                                        <td>@tabMetric.Goal</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Actual</td>
+                                                        <td>@tabMetric.Actual</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>% to Goal</td>
+                                                        <td>@tabMetric.perctoGoal</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="pull-left" style="width: 50%; padding: 0 0 0 10px; text-align: left; line-height: 28px; color: #000;">TASKS</div>
+                                    <div class="pull-right" style="width: 50%; padding: 0 10px 0 0; text-align: right; line-height: 28px; color: #000;">@tabMetric.NoOfTasks</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                           
+                        }
+                    }
+                }
+            </ul>
+
+            @*<div class="pull-right padlr5">
+                <ul class="pagination paganation-box">
+                    <li><a href="#">Previous</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li class="disabled"><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">Next</a></li>
+                </ul>
+            </div>*@
+        </div>
+
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    //$("ul.pagination1").quickPagination();
+    $('.test').click(function (e) {
+        //var selectedValue = $(this).text();
+        var selectedValue = $(this).attr("itemid");
+        $.ajax({
+            url: '@Url.Action("IndividualEmpPerf", "Dashboard")',
+                cache: false,
+                data: { 'selectedValue': selectedValue },
+
+                success: function (result) {
+                    window.location.href = '/Dashboard/IndividualEmpPerf/';
+                },
+                error: function (result) {
+                    alert('Cannot update selection values now!!');
+                }
+            })
+        })
+</script>

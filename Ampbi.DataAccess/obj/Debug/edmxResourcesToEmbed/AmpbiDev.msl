@@ -1,0 +1,1463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AmpbidevModelStoreContainer" CdmEntityContainer="AmpbidevEntities">
+    <EntitySetMapping Name="DIM_EMPLOYEE">
+      <EntityTypeMapping TypeName="AmpbidevModel.DIM_EMPLOYEE">
+        <MappingFragment StoreEntitySet="DIM_EMPLOYEE">
+          <ScalarProperty Name="Empid" ColumnName="Empid" />
+          <ScalarProperty Name="Employeenumber" ColumnName="Employeenumber" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+          <ScalarProperty Name="Startdate" ColumnName="Startdate" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="employeeFirstname" ColumnName="employeeFirstname" />
+          <ScalarProperty Name="employeeLastname" ColumnName="employeeLastname" />
+          <ScalarProperty Name="mgr_lev1_id" ColumnName="mgr_lev1_id" />
+          <ScalarProperty Name="mgr_lev2_id" ColumnName="mgr_lev2_id" />
+          <ScalarProperty Name="mgr_lev3_id" ColumnName="mgr_lev3_id" />
+          <ScalarProperty Name="mgr_lev4_id" ColumnName="mgr_lev4_id" />
+          <ScalarProperty Name="mgr_lev5_id" ColumnName="mgr_lev5_id" />
+          <ScalarProperty Name="mgr_lev1_name" ColumnName="mgr_lev1_name" />
+          <ScalarProperty Name="mgr_lev2_name" ColumnName="mgr_lev2_name" />
+          <ScalarProperty Name="mgr_lev3_name" ColumnName="mgr_lev3_name" />
+          <ScalarProperty Name="mgr_lev4_name" ColumnName="mgr_lev4_name" />
+          <ScalarProperty Name="mgr_lev5_name" ColumnName="mgr_lev5_name" />
+          <ScalarProperty Name="project_number" ColumnName="project_number" />
+          <ScalarProperty Name="job_id" ColumnName="job_id" />
+          <ScalarProperty Name="Employeetitle" ColumnName="Employeetitle" />
+          <ScalarProperty Name="employee_type" ColumnName="employee_type" />
+          <ScalarProperty Name="assignment_status" ColumnName="assignment_status" />
+          <ScalarProperty Name="hire_date" ColumnName="hire_date" />
+          <ScalarProperty Name="term_date" ColumnName="term_date" />
+          <ScalarProperty Name="leaving_code" ColumnName="leaving_code" />
+          <ScalarProperty Name="leaving_reason" ColumnName="leaving_reason" />
+          <ScalarProperty Name="employee_code" ColumnName="employee_code" />
+          <ScalarProperty Name="companyGUID" ColumnName="companyGUID" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DynamicParameterLists">
+      <EntityTypeMapping TypeName="AmpbidevModel.DynamicParameterList">
+        <MappingFragment StoreEntitySet="DynamicParameterList">
+          <ScalarProperty Name="Listid" ColumnName="Listid" />
+          <ScalarProperty Name="CompanyGuid" ColumnName="CompanyGuid" />
+          <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+          <ScalarProperty Name="DashboardName" ColumnName="DashboardName" />
+          <ScalarProperty Name="ParameterName" ColumnName="ParameterName" />
+          <ScalarProperty Name="ParamValue" ColumnName="ParamValue" />
+          <ScalarProperty Name="displayorder" ColumnName="displayorder" />
+          <ScalarProperty Name="isactive" ColumnName="isactive" />
+          <ScalarProperty Name="startdate" ColumnName="startdate" />
+          <ScalarProperty Name="enddate" ColumnName="enddate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QA_Data_SummaryTable">
+      <EntityTypeMapping TypeName="AmpbidevModel.QA_Data_SummaryTable">
+        <MappingFragment StoreEntitySet="QA_Data_SummaryTable">
+          <ScalarProperty Name="RowId" ColumnName="RowId" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Manager_Level_Id" ColumnName="Manager_Level_Id" />
+          <ScalarProperty Name="employee_name" ColumnName="employee_name" />
+          <ScalarProperty Name="Offset" ColumnName="Offset" />
+          <ScalarProperty Name="ScoreValue" ColumnName="ScoreValue" />
+          <ScalarProperty Name="AgentId" ColumnName="AgentId" />
+          <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="Filter" ColumnName="Filter" />
+          <ScalarProperty Name="companyguid" ColumnName="companyguid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QATrackers">
+      <EntityTypeMapping TypeName="AmpbidevModel.QATracker">
+        <MappingFragment StoreEntitySet="QATracker">
+          <ScalarProperty Name="LoadID" ColumnName="LoadID" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Program" ColumnName="Program" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Week" ColumnName="Week" />
+          <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TotalQAReqd" ColumnName="TotalQAReqd" />
+          <ScalarProperty Name="ActualQA" ColumnName="ActualQA" />
+          <ScalarProperty Name="TotalScore" ColumnName="TotalScore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ref_LookupValues">
+      <EntityTypeMapping TypeName="AmpbidevModel.ref_LookupValues">
+        <MappingFragment StoreEntitySet="ref_LookupValues">
+          <ScalarProperty Name="Lkpseqid" ColumnName="Lkpseqid" />
+          <ScalarProperty Name="Modulename" ColumnName="Modulename" />
+          <ScalarProperty Name="Columnname" ColumnName="Columnname" />
+          <ScalarProperty Name="ActualValue" ColumnName="ActualValue" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Createdby" ColumnName="Createdby" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+          <ScalarProperty Name="Updatedon" ColumnName="Updatedon" />
+          <ScalarProperty Name="Genericvarchar1" ColumnName="Genericvarchar1" />
+          <ScalarProperty Name="Genericvarchar2" ColumnName="Genericvarchar2" />
+          <ScalarProperty Name="Genericvarchar3" ColumnName="Genericvarchar3" />
+          <ScalarProperty Name="GenericDate1" ColumnName="GenericDate1" />
+          <ScalarProperty Name="GenericDate2" ColumnName="GenericDate2" />
+          <ScalarProperty Name="GenericDate3" ColumnName="GenericDate3" />
+          <ScalarProperty Name="Genericbit1" ColumnName="Genericbit1" />
+          <ScalarProperty Name="Genericbit2" ColumnName="Genericbit2" />
+          <ScalarProperty Name="Genericbit3" ColumnName="Genericbit3" />
+          <ScalarProperty Name="GenericNumeric1" ColumnName="GenericNumeric1" />
+          <ScalarProperty Name="GenericNumeric2" ColumnName="GenericNumeric2" />
+          <ScalarProperty Name="GenericNumeric3" ColumnName="GenericNumeric3" />
+          <ScalarProperty Name="displayorder" ColumnName="displayorder" />
+          <ScalarProperty Name="finalaction" ColumnName="finalaction" />
+          <ScalarProperty Name="WriteRecord" ColumnName="WriteRecord" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ref_LookupValues_Hist">
+      <EntityTypeMapping TypeName="AmpbidevModel.ref_LookupValues_Hist">
+        <MappingFragment StoreEntitySet="ref_LookupValues_Hist">
+          <ScalarProperty Name="Lkphistseqid" ColumnName="Lkphistseqid" />
+          <ScalarProperty Name="Lkpseqid" ColumnName="Lkpseqid" />
+          <ScalarProperty Name="Modulename" ColumnName="Modulename" />
+          <ScalarProperty Name="Columnname" ColumnName="Columnname" />
+          <ScalarProperty Name="ActualValue" ColumnName="ActualValue" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Createdby" ColumnName="Createdby" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+          <ScalarProperty Name="Updatedon" ColumnName="Updatedon" />
+          <ScalarProperty Name="Genericvarchar1" ColumnName="Genericvarchar1" />
+          <ScalarProperty Name="Genericvarchar2" ColumnName="Genericvarchar2" />
+          <ScalarProperty Name="Genericvarchar3" ColumnName="Genericvarchar3" />
+          <ScalarProperty Name="GenericDate1" ColumnName="GenericDate1" />
+          <ScalarProperty Name="GenericDate2" ColumnName="GenericDate2" />
+          <ScalarProperty Name="GenericDate3" ColumnName="GenericDate3" />
+          <ScalarProperty Name="Genericbit1" ColumnName="Genericbit1" />
+          <ScalarProperty Name="Genericbit2" ColumnName="Genericbit2" />
+          <ScalarProperty Name="Genericbit3" ColumnName="Genericbit3" />
+          <ScalarProperty Name="GenericNumeric1" ColumnName="GenericNumeric1" />
+          <ScalarProperty Name="GenericNumeric2" ColumnName="GenericNumeric2" />
+          <ScalarProperty Name="GenericNumeric3" ColumnName="GenericNumeric3" />
+          <ScalarProperty Name="displayorder" ColumnName="displayorder" />
+          <ScalarProperty Name="finalaction" ColumnName="finalaction" />
+          <ScalarProperty Name="WriteRecord" ColumnName="WriteRecord" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ref_Modules">
+      <EntityTypeMapping TypeName="AmpbidevModel.ref_Modules">
+        <MappingFragment StoreEntitySet="ref_Modules">
+          <ScalarProperty Name="Moduleid" ColumnName="Moduleid" />
+          <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="DefaultModule" ColumnName="DefaultModule" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ref_Modules_hist">
+      <EntityTypeMapping TypeName="AmpbidevModel.ref_Modules_hist">
+        <MappingFragment StoreEntitySet="ref_Modules_hist">
+          <ScalarProperty Name="ModuleHistid" ColumnName="ModuleHistid" />
+          <ScalarProperty Name="Moduleid" ColumnName="Moduleid" />
+          <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="defaultmodule" ColumnName="defaultmodule" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ref_SecretQuestion">
+      <EntityTypeMapping TypeName="AmpbidevModel.ref_SecretQuestion">
+        <MappingFragment StoreEntitySet="ref_SecretQuestion">
+          <ScalarProperty Name="SecSeq" ColumnName="SecSeq" />
+          <ScalarProperty Name="SecretQuestion" ColumnName="SecretQuestion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ref_SecretQuestion_hist">
+      <EntityTypeMapping TypeName="AmpbidevModel.ref_SecretQuestion_hist">
+        <MappingFragment StoreEntitySet="ref_SecretQuestion_hist">
+          <ScalarProperty Name="SecSeq" ColumnName="SecSeq" />
+          <ScalarProperty Name="SecretQuestion" ColumnName="SecretQuestion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ref_UserType">
+      <EntityTypeMapping TypeName="AmpbidevModel.ref_UserType">
+        <MappingFragment StoreEntitySet="ref_UserType">
+          <ScalarProperty Name="UserTypeID" ColumnName="UserTypeID" />
+          <ScalarProperty Name="UserTypeName" ColumnName="UserTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ref_UserType_hist">
+      <EntityTypeMapping TypeName="AmpbidevModel.ref_UserType_hist">
+        <MappingFragment StoreEntitySet="ref_UserType_hist">
+          <ScalarProperty Name="UserTypeID" ColumnName="UserTypeID" />
+          <ScalarProperty Name="UserTypeName" ColumnName="UserTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="statelists">
+      <EntityTypeMapping TypeName="AmpbidevModel.statelist">
+        <MappingFragment StoreEntitySet="statelist">
+          <ScalarProperty Name="statecode" ColumnName="statecode" />
+          <ScalarProperty Name="statename" ColumnName="statename" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+          <ScalarProperty Name="Updatedon" ColumnName="Updatedon" />
+          <ScalarProperty Name="active" ColumnName="active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="statelist_hist">
+      <EntityTypeMapping TypeName="AmpbidevModel.statelist_hist">
+        <MappingFragment StoreEntitySet="statelist_hist">
+          <ScalarProperty Name="Statecodehistid" ColumnName="Statecodehistid" />
+          <ScalarProperty Name="statecode" ColumnName="statecode" />
+          <ScalarProperty Name="statename" ColumnName="statename" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+          <ScalarProperty Name="Updatedon" ColumnName="Updatedon" />
+          <ScalarProperty Name="active" ColumnName="active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stgtbl_fact_chimes_behavior">
+      <EntityTypeMapping TypeName="AmpbidevModel.stgtbl_fact_chimes_behavior">
+        <MappingFragment StoreEntitySet="stgtbl_fact_chimes_behavior">
+          <ScalarProperty Name="tblseqid" ColumnName="tblseqid" />
+          <ScalarProperty Name="QuestionCategory" ColumnName="QuestionCategory" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Client" ColumnName="Client" />
+          <ScalarProperty Name="Agent" ColumnName="Agent" />
+          <ScalarProperty Name="CallDate" ColumnName="CallDate" />
+          <ScalarProperty Name="oppurtunity" ColumnName="oppurtunity" />
+          <ScalarProperty Name="Meeting" ColumnName="Meeting" />
+          <ScalarProperty Name="Coaching" ColumnName="Coaching" />
+          <ScalarProperty Name="Unacceptable" ColumnName="Unacceptable" />
+          <ScalarProperty Name="Yes" ColumnName="Yes" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="NotApplicable" ColumnName="NotApplicable" />
+          <ScalarProperty Name="Defects" ColumnName="Defects" />
+          <ScalarProperty Name="DefectPercent" ColumnName="DefectPercent" />
+          <ScalarProperty Name="companyguid" ColumnName="companyguid" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Week" ColumnName="Week" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stgtbl_fact_chimes_behaviordetail">
+      <EntityTypeMapping TypeName="AmpbidevModel.stgtbl_fact_chimes_behaviordetail">
+        <MappingFragment StoreEntitySet="stgtbl_fact_chimes_behaviordetail">
+          <ScalarProperty Name="tblseqid" ColumnName="tblseqid" />
+          <ScalarProperty Name="QuestionCategory" ColumnName="QuestionCategory" />
+          <ScalarProperty Name="QuestionText" ColumnName="QuestionText" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Client" ColumnName="Client" />
+          <ScalarProperty Name="Agent" ColumnName="Agent" />
+          <ScalarProperty Name="CallDate" ColumnName="CallDate" />
+          <ScalarProperty Name="oppurtunity" ColumnName="oppurtunity" />
+          <ScalarProperty Name="Meeting" ColumnName="Meeting" />
+          <ScalarProperty Name="Coaching" ColumnName="Coaching" />
+          <ScalarProperty Name="Unacceptable" ColumnName="Unacceptable" />
+          <ScalarProperty Name="Yes" ColumnName="Yes" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="NotApplicable" ColumnName="NotApplicable" />
+          <ScalarProperty Name="Defects" ColumnName="Defects" />
+          <ScalarProperty Name="DefectPercent" ColumnName="DefectPercent" />
+          <ScalarProperty Name="companyguid" ColumnName="companyguid" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Week" ColumnName="Week" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stgtbl_fact_chimes_callaudit">
+      <EntityTypeMapping TypeName="AmpbidevModel.stgtbl_fact_chimes_callaudit">
+        <MappingFragment StoreEntitySet="stgtbl_fact_chimes_callaudit">
+          <ScalarProperty Name="tlbseqid" ColumnName="tlbseqid" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Evaluationid" ColumnName="Evaluationid" />
+          <ScalarProperty Name="EvaluationDate" ColumnName="EvaluationDate" />
+          <ScalarProperty Name="Client" ColumnName="Client" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="Agent" ColumnName="Agent" />
+          <ScalarProperty Name="Reviewer" ColumnName="Reviewer" />
+          <ScalarProperty Name="oppurtunity" ColumnName="oppurtunity" />
+          <ScalarProperty Name="Meeting" ColumnName="Meeting" />
+          <ScalarProperty Name="Coaching" ColumnName="Coaching" />
+          <ScalarProperty Name="Unacceptable" ColumnName="Unacceptable" />
+          <ScalarProperty Name="Yes" ColumnName="Yes" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="NotApplicable" ColumnName="NotApplicable" />
+          <ScalarProperty Name="Defects" ColumnName="Defects" />
+          <ScalarProperty Name="DefectPercent" ColumnName="DefectPercent" />
+          <ScalarProperty Name="companyguid" ColumnName="companyguid" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Week" ColumnName="Week" />
+          <ScalarProperty Name="calldate" ColumnName="calldate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="AmpbidevModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_AppLog">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_AppLog">
+        <MappingFragment StoreEntitySet="tbl_AppLog">
+          <ScalarProperty Name="logSeq" ColumnName="logSeq" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="UserEmailID" ColumnName="UserEmailID" />
+          <ScalarProperty Name="PropertyName1" ColumnName="PropertyName1" />
+          <ScalarProperty Name="PropertyValue1" ColumnName="PropertyValue1" />
+          <ScalarProperty Name="PropertyName2" ColumnName="PropertyName2" />
+          <ScalarProperty Name="PropertyValue2" ColumnName="PropertyValue2" />
+          <ScalarProperty Name="PropertyName3" ColumnName="PropertyName3" />
+          <ScalarProperty Name="PropertyValue3" ColumnName="PropertyValue3" />
+          <ScalarProperty Name="PropertyName4" ColumnName="PropertyName4" />
+          <ScalarProperty Name="PropertyValue4" ColumnName="PropertyValue4" />
+          <ScalarProperty Name="PropertyName5" ColumnName="PropertyName5" />
+          <ScalarProperty Name="PropertyValue5" ColumnName="PropertyValue5" />
+          <ScalarProperty Name="PropertyName6" ColumnName="PropertyName6" />
+          <ScalarProperty Name="PropertyValue6" ColumnName="PropertyValue6" />
+          <ScalarProperty Name="PropertyName7" ColumnName="PropertyName7" />
+          <ScalarProperty Name="PropertyValue7" ColumnName="PropertyValue7" />
+          <ScalarProperty Name="PropertyName8" ColumnName="PropertyName8" />
+          <ScalarProperty Name="PropertyValue8" ColumnName="PropertyValue8" />
+          <ScalarProperty Name="DashboardName" ColumnName="DashboardName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_coaching">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_coaching">
+        <MappingFragment StoreEntitySet="tbl_coaching">
+          <ScalarProperty Name="coachingid" ColumnName="coachingid" />
+          <ScalarProperty Name="CompanyGuid" ColumnName="CompanyGuid" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmployeeNumber" ColumnName="EmployeeNumber" />
+          <ScalarProperty Name="CoachingAssignedDate" ColumnName="CoachingAssignedDate" />
+          <ScalarProperty Name="KPIMetricId" ColumnName="KPIMetricId" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="Goal" ColumnName="Goal" />
+          <ScalarProperty Name="commitment" ColumnName="commitment" />
+          <ScalarProperty Name="Actual" ColumnName="Actual" />
+          <ScalarProperty Name="CoachingCompletionDate" ColumnName="CoachingCompletionDate" />
+          <ScalarProperty Name="Recording" ColumnName="Recording" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="articlename" ColumnName="articlename" />
+          <ScalarProperty Name="TargetedCompletionDate" ColumnName="TargetedCompletionDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Company">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_Company">
+        <MappingFragment StoreEntitySet="tbl_Company">
+          <ScalarProperty Name="CompanySeq" ColumnName="CompanySeq" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="NoofEmployee" ColumnName="NoofEmployee" />
+          <ScalarProperty Name="NoofLicence" ColumnName="NoofLicence" />
+          <ScalarProperty Name="TrialStartDate" ColumnName="TrialStartDate" />
+          <ScalarProperty Name="TrialEndDate" ColumnName="TrialEndDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="PrefferedContactMethod" ColumnName="PrefferedContactMethod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Company_hist">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_Company_hist">
+        <MappingFragment StoreEntitySet="tbl_Company_hist">
+          <ScalarProperty Name="CompanyHistSeq" ColumnName="CompanyHistSeq" />
+          <ScalarProperty Name="CompanySeq" ColumnName="CompanySeq" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="NoofEmployee" ColumnName="NoofEmployee" />
+          <ScalarProperty Name="NoofLicence" ColumnName="NoofLicence" />
+          <ScalarProperty Name="TrialStartDate" ColumnName="TrialStartDate" />
+          <ScalarProperty Name="TrialEndDate" ColumnName="TrialEndDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="PrefferedContactMethod" ColumnName="PrefferedContactMethod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_CompanyChartInfo">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_CompanyChartInfo">
+        <MappingFragment StoreEntitySet="tbl_CompanyChartInfo">
+          <ScalarProperty Name="cciseq" ColumnName="cciseq" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="ModuleID" ColumnName="ModuleID" />
+          <ScalarProperty Name="Chart1" ColumnName="Chart1" />
+          <ScalarProperty Name="Chart1Name" ColumnName="Chart1Name" />
+          <ScalarProperty Name="Chart2" ColumnName="Chart2" />
+          <ScalarProperty Name="Chart2Name" ColumnName="Chart2Name" />
+          <ScalarProperty Name="Chart3" ColumnName="Chart3" />
+          <ScalarProperty Name="Chart3Name" ColumnName="Chart3Name" />
+          <ScalarProperty Name="Chart4" ColumnName="Chart4" />
+          <ScalarProperty Name="Chart4Name" ColumnName="Chart4Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_companymodule">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_companymodule">
+        <MappingFragment StoreEntitySet="tbl_companymodule">
+          <ScalarProperty Name="companymoduleid" ColumnName="companymoduleid" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="moduleid" ColumnName="moduleid" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_companymodule_hist">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_companymodule_hist">
+        <MappingFragment StoreEntitySet="tbl_companymodule_hist">
+          <ScalarProperty Name="companymodulehistid" ColumnName="companymodulehistid" />
+          <ScalarProperty Name="companymoduleid" ColumnName="companymoduleid" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="moduleid" ColumnName="moduleid" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_empcomparision">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_empcomparision">
+        <MappingFragment StoreEntitySet="tbl_empcomparision">
+          <ScalarProperty Name="EmpCompid" ColumnName="EmpCompid" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="kpimetricid" ColumnName="kpimetricid" />
+          <ScalarProperty Name="RecDate" ColumnName="RecDate" />
+          <ScalarProperty Name="ComparisionType" ColumnName="ComparisionType" />
+          <ScalarProperty Name="Best" ColumnName="Best" />
+          <ScalarProperty Name="Average" ColumnName="Average" />
+          <ScalarProperty Name="Me" ColumnName="Me" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_empperfdata">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_empperfdata">
+        <MappingFragment StoreEntitySet="tbl_empperfdata">
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="AgentID" ColumnName="AgentID" />
+          <ScalarProperty Name="MetricName" ColumnName="MetricName" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="goal" ColumnName="goal" />
+          <ScalarProperty Name="PercentageToGoal" ColumnName="PercentageToGoal" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="Current_Date" ColumnName="Current_Date" />
+          <ScalarProperty Name="Offset" ColumnName="Offset" />
+          <ScalarProperty Name="Tenure" ColumnName="Tenure" />
+          <ScalarProperty Name="Manager_Level_Id" ColumnName="Manager_Level_Id" />
+          <ScalarProperty Name="emp_last_name" ColumnName="emp_last_name" />
+          <ScalarProperty Name="emp_first_name" ColumnName="emp_first_name" />
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="employee_name" ColumnName="employee_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_fact_chimes_behavior">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_fact_chimes_behavior">
+        <MappingFragment StoreEntitySet="tbl_fact_chimes_behavior">
+          <ScalarProperty Name="tblseqid" ColumnName="tblseqid" />
+          <ScalarProperty Name="QuestionCategory" ColumnName="QuestionCategory" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Client" ColumnName="Client" />
+          <ScalarProperty Name="Agent" ColumnName="Agent" />
+          <ScalarProperty Name="CallDate" ColumnName="CallDate" />
+          <ScalarProperty Name="oppurtunity" ColumnName="oppurtunity" />
+          <ScalarProperty Name="Meeting" ColumnName="Meeting" />
+          <ScalarProperty Name="Coaching" ColumnName="Coaching" />
+          <ScalarProperty Name="Unacceptable" ColumnName="Unacceptable" />
+          <ScalarProperty Name="Yes" ColumnName="Yes" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="NotApplicable" ColumnName="NotApplicable" />
+          <ScalarProperty Name="Defects" ColumnName="Defects" />
+          <ScalarProperty Name="DefectPercent" ColumnName="DefectPercent" />
+          <ScalarProperty Name="companyguid" ColumnName="companyguid" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Week" ColumnName="Week" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_fact_chimes_behaviordetail">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_fact_chimes_behaviordetail">
+        <MappingFragment StoreEntitySet="tbl_fact_chimes_behaviordetail">
+          <ScalarProperty Name="tblseqid" ColumnName="tblseqid" />
+          <ScalarProperty Name="QuestionText" ColumnName="QuestionText" />
+          <ScalarProperty Name="QuestionCategory" ColumnName="QuestionCategory" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Client" ColumnName="Client" />
+          <ScalarProperty Name="Agent" ColumnName="Agent" />
+          <ScalarProperty Name="CallDate" ColumnName="CallDate" />
+          <ScalarProperty Name="oppurtunity" ColumnName="oppurtunity" />
+          <ScalarProperty Name="Meeting" ColumnName="Meeting" />
+          <ScalarProperty Name="Coaching" ColumnName="Coaching" />
+          <ScalarProperty Name="Unacceptable" ColumnName="Unacceptable" />
+          <ScalarProperty Name="Yes" ColumnName="Yes" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="NotApplicable" ColumnName="NotApplicable" />
+          <ScalarProperty Name="Defects" ColumnName="Defects" />
+          <ScalarProperty Name="DefectPercent" ColumnName="DefectPercent" />
+          <ScalarProperty Name="companyguid" ColumnName="companyguid" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Week" ColumnName="Week" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_fact_chimes_callaudit">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_fact_chimes_callaudit">
+        <MappingFragment StoreEntitySet="tbl_fact_chimes_callaudit">
+          <ScalarProperty Name="tlbseqid" ColumnName="tlbseqid" />
+          <ScalarProperty Name="companyguid" ColumnName="companyguid" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Evaluationid" ColumnName="Evaluationid" />
+          <ScalarProperty Name="EvaluationDate" ColumnName="EvaluationDate" />
+          <ScalarProperty Name="Client" ColumnName="Client" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="Agent" ColumnName="Agent" />
+          <ScalarProperty Name="Reviewer" ColumnName="Reviewer" />
+          <ScalarProperty Name="oppurtunity" ColumnName="oppurtunity" />
+          <ScalarProperty Name="Meeting" ColumnName="Meeting" />
+          <ScalarProperty Name="Coaching" ColumnName="Coaching" />
+          <ScalarProperty Name="Unacceptable" ColumnName="Unacceptable" />
+          <ScalarProperty Name="Yes" ColumnName="Yes" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="NotApplicable" ColumnName="NotApplicable" />
+          <ScalarProperty Name="Defects" ColumnName="Defects" />
+          <ScalarProperty Name="DefectPercent" ColumnName="DefectPercent" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Week" ColumnName="Week" />
+          <ScalarProperty Name="calldate" ColumnName="calldate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_fact_empperf_All">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_fact_empperf_All">
+        <MappingFragment StoreEntitySet="tbl_fact_empperf_All">
+          <ScalarProperty Name="Tblid" ColumnName="Tblid" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="KPIMetricId" ColumnName="KPIMetricId" />
+          <ScalarProperty Name="ReportDate" ColumnName="ReportDate" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmployeeNumber" ColumnName="EmployeeNumber" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Goal" ColumnName="Goal" />
+          <ScalarProperty Name="Actual" ColumnName="Actual" />
+          <ScalarProperty Name="PerctoGoal" ColumnName="PerctoGoal" />
+          <ScalarProperty Name="NoofTasks" ColumnName="NoofTasks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_fact_empperf_Daily">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_fact_empperf_Daily">
+        <MappingFragment StoreEntitySet="tbl_fact_empperf_Daily">
+          <ScalarProperty Name="Tblid" ColumnName="Tblid" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="KPIMetricId" ColumnName="KPIMetricId" />
+          <ScalarProperty Name="RecDate" ColumnName="RecDate" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmployeeNumber" ColumnName="EmployeeNumber" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Goal" ColumnName="Goal" />
+          <ScalarProperty Name="Actual" ColumnName="Actual" />
+          <ScalarProperty Name="PerctoGoal" ColumnName="PerctoGoal" />
+          <ScalarProperty Name="NoofTasks" ColumnName="NoofTasks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_fact_empperf_Intraday">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_fact_empperf_Intraday">
+        <MappingFragment StoreEntitySet="tbl_fact_empperf_Intraday">
+          <ScalarProperty Name="Tblid" ColumnName="Tblid" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="KPIMetricId" ColumnName="KPIMetricId" />
+          <ScalarProperty Name="ReportDate" ColumnName="ReportDate" />
+          <ScalarProperty Name="ReportHour" ColumnName="ReportHour" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmployeeNumber" ColumnName="EmployeeNumber" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Goal" ColumnName="Goal" />
+          <ScalarProperty Name="Actual" ColumnName="Actual" />
+          <ScalarProperty Name="PerctoGoal" ColumnName="PerctoGoal" />
+          <ScalarProperty Name="NoofTasks" ColumnName="NoofTasks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_fact_empperf_Monthly">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_fact_empperf_Monthly">
+        <MappingFragment StoreEntitySet="tbl_fact_empperf_Monthly">
+          <ScalarProperty Name="Tblid" ColumnName="Tblid" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="KPIMetricId" ColumnName="KPIMetricId" />
+          <ScalarProperty Name="RecMonth" ColumnName="RecMonth" />
+          <ScalarProperty Name="RecYear" ColumnName="RecYear" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmployeeNumber" ColumnName="EmployeeNumber" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Goal" ColumnName="Goal" />
+          <ScalarProperty Name="Actual" ColumnName="Actual" />
+          <ScalarProperty Name="PerctoGoal" ColumnName="PerctoGoal" />
+          <ScalarProperty Name="NoofTasks" ColumnName="NoofTasks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_fact_empperf_weekly">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_fact_empperf_weekly">
+        <MappingFragment StoreEntitySet="tbl_fact_empperf_weekly">
+          <ScalarProperty Name="Tblid" ColumnName="Tblid" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="KPIMetricId" ColumnName="KPIMetricId" />
+          <ScalarProperty Name="RecWeekStartDate" ColumnName="RecWeekStartDate" />
+          <ScalarProperty Name="RecMonth" ColumnName="RecMonth" />
+          <ScalarProperty Name="RecYear" ColumnName="RecYear" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmployeeNumber" ColumnName="EmployeeNumber" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Goal" ColumnName="Goal" />
+          <ScalarProperty Name="Actual" ColumnName="Actual" />
+          <ScalarProperty Name="PerctoGoal" ColumnName="PerctoGoal" />
+          <ScalarProperty Name="NoofTasks" ColumnName="NoofTasks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_FactCalls_All">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_FactCalls_All">
+        <MappingFragment StoreEntitySet="tbl_FactCalls_All">
+          <ScalarProperty Name="TblId" ColumnName="TblId" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="SourceReferenceId" ColumnName="SourceReferenceId" />
+          <ScalarProperty Name="ContactDate" ColumnName="ContactDate" />
+          <ScalarProperty Name="SourceTimeZone" ColumnName="SourceTimeZone" />
+          <ScalarProperty Name="ContactDate_Est" ColumnName="ContactDate_Est" />
+          <ScalarProperty Name="ContactDate_Cst" ColumnName="ContactDate_Cst" />
+          <ScalarProperty Name="ContactDate_Mst" ColumnName="ContactDate_Mst" />
+          <ScalarProperty Name="ContactDate_Pst" ColumnName="ContactDate_Pst" />
+          <ScalarProperty Name="RecordCreatedby" ColumnName="RecordCreatedby" />
+          <ScalarProperty Name="Dnis" ColumnName="Dnis" />
+          <ScalarProperty Name="DnisDescription" ColumnName="DnisDescription" />
+          <ScalarProperty Name="DispositionLevelID1" ColumnName="DispositionLevelID1" />
+          <ScalarProperty Name="DispositionLevel1" ColumnName="DispositionLevel1" />
+          <ScalarProperty Name="DispositionLevelID2" ColumnName="DispositionLevelID2" />
+          <ScalarProperty Name="DispositionLevel2" ColumnName="DispositionLevel2" />
+          <ScalarProperty Name="DispositionLevelID3" ColumnName="DispositionLevelID3" />
+          <ScalarProperty Name="DispositionLevel3" ColumnName="DispositionLevel3" />
+          <ScalarProperty Name="Dealershipdid" ColumnName="Dealershipdid" />
+          <ScalarProperty Name="DealerName" ColumnName="DealerName" />
+          <ScalarProperty Name="Marketid" ColumnName="Marketid" />
+          <ScalarProperty Name="MarketName" ColumnName="MarketName" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="IntraDayprocessed" ColumnName="IntraDayprocessed" />
+          <ScalarProperty Name="DailyProcessed" ColumnName="DailyProcessed" />
+          <ScalarProperty Name="WklyProcessed" ColumnName="WklyProcessed" />
+          <ScalarProperty Name="MlyProcessed" ColumnName="MlyProcessed" />
+          <ScalarProperty Name="DispositionLevelID4" ColumnName="DispositionLevelID4" />
+          <ScalarProperty Name="DispositionLevel4" ColumnName="DispositionLevel4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_FactCalls_Daily">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_FactCalls_Daily">
+        <MappingFragment StoreEntitySet="tbl_FactCalls_Daily">
+          <ScalarProperty Name="TblId" ColumnName="TblId" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="SourceReferenceId" ColumnName="SourceReferenceId" />
+          <ScalarProperty Name="ReportDate" ColumnName="ReportDate" />
+          <ScalarProperty Name="Dnis" ColumnName="Dnis" />
+          <ScalarProperty Name="DnisDescription" ColumnName="DnisDescription" />
+          <ScalarProperty Name="DispositionLevelID1" ColumnName="DispositionLevelID1" />
+          <ScalarProperty Name="DispositionLevel1" ColumnName="DispositionLevel1" />
+          <ScalarProperty Name="DispositionLevelID2" ColumnName="DispositionLevelID2" />
+          <ScalarProperty Name="DispositionLevel2" ColumnName="DispositionLevel2" />
+          <ScalarProperty Name="DispositionLevelID3" ColumnName="DispositionLevelID3" />
+          <ScalarProperty Name="DispositionLevel3" ColumnName="DispositionLevel3" />
+          <ScalarProperty Name="Dealershipdid" ColumnName="Dealershipdid" />
+          <ScalarProperty Name="DealerName" ColumnName="DealerName" />
+          <ScalarProperty Name="Marketid" ColumnName="Marketid" />
+          <ScalarProperty Name="MarketName" ColumnName="MarketName" />
+          <ScalarProperty Name="DispositionLevelID4" ColumnName="DispositionLevelID4" />
+          <ScalarProperty Name="DispositionLevel4" ColumnName="DispositionLevel4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_FactCalls_Intraday">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_FactCalls_Intraday">
+        <MappingFragment StoreEntitySet="tbl_FactCalls_Intraday">
+          <ScalarProperty Name="TblId" ColumnName="TblId" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="ReportDate" ColumnName="ReportDate" />
+          <ScalarProperty Name="RecHour" ColumnName="RecHour" />
+          <ScalarProperty Name="DispositionLevelID1" ColumnName="DispositionLevelID1" />
+          <ScalarProperty Name="DispositionLevel1" ColumnName="DispositionLevel1" />
+          <ScalarProperty Name="DispositionLevelID2" ColumnName="DispositionLevelID2" />
+          <ScalarProperty Name="DispositionLevel2" ColumnName="DispositionLevel2" />
+          <ScalarProperty Name="DispositionLevelID3" ColumnName="DispositionLevelID3" />
+          <ScalarProperty Name="DispositionLevel3" ColumnName="DispositionLevel3" />
+          <ScalarProperty Name="DispositionLevelID4" ColumnName="DispositionLevelID4" />
+          <ScalarProperty Name="DispositionLevel4" ColumnName="DispositionLevel4" />
+          <ScalarProperty Name="Dealershipdid" ColumnName="Dealershipdid" />
+          <ScalarProperty Name="DealerName" ColumnName="DealerName" />
+          <ScalarProperty Name="Marketid" ColumnName="Marketid" />
+          <ScalarProperty Name="MarketName" ColumnName="MarketName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_FactCalls_Monthly">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_FactCalls_Monthly">
+        <MappingFragment StoreEntitySet="tbl_FactCalls_Monthly">
+          <ScalarProperty Name="TblId" ColumnName="TblId" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="SourceReferenceId" ColumnName="SourceReferenceId" />
+          <ScalarProperty Name="RecMonth" ColumnName="RecMonth" />
+          <ScalarProperty Name="RecYear" ColumnName="RecYear" />
+          <ScalarProperty Name="RecMnthYear" ColumnName="RecMnthYear" />
+          <ScalarProperty Name="Dnis" ColumnName="Dnis" />
+          <ScalarProperty Name="DnisDescription" ColumnName="DnisDescription" />
+          <ScalarProperty Name="DispositionLevelID1" ColumnName="DispositionLevelID1" />
+          <ScalarProperty Name="DispositionLevel1" ColumnName="DispositionLevel1" />
+          <ScalarProperty Name="DispositionLevelID2" ColumnName="DispositionLevelID2" />
+          <ScalarProperty Name="DispositionLevel2" ColumnName="DispositionLevel2" />
+          <ScalarProperty Name="DispositionLevelID3" ColumnName="DispositionLevelID3" />
+          <ScalarProperty Name="DispositionLevel3" ColumnName="DispositionLevel3" />
+          <ScalarProperty Name="Dealershipdid" ColumnName="Dealershipdid" />
+          <ScalarProperty Name="DealerName" ColumnName="DealerName" />
+          <ScalarProperty Name="Marketid" ColumnName="Marketid" />
+          <ScalarProperty Name="MarketName" ColumnName="MarketName" />
+          <ScalarProperty Name="DispositionLevelID4" ColumnName="DispositionLevelID4" />
+          <ScalarProperty Name="DispositionLevel4" ColumnName="DispositionLevel4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_FactCalls_Weekly">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_FactCalls_Weekly">
+        <MappingFragment StoreEntitySet="tbl_FactCalls_Weekly">
+          <ScalarProperty Name="TblId" ColumnName="TblId" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="RecWeekStartDate" ColumnName="RecWeekStartDate" />
+          <ScalarProperty Name="RecMonth" ColumnName="RecMonth" />
+          <ScalarProperty Name="RecYear" ColumnName="RecYear" />
+          <ScalarProperty Name="DispositionLevelID1" ColumnName="DispositionLevelID1" />
+          <ScalarProperty Name="DispositionLevel1" ColumnName="DispositionLevel1" />
+          <ScalarProperty Name="DispositionLevelID2" ColumnName="DispositionLevelID2" />
+          <ScalarProperty Name="DispositionLevel2" ColumnName="DispositionLevel2" />
+          <ScalarProperty Name="DispositionLevelID3" ColumnName="DispositionLevelID3" />
+          <ScalarProperty Name="DispositionLevel3" ColumnName="DispositionLevel3" />
+          <ScalarProperty Name="DispositionLevelID4" ColumnName="DispositionLevelID4" />
+          <ScalarProperty Name="DispositionLevel4" ColumnName="DispositionLevel4" />
+          <ScalarProperty Name="Dealershipdid" ColumnName="Dealershipdid" />
+          <ScalarProperty Name="DealerName" ColumnName="DealerName" />
+          <ScalarProperty Name="Marketid" ColumnName="Marketid" />
+          <ScalarProperty Name="MarketName" ColumnName="MarketName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_KPIMetric">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_KPIMetric">
+        <MappingFragment StoreEntitySet="tbl_KPIMetric">
+          <ScalarProperty Name="KPIMetricId" ColumnName="KPIMetricId" />
+          <ScalarProperty Name="companyguid" ColumnName="companyguid" />
+          <ScalarProperty Name="KPIMetricName" ColumnName="KPIMetricName" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="displayorder" ColumnName="displayorder" />
+          <ScalarProperty Name="InternalExternalAccess" ColumnName="InternalExternalAccess" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_KPIMetricGoal">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_KPIMetricGoal">
+        <MappingFragment StoreEntitySet="tbl_KPIMetricGoal">
+          <ScalarProperty Name="CompanyGuid" ColumnName="CompanyGuid" />
+          <ScalarProperty Name="KPIMetricId" ColumnName="KPIMetricId" />
+          <ScalarProperty Name="Goal" ColumnName="Goal" />
+          <ScalarProperty Name="CoachingColorbelowGoal" ColumnName="CoachingColorbelowGoal" />
+          <ScalarProperty Name="CoachingColormeetGoal" ColumnName="CoachingColormeetGoal" />
+          <ScalarProperty Name="CoachingColorAboveGoal" ColumnName="CoachingColorAboveGoal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_LicenceInfo">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_LicenceInfo">
+        <MappingFragment StoreEntitySet="tbl_LicenceInfo">
+          <ScalarProperty Name="Licenceseq" ColumnName="Licenceseq" />
+          <ScalarProperty Name="LicenceKey" ColumnName="LicenceKey" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ValidFromDate" ColumnName="ValidFromDate" />
+          <ScalarProperty Name="ValideToDate" ColumnName="ValideToDate" />
+          <ScalarProperty Name="AssignedTo" ColumnName="AssignedTo" />
+          <ScalarProperty Name="Trial" ColumnName="Trial" />
+          <ScalarProperty Name="TrialStartDate" ColumnName="TrialStartDate" />
+          <ScalarProperty Name="TrialEndDate" ColumnName="TrialEndDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_LicenceInfo_hist">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_LicenceInfo_hist">
+        <MappingFragment StoreEntitySet="tbl_LicenceInfo_hist">
+          <ScalarProperty Name="Licencehistseq" ColumnName="Licencehistseq" />
+          <ScalarProperty Name="Licenceseq" ColumnName="Licenceseq" />
+          <ScalarProperty Name="LicenceKey" ColumnName="LicenceKey" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ValidFromDate" ColumnName="ValidFromDate" />
+          <ScalarProperty Name="ValidToDate" ColumnName="ValidToDate" />
+          <ScalarProperty Name="AssignedTo" ColumnName="AssignedTo" />
+          <ScalarProperty Name="Trial" ColumnName="Trial" />
+          <ScalarProperty Name="TrialStartDate" ColumnName="TrialStartDate" />
+          <ScalarProperty Name="TrialEndDate" ColumnName="TrialEndDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_licencemoduleInfo">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_licencemoduleInfo">
+        <MappingFragment StoreEntitySet="tbl_licencemoduleInfo">
+          <ScalarProperty Name="Licencemoduleseq" ColumnName="Licencemoduleseq" />
+          <ScalarProperty Name="Licencekey" ColumnName="Licencekey" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="Moduleid" ColumnName="Moduleid" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_licencemoduleInfo_hist">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_licencemoduleInfo_hist">
+        <MappingFragment StoreEntitySet="tbl_licencemoduleInfo_hist">
+          <ScalarProperty Name="LicencemoduleseqHistid" ColumnName="LicencemoduleseqHistid" />
+          <ScalarProperty Name="Licencemoduleseq" ColumnName="Licencemoduleseq" />
+          <ScalarProperty Name="Licencekey" ColumnName="Licencekey" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="Moduleid" ColumnName="Moduleid" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_moodicontransaction">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_moodicontransaction">
+        <MappingFragment StoreEntitySet="tbl_moodicontransaction">
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Datecreated" ColumnName="Datecreated" />
+          <ScalarProperty Name="Moodiconselected" ColumnName="Moodiconselected" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_noofchartsbydbcompany">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_noofchartsbydbcompany">
+        <MappingFragment StoreEntitySet="tbl_noofchartsbydbcompany">
+          <ScalarProperty Name="tblseq" ColumnName="tblseq" />
+          <ScalarProperty Name="Modulename" ColumnName="Modulename" />
+          <ScalarProperty Name="NoOfCharts" ColumnName="NoOfCharts" />
+          <ScalarProperty Name="isactive" ColumnName="isactive" />
+          <ScalarProperty Name="companyGUID" ColumnName="companyGUID" />
+          <ScalarProperty Name="ChartDisplayName" ColumnName="ChartDisplayName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_qaperfdata_Daily">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_qaperfdata_Daily">
+        <MappingFragment StoreEntitySet="tbl_qaperfdata_Daily">
+          <ScalarProperty Name="tblid" ColumnName="tblid" />
+          <ScalarProperty Name="companyguid" ColumnName="companyguid" />
+          <ScalarProperty Name="question" ColumnName="question" />
+          <ScalarProperty Name="EmployeeNumber" ColumnName="EmployeeNumber" />
+          <ScalarProperty Name="Recdate" ColumnName="Recdate" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="employeename" ColumnName="employeename" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_qaperfdata_Intraday">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_qaperfdata_Intraday">
+        <MappingFragment StoreEntitySet="tbl_qaperfdata_Intraday">
+          <ScalarProperty Name="tblid" ColumnName="tblid" />
+          <ScalarProperty Name="companyguid" ColumnName="companyguid" />
+          <ScalarProperty Name="question" ColumnName="question" />
+          <ScalarProperty Name="EmployeeNumber" ColumnName="EmployeeNumber" />
+          <ScalarProperty Name="RecDate" ColumnName="RecDate" />
+          <ScalarProperty Name="RecHour" ColumnName="RecHour" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="employeename" ColumnName="employeename" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_qaperfdata_Monthly">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_qaperfdata_Monthly">
+        <MappingFragment StoreEntitySet="tbl_qaperfdata_Monthly">
+          <ScalarProperty Name="tblid" ColumnName="tblid" />
+          <ScalarProperty Name="companyguid" ColumnName="companyguid" />
+          <ScalarProperty Name="question" ColumnName="question" />
+          <ScalarProperty Name="EmployeeNumber" ColumnName="EmployeeNumber" />
+          <ScalarProperty Name="RecMonth" ColumnName="RecMonth" />
+          <ScalarProperty Name="Recyear" ColumnName="Recyear" />
+          <ScalarProperty Name="Recdate" ColumnName="Recdate" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="employeename" ColumnName="employeename" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_qaperfdata_Weekly">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_qaperfdata_Weekly">
+        <MappingFragment StoreEntitySet="tbl_qaperfdata_Weekly">
+          <ScalarProperty Name="tblid" ColumnName="tblid" />
+          <ScalarProperty Name="companyguid" ColumnName="companyguid" />
+          <ScalarProperty Name="question" ColumnName="question" />
+          <ScalarProperty Name="EmployeeNumber" ColumnName="EmployeeNumber" />
+          <ScalarProperty Name="RecWkStartDate" ColumnName="RecWkStartDate" />
+          <ScalarProperty Name="RecMonth" ColumnName="RecMonth" />
+          <ScalarProperty Name="RecYear" ColumnName="RecYear" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="employeename" ColumnName="employeename" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_selchartdispname">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_selchartdispname">
+        <MappingFragment StoreEntitySet="tbl_selchartdispname">
+          <ScalarProperty Name="selchartdispnameseq" ColumnName="selchartdispnameseq" />
+          <ScalarProperty Name="tblseq" ColumnName="tblseq" />
+          <ScalarProperty Name="Chart1name" ColumnName="Chart1name" />
+          <ScalarProperty Name="Chart2name" ColumnName="Chart2name" />
+          <ScalarProperty Name="Chart3name" ColumnName="Chart3name" />
+          <ScalarProperty Name="Chart4name" ColumnName="Chart4name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_User">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_User">
+        <MappingFragment StoreEntitySet="tbl_User">
+          <ScalarProperty Name="UserSeq" ColumnName="UserSeq" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="CompanyGuid" ColumnName="CompanyGuid" />
+          <ScalarProperty Name="SecretQuestion1" ColumnName="SecretQuestion1" />
+          <ScalarProperty Name="SecretAnswer1" ColumnName="SecretAnswer1" />
+          <ScalarProperty Name="SecretQuestion2" ColumnName="SecretQuestion2" />
+          <ScalarProperty Name="SecretAnswer2" ColumnName="SecretAnswer2" />
+          <ScalarProperty Name="SecretQuestion3" ColumnName="SecretQuestion3" />
+          <ScalarProperty Name="SecretAnswer3" ColumnName="SecretAnswer3" />
+          <ScalarProperty Name="PasswordUpdatedDate" ColumnName="PasswordUpdatedDate" />
+          <ScalarProperty Name="SecurityQuestionSet" ColumnName="SecurityQuestionSet" />
+          <ScalarProperty Name="FstTimeLogin" ColumnName="FstTimeLogin" />
+          <ScalarProperty Name="searchfield" ColumnName="searchfield" />
+          <ScalarProperty Name="InternalExternalAccess" ColumnName="InternalExternalAccess" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_User_hist">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_User_hist">
+        <MappingFragment StoreEntitySet="tbl_User_hist">
+          <ScalarProperty Name="UserSeq" ColumnName="UserSeq" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="CompanyGuid" ColumnName="CompanyGuid" />
+          <ScalarProperty Name="SecretQuestion1" ColumnName="SecretQuestion1" />
+          <ScalarProperty Name="SecretAnswer1" ColumnName="SecretAnswer1" />
+          <ScalarProperty Name="SecretQuestion2" ColumnName="SecretQuestion2" />
+          <ScalarProperty Name="SecretAnswer2" ColumnName="SecretAnswer2" />
+          <ScalarProperty Name="SecretQuestion3" ColumnName="SecretQuestion3" />
+          <ScalarProperty Name="SecretAnswer3" ColumnName="SecretAnswer3" />
+          <ScalarProperty Name="PasswordUpdatedDate" ColumnName="PasswordUpdatedDate" />
+          <ScalarProperty Name="SecurityQuestionSet" ColumnName="SecurityQuestionSet" />
+          <ScalarProperty Name="FstTimeLogin" ColumnName="FstTimeLogin" />
+          <ScalarProperty Name="searchfield" ColumnName="searchfield" />
+          <ScalarProperty Name="InternalExternalAccess" ColumnName="InternalExternalAccess" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_UserRegistration">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_UserRegistration">
+        <MappingFragment StoreEntitySet="tbl_UserRegistration">
+          <ScalarProperty Name="USRSeq" ColumnName="USRSeq" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+          <ScalarProperty Name="PrefferedContactMethod" ColumnName="PrefferedContactMethod" />
+          <ScalarProperty Name="NoOfEmployee" ColumnName="NoOfEmployee" />
+          <ScalarProperty Name="NoOfLicence" ColumnName="NoOfLicence" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_UserRegistration_hist">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_UserRegistration_hist">
+        <MappingFragment StoreEntitySet="tbl_UserRegistration_hist">
+          <ScalarProperty Name="USRSeq" ColumnName="USRSeq" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+          <ScalarProperty Name="PrefferedContactMethod" ColumnName="PrefferedContactMethod" />
+          <ScalarProperty Name="NoOfEmployee" ColumnName="NoOfEmployee" />
+          <ScalarProperty Name="NoOfLicence" ColumnName="NoOfLicence" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_UserRegistrationFollowup">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_UserRegistrationFollowup">
+        <MappingFragment StoreEntitySet="tbl_UserRegistrationFollowup">
+          <ScalarProperty Name="USRFLWPSeq" ColumnName="USRFLWPSeq" />
+          <ScalarProperty Name="USRSeq" ColumnName="USRSeq" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="ContactDate" ColumnName="ContactDate" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="ContactedBy" ColumnName="ContactedBy" />
+          <ScalarProperty Name="Contactedon" ColumnName="Contactedon" />
+          <ScalarProperty Name="OutCome" ColumnName="OutCome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_UserRegistrationFollowup_hist">
+      <EntityTypeMapping TypeName="AmpbidevModel.tbl_UserRegistrationFollowup_hist">
+        <MappingFragment StoreEntitySet="tbl_UserRegistrationFollowup_hist">
+          <ScalarProperty Name="USRFLWPHistSeq" ColumnName="USRFLWPHistSeq" />
+          <ScalarProperty Name="USRFLWPSeq" ColumnName="USRFLWPSeq" />
+          <ScalarProperty Name="USRSeq" ColumnName="USRSeq" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="ContactDate" ColumnName="ContactDate" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="ContactedBy" ColumnName="ContactedBy" />
+          <ScalarProperty Name="Contactedon" ColumnName="Contactedon" />
+          <ScalarProperty Name="OutCome" ColumnName="OutCome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="getRegistrationFollowUpGridRecord" FunctionName="AmpbidevModel.Store.getRegistrationFollowUpGridRecord">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.getRegistrationFollowUpGridRecord_Result">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="NoofLicences" ColumnName="NoofLicences" />
+          <ScalarProperty Name="LastContactDate" ColumnName="LastContactDate" />
+          <ScalarProperty Name="LastOutcome" ColumnName="LastOutcome" />
+          <ScalarProperty Name="LastContactChannel" ColumnName="LastContactChannel" />
+          <ScalarProperty Name="NoofAttempts" ColumnName="NoofAttempts" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="AmpbidevModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_callsdashboard_dlydata" FunctionName="AmpbidevModel.Store.sp_callsdashboard_dlydata">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_callsdashboard_dlydata_Result">
+          <ScalarProperty Name="Disposition" ColumnName="Disposition" />
+          <ScalarProperty Name="DispCount" ColumnName="DispCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_callsdashboard_Intraday" FunctionName="AmpbidevModel.Store.sp_callsdashboard_Intraday">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_callsdashboard_Intraday_Result">
+          <ScalarProperty Name="Disposition" ColumnName="Disposition" />
+          <ScalarProperty Name="DispCount" ColumnName="DispCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_callsdashboard_listofvalues" FunctionName="AmpbidevModel.Store.sp_callsdashboard_listofvalues">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_callsdashboard_listofvalues_Result">
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_callsdashboard_mlydata" FunctionName="AmpbidevModel.Store.sp_callsdashboard_mlydata">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_callsdashboard_mlydata_Result">
+          <ScalarProperty Name="Disposition" ColumnName="Disposition" />
+          <ScalarProperty Name="DispCount" ColumnName="DispCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_callsdashboard_wkydata" FunctionName="AmpbidevModel.Store.sp_callsdashboard_wkydata">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_callsdashboard_wkydata_Result">
+          <ScalarProperty Name="Disposition" ColumnName="Disposition" />
+          <ScalarProperty Name="DispCount" ColumnName="DispCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_callsdb_callcount" FunctionName="AmpbidevModel.Store.sp_callsdb_callcount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_callsdb_callcount_Result">
+          <ScalarProperty Name="TotalCallswithDisposition" ColumnName="TotalCallswithDisposition" />
+          <ScalarProperty Name="TotalCalls" ColumnName="TotalCalls" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sp_CheckUser" FunctionName="AmpbidevModel.Store.Sp_CheckUser" />
+    <FunctionImportMapping FunctionImportName="sp_companyprofile_listofvalues" FunctionName="AmpbidevModel.Store.sp_companyprofile_listofvalues">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_companyprofile_listofvalues_Result">
+          <ScalarProperty Name="Licenceseq" ColumnName="Licenceseq" />
+          <ScalarProperty Name="LicenceKey" ColumnName="LicenceKey" />
+          <ScalarProperty Name="CompanyGUID" ColumnName="CompanyGUID" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ValidFromDate" ColumnName="ValidFromDate" />
+          <ScalarProperty Name="ValideToDate" ColumnName="ValideToDate" />
+          <ScalarProperty Name="AssignedTo" ColumnName="AssignedTo" />
+          <ScalarProperty Name="Trial" ColumnName="Trial" />
+          <ScalarProperty Name="TrialStartDate" ColumnName="TrialStartDate" />
+          <ScalarProperty Name="TrialEndDate" ColumnName="TrialEndDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="AmpbidevModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="AmpbidevModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="Sp_EmailExist" FunctionName="AmpbidevModel.Store.Sp_EmailExist" />
+    <FunctionImportMapping FunctionImportName="sp_getEmployeePerformance" FunctionName="AmpbidevModel.Store.sp_getEmployeePerformance">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_getEmployeePerformance_Result">
+          <ScalarProperty Name="KPIMetricId" ColumnName="KPIMetricId" />
+          <ScalarProperty Name="KPIName" ColumnName="KPIName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getEmployeePerformance_Coachinggrid" FunctionName="AmpbidevModel.Store.sp_getEmployeePerformance_Coachinggrid">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_getEmployeePerformance_Coachinggrid_Result">
+          <ScalarProperty Name="coachingassigneddate" ColumnName="coachingassigneddate" />
+          <ScalarProperty Name="KPIMetricName" ColumnName="KPIMetricName" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="Goal" ColumnName="Goal" />
+          <ScalarProperty Name="Commitment" ColumnName="Commitment" />
+          <ScalarProperty Name="Actual" ColumnName="Actual" />
+          <ScalarProperty Name="Recording" ColumnName="Recording" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getEmployeePerformance_Comparision" FunctionName="AmpbidevModel.Store.sp_getEmployeePerformance_Comparision">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_getEmployeePerformance_Comparision_Result">
+          <ScalarProperty Name="Metric" ColumnName="Metric" />
+          <ScalarProperty Name="Best" ColumnName="Best" />
+          <ScalarProperty Name="average" ColumnName="average" />
+          <ScalarProperty Name="me" ColumnName="me" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getEmployeePerformance_Daily" FunctionName="AmpbidevModel.Store.sp_getEmployeePerformance_Daily">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_getEmployeePerformance_Daily_Result">
+          <ScalarProperty Name="KPIMetricId" ColumnName="KPIMetricId" />
+          <ScalarProperty Name="KPIName" ColumnName="KPIName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getEmployeePerformance_Details_Daily" FunctionName="AmpbidevModel.Store.sp_getEmployeePerformance_Details_Daily">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_getEmployeePerformance_Details_Daily_Result">
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="KPIMetricName" ColumnName="KPIMetricName" />
+          <ScalarProperty Name="goal" ColumnName="goal" />
+          <ScalarProperty Name="actual" ColumnName="actual" />
+          <ScalarProperty Name="coachings" ColumnName="coachings" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getEmployeePerformance_Details_IntraDay" FunctionName="AmpbidevModel.Store.sp_getEmployeePerformance_Details_IntraDay">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_getEmployeePerformance_Details_IntraDay_Result">
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="KPIMetricName" ColumnName="KPIMetricName" />
+          <ScalarProperty Name="goal" ColumnName="goal" />
+          <ScalarProperty Name="actual" ColumnName="actual" />
+          <ScalarProperty Name="coachings" ColumnName="coachings" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getEmployeePerformance_Details_Monthly" FunctionName="AmpbidevModel.Store.sp_getEmployeePerformance_Details_Monthly">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_getEmployeePerformance_Details_Monthly_Result">
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="KPIMetricName" ColumnName="KPIMetricName" />
+          <ScalarProperty Name="goal" ColumnName="goal" />
+          <ScalarProperty Name="actual" ColumnName="actual" />
+          <ScalarProperty Name="coachings" ColumnName="coachings" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getEmployeePerformance_Details_Weekly" FunctionName="AmpbidevModel.Store.sp_getEmployeePerformance_Details_Weekly">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_getEmployeePerformance_Details_Weekly_Result">
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="KPIMetricName" ColumnName="KPIMetricName" />
+          <ScalarProperty Name="goal" ColumnName="goal" />
+          <ScalarProperty Name="actual" ColumnName="actual" />
+          <ScalarProperty Name="coachings" ColumnName="coachings" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getEmployeePerformance_Intraday" FunctionName="AmpbidevModel.Store.sp_getEmployeePerformance_Intraday">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_getEmployeePerformance_Intraday_Result">
+          <ScalarProperty Name="KPIMetricId" ColumnName="KPIMetricId" />
+          <ScalarProperty Name="KPIName" ColumnName="KPIName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getEmployeePerformance_Monthly" FunctionName="AmpbidevModel.Store.sp_getEmployeePerformance_Monthly">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_getEmployeePerformance_Monthly_Result">
+          <ScalarProperty Name="KPIMetricId" ColumnName="KPIMetricId" />
+          <ScalarProperty Name="KPIName" ColumnName="KPIName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getEmployeePerformance_traininggrid" FunctionName="AmpbidevModel.Store.sp_getEmployeePerformance_traininggrid">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_getEmployeePerformance_traininggrid_Result">
+          <ScalarProperty Name="TargetedCompletionDate" ColumnName="TargetedCompletionDate" />
+          <ScalarProperty Name="CoachingAssignedDate" ColumnName="CoachingAssignedDate" />
+          <ScalarProperty Name="ActualCompletionDate" ColumnName="ActualCompletionDate" />
+          <ScalarProperty Name="articlename" ColumnName="articlename" />
+          <ScalarProperty Name="AssociatedMetric" ColumnName="AssociatedMetric" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getEmployeePerformance_Weekly" FunctionName="AmpbidevModel.Store.sp_getEmployeePerformance_Weekly">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_getEmployeePerformance_Weekly_Result">
+          <ScalarProperty Name="KPIMetricId" ColumnName="KPIMetricId" />
+          <ScalarProperty Name="KPIName" ColumnName="KPIName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getKPIMenu" FunctionName="AmpbidevModel.Store.sp_getKPIMenu">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_getKPIMenu_Result">
+          <ScalarProperty Name="KPIMetricId" ColumnName="KPIMetricId" />
+          <ScalarProperty Name="KPIName" ColumnName="KPIName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getlistofvalues" FunctionName="AmpbidevModel.Store.sp_getlistofvalues">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_getlistofvalues_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Genericvarchar1" ColumnName="Genericvarchar1" />
+          <ScalarProperty Name="Genericvarchar2" ColumnName="Genericvarchar2" />
+          <ScalarProperty Name="Genericvarchar3" ColumnName="Genericvarchar3" />
+          <ScalarProperty Name="GenericDate1" ColumnName="GenericDate1" />
+          <ScalarProperty Name="GenericDate2" ColumnName="GenericDate2" />
+          <ScalarProperty Name="GenericDate3" ColumnName="GenericDate3" />
+          <ScalarProperty Name="Genericbit1" ColumnName="Genericbit1" />
+          <ScalarProperty Name="Genericbit2" ColumnName="Genericbit2" />
+          <ScalarProperty Name="Genericbit3" ColumnName="Genericbit3" />
+          <ScalarProperty Name="GenericNumeric1" ColumnName="GenericNumeric1" />
+          <ScalarProperty Name="GenericNumeric2" ColumnName="GenericNumeric2" />
+          <ScalarProperty Name="GenericNumeric3" ColumnName="GenericNumeric3" />
+          <ScalarProperty Name="FinalAction" ColumnName="FinalAction" />
+          <ScalarProperty Name="WriteRecord" ColumnName="WriteRecord" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getMainMenu" FunctionName="AmpbidevModel.Store.sp_getMainMenu" />
+    <FunctionImportMapping FunctionImportName="sp_getParameterlist" FunctionName="AmpbidevModel.Store.sp_getParameterlist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_getParameterlist_Result">
+          <ScalarProperty Name="Listid" ColumnName="Listid" />
+          <ScalarProperty Name="Paramvalue" ColumnName="Paramvalue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getslidervalues" FunctionName="AmpbidevModel.Store.sp_getslidervalues" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="AmpbidevModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="AmpbidevModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_QABehavioralChart1" FunctionName="AmpbidevModel.Store.sp_QABehavioralChart1">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_QABehavioralChart1_Result">
+          <ScalarProperty Name="QuestionCategory" ColumnName="QuestionCategory" />
+          <ScalarProperty Name="DefectPercent" ColumnName="DefectPercent" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_QABehavioralChart2" FunctionName="AmpbidevModel.Store.sp_QABehavioralChart2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_QABehavioralChart2_Result">
+          <ScalarProperty Name="Questiontext" ColumnName="Questiontext" />
+          <ScalarProperty Name="DefectPercent" ColumnName="DefectPercent" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_QABehavioralChart3" FunctionName="AmpbidevModel.Store.sp_QABehavioralChart3">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_QABehavioralChart3_Result">
+          <ScalarProperty Name="Outagent" ColumnName="Outagent" />
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_QABehavioralChart4" FunctionName="AmpbidevModel.Store.sp_QABehavioralChart4">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_QABehavioralChart4_Result">
+          <ScalarProperty Name="outMonth" ColumnName="outMonth" />
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_QADBListofValues" FunctionName="AmpbidevModel.Store.sp_QADBListofValues">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_QADBListofValues_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_qaperf_mlydata" FunctionName="AmpbidevModel.Store.sp_qaperf_mlydata">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_qaperf_mlydata_Result">
+          <ScalarProperty Name="RecMonth" ColumnName="RecMonth" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_QAScores" FunctionName="AmpbidevModel.Store.sp_QAScores">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_QAScores_Result">
+          <ScalarProperty Name="ProgramName" ColumnName="ProgramName" />
+          <ScalarProperty Name="Goal" ColumnName="Goal" />
+          <ScalarProperty Name="actual" ColumnName="actual" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_QATrackerGoalVsActual" FunctionName="AmpbidevModel.Store.sp_QATrackerGoalVsActual">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_QATrackerGoalVsActual_Result">
+          <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+          <ScalarProperty Name="Goal" ColumnName="Goal" />
+          <ScalarProperty Name="Actual" ColumnName="Actual" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_QATrackerGoalVsActual_BAK" FunctionName="AmpbidevModel.Store.sp_QATrackerGoalVsActual_BAK">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AmpbidevModel.sp_QATrackerGoalVsActual_BAK_Result">
+          <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+          <ScalarProperty Name="Goal" ColumnName="Goal" />
+          <ScalarProperty Name="Actual" ColumnName="Actual" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="AmpbidevModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="AmpbidevModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

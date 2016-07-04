@@ -1,0 +1,468 @@
+﻿@model Ampbi.DataAccess.ViewModel.DashBoard
+@using Ampbi.UI.Utilities
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta charset="utf-8" />
+    <title>@Html.GetPageTitle();</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- CORE CSS FRAMEWORK - START -->
+    <link href="~/Content/assets/css/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="~/Content/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/assets/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    @*<link href="~/Content/assets/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />*@
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="~/Content/assets/css/animate.min.css" rel="stylesheet" type="text/css" />   
+    <link rel="stylesheet" href="~/Content/assets/css/dataTables.bootstrap.min.css">
+    <link href="~/Content/assets/css/datepicker.css" rel="stylesheet">
+    <link href="~/Content/assets/css/bootstrap-slider.css" rel="stylesheet">
+
+    <script  type="text/javascript" src="~/Content/assets/js/typeahead.bundle.js"></script>
+    <!-- CORE CSS FRAMEWORK - END -->
+
+    <!-- CORE CSS TEMPLATE - START -->
+    <link href="~/Content/assets/css/style.css" rel="stylesheet" type="text/css" />
+    <!-- CORE CSS TEMPLATE - END -->
+    <!-- Jquery declaration here for highCharts -->
+    <script src="~/Content/assets/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+    <script src="~/Content/assets/JsDemo/date.js"></script>
+
+    @*<script src="~/Content/assets/js/highslide.config.js"></script>*@
+    <link href="~/Content/assets/js/highslide.css" rel="stylesheet" />
+    <script src="~/Content/assets/js/highslide-full.min.js"></script>
+   
+    @*    <script src="~/Content/assets/JsDemo/export-csv.js"></script>*@
+
+  
+</head>
+<body class="login">
+    <!-- START TOPBAR -->
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid header-top-box ">
+            <div class="logo-top pull-left">
+                <a href="#">
+                    <img src="~/Content/assets/images/logo-sign.png" alt=""></a>
+            </div>
+            <ul class="nav navbar-nav navbar-right navbar-nav-right pull-right user-login" style="margin:0px; padding:0px;">                
+                <li class="dropdown pull-right">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <img src="~/Content/assets/images/user.png" alt="">
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Change Password</a></li>
+                        <li>@Html.MenuLinkBootstrap("Log out", "LogOut", "Dashboard")</li>
+                    </ul>
+                </li>
+                <li class="pull-right" style="margin:0 5px 0 0px;"><a href="#"><label>@Session["UserName"].ToString()</label></a></li>
+            </ul>
+
+            @*<ul class="nav navbar-nav navbar-right pull-right hidden-sm hidden-xs">
+                <li><a href="#"><label>@Session["UserName"].ToString()</label></a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <img src="~/Content/assets/images/user.png" alt="">
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Change Password</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>*@
+            @*<div class="pull-right admin-icon">
+               
+               <a href="#">
+                    <img src="~/Content/assets/images/user.png" alt=""></a
+            </div>>*@
+        </div>
+        <div class="container-fluid nav-box sml-bnt">
+            <div class="navbar-header pull-left btn-menu">
+                <button type="button" class="navbar-toggle collapsed pull-left btn-left-menu" style="margin-left:15px;" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse nav-w-box pull-left">
+                <ul class="nav navbar-nav nav-active" style="margin:0px !important; ">
+                    @{
+                        string[] menu = @Ampbi.DataAccess.ViewModel.DashBoard.mainMenuItem.Split(',');
+                    }
+                    @for (int i = 0; i < menu.Count(); i++)
+                    {
+
+                        if (menu[i] == "Administration")
+                        {
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administration <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.MenuLinkBootstrap("Subscription Requests - Follow up", "RegAcctFollowUp", "Dashboard")@*<a href="#">Subscription Requests - Follow up</a>*@</li>
+                                <li>@Html.MenuLinkBootstrap("Company Profile", "CompanyProfile", "Dashboard")</li>
+                                <li>@Html.MenuLinkBootstrap("User Profile", "UserProfile", "Dashboard")</li>
+                                @* <li><a href="#">Change Password</a></li>*@
+                                <li>@Html.MenuLinkBootstrap("KPI Metrics", "KPI", "Dashboard")@* <a href="#">KPI Metrics</a>*@</li>
+                                <li><a href="#">Data Load - Employee</a></li>
+                                <li><a href="#">Data Load - Call Dashboard</a></li>
+                                <li><a href="#">Data Load - QA Dashboard</a></li>
+                                <li><a href="#">Data Load - Appointments</a></li>
+                                <li><a href="#">Data Load – Tickets</a></li>
+                                <li><a href="#">Data Load – Knowledge Base</a></li>
+
+                            </ul>
+                        </li>
+                        }
+                        if (menu[i] == "Calls Dashboard")
+                        {
+                        <li>@Html.MenuLinkBootstrap("Call dashboard", "CallDashBoard", "Dashboard")</li>
+                        }
+                        if (menu[i] == "Appointments Dashboard")
+                        {
+                        <li >@Html.MenuLinkBootstrap("Appointments dashboard", "ApptDashBoard", "Dashboard")@*<a href="appointments-dashboard.html">Appointments Dashboard</a>*@</li>
+                        }
+                        if (menu[i] == "QA Dashboard")
+                        {
+                        
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">QA Dashboard <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.MenuLinkBootstrap("Goal Vs Actual", "QADashBoard_New", "Dashboard")@*<a href="qa-dashboard.html">QA Dashboard</a>*@</li>
+                                <li>@Html.MenuLinkBootstrap("QA Scores", "QADashBoard_New1", "Dashboard")</li>
+                                <li>@Html.MenuLinkBootstrap("QA Behavioral", "QADashBoard_New2", "Dashboard")</li>
+                            </ul>
+                        </li>   
+                            
+                        
+                        }
+                        if (menu[i] == "Employee Performance")
+                        {
+                        <li>@Html.MenuLinkBootstrap("Employee Performance", "EmployeePerformance", "Dashboard") @*<a href="employee-performance.html">Employee Performance</a>*@</li>
+                        }
+                        if (menu[i] == "Virtual Assistant")
+                        {
+                        <li>@Html.MenuLinkBootstrap("Virtual Assistant", "VirtualAssistant", "Dashboard")@*<a href="#">Virtual Assistant</a>*@</li>
+                        }
+                         if (menu[i] == "Ticket Dashboard")
+                        {
+                        <li><a href="#">Ticket Dashboard</a></li>
+                        }
+                        if (menu[i] == "Performance Dashboard")
+                         {
+                         <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Performance Dashboard <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.MenuLinkBootstrap("Utilization", "Utilization", "Dashboard")@*<a href="qa-dashboard.html">QA Dashboard</a>*@</li>
+                               @* <li>@Html.MenuLinkBootstrap("QA Scores", "QADashBoard_New1", "Dashboard")</li>
+                                <li>@Html.MenuLinkBootstrap("QA Behavioral", "QADashBoard_New2", "Dashboard")</li>*@
+                            </ul>
+                        </li>   
+                            
+                        
+                         }
+                         if (menu[i] == "Knowledge Base")
+                         {
+                        <li>@Html.MenuLinkBootstrap("Knowledge Base", "KnowledgeBase", "Dashboard")   @*<a href="#">Knowledge Base</a>*@</li>
+                         }
+                         if (menu[i] == "DISC Assessment")
+                         {
+                        <li><a class="back-none" href="#">DISC Assessment</a></li>
+                         }
+
+                    }
+                </ul>
+            </div>
+            @*<div class="col-md-2 pull-right hidden-sm hidden-xs pad pan0">
+                <ul class="smile-mood pull-right">
+                    @if (!string.IsNullOrEmpty(Ampbi.DataAccess.ViewModel.DashBoard.modiIconPath))
+                    {
+                        <li><a href="#">
+
+                            <img src="@Url.Content(Ampbi.DataAccess.ViewModel.DashBoard.modiIconPath)" alt=""></a></li>
+                    }
+                </ul>
+            </div>*@
+            <div class="pull-right pad pan0">
+                <ul class="smile-mood smile-mood1 pull-right">
+
+                    @if (Ampbi.DataAccess.ViewModel.DashBoard.modiIconPath == "active-green")
+                    {<li><a class="active-red" href="#"></a></li>}
+                    else
+                    {
+                        <li><a class="red" href="#"></a></li>}
+                    @if (Ampbi.DataAccess.ViewModel.DashBoard.modiIconPath == "active-yellow")
+                    {<li><a class="active-yellow" href="#"></a></li>}
+                    else
+                    {
+                        <li><a class="yellow" href="#"></a></li>}
+                    @if (Ampbi.DataAccess.ViewModel.DashBoard.modiIconPath == "active-red")
+                    {<li><a class="active-green" href="#"></a></li>}
+                    else
+                    {
+                        <li><a class="green" href="#"></a></li>}
+                </ul>
+            </div>
+
+            
+
+        </div>
+    </nav>
+    <!-- END TOPBAR -->
+    <!-- START CONTAINER -->
+
+    @RenderBody()
+
+    <!-- END CONTAINER -->
+    <!-- START FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">Copyright © 2016</p>
+        </div>
+    </footer>
+    <!-- END FOOTER -->
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header box-heading">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="title modal-title" id="myModalLabel">Previous Notes</h4>
+                </div>
+                <div class="modal-body model-box-acc">
+                    <p style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CORE JS FRAMEWORK - START -->
+    <script src="~/Content/assets/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    @*<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>*@
+
+     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+
+    <script src="~/Content/assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="~/Content/assets/js/bootstrap-datepicker.js"></script>
+    <script src="~/Content/assets/js/jquery.dataTables.min.js"></script>
+    <script src="~/Content/assets/js/dataTables.bootstrap.min.js"></script>
+    <script type='text/javascript' src="~/Content/assets/js/bootstrap-slider.js"></script>
+    <!-- CORE JS FRAMEWORK - END -->
+    <!-- CORE TEMPLATE Highcharts - START -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+      <script src="https://code.highcharts.com/highcharts-more.js"></script>
+     <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+    <!-- CORE TEMPLATE Highcharts - END-->
+    <!-- CORE TEMPLATE JS - START -->
+    <!-- CORE TEMPLATE JS - START -->
+    <script src="~/Content/assets/js/scripts.js" type="text/javascript"></script>
+    <!-- END CORE TEMPLATE JS - END -->
+    <!--<script src="assets/js/scripts.js" type="text/javascript"></script> -->
+    <!-- END CORE TEMPLATE JS - END -->
+
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('#myModal').modal('show');
+        });
+    </script>
+
+    <script type='text/javascript' src="https://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+    <script type='text/javascript'>
+
+        $(document).ready(function () {
+
+            jQuery(function ($) {
+                var panelList = $('#draggablePanelList');
+
+                panelList.sortable({
+                    // Only make the .panel-heading child elements support dragging.
+                    // Omit this to make then entire <li>...</li> draggable.
+                    handle: '.panel_header',
+                    update: function () {
+                        $('.panel', panelList).each(function (index, elem) {
+                            var $listItem = $(elem),
+                                newIndex = $listItem.index();
+
+                            // Persist the new indices.
+                        });
+                    }
+                });
+            });
+
+        });
+
+    </script>
+
+
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable();
+            $('#licencetbl').DataTable();
+
+            $('.input-daterange').datepicker({
+                todayBtn: "linked"
+            });
+        });
+
+
+    </script>
+
+
+    <!-- Code for calls Dashboard - START -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+           @* $("#btnMonth").on("click", function () {
+                var sliderValue = $('#ex1').val();
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("GetMonthlyData", "Dashboard")',
+                    cache: false,
+                    data: { 'sliderValue': sliderValue, 'Type': "M" },
+                    success: function (data) {
+                        if (data[0].TotalCallswithDisposition == null) {
+                            $('#dispositionCalls #dispositionCallsText').text(0);
+                        }
+                        else {
+                            $('#dispositionCalls #dispositionCallsText').text(data[0].TotalCallswithDisposition);
+                        }
+                        if (data[0].TotalCallswithDisposition == null) {
+                            $('#totalCalls #totalCallsText').text(0);
+                        }
+                        else {
+                            $('#totalCalls #totalCallsText').text(data[0].TotalCalls);
+                        }
+                    },
+                    error: function (result) {
+                        alert('Cannot update selection values now!!');
+                    }
+                })
+            });
+            $("#btnWeekly").on("click", function () {
+                var sliderValue = $('#ex1').val();
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("GetMonthlyData", "Dashboard")',
+                    cache: false,
+                    data: { 'sliderValue': sliderValue, 'Type': "W" },
+                    success: function (data) {
+                        if (data[0].TotalCallswithDisposition == null) {
+                            $('#dispositionCalls #dispositionCallsText').text(0);
+                        }
+                        else {
+                            $('#dispositionCalls #dispositionCallsText').text(data[0].TotalCallswithDisposition);
+                        }
+                        if (data[0].TotalCallswithDisposition == null) {
+                            $('#totalCalls #totalCallsText').text(0);
+                        }
+                        else {
+                            $('#totalCalls #totalCallsText').text(data[0].TotalCalls);
+                        }
+                    },
+                    error: function (result) {
+                        alert('Cannot update selection values now!!');
+                    }
+                })
+            });
+            $("#btnDaily").on("click", function () {
+                var sliderValue = $('#ex1').val();
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("GetMonthlyData", "Dashboard")',
+                    cache: false,
+                    data: { 'sliderValue': sliderValue, 'Type': "D" },
+                    success: function (data) {
+                        if (data[0].TotalCallswithDisposition == null) {
+                            $('#dispositionCalls #dispositionCallsText').text(0);
+                        }
+                        else {
+                            $('#dispositionCalls #dispositionCallsText').text(data[0].TotalCallswithDisposition);
+                        }
+                        if (data[0].TotalCallswithDisposition == null) {
+                            $('#totalCalls #totalCallsText').text(0);
+                        }
+                        else {
+                            $('#totalCalls #totalCallsText').text(data[0].TotalCalls);
+                        }
+                    },
+                    error: function (result) {
+                        alert('Cannot update selection values now!!');
+                    }
+                })
+            });
+            $("#btnIntraday").on("click", function () {
+                var sliderValue = $('#ex1').val();
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("GetMonthlyData", "Dashboard")',
+                    cache: false,
+                    data: { 'sliderValue': sliderValue, 'Type': "I" },
+                    success: function (data) {
+                        if (data[0].TotalCallswithDisposition == null) {
+                            $('#dispositionCalls #dispositionCallsText').text(0);
+                        }
+                        else {
+                            $('#dispositionCalls #dispositionCallsText').text(data[0].TotalCallswithDisposition);
+                        }
+                        if (data[0].TotalCallswithDisposition == null) {
+                            $('#totalCalls #totalCallsText').text(0);
+                        }
+                        else {
+                            $('#totalCalls #totalCallsText').text(data[0].TotalCalls);
+                        }
+                    },
+                    error: function (result) {
+                        alert('Cannot update selection values now!!');
+                    }
+                })
+            });
+
+            *@
+
+
+            $("#delearshipselection").change(function () {
+                var selectedDealerVal = $("#delearshipselection option:selected").text();
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("bindMarketData", "Dashboard")',
+                    cache: false,
+                    dataType: "json",
+                    data: { 'selectedDealerVal': selectedDealerVal },
+                    success: function (data) {
+                        //alert(data);
+                        $.each(data, function (i) {
+                            $('#ddlMarkets').append($('<option />').val(this.DisplayOrder).text(this.Name));
+                        });
+                    },
+                    error: function (result) {
+                        alert('Cannot update selection values now!!');
+                    }
+                })
+            });
+
+        });
+    </script>
+
+
+
+    @*     <script type="text/javascript">
+         $('.nav-active li').click(function (e) {
+             $('.nav-active li.active').removeClass('active');
+             var $this = $(this);
+             if (!$this.hasClass('active')) {
+                 $this.addClass('active');
+             }
+             e.preventDefault();
+         });
+</script>*@
+
+
+    <script type="text/javascript" src="~/Content/assets/js/jquery.quick.pagination.min.js"></script>
+    <!-- Code for calls Dashboard - END -->
+</body>
+</html>

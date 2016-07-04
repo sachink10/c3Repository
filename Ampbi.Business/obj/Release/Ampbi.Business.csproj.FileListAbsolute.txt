@@ -1,0 +1,70 @@
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.Business\bin\Release\Ampbi.Business.dll.config
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.Business\bin\Release\Ampbi.Business.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.Business\bin\Release\Ampbi.Business.pdb
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.Business\bin\Release\Ampbi.DataAccess.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.Business\bin\Release\AutoMapper.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.Business\bin\Release\EntityFramework.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.Business\bin\Release\EntityFramework.SqlServer.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.Business\bin\Release\Ampbi.DataAccess.pdb
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.Business\bin\Release\AutoMapper.xml
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.Business\bin\Release\EntityFramework.xml
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.Business\bin\Release\EntityFramework.SqlServer.xml
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.Business\obj\Release\Ampbi.Business.csprojResolveAssemblyReference.cache
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.Business\obj\Release\Ampbi.Business.dll
+C:\CRM\Ampbi10242015\Ampbi\Ampbi.Business\obj\Release\Ampbi.Business.pdb
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.Business\bin\Release\Ampbi.Business.dll.config
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.Business\bin\Release\Ampbi.Business.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.Business\bin\Release\Ampbi.Business.pdb
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.Business\bin\Release\Ampbi.DataAccess.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.Business\bin\Release\AutoMapper.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.Business\bin\Release\EntityFramework.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.Business\bin\Release\EntityFramework.SqlServer.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.Business\bin\Release\Ampbi.DataAccess.pdb
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.Business\bin\Release\AutoMapper.xml
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.Business\bin\Release\EntityFramework.xml
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.Business\bin\Release\EntityFramework.SqlServer.xml
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.Business\obj\Release\Ampbi.Business.csprojResolveAssemblyReference.cache
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.Business\obj\Release\Ampbi.Business.dll
+C:\CRM\Main Development\Ampbi10292015\Ampbi\Ampbi.Business\obj\Release\Ampbi.Business.pdb
+C:\CRM\Main Development\Main Development\Ampbi.Business\bin\Release\Ampbi.Business.dll.config
+C:\CRM\Main Development\Main Development\Ampbi.Business\bin\Release\Ampbi.Business.dll
+C:\CRM\Main Development\Main Development\Ampbi.Business\bin\Release\Ampbi.Business.pdb
+C:\CRM\Main Development\Main Development\Ampbi.Business\bin\Release\Ampbi.DataAccess.dll
+C:\CRM\Main Development\Main Development\Ampbi.Business\bin\Release\AutoMapper.dll
+C:\CRM\Main Development\Main Development\Ampbi.Business\bin\Release\EntityFramework.dll
+C:\CRM\Main Development\Main Development\Ampbi.Business\bin\Release\EntityFramework.SqlServer.dll
+C:\CRM\Main Development\Main Development\Ampbi.Business\bin\Release\Ampbi.DataAccess.pdb
+C:\CRM\Main Development\Main Development\Ampbi.Business\bin\Release\AutoMapper.xml
+C:\CRM\Main Development\Main Development\Ampbi.Business\bin\Release\EntityFramework.xml
+C:\CRM\Main Development\Main Development\Ampbi.Business\bin\Release\EntityFramework.SqlServer.xml
+C:\CRM\Main Development\Main Development\Ampbi.Business\obj\Release\Ampbi.Business.csprojResolveAssemblyReference.cache
+C:\CRM\Main Development\Main Development\Ampbi.Business\obj\Release\Ampbi.Business.dll
+C:\CRM\Main Development\Main Development\Ampbi.Business\obj\Release\Ampbi.Business.pdb
+C:\CRM\TFS\AMPBICRM\Ampbi.Business\bin\Release\Ampbi.Business.dll.config
+C:\CRM\TFS\AMPBICRM\Ampbi.Business\bin\Release\Ampbi.Business.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.Business\bin\Release\Ampbi.Business.pdb
+C:\CRM\TFS\AMPBICRM\Ampbi.Business\bin\Release\Ampbi.DataAccess.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.Business\bin\Release\AutoMapper.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.Business\bin\Release\EntityFramework.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.Business\bin\Release\EntityFramework.SqlServer.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.Business\bin\Release\Ampbi.DataAccess.pdb
+C:\CRM\TFS\AMPBICRM\Ampbi.Business\bin\Release\AutoMapper.xml
+C:\CRM\TFS\AMPBICRM\Ampbi.Business\bin\Release\EntityFramework.xml
+C:\CRM\TFS\AMPBICRM\Ampbi.Business\bin\Release\EntityFramework.SqlServer.xml
+C:\CRM\TFS\AMPBICRM\Ampbi.Business\obj\Release\Ampbi.Business.csprojResolveAssemblyReference.cache
+C:\CRM\TFS\AMPBICRM\Ampbi.Business\obj\Release\Ampbi.Business.dll
+C:\CRM\TFS\AMPBICRM\Ampbi.Business\obj\Release\Ampbi.Business.pdb
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.Business\bin\Release\Ampbi.Business.dll.config
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.Business\bin\Release\Ampbi.Business.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.Business\bin\Release\Ampbi.Business.pdb
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.Business\bin\Release\Ampbi.DataAccess.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.Business\bin\Release\AutoMapper.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.Business\bin\Release\EntityFramework.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.Business\bin\Release\EntityFramework.SqlServer.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.Business\bin\Release\Ampbi.DataAccess.pdb
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.Business\bin\Release\AutoMapper.xml
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.Business\bin\Release\EntityFramework.xml
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.Business\bin\Release\EntityFramework.SqlServer.xml
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.Business\obj\Release\Ampbi.Business.csprojResolveAssemblyReference.cache
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.Business\obj\Release\Ampbi.Business.dll
+C:\CRM\TFS\Pradip Tablet changes\AMPBICRM\AMPBICRM\Ampbi.Business\obj\Release\Ampbi.Business.pdb

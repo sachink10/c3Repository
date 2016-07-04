@@ -1,0 +1,167 @@
+﻿@model Ampbi.DataAccess.ViewModel.DashBoard
+@using System.Web.UI.WebControls
+
+
+<div class="col-md-9" id="PerfCardDefault">
+    @if (Model.empIndPerfCard != null)
+    {
+        foreach (var perfDetails in Model.empIndPerfCard)
+        {
+            
+        <div class="col-md-4 m-bottom">
+            <div class="clearfix orange-light">
+                <div class="clearfix">
+                    <div style="width: 50%; padding: 0 0 0 10px; line-height: 28px; color: #000;" class="pull-left">@perfDetails.KPIMetricName</div>
+                    <div style="width: 50%; line-height: 28px; color: #000;" class="pull-right">
+                        <ul class="nav nav-pills">
+                            <li role="presentation" class="dropdown" style="float: right; padding: 0 10px 0 0;">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="padding: 0px; background: none !important; float: right;">
+                                    <i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a>
+
+                                <ul class="dropdown-menu arrow-top" style="padding: 10px; left: -200px; top: 20px;">
+                                    <button style="width: 200px; margin-bottom: 10px; font-size: 12px; font-weight: normal;" type="button" class="btn btn-primary " data-toggle="button" aria-pressed="false" onclick="location.href='@Url.Action("Coachingnow", "Dashboard")'" id="btnCoaching" autocomplete="true">Coach Now</button><br>
+                                    <button style="width: 200px; margin-bottom: 10px; font-size: 12px; font-weight: normal;" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Schedule Coaching Session</button>
+                                    <br>
+                                    <button style="width: 200px; font-size: 12px; font-weight: normal;" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Assign Training</button>
+
+
+                                </ul>
+
+                            </li>
+                        </ul>
+
+                        <!-- <a href="#" data-toggle="popover" class="an-color change_status pull-right" style="margin:0 6px 0 0;"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a> -->
+                        @*<a style="color:#000;" href="@Url.Action("TeamComparision", "Dashboard")" ><strong>Team Rank -@perf class="an-color change_status pull-right"Details.teamrank </strong></a>*@
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="pull-left emp-pic orange-dark orange-light-right-box ">
+                        <a href="@perfDetails.KPIMetricName" data-toggle="modal" data-target="#my-metric" class="an-color change_status pull-right" style="margin:0 6px;" ><img id="@perfDetails.KPIMetricName" src="~/Content/assets/images/pic-card.png"></a>
+                        @*<a href="@perfDetails.KpiMetricName" data-toggle="modal" data-target="#my-metric"  class="an-color change_status pull-right" style="margin:0 6px;" ><img id="@perfDetails.KpiMetricName" src="/Content/assets/images/pic-card.png"> </a>*@
+
+                    </div>
+                    <div style="width: 73%;" class="pull-right">
+                        <div class="clearfix">
+                            <div class="table-responsive">
+                                <table class="table table-orange">
+                                    <tbody>
+                                        <tr>
+                                            <td style="height: 22px;">Goal</td>
+                                            <td>@perfDetails.goal</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Achieved</td>
+                                            <td>@perfDetails.actual</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Coachings</td>
+                                            <td>@perfDetails.coachings</td>
+                                        </tr>
+                                        @*<tr>
+                                          <td>Open Tasks</td>
+                                          <td>@perfDetails.OpenTasks</td>
+                                        </tr>
+                                             <tr>
+                                          <td>Completed Coachings</td>
+                                          <td>@perfDetails.Completedcoachings</td>
+                                        </tr>*@
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+@*<div class="col-md-3 padlr5">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr class="red-t">
+                                <td width="96%" align="left">@perfDetails.KPIMetricName</td>
+                                <td width="4%" align="right">
+                                    <a href="#" data-toggle="popover"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="red-td">
+                                <td align="left" scope="row">Goal</td>
+                                <td align="right">@perfDetails.goal</td>
+                            </tr>
+                            <tr class="red-t">
+                                <td align="left" scope="row">Achieved</td>
+                                <td align="right">@perfDetails.actual</td>
+                            </tr>
+                            <tr class="red-td">
+                                <td align="left" scope="row">Coachings</td>
+                                <td align="right">@perfDetails.coachings</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>*@
+        }
+    }
+</div>
+
+<script type="text/javascript">
+
+   
+
+
+</script>
+
+@*<div role="tabpanel" class="tab-pane" id="Organization">
+    <div class="col-md-3 padlr5">
+        <div class="main-box-emp box-sky">
+            <div class="clearfix box-sky-heading">
+                <h5 class="pull-left">Int Set 2/19</h5>
+                <p class="pull-right anchor-icon"><a href="#"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></p>
+                <ul class="average">
+                    <li><span>Me</span></li>
+                    <li>
+                        <div class="color-persent-sky"></div>
+                        <span>Average</span></li>
+                    <li>
+                        <div class="color-persent-sky"></div>
+                        <span>Best</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 padlr5">
+        <div class="main-box-emp box-pink">
+            <div class="clearfix box-pink-heading">
+                <h5 class="pull-left">Int Set 2/19</h5>
+                <p class="pull-right anchor-icon"><a href="#"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></p>
+                <ul class="average">
+                    <li><span>Me</span></li>
+                    <li>
+                        <div class="color-persent-pink"></div>
+                        <span>Average</span></li>
+                    <li>
+                        <div class="color-persent-pink"></div>
+                        <span>Best</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 padlr5">
+        <div class="main-box-emp box-sky">
+            <div class="clearfix box-sky-heading">
+                <h5 class="pull-left">Int Set 2/19</h5>
+                <p class="pull-right anchor-icon"><a href="#"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></p>
+                <ul class="average">
+                    <li><span>Me</span></li>
+                    <li>
+                        <div class="color-persent-sky"></div>
+                        <span>Average</span></li>
+                    <li>
+                        <div class="color-persent-sky"></div>
+                        <span>Best</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>*@

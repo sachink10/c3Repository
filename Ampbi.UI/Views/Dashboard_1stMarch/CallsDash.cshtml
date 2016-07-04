@@ -1,0 +1,203 @@
+﻿@{
+    ViewBag.Title = "CallsDash";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pan0 top-box-search">
+    <div class="page-title">
+        <div class="pull-left col-md-8 col-sm-12 col-xs-12 mart10">
+            <div class="pull-left"><strong class="fonts24">Sep 2015</strong></div>
+            <div class="clearfix">
+                <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="12" data-slider-step="1" data-slider-value="12" />
+            </div>
+        </div>
+        <div class="btn-group pull-right col-md-4 col-sm-12 col-xs-12 mart15" role="group" aria-label="...">
+            <button type="button" class="btn btn-default pull-right  col-sm-12 col-xs-12 col-md-3 col-lg-3 border-btn">Month</button>
+            <button type="button" class="btn btn-default pull-right col-sm-12 col-xs-12 col-md-3 col-lg-3 border-btn">Weekly</button>
+            <button type="button" class="btn btn-default pull-right active col-sm-12 col-xs-12 col-md-3 col-lg-3 border-btn" >Daily</button>
+            <button type="button" class="btn btn-default pull-right col-sm-12 col-xs-12 col-md-3 col-lg-3 border-btn">Intraday</button>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 mart10">
+    <div class="clearfix marb20">
+        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+            <div class="tile-counter bg-orange">
+                <div class="content">
+                    <h5 data-to="3304" data-from="1001" data-speed="3000" class="number_counter start_timer counted text-color">Calls with Disposition <span class="text-color">235</span> </h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+            <div class="tile-counter bg-orange">
+                <div class="content">
+                    <h5 data-to="7504" data-from="1001" data-speed="3000" class="number_counter start_timer counted text-color">Total Calls <span class="text-color">5492</span></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <section class="box mar0">
+            <header class="panel_header box-heading">
+                <!--<h2 class="title pull-left">Calls</h2>-->
+                <div class="pull-left col-md-3 pantb20">
+                    <select class="select-box input-sm">
+                        <option>Chart Type</option>
+                        <option>Pie</option>
+                        <option>Stacked</option>
+                        <option>Donut</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="pull-left col-md-6 pantb20 text-color-whiite">
+                    CALLS
+                </div>
+                <div class="pull-right col-md-3 pantb20">
+                    <select class="select-box input-sm">
+                        <option>Export</option>
+                        <option>JPEG</option>
+                        <option>PDF</option>
+                        <option>PNG</option>
+                        <option>Excel</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="pull-right"></div>
+            </header>
+            <div class="content-body" style="height: 420px;">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12 pan0">
+                        <div class="clearfix">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-5">
+                                <div class="col-md-12 clearfix marb20">
+                                    <select class="select-box input-sm">
+                                        <option>ALL-Dealerships</option>
+                                        <option>ALL-Dealerships1</option>
+                                        <option>ALL-Dealerships2</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="col-md-12">
+                                        <div id="carousel">
+                                            <div id="buttons">
+                                                <a href="#" id="prev">
+                                                    <img src="~/Content/assets/images/arrow-1.png" alt=""></a> <a href="#" id="next">
+                                                        <img src="~/Content/assets/images/arrow-2.png" alt=""></a>
+                                            </div>
+                                            <div id="slides">
+                                                <ul>
+                                                    <li>
+                                                        <select class="select-box input-sm">
+                                                            <option>All Marketing Campaigns</option>
+                                                            <option>All Marketing Campaigns1</option>
+                                                            <option>All Marketing Campaigns2</option>
+                                                            </optgroup>
+                                                        </select>
+                                                    </li>
+                                                    <li>
+                                                        <select class="select-box input-sm">
+                                                            <option>All Dealerships</option>
+                                                            <option>All Dealerships1</option>
+                                                            <option>All Dealerships2</option>
+                                                            </optgroup>
+                                                        </select>
+                                                    </li>
+                                                    <li>
+                                                        <select class="select-box input-sm">
+                                                            <option>All Dealerships</option>
+                                                            <option>All Dealerships1</option>
+                                                            <option>All Dealerships2</option>
+                                                            </optgroup>
+                                                        </select>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3"></div>
+                        </div>
+                        <div class="sm-device col-lg-12 col-md-12 col-sm-12 col-xs-12 pant20 pic-width mart30">
+                            <img src="~/Content/assets/images/pie-chart.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <section class="box mart10">
+            <header class="panel_header box-heading">
+                <div class="pull-left col-md-3 pantb20">
+                    <select class="select-box input-sm">
+                        <option>Chart Type</option>
+                        <option>Pie</option>
+                        <option>Stacked</option>
+                        <option>Donut</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="pull-left col-md-6 pantb20 text-color-whiite">PIE</div>
+                <div class="pull-right col-md-3 pantb20">
+                    <select class="select-box input-sm">
+                        <option>Export</option>
+                        <option>JPEG</option>
+                        <option>PDF</option>
+                        <option>PNG</option>
+                        <option>Excel</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </header>
+            <div class="content-body">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 col-md-offset-2 col-lg-offset-2 mart10 pic-width">
+                        <img src="~/Content/assets/images/pie-chart1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="clearfix"></div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <section class="box mart30">
+            <header class="panel_header box-heading">
+                <div class="pull-left col-md-3 pantb20">
+                    <select class="select-box input-sm">
+                        <option>Chart Type</option>
+                        <option>Pie</option>
+                        <option>Stacked</option>
+                        <option>Donut</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="pull-left col-md-6 pantb20 text-color-whiite">
+                    STACKED
+                </div>
+                <div class="pull-right col-md-3 pantb20">
+                    <select class="select-box input-sm">
+                        <option>Export</option>
+                        <option>JPEG</option>
+                        <option>PDF</option>
+                        <option>PNG</option>
+                        <option>Excel</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </header>
+            <div class="content-body">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 mart10 pic-width">
+                        <img src="~/Content/assets/images/pie-chart2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

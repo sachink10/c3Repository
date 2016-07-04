@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta charset="utf-8" />
+    <title>First Time Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- CORE CSS FRAMEWORK - START -->
+    <link href="~/Content/assets/css/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="~/Content/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/assets/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/assets/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/assets/css/animate.min.css" rel="stylesheet" type="text/css" />
+    <!-- CORE CSS FRAMEWORK - END -->
+    <!-- CORE CSS TEMPLATE - START -->
+    <link href="~/Content/assets/css/style.css" rel="stylesheet" type="text/css" />
+    <!-- CORE CSS TEMPLATE - END -->
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid header-top-box">
+            <div class="logo-top pull-left">
+                <a href="#">
+                    <img src="~/Content/assets/images/logo-sign.png" alt=""></a>
+            </div>
+            <div class="pull-right admin-icon">
+                <a href="#">
+                    <img src="~/Content/assets/images/user.png" alt=""></a>
+            </div>
+        </div>
+        <div class="container-fluid nav-box"></div>
+    </nav>
+    <!-- START CONTAINER -->
+    <div class="page-container row-fluid">
+
+        <!-- START CONTENT -->
+        <section id="main-content" class=" sidebar_shift  sidebar_shift-reg">
+            <section class="wrapper wrap-box">
+                <div class="clearfix"></div>
+                <div class="col-md-3"></div>
+                <div class="col-md-6 col-sm-offset-3 col-md-offset-0 col-sm-6">
+                    <section class="box">
+                        <header class="panel_header box-heading">
+                            <h2 class="title pull-left">First Time Login</h2>
+                        </header>
+                        @RenderBody()
+                    </section>
+                </div>
+                <div class="col-md-3"></div>
+            </section>
+        </section>
+        <!-- END CONTENT -->
+
+    </div>
+    <!-- END CONTAINER -->
+    <!-- START FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">Copyright © 2015</p>
+        </div>
+    </footer>
+    <!-- END FOOTER -->
+    <!-- LOAD FILES AT PAGE END FOR FASTER LOADING -->
+
+    <!-- CORE JS FRAMEWORK - START -->
+    <script src="~/Content/assets/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+    <script src="~/Content/assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- CORE JS FRAMEWORK - END -->
+    <!-- CORE TEMPLATE JS - START -->
+    <script src="~/Content/assets/js/scripts.js" type="text/javascript"></script>
+    <!-- END CORE TEMPLATE JS - END -->
+
+
+    <script>
+        var firstSelected = null;
+        var secondSelected = null;
+
+        $('#optionsA').change(function () {
+            //remove the currently selected option from 2nd/3rd drop down
+            var selectedValue = $('#optionsA option:selected');
+            if (selectedValue.val() != "") {
+                $('#optionsB option[value="' + selectedValue.val() + '"]').remove();
+                $('#optionsC option[value="' + selectedValue.val() + '"]').remove();
+            }
+            else {
+                selectedValue = null;
+            }
+
+            //add previous item back in to 2nd/3rd drop down
+            if (firstSelected != null) {
+                $('#optionsB').append($('<option>', { value: firstSelected.val() }).text(firstSelected.text()));
+                $('#optionsC').append($('<option>', { value: firstSelected.val() }).text(firstSelected.text()));
+            }
+
+            //save the currently selected value
+            firstSelected = selectedValue;
+        });
+
+
+        $('#optionsB').change(function () {
+            //remove the currently selected option from 1st/3rd drop down
+            var selectedValue = $('#optionsB option:selected')
+            if (selectedValue.val() != "") {
+                $('#optionsA option[value="' + selectedValue.val() + '"]').remove();
+                $('#optionsC option[value="' + selectedValue.val() + '"]').remove();
+            }
+            else {
+                selectedValue = null;
+            }
+
+            //add previous item back in to 1st/3rd drop down
+            if (secondSelected != null) {
+                $('#optionsA').append($('<option>', { value: secondSelected.val() }).text(secondSelected.text()));
+                $('#optionsC').append($('<option>', { value: firstSelected.val() }).text(firstSelected.text()));
+            }
+
+            //save the currently selected value
+            secondSelected = selectedValue;
+        });
+    </script>
+</body>
+</html>

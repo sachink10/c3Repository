@@ -1,0 +1,189 @@
+﻿@model Ampbi.DataAccess.ViewModel.DashBoard
+@using System.Web.UI.WebControls
+
+
+<div class="col-md-9" id="PerfCardDefault">
+    @if (Model.agentMyMetric != null)
+    {
+        foreach (var perfDetails in Model.agentMyMetric)
+        {
+
+            if (perfDetails.CardColor == "Green")
+            {
+                <div class="col-md-3 padlr5">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr class="green-tdtd">
+                                    <td width="96%" align="left"><strong>@perfDetails.KpiMetricName</strong></td>
+                                    <td width="4%" align="right">
+                                        <a href="#" data-toggle="modal" data-target="#my-metric"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="green-tdtd1">
+                                    <td align="left" scope="row">Goal</td>
+                                    <td align="right">@perfDetails.Goal</td>
+                                </tr>
+                                <tr class="green-tdtd">
+                                    <td align="left" scope="row">Actual</td>
+                                    <td align="right">@perfDetails.Achieved</td>
+                                </tr>
+                                <tr class="green-tdtd1">
+                                    <td align="left" scope="row">Percentage to Goal</td>
+                                    <td align="right">@perfDetails.Percenttotarget</td>
+                                </tr>
+                                <tr class="green-tdtd1">
+                                    <td align="left" scope="row">Coachings</td>
+                                    <td align="right">@perfDetails.Coachings</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            }
+
+            if (perfDetails.CardColor == "Red")
+            {
+                <div class="col-md-3 padlr5">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr class="green-tdtd">
+                                    <td width="96%" align="left"><strong>@perfDetails.KpiMetricName</strong></td>
+                                    <td width="4%" align="right">
+                                        <a href="#" data-toggle="modal" data-target="#my-metric"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="green-tdtd1">
+                                    <td align="left" scope="row">Goal</td>
+                                    <td align="right">@perfDetails.Goal</td>
+                                </tr>
+                                <tr class="green-tdtd">
+                                    <td align="left" scope="row">Actual</td>
+                                    <td align="right">@perfDetails.Achieved</td>
+                                </tr>
+                                <tr class="green-tdtd1">
+                                    <td align="left" scope="row">Percentage to Goal</td>
+                                    <td align="right">@perfDetails.Percenttotarget</td>
+                                </tr>
+                                <tr class="green-tdtd1">
+                                    <td align="left" scope="row">Coachings</td>
+                                    <td align="right">@perfDetails.Coachings</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            }
+            
+             if (perfDetails.CardColor == "Yellow")
+            {
+                <div class="col-md-3 padlr5">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr class="green-tdtd">
+                                    <td width="96%" align="left"><strong>@perfDetails.KpiMetricName</strong></td>
+                                    <td width="4%" align="right">
+                                        <a href="#" data-toggle="modal" data-target="#my-metric"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="green-tdtd1">
+                                    <td align="left" scope="row">Goal</td>
+                                    <td align="right">@perfDetails.Goal</td>
+                                </tr>
+                                <tr class="green-tdtd">
+                                    <td align="left" scope="row">Actual</td>
+                                    <td align="right">@perfDetails.Achieved</td>
+                                </tr>
+                                <tr class="green-tdtd1">
+                                    <td align="left" scope="row">Percentage to Goal</td>
+                                    <td align="right">@perfDetails.Percenttotarget</td>
+                                </tr>
+                                <tr class="green-tdtd1">
+                                    <td align="left" scope="row">Coachings</td>
+                                    <td align="right">@perfDetails.Coachings</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            }
+        }
+    }
+</div>
+
+@*<div role="tabpanel" class="tab-pane" id="Organization">
+    <div class="col-md-3 padlr5">
+        <div class="main-box-emp box-sky">
+            <div class="clearfix box-sky-heading">
+                <h5 class="pull-left">Int Set 2/19</h5>
+                <p class="pull-right anchor-icon"><a href="#"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></p>
+                <ul class="average">
+                    <li><span>Me</span></li>
+                    <li>
+                        <div class="color-persent-sky"></div>
+                        <span>Average</span></li>
+                    <li>
+                        <div class="color-persent-sky"></div>
+                        <span>Best</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 padlr5">
+        <div class="main-box-emp box-pink">
+            <div class="clearfix box-pink-heading">
+                <h5 class="pull-left">Int Set 2/19</h5>
+                <p class="pull-right anchor-icon"><a href="#"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></p>
+                <ul class="average">
+                    <li><span>Me</span></li>
+                    <li>
+                        <div class="color-persent-pink"></div>
+                        <span>Average</span></li>
+                    <li>
+                        <div class="color-persent-pink"></div>
+                        <span>Best</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 padlr5">
+        <div class="main-box-emp box-sky">
+            <div class="clearfix box-sky-heading">
+                <h5 class="pull-left">Int Set 2/19</h5>
+                <p class="pull-right anchor-icon"><a href="#"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></p>
+                <ul class="average">
+                    <li><span>Me</span></li>
+                    <li>
+                        <div class="color-persent-sky"></div>
+                        <span>Average</span></li>
+                    <li>
+                        <div class="color-persent-sky"></div>
+                        <span>Best</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>*@
+<div id="my-metric" class="modal fade" role="dialog">
+    <div class="modal-dialog box-width">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+                <img src="~/Content/assets/images/pie-chart2.png" alt="">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,431 @@
+﻿@model Ampbi.DataAccess.ViewModel.DashBoard
+@using System.Web.UI.WebControls
+
+
+
+<div class="col-md-12" style="padding: 25px 0 0 10px;">
+    <button type="reset" class="clear">Clear Selection</button>
+
+    <ul id="tree2" style="height: 490px; overflow: auto;">
+
+        <li id="metric"><a href="#">Metric</a>
+
+            <ul>
+                @foreach (var item in Model.getTreeviewdata[4].Split(','))
+                {
+
+                    if (item == "Composite")
+                    {
+                    <li class="treecs selecttree default">
+                        <a href="#"><span></span>@item</a></li>
+                    }
+                    else
+                    {
+                    <li class="treecs selected">
+                        <a href="#" onclick="siteclick();"><span></span>@item</a></li>
+                    }
+                }
+
+
+            </ul>
+        </li>
+
+        <li id="lob"><a href="#">LOB</a>
+
+            <ul>
+                @foreach (var item in Model.getTreeviewdata[0].Split(','))
+                {
+                    if (Model.selectedItems["lob"].ToString() != "All" && item == Model.selectedItems["lob"].ToString())
+                    {
+                    <li class="treecs selecttree default">
+                        <a href="#"><span></span>@item</a></li>
+                    }
+                    else
+                    {
+
+                        if (item == "All" && Model.selectedItems["lob"].ToString() == "All")
+                        {
+                    <li class="treecs selecttree default">
+                        <a href="#"><span></span>@item</a></li>
+                        }
+                        else
+                        {
+                    <li class="treecs selected">
+                        <a href="#" onclick="siteclick();"><span></span>@item</a></li>
+                        }
+                    }
+                }
+
+            </ul>
+        </li>
+        <li id="site"><a href="#">Site</a>
+            <ul>
+                @foreach (var item in Model.getTreeviewdata[1].Split(','))
+                {
+                    if (Model.selectedItems["site"].ToString() != "All" && item == Model.selectedItems["site"].ToString())
+                    {
+                    <li class="treecs selecttree default">
+                        <a href="#"><span></span>@item</a></li>
+                    }
+                    else
+                    {
+
+                        if (item == "All" && Model.selectedItems["site"].ToString() == "All")
+                        {
+                    <li class="treecs selecttree default">
+                        <a href="#"><span></span>@item</a></li>
+                        }
+                        else
+                        {
+                    <li class="treecs selected">
+                        <a href="#" onclick="siteclick();"><span></span>@item</a></li>
+                        }
+                    }
+                }
+            </ul>
+        </li>
+        <li id="teammanager"><a href="#">Team Manager</a>
+            <ul>
+                @foreach (var item in Model.getTreeviewdata[2].Split(','))
+                {
+                    if (Model.selectedItems["TeamManager"].ToString() != "All" && item == Model.selectedItems["TeamManager"].ToString())
+                    {
+                    <li class="treecs selecttree default">
+                        <a href="#"><span></span>@item</a></li>
+                    }
+                    else
+                    {
+
+                        if (item == "All" && Model.selectedItems["TeamManager"].ToString() == "All")
+                        {
+                    <li class="treecs selecttree default">
+                        <a href="#"><span></span>@item</a></li>
+                        }
+                        else
+                        {
+                    <li class="treecs selected">
+                        <a href="#" onclick="siteclick();"><span></span>@item</a></li>
+                        }
+                    }
+                }
+            </ul>
+        </li>
+        <li id="agent"><a href="#">Agent</a>
+            <ul>
+                @foreach (var item in Model.getTreeviewdata[3].Split(','))
+                {
+
+                    if (item == "All" && Model.getTreeviewdata[3].Split(',').Count() == 1)
+                    {
+                    <li class="treecs selecttree default">
+                        <a href="#"><span></span>@item</a></li>
+                    }
+                    else
+                    {
+
+                        if (item == "All")
+                        {
+                    <li class="treecs selecttree default">
+                        <a href="#"><span></span>@item</a></li>
+                        }
+                        else
+                        {
+                    <li class="treecs selected">
+                        <a href="#" onclick="siteclick();"><span></span>@item</a></li>
+                        }
+                    }
+                }
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+<script type="text/javascript">
+
+    $(".clear").click(function () {
+        $(".tree ul li").removeClass("selecttree");
+        $(".tree ul li").addClass("selected");
+        $('#chart1y').hide();
+        $('#chart1x').hide();
+        $('#chart3y').hide();
+        $('#chart3x').hide();
+        $('#chart4y').hide();
+        $('#chart4x').hide();
+        if ($('#usertype').val() == '1') {
+            $('#siteID').val('All Sites');
+            $('.default').removeClass("selected ");
+            $('.default').addClass('treecs selecttree default');
+
+
+        }
+        else {
+            $('#siteID').val('All Sites');
+        }
+
+        $('#programID').val('All');
+        $('#agentID').val('All');
+        $('#managerID').val('All');
+        //if ($('#usertype').val() == '1') {
+        //    $('#monthID').val(month);
+        //}
+        //else {
+        //    $('#monthID').val(month);
+        //}
+
+        $('#weekID').val('');
+        $('#container2').hide();
+        $('#container3').hide();
+        $('#container4').hide();
+        loadTreeview('lob', '', '', '');
+        //  bindGraph1($('#siteID').val(), $('#programID').val(), $('#agentID').val(), $('#managerID').val());
+    });
+
+
+    $("#metric ul li a").click(function () {
+        //alert($(this).eq(0).text());
+        //$('#chart1y').hide();
+        //$('#chart1x').hide();
+        //$('#chart3y').hide();
+        //$('#chart3x').hide();
+        //$('#chart4y').hide();
+        //$('#chart4x').hide();
+
+
+      //  loadTreeview('lob', $(this).eq(0).text(), '', '');
+
+        var value = $(this).eq(0).text();
+        if ($(this).eq(0).text() == $('#metricID').val()) {
+            value = 'Composite';
+            $('#metricID').val(value);
+        }
+        else {
+            value = $(this).eq(0).text();
+            $('#metricID').val($(this).eq(0).text());
+
+        }
+        $('#container2').hide();
+        $('#container3').hide();
+        $('#container4').hide();
+        // value = value.replace("↵ ", "");
+        //  bindGraph1(value, 'All', 'All', 'All');
+
+        bindGraph1(value, $('#lobID').val(), $('#siteID').val(), $('#teammanagerID').val(), $('#agentID').val())
+    });
+
+    $("#lob ul li a").click(function () {
+        //alert($(this).eq(0).text());
+        //$('#chart1y').hide();
+        //$('#chart1x').hide();
+        //$('#chart3y').hide();
+        //$('#chart3x').hide();
+        //$('#chart4y').hide();
+        //$('#chart4x').hide();
+
+
+        loadTreeview('lob', $(this).eq(0).text(), '', '');
+
+        var value = $(this).eq(0).text();
+        if ($(this).eq(0).text() == $('#lobID').val()) {
+            value = 'All';
+            $('#lobID').val(value);
+        }
+        else {
+            value = $(this).eq(0).text();
+            $('#lobID').val($(this).eq(0).text());
+
+        }
+        $('#container2').hide();
+        $('#container3').hide();
+        $('#container4').hide();
+        // value = value.replace("↵ ", "");
+        //  bindGraph1(value, 'All', 'All', 'All');
+
+        bindGraph1($('#metricID').val(), value, $('#siteID').val(), $('#teammanagerID').val(), $('#agentID').val())
+    });
+    $("#site ul li").click(function () {
+        //alert($(this).eq(0).text());
+        $('#chart1y').hide();
+        $('#chart1x').hide();
+        $('#chart3y').hide();
+        $('#chart3x').hide();
+        $('#chart4y').hide();
+        $('#chart4x').hide();
+
+        loadTreeview('site', $('#lobID').val(), $(this).eq(0).text(), '');
+
+
+
+        var value = $(this).eq(0).text();
+        if ($(this).eq(0).text() == $('#siteID').val()) {
+            value = 'All';
+            $('#siteID').val(value);
+            $('#managerID').val('All');
+            $('#agentID').val('All');
+        }
+        else {
+            value = $(this).eq(0).text();
+            $('#programID').val($(this).eq(0).text());
+            $('#managerID').val('All');
+            $('#agentID').val('All');
+        }
+        $('#container2').hide();
+        $('#container3').hide();
+        $('#container4').hide();
+        // bindGraph1($('#lobID').val(), value, 'All', 'All');
+        bindGraph1($('#metricID').val(), $('#lobID').val(), value, $('#teammanagerID').val(), $('#agentID').val())
+    });
+
+    $("#teammanager ul li").click(function () {
+        //alert($(this).eq(0).text());
+        $('#chart1y').hide();
+        $('#chart1x').hide();
+        $('#chart3y').hide();
+        $('#chart3x').hide();
+        $('#chart4y').hide();
+        $('#chart4x').hide();
+
+
+        loadTreeview('teammanager', $('#lobID').val(), $('#siteID').val(), $(this).eq(0).text());
+
+        var value = $(this).eq(0).text();
+        if ($(this).eq(0).text() == $('#teammanagerID').val()) {
+            value = 'All';
+            $('#teammanagerID').val(value);
+            $('#agentID').val('All');
+        }
+        else {
+            value = $(this).eq(0).text();
+            $('#teammanagerID').val($(this).eq(0).text());
+            $('#agentID').val('All');
+        }
+        $('#container2').hide();
+        $('#container3').hide();
+        $('#container4').hide();
+        // bindGraph1($('#lobID').val(), $('#siteID').val(), value, 'All');
+        bindGraph1($('#metricID').val(), $('#lobID').val(), $('#siteID').val(),value, $('#agentID').val())
+    });
+
+
+    $("#agent ul li").click(function () {
+        //  alert($(this).eq(0).text());
+        $('#chart1y').hide();
+        $('#chart1x').hide();
+        $('#chart3y').hide();
+        $('#chart3x').hide();
+        $('#chart4y').hide();
+        $('#chart4x').hide();
+        var value = $(this).eq(0).text();
+        if ($(this).eq(0).text() == $('#agentID').val()) {
+            value = 'All';
+            $('#agentID').val(value);
+        }
+        else {
+            value = $(this).eq(0).text();
+            $('#agentID').val($(this).eq(0).text());
+        }
+        $('#container2').hide();
+        $('#container3').hide();
+        $('#container4').hide();
+
+        // bindGraph1($('#lobID').val(), $('#siteID').val(), $('#teammanagerID').val(),value);
+        bindGraph1($('#metricID').val(), $('#lobID').val(), $('#siteID').val(), $('#teammanagerID').val(), value)
+    });
+
+
+
+</script>
+
+
+<script>
+    $.fn.extend({
+        treed: function (o) {
+
+            var openedClass = 'glyphicon-minus-sign';
+            var closedClass = 'glyphicon-plus-sign';
+
+            if (typeof o != 'undefined') {
+                if (typeof o.openedClass != 'undefined') {
+                    openedClass = o.openedClass;
+                }
+                if (typeof o.closedClass != 'undefined') {
+                    closedClass = o.closedClass;
+                }
+            };
+
+            //initialize each of the top levels
+            var tree = $(this);
+            tree.addClass("tree");
+            tree.find('li').has("ul").each(function () {
+                var branch = $(this); //li with children ul
+                branch.prepend("<i class='indicator glyphicon " + closedClass + "'></i>");
+                branch.addClass('branch');
+                branch.on('click', function (e) {
+                    if (this == e.target) {
+                        var icon = $(this).children('i:first');
+                        icon.toggleClass(openedClass + " " + closedClass);
+                        $(this).children().children().toggle();
+                    }
+                })
+                branch.children().children().toggle();
+            });
+            //fire event from the dynamically added icon
+            tree.find('.branch .indicator').each(function () {
+                $(this).on('click', function () {
+                    $(this).closest('li').click();
+                });
+            });
+            //fire event to open branch if the li contains an anchor instead of text
+            tree.find('.branch>a').each(function () {
+                $(this).on('click', function (e) {
+                    $(this).closest('li').click();
+                    e.preventDefault();
+                });
+            });
+            //fire event to open branch if the li contains a button instead of text
+            tree.find('.branch>button').each(function () {
+                $(this).on('click', function (e) {
+                    $(this).closest('li').click();
+                    e.preventDefault();
+                });
+            });
+        }
+    });
+
+
+    //Initialization of treeviews
+    $('#tree2').treed({ openedClass: 'glyphicon-folder-open', closedClass: 'glyphicon-folder-close' });
+
+    $(".treecs").click(function (e) {
+
+        if ($(this).hasClass("selecttree")) {
+            $(this).removeClass("selecttree").addClass("selected");
+        } else {
+            // if other menus are open remove open class and add closed
+            $(this).siblings().removeClass("selecttree").addClass("selected");
+            $(this).removeClass("selected").addClass("selecttree");
+        }
+
+    });
+    //$('label input.example').on('change', function () {
+    //    $('label input.example').not(this).prop('checked', false);
+    //});
+</script>
+
+<style>
+    .treecs {
+        /*padding: 10px;
+    width: 100px;
+    cursor: pointer;*/
+        display: block;
+    }
+
+        .treecs.selecttree {
+            font-weight: bold;
+            color: #f00;
+        }
+
+        .treecs.selected {
+            font-weight: normal;
+        }
+</style>

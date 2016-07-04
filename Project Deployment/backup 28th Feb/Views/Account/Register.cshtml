@@ -1,0 +1,320 @@
+﻿@using System.Web.UI.WebControls
+@model Ampbi.DataAccess.ViewModel.Registration
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_LayoutRegister.cshtml";
+}
+
+
+<div class="clearfix" style="padding-top: 20px; padding-bottom: 10px; border-right: #ccc solid 1px !important; border-left: #ccc solid 1px !important;">
+    @if (ViewBag.Message != null)
+    {
+                                 
+        <div class="col-md-2 col-sm-3 col-xs-3 col-md-offset-4">
+            <label>
+                <input id="optDaily" name="register" type="radio" data-target="#User">&nbsp;User</label>
+        </div>
+        <div class="col-md-3">
+            <label>
+                <input id="optWeekly" name="register"  checked="checked" type="radio" data-target="#Admin">&nbsp;Account Owner</label>
+        </div>
+    }
+    else
+    {
+        <div class="col-md-2 col-sm-3 col-xs-3 col-md-offset-4">
+            <label>
+                <input id="optDaily" name="register" checked="checked" type="radio" data-target="#User">&nbsp;User</label>
+        </div>
+        <div class="col-md-3">
+            <label>
+                <input id="optWeekly" name="register" type="radio" data-target="#Admin">&nbsp;Account Owner</label>
+        </div>
+    }
+</div>
+<div id="User" class="tab-pane active">
+    <section class="box box1">
+        <!--<header class="panel_header box-heading">
+                <h2 class="title pull-left">Signup Form</h2>
+              </header>-->
+        <form id="User" class="form-horizontal"  method="post" action="@Url.Action("Register", "Account", new { id = 0 })">
+            @Html.ValidationSummary()
+            <div class="content-body border-box" style="border-top: none !important;">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <!--first Name-->
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Email <span class="red">*</span></label>
+                            <div class="col-md-8">
+                                @*<input type="email" placeholder="John.Smith@noreply.com" class="form-control input-sm" name="email" required="required">*@
+                                @Html.TextBoxFor(u => u.userRegModel.Email, new { @id = "usrEmail", @class = "form-control input-sm", @placeholder = "John.Smith@noreply.com", @type = "email", @required = "required" })
+                                <div id="divUserStatus"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-4">First Name <span class="red">*</span></label>
+                            <div class="col-md-8">
+                                @*<input type="text" placeholder="John" class="form-control input-sm" name="fname" required="required">*@
+                                @Html.TextBoxFor(u => u.userRegModel.FirstName, new { @id = "usrFirstName", @class = "form-control input-sm", @placeholder = "John", @required = "required" })
+                            </div>
+                        </div>
+
+                        <!--last Name-->
+
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Last Name <span class="red">*</span></label>
+                            <div class="col-md-8">
+                                @*<input type="text" placeholder="Smith" class="form-control input-sm" name="lname" required="required">*@
+                                @Html.TextBoxFor(u => u.userRegModel.LastName, new { @id = "usrLastName", @class = "form-control input-sm", @placeholder = "Smith", @required = "required" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Password <span class="red">*</span></label>
+                            <div class="col-md-8">
+                                @*<input type="password" placeholder="Password" class="form-control input-sm" name="password" required="required">*@
+                                @Html.TextBoxFor(u => u.userRegModel.Password, new { @id = "usrEmail", @class = "form-control input-sm", @placeholder = "Password", @type = "password", @required = "required" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Confirm Password <span class="red">*</span></label>
+                            <div class="col-md-8">
+                                @*<input type="password" placeholder="Confirm Password" class="form-control input-sm" name="cpassword" required="required">*@
+                                @Html.TextBoxFor(u => u.userRegModel.Password, new { @id = "usrConfirmPassword", @class = "form-control input-sm", @placeholder = "Confirm Password", @type = "password", @required = "required" })
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="col-md-12 col-sm-12 col-xs-12 footer-line-box">
+                            <div class="pull-left col-md-offset-4">
+                                <button type="submit" class="btn btn-success input-sm">Submit</button>
+                                <button type="reset" class="btn btn-success input-sm">Cancel</button>
+                            </div>
+                        </div>-->
+
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 page-footer-box clearfix">
+                <div class="pull-right col-md-offset-4">
+                    <button type="submit" class="btn btn-success input-sm">Submit</button>
+                    <button type="reset" class="btn btn-success input-sm">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </section>
+</div>
+<div id="Admin" class="tab-pane">
+    <section class="box box1">
+        <!-- <header class="panel_header box-heading">
+                <h2 class="title pull-left">Signup Form</h2>
+              </header>-->
+        <div class="content-body border-box" style="border-top: none !important;">
+            <div class="row">
+                <form id="Admin" class="form-horizontal"  method="post" action="@Url.Action("Register", "Account", new { id = 1 })">
+                    @Html.ValidationSummary()
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Email <span class="red">*</span></label>
+                            <div class="col-md-8">
+                                @*<input type="email" class="form-control input-sm" placeholder="John.Smith@noreply.com" name="email" required="required">*@
+                                @Html.TextBoxFor(u => u.adminRegModel.Email, new { @id = "usrAdminEmail", @class = "form-control input-sm", @placeholder = "John.Smith@noreply.com", @required = "required" })
+                                <div id="divAdminStatus"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">First Name <span class="red">*</span></label>
+                            <div class="col-md-8">
+                                @*<input type="text" placeholder="John" class="form-control input-sm" name="fname" required="required">*@
+                                @Html.TextBoxFor(u => u.adminRegModel.FirstName, new { @id = "usrAdminFirstName", @class = "form-control input-sm", @placeholder = "John", @required = "required" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Last Name <span class="red">*</span></label>
+                            <div class="col-md-8">
+                                @*<input type="text" placeholder="Smith" class="form-control input-sm" name="lname" required="required">*@
+                                @Html.TextBoxFor(u => u.adminRegModel.LastName, new { @id = "usrAdminLastName", @class = "form-control input-sm", @placeholder = "Smith", @required = "required" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Password <span class="red">*</span></label>
+                            <div class="col-md-8">
+                                @*<input type="password" placeholder="Enter Password" class="form-control input-sm" name="password" required="required">*@
+                                @Html.TextBoxFor(u => u.adminRegModel.Password, new { @id = "usrAdminPassword", @class = "form-control input-sm", @placeholder = "Password", @type = "password", @required = "required" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Confirm Password <span class="red">*</span></label>
+                            <div class="col-md-8">
+                                @*<input type="password" placeholder="Confirm Password" class="form-control input-sm" name="cpassword" required="required">*@
+                                @Html.TextBoxFor(u => u.adminRegModel.ConfirmPassword, new { @id = "usrAdminConfirmPassword", @class = "form-control input-sm", @placeholder = "Confirm Password", @type = "password", @required = "required" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Company Name <span class="red">*</span></label>
+                            <div class="col-md-8">
+                                @*<input type="text" placeholder="No Reply Inquiries Inc" class="form-control input-sm" name="cname" required="required">*@
+                                @Html.TextBoxFor(u => u.adminRegModel.CompanyName, new { @id = "usrAdminCompanyName", @class = "form-control input-sm", @placeholder = "No Reply Inquiries Inc", @required = "required" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Logo <span class="red">*</span></label>
+                            <div class="col-md-8">
+                                @*<input type="file" placeholder="(files with .png, .jpg and less than 2 MB)" class="form-control input-sm upload-logo" name="logo" required="required">*@
+                                @Html.TextBoxFor(u => u.adminRegModel.Logo, new { @id = "usrAdminLogo", @class = "form-control input-sm upload-logo", @placeholder = "(files with .png, .jpg and less than 2 MB)", @type = "file" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Address1 <span class="red">*</span></label>
+                            <div class="col-md-8">
+                                @*<input type="text" placeholder="Enter Address1" class="form-control input-sm" name="address1" required="required">*@
+                                @Html.TextBoxFor(u => u.adminRegModel.Address1, new { @id = "usrAddress1", @class = "form-control input-sm", @placeholder = "Enter Address1", @required = "required" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Address2 </label>
+                            <div class="col-md-8">
+                                @*<input type="text" placeholder="Enter Address2" class="form-control input-sm" name="address2">*@
+                                @Html.TextBoxFor(u => u.adminRegModel.Address2, new { @id = "usrAddress2", @class = "form-control input-sm", @placeholder = "Enter Address2" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">City <span class="red">*</span></label>
+                            <div class="col-md-8">
+                                @*<input type="text" placeholder="Enter City" class="form-control input-sm" name="city" required="required">*@
+                                @Html.TextBoxFor(u => u.adminRegModel.City, new { @id = "usrCity", @class = "form-control input-sm", @placeholder = "Enter City", @required = "required" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">State <span class="red">*</span></label>
+                            <div class="col-md-8">
+                                @*<select name="State" class="form-control input-sm" required="required">
+                                    <option>Select</option>
+                                </select>*@
+                                @Html.DropDownListFor(u => u.adminRegModel.State, new SelectList(Model.lstAllStateNames, "statecode", "statename"), "Select", new { @id = "StateList", @class = "form-control input-sm", @required = "required" })
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Zip <span class="red">*</span></label>
+                            <div class="col-md-3">
+                                @*<input type="zip" placeholder="Enter Zip" maxlength="10" class="form-control input-sm" name="zip" required="required">*@
+                                @Html.TextBoxFor(u => u.adminRegModel.Zip, new { @id = "usrZip", @class = "form-control input-sm", @placeholder = "Enter Zip", @required = "required", @maxlength = "10", @type = "zip" })
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Contact Phone <span class="red">*</span></label>
+                            <div class="col-md-4">
+                                @*<input type="text" placeholder="Enter Contact Phone" class="form-control input-sm" name="cphone" required="required">*@
+                                @Html.TextBoxFor(u => u.adminRegModel.ContactPhone, new { @id = "usrContactPhone", @class = "form-control input-sm", @placeholder = "Enter Contact Phone", @required = "required" })
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">No of Employees <span class="red">*</span></label>
+                            <div class="col-md-5">
+                                @*<select name="employees" class="form-control input-sm" required="required">
+                                    <option>Select</option>
+                                    <option>10</option>
+                                    <option>20</option>
+                                    <option>50</option>
+                                    <option>100</option>
+                                </select>*@
+
+                                @Html.DropDownListFor(u => u.adminRegModel.NoOfEmployee, new SelectList(Model.LstNoOfEmpList, "ID", "Description"), "Select", new { @class = "form-control input-sm", @required = "required" })
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">No of Licenses <span class="red">*</span></label>
+                            <div class="col-md-5">
+                                @*<select class="form-control input-sm" name="Licenses" required="required">
+                                    <option>Select</option>
+                                    <option>10</option>
+                                    <option>20</option>
+                                    <option>25</option>
+                                    <option>50</option>
+                                    <option>100</option>
+                                </select>*@
+
+                                @Html.DropDownListFor(u => u.adminRegModel.NoOfLicence, new SelectList(Model.LstNoOfLicencesList, "ID", "Description"), "Select", new { @class = "form-control input-sm", @required = "required" })
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Preferred Contact Method <span class="red">*</span></label>
+                            <div class="col-md-3">
+                                @*<select class="form-control input-sm" name="Preferred" required="required">
+                                    <option>Select</option>
+                                    <option>Email</option>
+                                    <option>Phone</option>
+                                </select>*@
+                               @* @{var listContactMethods = new List<ListItem>
+                                  {
+                                      new ListItem { Text = "Email", Value="Email" },
+                                      new ListItem { Text = "Phone", Value="Phone" }
+                                  };
+                                }*@
+                                @Html.DropDownListFor(u => u.adminRegModel.PrefferedContactMethod, new SelectList(Model.LstPreferedContactMethod, "ID", "Description"), "Select", new { @class = "form-control input-sm", @required = "required" })
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Captcha <span class="red">*</span>
+                                <br>
+                                <div class="col-md-2" style="padding: 0px !important;">
+                                    <img src="~/Content/assets/images/refresh.png" onclick="RefreshCaptch();" alt="" id="refreshbutton">
+                                </div>
+                                <div class="col-md-10" style="padding: 0px 5px !important;">
+                                    <img id="m_imgCaptcha" alt="Click to Change image" src="@Url.Action("GetCaptchaImage", "Account")"  title="Click to Change image"
+            style="width: 150px; height: 40px;" />
+                                </div>
+                                <span id="m_lbMessage"></span>
+                                @*<img src="~/Content/assets/images/captacha.jpg" alt="" id="m_imgCaptcha">*@</label>
+
+                            <div>
+                            </div>
+                            <div class="col-md-4">
+                                @*<input type="text" placeholder="Captcha" class="form-control input-sm" id="CaptchaText" value="@ViewBag.CaptchaText" name="Captcha" required="required">*@
+                                @Html.TextBoxFor(u => u.adminRegModel.captchValue, new { @id = "captch", @class = "form-control input-sm", @name = "Captcha", @required = "required" })
+                            </div>
+                            <div class="col-md-3" style="color: red; font-weight: bold;">
+                                @if (ViewBag.Message != null)
+                                {
+                                   
+                                    @ViewBag.Message
+                                  
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group col-md-12 accepts-box">
+                        <label class="control-label col-md-12">
+                            <input type="checkbox" class="iCheck" checked required="required">
+                            <span>Accept <a data-toggle="modal" href="#ultraModal-1">Terms and conditions </a></span>
+                        </label>
+                    </div>
+                    <!--<div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="pull-left col-md-offset-4">
+                                <button type="submit" class="btn btn-success input-sm">Submit</button>
+                                <button type="reset" class="btn btn-success input-sm">Cancel</button>
+                            </div>
+                        </div>-->
+                    <div class="col-md-12 col-sm-12 page-footer-box clearfix">
+                        <div class="pull-right col-md-offset-4">
+                            <button type="submit" id="btnAdminSubmit" class="btn btn-success input-sm">Submit</button>
+                            <button type="reset" class="btn btn-success input-sm">Cancel</button>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </section>
+</div>

@@ -1,0 +1,467 @@
+﻿@using System.Web.UI.HtmlControls
+@model Ampbi.DataAccess.ViewModel.DashBoard
+
+@{
+    ViewBag.Title = "IndividualEmpPerf";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+@using (Html.BeginForm("MyMetrics", "DashBoard"))
+{
+    <div class="page-container row-fluid">
+        <!-- START CONTENT -->
+        <section id="main-content" class="sidebar_shift sidebar_shift-reg">
+            <section class="wrapper wrap-box">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pan0 top-box-search">
+                    <div class="page-title">
+                        <div class="tab-content pull-left col-md-8 col-sm-12 col-xs-12 mart10">
+
+                            <!--Intraday-->
+
+                            @*  <div role="tabpanel" class="tab-pane" id="Intraday">
+                                <div class="pull-left"><strong class="fonts24" id="IntradayID"></strong></div>
+                                <div class="clearfix">
+                                    <input id="ex4" data-slider-id='ex1Slider' type="text" data-slider-min="-13" data-slider-max="0" data-slider-value="0" data-slider-step="1" />
+                                </div>
+                            </div>*@
+
+                            <!--Daily-->
+
+                            <!--Month-->
+
+                            <div role="tabpanel" class="tab-pane active" id="Month">
+                                <div class="pull-left"><strong class="fonts24" id="MonthID"></strong></div>
+                                <div class="clearfix">
+                                    <input id="ex1" data-slider-id='ex1Slider' data-slider-min="-13" data-slider-max="0" data-slider-value="0" data-slider-step="1" />
+                                </div>
+                            </div>
+
+
+                            <div role="tabpanel" class="tab-pane " id="Daily">
+                                <div class="pull-left"><strong class="fonts24" id="DailyID"></strong></div>
+                                <div class="clearfix">
+                                    <input id="ex3" data-slider-id='ex1Slider' type="text" data-slider-min="-13" data-slider-max="0" data-slider-value="-1" data-slider-step="1">
+                                </div>
+                            </div>
+
+                            <!--Weekly-->
+
+                            <div role="tabpanel" class="tab-pane" id="Weekly">
+                                <div class="pull-left"><strong class="fonts24" id="WeekID"></strong></div>
+                                <div class="clearfix">
+                                    <input id="ex2" data-slider-id='ex1Slider' type="text" data-slider-min="-12" data-slider-max="0" data-slider-value="0" data-slider-step="1" />
+                                </div>
+                            </div>
+
+                            
+
+
+                        </div>
+                        <nav class="navbar-default" role="navigation">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbarCollapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                            </div>
+                            <div class="pull-right">
+                                <ul class="nav navbar-nav navbar-right btn-group nav-tabs" role="tablist">
+                                    @*<li role="presentation"><a style="margin: 0px;" href="#Intraday" aria-controls="Intraday" onclick="getIntraday();" role="tab" data-toggle="tab" id="btnIntraday">Intraday</a></li>*@
+                                    <li role="presentation" ><a style="margin: 0px;" href="#Daily" aria-controls="Daily" role="tab" data-toggle="tab" id="btnDaily">Daily</a></li>
+                                    <li role="presentation" ><a style="margin: 0px;" href="#Weekly" aria-controls="Weekly" onclick="GetWeekINfo();" role="tab" data-toggle="tab" id="btnWeekly">Weekly</a></li>
+                                    <li role="presentation" class="active"><a style="margin: 0px;" href="#Month" aria-controls="Month" role="tab" onclick="GetMonthINfo();" data-toggle="tab" id="btnMonth">Month</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+
+                    </div>
+                </div>
+               <div id="EmployeeScorecard">
+
+                 </div>
+@*  
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 mart20" style="display: none;" id="tblTraining">
+                    @Html.Partial("_PartialEmpPerfGrid", Model)
+                </div>
+
+                <div id="EmpPerfGridCoaching">
+                    @Html.Partial("_PartialEmpPerfGrid", Model)
+                </div>*@
+
+
+
+            </section>
+        </section>
+        <!-- END CONTENT -->
+        <input name="hdnSrvtDtime" id="hdnSrvtDtime" type="hidden">
+        <input name="Type" id="typeID" type="hidden" />
+        <input type="hidden" id="Slider" value="@ViewBag.Slider"/>
+        <input type="hidden" id="T" value="@ViewBag.T"/>
+
+    </div>
+    <!-- END CONTAINER --> 
+    
+    
+    <script>
+
+        $(document).ready(function () {
+
+           
+
+            var d = new Date();
+
+            var month = d.getMonth() + 1;
+            var day = d.getDate();
+            var year = d.getFullYear();
+            var hr = d.getHours();
+            var mi = d.getMinutes();
+            var sec = d.getSeconds();
+            $('#hdnSrvtDtime').val(year + ',' + month + ',' + day + ',' + hr + ',' + mi + ',' + sec);
+
+            //if ($('#T').val() == "M") {
+            GetMonthINfo();
+            //    alert('df');
+            //}
+            //else {
+            // getDaily();
+            //    alert('daily');
+            //}
+
+          
+
+            $("#btnMonth").on("click", function () {
+                SonicDashboard_getDate('ex1', 'MONTHLY');
+                MyMetricsScreen();
+
+            });
+            $("#btnWeekly").on("click", function () {
+                SonicDashboard_getDate('ex2', 'WEEKLY');
+                MyMetricsScreen();
+
+            });
+            $("#btnDaily").on("click", function () {
+                SonicDashboard_getDate('ex3', 'DAILY');
+
+            });
+            $("#btnIntraday").on("click", function () {
+                SonicDashboard_getDate('ex4', 'INTRADAY');
+
+
+            });
+            ///Change event of Slider
+            $('#ex1').on('change', function () {
+                SonicDashboard_getDate('ex1', 'MONTHLY');
+                MyMetricsScreen();
+
+            });
+            $('#ex2').on('change', function () {
+                SonicDashboard_getDate('ex2', 'WEEKLY');
+                MyMetricsScreen();
+
+            });
+            $('#ex3').on('change', function () {
+                SonicDashboard_getDate('ex3', 'DAILY');
+                MyMetricsScreen();
+
+            });
+            $('#ex4').on('change', function () {
+                SonicDashboard_getDate('ex4', 'INTRADAY');
+                MyMetricsScreen();
+
+            });
+        });
+       setInterval(function () { SonicDashboard_getDate(); }, 250);
+        function SonicDashboard_getDate(slider, type) {
+
+            //if ($('#T').val() == "M") {
+            //    type = "MONTHLY";
+            //   // alert('df');
+            //}
+
+            var servrDat = $("#hdnSrvtDtime").val();
+            var sliderVal = $("#" + slider).val();;
+            if (servrDat != '') {
+                var mySplitResult = servrDat.split(",");
+                var a = new Date(mySplitResult[0], (mySplitResult[1] - 1).toString(), mySplitResult[2], mySplitResult[3], mySplitResult[4], mySplitResult[5]);
+                //var selected = $("input[type='radio'][name='radio-choice-h-230']:checked");
+                var mydate;
+                switch (type) {
+                    case 'MONTHLY':
+                        $('#typeID').val('M');
+                        // alert('Montly');
+                        mydate = a.addMonths(parseInt(sliderVal));
+                        $("#MonthID").html(mydate.toString('MMM yyyy'));
+                        //$("#hdnDateSelected").val(mydate.toString('MM/dd/yyyy'));
+                        break;
+                    case 'DAILY':
+                        $('#typeID').val('D');
+                        var dt = a.addDays(sliderVal);
+                        var dy = dt.toString('d');
+                        var mt = dt.toString('MMM');
+                        var yr = dt.toString('yyyy');
+                        //$("#hdnDateSelected").val(dt.toString('MM/dd/yyyy'));
+                        $('#DailyID').html((mt + ' ' + dy + ' ' + yr).toString('MMM/d/yyyy'));
+                        break;
+                    case 'WEEKLY':
+                        $('#typeID').val('W');
+                        var dt;
+                        if (sliderVal == 0) {
+                            dt = a;
+                        }
+                        else {
+                            dt = a.sunday();
+                            dt.addWeeks(sliderVal);
+                        }
+                        var dy = dt.toString('d');
+                        var mt = dt.toString('MMM');
+                        var yr = dt.toString('yyyy');
+                        //$("#hdnDateSelected").val(dt.toString('MM/dd/yyyy'));
+                        $("#WeekID").html(mt + ' ' + dy + ' ' + yr);
+                        break;
+
+                    case 'INTRADAY':
+                        $('#typeID').val('I');
+                        var dt = a.addHours(sliderVal);
+                        var dy = dt.toString('d');
+                        var mt = dt.toString('MMM');
+                        var yr = dt.toString('yyyy');
+                        var hr = dt.toString('h');
+                        var tt = dt.toString('tt');
+                        var hour = dt.toString('hh');
+                        if (tt == "PM" && hour < 12) {
+                            hour = parseInt(hour) + 12;
+                        }
+                        $("#hdnDateSelected").val(dt.toString('MM/dd/yyyy') + " " + hour + ":" + dt.toString('mm') + ":" + dt.toString('ss'));
+                        if (hr == 0) { hr = 12; }
+                        $('#IntradayID').html(hr + ' ' + tt + ' ' + mt + ' ' + dy + ' ' + yr);
+                        break;
+                }
+            }
+        }
+
+
+        function GetMonthINfo() {
+            SonicDashboard_getDate('ex1', 'MONTHLY');
+            MyMetricsScreen();
+        };
+
+        function GetWeekINfo() {
+            SonicDashboard_getDate('ex2', 'WEEKLY');
+        };
+
+        function getDaily() {
+            SonicDashboard_getDate('ex3', 'DAILY');
+           // MyMetricsScreen();
+
+
+        };
+        function getIntraday() {
+            SonicDashboard_getDate('ex4', 'INTRADAY');
+        };
+        
+       
+        function MyMetricsScreen() {
+            var slidervalue;
+            var T = $('#typeID').val();
+            if (T == 'D') {
+                slidervalue = $('#DailyID').html();
+
+            }
+            if (T == 'W') {
+                slidervalue = $('#WeekID').html();
+            }
+            if (T == 'M') {
+                slidervalue = $('#MonthID').html();
+            }
+            if (T == 'I') {
+                slidervalue = $('#IntradayID').html();
+            }
+         ajaxindicatorstart("Data is Loading....");
+            $.ajax({
+                type: 'POST',
+                //url: hostAddress + "/ApprovalTask/CreateMetadata_Test",
+
+                url: "../DashBoard/MyMetricsData",
+              
+                data:JSON.stringify({ 'sliderValue': slidervalue, 'type': T }),
+                contentType: 'application/json; charset=utf-8',
+                dataType: "json",
+                //async : false,
+                success: function (Data) {
+                    //$("#EmployeeScorecard").load("/DashBoard/EmployeePerformance");
+                    $('#EmployeeScorecard').html(Data.Data);
+
+               ajaxindicatorstop();
+                },
+                error: function (result) {
+                    alert('Cannot update selection values now!!');
+                }
+            });
+
+        }
+        @* $.ajax({
+                type: "POST",
+                url: '@Url.Action("IndividualEmpPerf", "Dashboard")',
+                cache: false,
+                dataType: "json",
+                data: { 'email': '', 'sliderValue': sliderValue, 'type': T },
+                success: function (data) {
+                //url: hostAddress + "/ApprovalTask/CreateMetadata_Test",
+                //url: "../DashBoard/IndividualEmpPerf",
+                //data: { 'email': 'df', 'sliderValue': sliderValue, 'type': T },
+              
+
+                    alert('success');
+                },
+                error: function (result) {
+                    alert('Cannot update selection values now!!');
+                }
+            });*@
+
+
+        @*  $("#CoachingHist").on("click", function () {
+            $.ajax({
+                //url: hostAddress + "/ApprovalTask/CreateMetadata_Test",
+                url: '@Url.Action("bindCoachingGridPerformance", "DashBoard")',
+                success: function (data) {
+                    $('#EmpPerfGridCoaching').html(data);
+
+                },
+                error: function (result) {
+                    alert('Cannot update selection values now!!');
+                }
+            });
+        });*@
+
+
+
+
+        @*      $("#TrningHist").on("click", function () {
+            $.ajax({
+                //url: hostAddress + "/ApprovalTask/CreateMetadata_Test",
+                url: '@Url.Action("bindTrainingGridPerformance", "DashBoard")',
+                     success: function (data) {
+                         $('#EmpPerfGridCoaching').html(data);
+                     },
+                     error: function (result) {
+                         alert('Cannot update selection values now!!');
+                     }
+                 });
+             });*@
+
+
+        @*  $("#teamComp").on("click", function () {
+                 $.ajax({
+                     //url: hostAddress + "/ApprovalTask/CreateMetadata_Test",
+                     url: '@Url.Action("bindTrainingGridPerformance", "DashBoard")',
+                success: function (data) {
+                    $('#PerfCardDefault').hide();
+                    $('#Organization').hide();
+                    $('#EmpPerfCards').html(data);
+                },
+                error: function (result) {
+                    alert('Cannot update selection values now!!');
+                }
+            });
+        });*@
+
+    </script>
+    <script>
+        jQuery(function () {
+            jQuery('#myTab a:last').tab('show')
+        })
+    </script>
+    <style>
+        ul.text-color li a {
+            color: #000 !important;
+        }
+
+            ul.text-color li a:hover {
+                color: #000 !important;
+            }
+
+        ul.text-color li.active {
+            color: #fff !important;
+            background: #014d88 !important;
+        }
+
+            ul.text-color li.active a {
+                color: #fff !important;
+            }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('[data-toggle="popover"]').popover({
+                placement: 'left',
+                html: true,
+                content: '<button style="width:200px; margin-bottom:10px; font-size:12px; font-weight:normal;" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Coach Now</button><br> <button style="width:200px; margin-bottom:10px; font-size:12px; font-weight:normal;" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Schedule Coaching Session</button> <br><button style="width:200px; font-size:12px; font-weight:normal;" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Assign Training</button> '
+            });
+            $(document).on("click", ".popover .close", function () {
+                $(this).parents(".popover").popover('hide');
+            });
+        });
+    </script>
+    
+    
+     
+    <script>
+        function ajaxindicatorstart(text) {
+            if (jQuery('body').find('#resultLoading').attr('id') != 'resultLoading') {
+                jQuery('body').append('<div id="resultLoading" style="color:#121331"><div><img src="@Url.Content("~/Content/assets/images/ajax-loader.gif")"><div>' + text + '</div></div><div class="bg"></div></div>');
+            }
+
+            jQuery('#resultLoading').css({
+                'width': '100%',
+                'height': '100%',
+                'position': 'fixed',
+                'z-index': '10000000',
+                'top': '0',
+                'left': '0',
+                'right': '0',
+                'bottom': '0',
+                'margin': 'auto'
+            });
+
+            jQuery('#resultLoading .bg').css({
+                // 'background': '#121331',
+                'opacity': '0.7',
+                'width': '100%',
+                'height': '100%',
+                'position': 'absolute',
+                'top': '0'
+            });
+
+            jQuery('#resultLoading>div:first').css({
+                'width': '250px',
+                'height': '75px',
+                'text-align': 'center',
+                'position': 'fixed',
+                'top': '0',
+                'left': '0',
+                'right': '0',
+                'bottom': '0',
+                'margin': 'auto',
+                'font-size': '16px',
+                'z-index': '10',
+                'color': '#ffffff'
+
+            });
+
+            jQuery('#resultLoading .bg').height('100%');
+            jQuery('#resultLoading').fadeIn(300);
+            jQuery('body').css('cursor', 'wait');
+        }
+
+        function ajaxindicatorstop() {
+            jQuery('#resultLoading .bg').height('100%');
+            jQuery('#resultLoading').fadeOut(300);
+            jQuery('body').css('cursor', 'default');
+        }
+
+
+
+        //jQuery(document).ajaxStart(function () {
+        //    //show ajax indicator
+        //    ajaxindicatorstart('loading data.. please wait..');
+        //}).ajaxStop(function () {
+        //    //hide ajax indicator
+        //    ajaxindicatorstop();
+        //});
+    </script>
+}

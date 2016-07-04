@@ -1,0 +1,663 @@
+﻿@model Ampbi.DataAccess.ViewModel.DashBoard
+@using System.Web.UI.WebControls;
+@{
+    ViewBag.Title = "KPI";
+    Layout = "~/Views/Shared/_LayoutMain1.cshtml";
+}
+@using (@Html.BeginForm("GetAllCompanyName", "Dashboard", new { @id = "test" }))
+{
+    <!-- START CONTAINER -->
+    <div class="page-container row-fluid">
+        <!-- START CONTENT -->
+        <section id="main-content" class="sidebar_shift sidebar_shift-reg">
+            <section class="wrapper sec-warp-box">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pan0 top-box-search">
+                    <div class="page-title">
+                        <div class="col-md-3 pull-right mart10">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="control-label col-sm-5" style="text-align: right;">Kpi Search</label>
+                                    <div class="col-sm-7">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control input-sm" placeholder="Kip Search" id="compSearch" onclick="loadKpiName();"/>
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-info input-sm" id="btnkpicompsearch" onclick="SearchCompanyProfile(); return false;" ><i class="glyphicon glyphicon-search" ></i></button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 mart10">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <section class="box mar0">
+                            <div class="row">
+                                <section style="margin-top: 10px; display: inline-block; width: 100%;" class="wrapper">
+                                    <div class="clearfix"></div>
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-6 col-sm-offset-3 col-md-offset-0 col-sm-6">
+                                        <section class="box">
+                                            <header class="panel_header box-heading">
+                                                <h2 class="title pull-left">KPI / Metrics</h2>
+                                            </header>
+                                               <form action="#" class="form-horizontal" id="Forgot">
+                                                <div class="content-body">
+                                                    <div class="row">
+                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                            <div class="form-group">
+                                                                <label class="control-label col-md-4">Company Name<span class="red">*</span></label>
+                                                                <div class="col-md-8">
+                                                           @*         <input type="text" id="compname" required="required" name="companyName" placeholder="Company Name"   class="form-control input-sm" />
+                                                         *@      @Html.DropDownListFor(k => k.CompanyModel.CompanyName, new SelectList(Model.lstAllCompanyNames, "", "CompanyName"), "Select", new { @id = "compname", @name = "companyName", @class = "form-control input-sm", @required = "required" })
+                                                         
+                                                                </div>
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                            <div class="form-group">
+                                                                <label class="control-label col-md-4" >Kpi Name <span class="red" >*</span></label>
+                                                                <div class="col-md-8">
+                                                                    <input type="text" id="kpiname" required="required"  name="kpinam" placeholder="Kpi Name" class="form-control input-sm">
+                                                            <div id="divKpiStatus"></div>
+                                                              
+                                                                      </div>
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                            <div class="form-group">
+                                                                <label class="control-label col-md-4">UserType<span class="red">*</span></label>
+                                                                <div class="col-md-8">
+                                                                    <select class="form-control input-sm" name="User-Type" id="OptSelect" required="required">
+                                                                        <option>Select</option>
+                                                                        <option value="1">Admin</option>
+                                                                        <option value="2">Principle</option>
+                                                                        <option value="3">User</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                            <div class="form-group">
+                                                                <label class="control-label col-md-4">Short Name<span class="red">*</span></label>
+                                                                <div class="col-md-8">
+                                                                    <input type="text" id="shortname" required="required" name="sname" placeholder="Short Name" class="form-control input-sm">
+                                                                </div>
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                            <div class="form-group">
+                                                                <label class="control-label col-md-4">Module Name<span class="red">*</span></label>
+                                                                <div class="col-md-8">
+                                                                @*    <input type="text" id="modulename" required="required" name="mname" placeholder="Security Answer 1" class="form-control input-sm"> *@ 
+                                                              @Html.DropDownListFor(m => m.modulesModel.ModuleName, new SelectList(Model.lstAllModuleName, "", "ModuleName"), "Select", new { @id = "modulename", @required = "required", @name = "mname", @placeholder = "Module Name", @class = "form-control input-sm" })
+                                                                </div>
+                                                            </div>
+                                                             <div class="clearfix"></div>
+                                                            <div class="form-group">
+                                                                <label class="control-label col-md-4">Program<span class="red">*</span></label>
+                                                                <div class="col-md-8">
+                                                                    <input type="text" id="program" required="required" name="program" placeholder="Programe Name" class="form-control input-sm">
+                                                                </div>
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                            <div class="form-group">
+                                                                <label class="control-label col-md-4">Actual Goal<span class="red">*</span></label>
+                                                                <div class="col-md-3">
+                                                                    <input type="text" id="goal" required ="required"  placeholder="Goal" class="form-control input-sm">
+                                                                    <div id="actualmessage"></div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="clearfix"></div>
+                                                             <div class="form-group">
+                                                                <label class="control-label col-md-4" >Meet Goal-Value<span class="red">*</span></label>
+                                                                
+                                                                 <div class="col-md-3">
+                                                                    <input type="text" id="meetgoal" onblur="checkgoal();"  required="required"  name="meetgoal" placeholder="Meet Goal" class="form-control input-sm">
+                                                                <div id="meetmessage" ></div>     
+                                                                </div>
+                                                                 <label class="control-label col-md-2">Color<span class="red">*</span></label>
+                                                                <div class="col-md-3">
+                                                                    @Html.DropDownListFor(c => c.LookupValuesModel.ActualValue, new SelectList(Model.lstAllColor, "", "ActualValue"), "Select", new { @class = "form-control input-sm", @name = "optionsA", @id = "optionsA", @required = "required" })
+                                                                      </div>
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                             <div class="form-group">
+                                                                <label class="control-label col-md-4">Above Goal-Value<span class="red">*</span></label>
+                                                                <div class="col-md-3">
+                                                                    <input type="text" id="abovegoal"  required="required" onblur="checkgoal();"    name="abovegoal" placeholder="Above Goal" class="form-control input-sm key-numeric">
+                                                                <div id="abovemessage"></div>     
+                                                                  
+                                                                     </div>
+                                                                  <label class="control-label col-md-2">Color<span class="red">*</span></label>
+                                                                <div class="col-md-3">
+                                                                    @Html.DropDownListFor(c => c.LookupValuesModel.ActualValue, new SelectList(Model.lstAllColor, "", "ActualValue"), "Select", new { @class = "form-control input-sm", @name = "optionsB", @id = "optionsB", @required = "required" })
+                                                                     </div>
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                             <div class="form-group">
+                                                                <label class="control-label col-md-4">Below Goal-Value<span class="red">*</span></label>
+                                                                <div class="col-md-3">
+                                                                    <input type="text" id="belowgoal" onblur="checkgoal();"   required="required"  name="belowgoal" placeholder="Meet Goal" class="form-control input-sm key-numeric">    
+                                                                <div id="belowmessage"></div>     
+                                                                    
+                                                                     </div>
+                                                                  <label class="control-label col-md-2">Color<span class="red">*</span></label>
+                                                                <div class="col-md-3">
+                                                                    @Html.DropDownListFor(c => c.LookupValuesModel.ActualValue, new SelectList(Model.lstAllColor, "", "ActualValue"), "Select", new { @class = "form-control input-sm", @name = "optionsC", @id = "optionsC", @required = "required" })
+                                                                
+                                                                </div>
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                            <div class="form-group">
+                                                                <label class="control-label col-md-4">Display Order<span class="red">*</span></label>
+                                                                <div class="col-md-3">
+                                                                    <input type="text" id="displayorder" required="required" name="Display-Order" placeholder="Display Order" class="form-control input-sm">
+                                                                </div>
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                            <div class="form-group">
+                                                                <label class="control-label col-md-4">Active<span class="red">*</span></label>
+                                                                <div class="col-md-8">
+                                                                    <label class="col-md-4">
+                                                                        <input type="radio" id="act" name="actve">&nbsp;&nbsp;Active</label>
+                                                                    <label class="col-md-4">
+                                                                        <input type="radio" id="inact" name="actve" checked>&nbsp;&nbsp;Inactive</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                            <div class="form-group">
+                                                                <label class="control-label col-md-4">Start Date<span class="red">*</span></label>
+                                                                <div class="col-md-3">
+                                                                    <input type="text" id="startdate" required="required"  placeholder="start Date" class="form-control input-sm">
+                                                                </div>
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                            <div class="form-group">
+                                                                <label class="control-label col-md-4">End Date<span class="red">*</span></label>
+                                                                <div class="col-md-3">
+                                                                    <input type="text" id="enddate" required="required"   placeholder="End Date" class="form-control input-sm">
+                                                                          </div>
+                                                               
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 col-sm-12 page-footer-box clearfix">
+                                                    <div class="pull-right col-md-offset-4">
+                                                        <button type="submit" id="btnsubmit" class="btn btn-success input-sm ax"   >Submit</button>
+                                                        <button type="reset" class="btn btn-success input-sm">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </section>
+                                    </div>
+                                    <div class="col-md-3"></div>
+                                </section>
+                            </div>
+                        </section>
+                    </div>
+                </div> 
+            </section>
+        </section>
+        <!-- END CONTENT -->
+
+    </div>
+      <!-- CORE JS FRAMEWORK - START -->
+    <script src="~/Content/assets/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+    <script src="~/Content/assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="~/Content/assets/js/bootstrap-datepicker.js"></script>
+    <script src="~/Content/assets/js/jquery.dataTables.min.js"></script>
+    <script src="~/Content/assets/js/dataTables.bootstrap.min.js"></script>
+    <script type='text/javascript' src="~/Content/assets/js/bootstrap-slider.js"></script>
+   <!-- CORE JS FRAMEWORK - END -->
+    <!-- CORE TEMPLATE JS - START -->
+    <!-- CORE TEMPLATE JS - START -->
+    <script src="~/Content/assets/js/scripts.js" type="text/javascript"></script>
+    <!-- END CORE TEMPLATE JS - END -->
+    <!--<script src="assets/js/scripts.js" type="text/javascript"></script> -->
+    <!-- END CORE TEMPLATE JS - END -->
+
+    <script>
+        function SubmitKPI() {
+            var active;
+            if ($('#act').is(':checked')) { active = 1; } else { active = 0; };
+            var model = {
+                "CompanyName": $('#compname').val(),
+                "KPIName": $('#kpiname').val(),
+                "ModuleName": $('#modulename').val(),
+                "UserTypes": $('#OptSelect').val(),
+                "ShortName": $('#shortname').val(),
+                "Goal": $('#goal').val(),
+                "DisplayOrder": $('#displayorder').val(),
+                "Active": active
+            }
+
+            $.ajax({
+                type: "POST",
+                //url: hostAddress + "/ApprovalTask/CreateMetadata_Test",
+                url: "@Url.Action("KPIInsert", "Dashboard")",
+                data: '{ "model": ' + JSON.stringify(model) + '}',
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'text json',
+                async: false,
+                cache: false,
+                success: function (data) {
+                    if (data) { alert('Data inserted successfully') }
+                    else { alert('Cannot update selection values now!!') };
+
+
+                },
+                error: function () {
+                    alert('Due to connectivity issue data is not inserted please try again or try after sometime!!');
+                }
+            });
+
+        }
+
+
+    </script>
+    @*kpi pranjal start*@
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#startdate").datepicker({
+                showOn: "both",
+                buttonImage: "/Content/assets/images/calendar-icon.png",
+                buttonImageOnly: true,
+                buttonText: "Select date",
+                // showAnim: 'slideDown',
+                dateFormat: 'MM-dd-yy',
+                onSelect: function (selected) {
+                    $("#enddate").datepicker("option", "minDate", selected)
+                }
+
+            });
+            $("#enddate").datepicker({
+                showOn: "both",
+                buttonImage: "/Content/assets/images/calendar-icon.png",
+                buttonImageOnly: true,
+                buttonText: "Select date",
+                //  showAnim: 'slideDown',
+                dateFormat: 'MM-dd-yy',
+                onSelect: function (selected) {
+                    $("#startdate").datepicker("option", "maxDate", selected)
+                }
+
+            });
+
+
+        });
+
+    </script>
+   
+    <script type="text/javascript">
+
+        function loadKpiName() {
+
+
+
+            $.ajax({
+
+                url: '@Url.Action("GetKpiSearch", "Dashboard")',
+                cache: false,
+                success: function (mg) {
+                    $('#compSearch').autocomplete({
+                        source: mg,
+                        autoFocus: true,
+                        minLength: 0,
+                        scroll: true,
+                    }).click(function () {
+                        $(this).autocomplete("search", "");
+                    });
+
+                },
+                error: function () {
+                    alert('Error while adding the value into the database. Please contact administrator.');
+                }
+            });
+
+        };
+
+        </script>
+   
+    <script type="text/javascript">
+        var firstSelected = null;
+        var secondSelected = null;
+        var thiredSelected = null;
+
+        $('#optionsA').change(function () {
+            //remove currently selected option from 2nd/3rd
+            var selectedValue = $('#optionsA').find(':selected').text();
+
+            if (selectedValue != "") {
+
+                $('#optionsB option:[text="' + selectedValue + '"]').remove();
+                $('#optionsC option:[text="' + selectedValue + '"]').remove();
+
+            }
+            else {
+                selectedValue = null;
+            }
+            // add previous item back in to 2nd/3rd drop down
+            if (firstSelected != null) {
+                $('#optionsA').append($('<option>', { text: firstSelected.val() }));
+                $('#optionsC').append($('<option>', { text: firstSelected.val() }));
+            }
+
+            //save the currently selected value
+            firstSelected = selectedValue;
+
+        });
+        $('#optionsB').change(function () {
+            //remove currently selected option from 1nd/3rd
+            var selectedValue = $('#optionsB').find(':selected').text();
+
+            if (selectedValue != "") {
+
+                $('#optionsA option:[text="' + selectedValue + '"]').remove();
+                $('#optionsC option:[text="' + selectedValue + '"]').remove();
+
+            }
+            else {
+                selectedValue = null;
+            }
+
+
+
+            //add previous item back in to 1st/3rd drop down
+            if (secondSelected != null) {
+                $('#optionsA').append($('<option>', { text: secondSelected }));
+                $('#optionsC').append($('<option>', { text: firstSelected }));
+            }
+
+            //save the currently selected value
+            secondSelected = selectedValue;
+
+
+        });
+
+
+
+    </script>
+  
+   
+    <script type="text/javascript">
+
+        $("#btnsubmit").click(function (event) {
+
+            var isValid = checkgoal();
+            if (isValid == true) {
+
+
+                var a = $('#kpiname').val();
+                var b = $('#shortname').val();
+                var c = $('#modulename').val();
+                var d = $('#program').val();
+                var e = $('#modulename').val();
+                var f = $('#OptSelect').val();
+                var g = $('#goal').val();
+                var h = $('#optionsC option:selected').text();
+                var i = $('#optionsA option:selected').text();
+                var j = $('#optionsB option:selected').text();
+                var k = $('#displayorder').val();
+                var l = $('#meetgoal').val();
+                var m = $('#abovegoal').val();
+                var n = $('#belowgoal').val();
+                var o = $('#startdate').val();
+                var p = $('#enddate').val();
+
+
+
+
+                if (a != "" && b != "" && c != "" && d != "" && e != "" && f != "" && g != "" && h != "" && i != "" && j != "" && k != "" && l != "" && m != "" && n != "" && o != "" && p != "") {
+                    var active;
+                    if ($('#act').is(':checked')) { active = 1; } else { active = 0; };
+                    var Model = {
+
+                        //  "CompanyName": $('#compname').val(),
+                        "KPIName": $('#kpiname').val(),
+                        "ShortName": $('#shortname').val(),
+                        "ModuleName": $('#modulename').val(),
+                        "programname": $('#program').val(),
+                        "ModuleName": $('#modulename').val(),
+                        "UserTypes": $('#OptSelect').val(),
+                        "Goal": $('#goal').val(),
+                        "CoachingColorbelowGoal": $('#optionsC option:selected').text(),
+                        "CoachingColormeetGoal": $('#optionsA option:selected').text(),
+                        "CoachingColorAboveGoal": $('#optionsB option:selected').text(),
+                        "DisplayOrder": $('#displayorder').val(),
+                        "valuemeetgoal": $('#meetgoal').val(),
+                        "valueabovegoal": $('#abovegoal').val(),
+                        "valuebelowgoal": $('#belowgoal').val(),
+                        "Active": active,
+                        "StartDate": $('#startdate').val(),
+                        "EndDate": $('#enddate').val()
+
+                    }
+
+
+
+                    $.ajax({
+                        type: "POST",
+                        url: "@Url.Action("KpiInsertUpdate", "Dashboard")",
+                            data: '{ "kpiModel": ' + JSON.stringify(Model) + ' }',
+                            contentType: 'application/json; charset=utf-8',
+                            dataType: 'json',
+                            async: false,
+                            success: function (data) {
+                                if (data == true) {
+                                    alert('Data inserted successfully')
+                                    @*//@Html.Action("GetAllCompanyName", "Dashboard")*@
+                                }
+
+
+                                else {
+                                    alert('Data insertion failed now!!')
+                                }
+
+
+                            },
+                            error: function () {
+                                alert('Due to connectivity issue data is not inserted please try again or try after sometime!!');
+                            }
+                        });
+
+                    }
+                }
+                else {
+
+
+                    event.preventDefault();
+                    return true;
+                }
+
+
+            });
+
+            //  }
+
+
+ </script>
+   
+    
+    <script type="text/javascript">
+
+
+        function checkgoal() {
+
+            var isvalid = true;
+            $('#meetmessage').hide();
+            $('#belowmessage').hide();
+            $('#abovemessage').hide();
+            $('#actualmessage').hide();
+            var valuemeet = $('#meetgoal').val();
+            var valabovegoal = $('#abovegoal').val();
+            var valbelowgoal = $('#belowgoal').val();
+            var valactualgoal = $('#goal').val();
+            if (isNaN(valuemeet)) {
+                $('#meetmessage').show();
+                $('#meetmessage').text("Please enter numeric").addClass('red');
+                isvalid = false;
+            }
+            else if (isNaN(valabovegoal)) {
+
+                $('#abovemessage').show();
+                $('#abovemessage').text("Please enter numeric").addClass('red');
+                isvalid = false;
+            }
+
+            else if (isNaN(valbelowgoal)) {
+
+                $('#belowmessage').show();
+                $('#belowmessage').text("Please enter numeric").addClass('red');
+                isvalid = false;
+            }
+            else if (isNaN(valactualgoal)) {
+                $('#actualmessage').show();
+                $('#actualmessage').text("Please enter numeric").addClass('red');
+                isvalid = false;
+
+            }
+            else {
+                isvalid = true;
+                return isvalid;
+            }
+        }
+
+    </script>
+    
+   
+
+    <script type="text/javascript">
+
+        function loadCompanyName() {
+            $.ajax({
+
+                url: '@Url.Action("GetCompany", "Dashboard")',
+                         cache: false,
+                         success: function (mg) {
+                             $('#compSearch').autocomplete({
+                                 source: mg,
+                                 autoFocus: true,
+                                 minLength: 0,
+                                 scroll: true,
+                             }).click(function () {
+                                 $(this).autocomplete("search", "");
+                             });
+
+                         },
+                         error: function () {
+                             alert('Error while adding the value into the database. Please contact administrator.');
+                         }
+                     });
+
+                 };
+
+                 $('#kpiname').blur(function () {
+
+                     String: serchkpi = $('#kpiname').val();
+                     var status = $("#divKpiStatus");
+                     if (serchkpi != "") {
+                         $.ajax({
+                             // type: "",
+                             url: '@Url.Action("CheckExistKpi", "Dashboard")',
+                        data: { 'kpiName': serchkpi },
+                        contentType: 'application/json; charset=utf-8',
+                        dataType: "json",
+                        async: false,
+                        success: function (data) {
+                            if (data == true) {
+                                status.html("You can use this kpi name.").addClass("green");
+
+                                return true;
+                            }
+                            if (data == false) {
+
+                                status.html("This Kpi Is All ready Exist.").addClass("red");
+
+                                return false;
+                            }
+
+                        },
+                        error: function () {
+                            alert('Error while adding the value into the database. Please contact administrator.');
+                        }
+
+
+                    });
+
+                     }
+                     else {
+                         status.html("Please enter kpi name.").addClass("red");
+
+                     }
+            });
+
+                 function SearchCompanyProfile() {
+                     var SearchValue = $('#compSearch').val();
+                     var active;
+                     var color;
+                     $.ajax({
+
+
+                         //url: hostAddress + "/ApprovalTask/CreateMetadata_Test",
+                         url: '@Url.Action("GetKpiDetailsFromSearch", "Dashboard")',
+                         data: { 'kpiName': SearchValue },
+                         contentType: 'application/json; charset=utf-8',
+                         dataType: "json",
+                         async: false,
+                         success: function (data) {
+                             if (data == null) {
+                                 $('#optionsA').val("");
+                                 $('#optionsB').val("");
+                                 $('#optionsC').val("");
+
+                                 alert("Sorry No Data");
+                                 $("input[type=text]").val("");
+                                 $('#kpiname').attr('disabled', false);
+                                 $('#modulename').val("");
+                                 $('#compname').val("");
+                                 $('#compname').attr('disabled', false);
+                                 if (data.Active == true)
+                                     $('#inact').attr('checked', true);
+                             }
+                             else {
+                                 $('#compname').val(data.companyName).attr('disabled', true);
+                                 $('#kpiname').val(data.KPIName).attr('disabled', true);
+                                 $('#shortname').val(data.ShortName);
+                                 $('#modulename').val(data.ModuleName);
+                                 $('#program').val(data.programname);
+                                 $('#goal').val(data.Goal);
+                                 $('#displayorder').val(data.DisplayOrder);
+                                 if (data.Active == true)
+                                     $('#act').attr('checked', true);
+                                 $('#optionsA').val(data.CoachingColormeetGoal);
+                                 $("#optionsB").val(data.CoachingColorAboveGoal);
+                                 $("#optionsC").val(data.CoachingColorbelowGoal);
+                                 $('#startdate').val(data.StartDate);
+                                 $('#enddate').val(data.EndDate);
+                                 $('#meetgoal').val(data.valuemeetgoal);
+                                 $('#abovegoal').val(data.valueabovegoal);
+                                 $('#belowgoal').val(data.valuebelowgoal);
+
+                             }
+                         },
+                         error: function () {
+                             alert('error');
+                         }
+                     });
+                     // $('compname').
+                     //alert(data);
+
+                 };
+
+    </script>
+   
+    
+     @*end*@
+    
+    
+    <!-- END CONTAINER --> 
+}
+

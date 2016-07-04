@@ -1,0 +1,2379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AmpbidevModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="AmpbidevEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="AgentSummaries" EntityType="AmpbidevModel.AgentSummary" />
+    <EntitySet Name="bak_qatracker" EntityType="AmpbidevModel.bak_qatracker" />
+    <EntitySet Name="bakqatrackers" EntityType="AmpbidevModel.bakqatracker" />
+    <EntitySet Name="bkp_tblmetric" EntityType="AmpbidevModel.bkp_tblmetric" />
+    <EntitySet Name="DIM_EMPLOYEE" EntityType="AmpbidevModel.DIM_EMPLOYEE" />
+    <EntitySet Name="DlyIdleReports" EntityType="AmpbidevModel.DlyIdleReport" />
+    <EntitySet Name="DlyIdleReportTotals" EntityType="AmpbidevModel.DlyIdleReportTotal" />
+    <EntitySet Name="DynamicParameterLists" EntityType="AmpbidevModel.DynamicParameterList" />
+    <EntitySet Name="QA_Data_SummaryTable" EntityType="AmpbidevModel.QA_Data_SummaryTable" />
+    <EntitySet Name="QATracker1" EntityType="AmpbidevModel.QATracker1" />
+    <EntitySet Name="ref_charts_axislabels" EntityType="AmpbidevModel.ref_charts_axislabels" />
+    <EntitySet Name="ref_LookupValues" EntityType="AmpbidevModel.ref_LookupValues" />
+    <EntitySet Name="ref_LookupValues_Hist" EntityType="AmpbidevModel.ref_LookupValues_Hist" />
+    <EntitySet Name="ref_Modules" EntityType="AmpbidevModel.ref_Modules" />
+    <EntitySet Name="ref_Modules_hist" EntityType="AmpbidevModel.ref_Modules_hist" />
+    <EntitySet Name="ref_programlist" EntityType="AmpbidevModel.ref_programlist" />
+    <EntitySet Name="ref_SecretQuestion" EntityType="AmpbidevModel.ref_SecretQuestion" />
+    <EntitySet Name="ref_SecretQuestion_hist" EntityType="AmpbidevModel.ref_SecretQuestion_hist" />
+    <EntitySet Name="ref_UserType" EntityType="AmpbidevModel.ref_UserType" />
+    <EntitySet Name="ref_UserType_hist" EntityType="AmpbidevModel.ref_UserType_hist" />
+    <EntitySet Name="SiteSummaries" EntityType="AmpbidevModel.SiteSummary" />
+    <EntitySet Name="statelists" EntityType="AmpbidevModel.statelist" />
+    <EntitySet Name="statelist_hist" EntityType="AmpbidevModel.statelist_hist" />
+    <EntitySet Name="stgtbl_fact_chimes_behavior" EntityType="AmpbidevModel.stgtbl_fact_chimes_behavior" />
+    <EntitySet Name="stgtbl_fact_chimes_behaviordetail" EntityType="AmpbidevModel.stgtbl_fact_chimes_behaviordetail" />
+    <EntitySet Name="stgtbl_fact_chimes_callaudit" EntityType="AmpbidevModel.stgtbl_fact_chimes_callaudit" />
+    <EntitySet Name="sysdiagrams" EntityType="AmpbidevModel.sysdiagram" />
+    <EntitySet Name="tbl_AppLog" EntityType="AmpbidevModel.tbl_AppLog" />
+    <EntitySet Name="tbl_chimes_qareqdbyweek" EntityType="AmpbidevModel.tbl_chimes_qareqdbyweek" />
+    <EntitySet Name="tbl_chimesworkweeks" EntityType="AmpbidevModel.tbl_chimesworkweeks" />
+    <EntitySet Name="tbl_coaching" EntityType="AmpbidevModel.tbl_coaching" />
+    <EntitySet Name="tbl_Company" EntityType="AmpbidevModel.tbl_Company" />
+    <EntitySet Name="tbl_Company_hist" EntityType="AmpbidevModel.tbl_Company_hist" />
+    <EntitySet Name="tbl_CompanyChartInfo" EntityType="AmpbidevModel.tbl_CompanyChartInfo" />
+    <EntitySet Name="tbl_companymodule" EntityType="AmpbidevModel.tbl_companymodule" />
+    <EntitySet Name="tbl_companymodule_hist" EntityType="AmpbidevModel.tbl_companymodule_hist" />
+    <EntitySet Name="tbl_empcomparision" EntityType="AmpbidevModel.tbl_empcomparision" />
+    <EntitySet Name="tbl_empperfdata" EntityType="AmpbidevModel.tbl_empperfdata" />
+    <EntitySet Name="tbl_fact_chimes_behavior" EntityType="AmpbidevModel.tbl_fact_chimes_behavior" />
+    <EntitySet Name="tbl_fact_chimes_behaviordetail" EntityType="AmpbidevModel.tbl_fact_chimes_behaviordetail" />
+    <EntitySet Name="tbl_fact_chimes_callaudit" EntityType="AmpbidevModel.tbl_fact_chimes_callaudit" />
+    <EntitySet Name="tbl_fact_empperf_All" EntityType="AmpbidevModel.tbl_fact_empperf_All" />
+    <EntitySet Name="tbl_fact_empperf_Daily" EntityType="AmpbidevModel.tbl_fact_empperf_Daily" />
+    <EntitySet Name="tbl_fact_empperf_Intraday" EntityType="AmpbidevModel.tbl_fact_empperf_Intraday" />
+    <EntitySet Name="tbl_fact_empperf_Monthly" EntityType="AmpbidevModel.tbl_fact_empperf_Monthly" />
+    <EntitySet Name="tbl_fact_empperf_weekly" EntityType="AmpbidevModel.tbl_fact_empperf_weekly" />
+    <EntitySet Name="tbl_FactCalls_All" EntityType="AmpbidevModel.tbl_FactCalls_All" />
+    <EntitySet Name="tbl_FactCalls_Daily" EntityType="AmpbidevModel.tbl_FactCalls_Daily" />
+    <EntitySet Name="tbl_FactCalls_Intraday" EntityType="AmpbidevModel.tbl_FactCalls_Intraday" />
+    <EntitySet Name="tbl_FactCalls_Monthly" EntityType="AmpbidevModel.tbl_FactCalls_Monthly" />
+    <EntitySet Name="tbl_FactCalls_Weekly" EntityType="AmpbidevModel.tbl_FactCalls_Weekly" />
+    <EntitySet Name="tbl_KPIMetric" EntityType="AmpbidevModel.tbl_KPIMetric" />
+    <EntitySet Name="tbl_KPIMetricGoal" EntityType="AmpbidevModel.tbl_KPIMetricGoal" />
+    <EntitySet Name="tbl_LicenceInfo" EntityType="AmpbidevModel.tbl_LicenceInfo" />
+    <EntitySet Name="tbl_LicenceInfo_hist" EntityType="AmpbidevModel.tbl_LicenceInfo_hist" />
+    <EntitySet Name="tbl_licencemoduleInfo" EntityType="AmpbidevModel.tbl_licencemoduleInfo" />
+    <EntitySet Name="tbl_licencemoduleInfo_hist" EntityType="AmpbidevModel.tbl_licencemoduleInfo_hist" />
+    <EntitySet Name="tbl_moodicontransaction" EntityType="AmpbidevModel.tbl_moodicontransaction" />
+    <EntitySet Name="tbl_noofchartsbydbcompany" EntityType="AmpbidevModel.tbl_noofchartsbydbcompany" />
+    <EntitySet Name="tbl_qaperfdata_Daily" EntityType="AmpbidevModel.tbl_qaperfdata_Daily" />
+    <EntitySet Name="tbl_qaperfdata_Intraday" EntityType="AmpbidevModel.tbl_qaperfdata_Intraday" />
+    <EntitySet Name="tbl_qaperfdata_Monthly" EntityType="AmpbidevModel.tbl_qaperfdata_Monthly" />
+    <EntitySet Name="tbl_qaperfdata_Weekly" EntityType="AmpbidevModel.tbl_qaperfdata_Weekly" />
+    <EntitySet Name="tbl_selchartdispname" EntityType="AmpbidevModel.tbl_selchartdispname" />
+    <EntitySet Name="tbl_User" EntityType="AmpbidevModel.tbl_User" />
+    <EntitySet Name="tbl_User_hist" EntityType="AmpbidevModel.tbl_User_hist" />
+    <EntitySet Name="tbl_UserRegistration" EntityType="AmpbidevModel.tbl_UserRegistration" />
+    <EntitySet Name="tbl_UserRegistration_hist" EntityType="AmpbidevModel.tbl_UserRegistration_hist" />
+    <EntitySet Name="tbl_UserRegistrationFollowup" EntityType="AmpbidevModel.tbl_UserRegistrationFollowup" />
+    <EntitySet Name="tbl_UserRegistrationFollowup_hist" EntityType="AmpbidevModel.tbl_UserRegistrationFollowup_hist" />
+    <FunctionImport Name="bkp_sp_QATrackerGoalVsActual">
+      <Parameter Name="CompanyGUID" Mode="In" Type="String" />
+      <Parameter Name="site" Mode="In" Type="String" />
+      <Parameter Name="Program" Mode="In" Type="String" />
+      <Parameter Name="Agent" Mode="In" Type="String" />
+      <Parameter Name="year" Mode="In" Type="String" />
+      <Parameter Name="Month" Mode="In" Type="String" />
+      <Parameter Name="week" Mode="In" Type="String" />
+      <Parameter Name="AgentName" Mode="InOut" Type="String" />
+      <Parameter Name="Goal" Mode="InOut" Type="Int32" />
+      <Parameter Name="Actual" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="bksp_QAScoresChart4" ReturnType="Collection(AmpbidevModel.bksp_QAScoresChart4_Result)">
+      <Parameter Name="chartno" Mode="In" Type="Int32" />
+      <Parameter Name="CompanyGUID" Mode="In" Type="String" />
+      <Parameter Name="site" Mode="In" Type="String" />
+      <Parameter Name="Program" Mode="In" Type="String" />
+      <Parameter Name="Agent" Mode="In" Type="String" />
+      <Parameter Name="year" Mode="In" Type="String" />
+      <Parameter Name="Month" Mode="In" Type="String" />
+      <Parameter Name="week" Mode="In" Type="String" />
+      <Parameter Name="agentname" Mode="In" Type="String" />
+      <Parameter Name="outmonth" Mode="InOut" Type="String" />
+      <Parameter Name="defectpercent" Mode="InOut" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="getRegistrationFollowUpGridRecord" ReturnType="Collection(AmpbidevModel.getRegistrationFollowUpGridRecord_Result)" />
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_callsdashboard_dlydata" ReturnType="Collection(AmpbidevModel.sp_callsdashboard_dlydata_Result)">
+      <Parameter Name="CompanyGUID" Mode="In" Type="String" />
+      <Parameter Name="chartno" Mode="In" Type="Int32" />
+      <Parameter Name="Dealername" Mode="In" Type="String" />
+      <Parameter Name="MarketName" Mode="In" Type="String" />
+      <Parameter Name="Displevel1" Mode="In" Type="String" />
+      <Parameter Name="Displevel2" Mode="In" Type="String" />
+      <Parameter Name="Displevel3" Mode="In" Type="String" />
+      <Parameter Name="ReportDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Disposition" Mode="InOut" Type="String" />
+      <Parameter Name="DispCount" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_callsdashboard_Intraday" ReturnType="Collection(AmpbidevModel.sp_callsdashboard_Intraday_Result)">
+      <Parameter Name="CompanyGUID" Mode="In" Type="String" />
+      <Parameter Name="chartno" Mode="In" Type="Int32" />
+      <Parameter Name="Dealername" Mode="In" Type="String" />
+      <Parameter Name="MarketName" Mode="In" Type="String" />
+      <Parameter Name="Displevel1" Mode="In" Type="String" />
+      <Parameter Name="Displevel2" Mode="In" Type="String" />
+      <Parameter Name="Displevel3" Mode="In" Type="String" />
+      <Parameter Name="ReportHour" Mode="In" Type="String" />
+      <Parameter Name="ReportDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Disposition" Mode="InOut" Type="String" />
+      <Parameter Name="DispCount" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_callsdashboard_listofvalues" ReturnType="Collection(AmpbidevModel.sp_callsdashboard_listofvalues_Result)">
+      <Parameter Name="CompanyGUID" Mode="In" Type="String" />
+      <Parameter Name="Type" Mode="In" Type="String" />
+      <Parameter Name="Dealername" Mode="In" Type="String" />
+      <Parameter Name="dispid" Mode="InOut" Type="Int32" />
+      <Parameter Name="Displayvalue" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_callsdashboard_mlydata" ReturnType="Collection(AmpbidevModel.sp_callsdashboard_mlydata_Result)">
+      <Parameter Name="CompanyGUID" Mode="In" Type="String" />
+      <Parameter Name="chartno" Mode="In" Type="Int32" />
+      <Parameter Name="Dealername" Mode="In" Type="String" />
+      <Parameter Name="MarketName" Mode="In" Type="String" />
+      <Parameter Name="Displevel1" Mode="In" Type="String" />
+      <Parameter Name="Displevel2" Mode="In" Type="String" />
+      <Parameter Name="Displevel3" Mode="In" Type="String" />
+      <Parameter Name="ReportMonth" Mode="In" Type="Int32" />
+      <Parameter Name="ReportYear" Mode="In" Type="Int32" />
+      <Parameter Name="Disposition" Mode="InOut" Type="String" />
+      <Parameter Name="DispCount" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_callsdashboard_wkydata" ReturnType="Collection(AmpbidevModel.sp_callsdashboard_wkydata_Result)">
+      <Parameter Name="CompanyGUID" Mode="In" Type="String" />
+      <Parameter Name="chartno" Mode="In" Type="Int32" />
+      <Parameter Name="Dealername" Mode="In" Type="String" />
+      <Parameter Name="MarketName" Mode="In" Type="String" />
+      <Parameter Name="Displevel1" Mode="In" Type="String" />
+      <Parameter Name="Displevel2" Mode="In" Type="String" />
+      <Parameter Name="Displevel3" Mode="In" Type="String" />
+      <Parameter Name="WkStartdate" Mode="In" Type="DateTime" />
+      <Parameter Name="Disposition" Mode="InOut" Type="String" />
+      <Parameter Name="DispCount" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_callsdb_callcount" ReturnType="Collection(AmpbidevModel.sp_callsdb_callcount_Result)">
+      <Parameter Name="Selection" Mode="In" Type="String" />
+      <Parameter Name="CompanyGUID" Mode="In" Type="String" />
+      <Parameter Name="ReportDate" Mode="In" Type="Int32" />
+      <Parameter Name="ReportMonth" Mode="In" Type="Int32" />
+      <Parameter Name="ReportYear" Mode="In" Type="Int32" />
+      <Parameter Name="ReportHour" Mode="In" Type="Int32" />
+      <Parameter Name="TotalCallswithDisposition" Mode="InOut" Type="Int32" />
+      <Parameter Name="TotalCalls" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_CheckUser" ReturnType="Collection(Int32)">
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_chimes_UtilizationChart1" ReturnType="Collection(AmpbidevModel.sp_chimes_UtilizationChart1_Result)">
+      <Parameter Name="companyGUID" Mode="In" Type="String" />
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="Chartno" Mode="In" Type="Int32" />
+      <Parameter Name="Site" Mode="In" Type="String" />
+      <Parameter Name="Client" Mode="In" Type="String" />
+      <Parameter Name="Agent" Mode="In" Type="String" />
+      <Parameter Name="Year" Mode="In" Type="Int32" />
+      <Parameter Name="Month" Mode="In" Type="Int32" />
+      <Parameter Name="Week" Mode="In" Type="Int32" />
+      <Parameter Name="ProgramName" Mode="InOut" Type="String" />
+      <Parameter Name="UtlizationPerc" Mode="InOut" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="sp_chimes_UtilizationChart2" ReturnType="Collection(AmpbidevModel.sp_chimes_UtilizationChart2_Result)">
+      <Parameter Name="companyGUID" Mode="In" Type="String" />
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="Chartno" Mode="In" Type="Int32" />
+      <Parameter Name="Site" Mode="In" Type="String" />
+      <Parameter Name="Client" Mode="In" Type="String" />
+      <Parameter Name="Agent" Mode="In" Type="String" />
+      <Parameter Name="Year" Mode="In" Type="Int32" />
+      <Parameter Name="Month" Mode="In" Type="Int32" />
+      <Parameter Name="Week" Mode="In" Type="Int32" />
+      <Parameter Name="ProgramName" Mode="In" Type="String" />
+      <Parameter Name="aux" Mode="InOut" Type="String" />
+      <Parameter Name="value" Mode="InOut" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="sp_chimes_UtilizationChart3" ReturnType="Collection(AmpbidevModel.sp_chimes_UtilizationChart3_Result)">
+      <Parameter Name="companyGUID" Mode="In" Type="String" />
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="Chartno" Mode="In" Type="Int32" />
+      <Parameter Name="Site" Mode="In" Type="String" />
+      <Parameter Name="Client" Mode="In" Type="String" />
+      <Parameter Name="Agent" Mode="In" Type="String" />
+      <Parameter Name="Year" Mode="In" Type="Int32" />
+      <Parameter Name="Month" Mode="In" Type="Int32" />
+      <Parameter Name="Week" Mode="In" Type="Int32" />
+      <Parameter Name="ProgramName" Mode="In" Type="String" />
+      <Parameter Name="aux" Mode="In" Type="String" />
+      <Parameter Name="selcolor" Mode="InOut" Type="String" />
+      <Parameter Name="value" Mode="InOut" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="sp_chimes_UtilizationChart4" ReturnType="Collection(AmpbidevModel.sp_chimes_UtilizationChart4_Result)">
+      <Parameter Name="companyGUID" Mode="In" Type="String" />
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="Chartno" Mode="In" Type="Int32" />
+      <Parameter Name="Site" Mode="In" Type="String" />
+      <Parameter Name="Client" Mode="In" Type="String" />
+      <Parameter Name="Agent" Mode="In" Type="String" />
+      <Parameter Name="Year" Mode="In" Type="Int32" />
+      <Parameter Name="Month" Mode="In" Type="Int32" />
+      <Parameter Name="Week" Mode="In" Type="Int32" />
+      <Parameter Name="ProgramName" Mode="In" Type="String" />
+      <Parameter Name="aux" Mode="In" Type="String" />
+      <Parameter Name="selcolor" Mode="In" Type="String" />
+      <Parameter Name="seloption" Mode="In" Type="String" />
+      <Parameter Name="Agentname" Mode="InOut" Type="String" />
+      <Parameter Name="Seltime" Mode="InOut" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="sp_companyprofile_listofvalues" ReturnType="Collection(AmpbidevModel.sp_companyprofile_listofvalues_Result)">
+      <Parameter Name="CompanyGUID" Mode="In" Type="String" />
+      <Parameter Name="Type" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_EmailExist" ReturnType="Collection(Int32)">
+      <Parameter Name="UserName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getchartaxislabels" ReturnType="Collection(AmpbidevModel.sp_getchartaxislabels_Result)">
+      <Parameter Name="companyguid" Mode="In" Type="String" />
+      <Parameter Name="modulename" Mode="In" Type="String" />
+      <Parameter Name="chartname" Mode="In" Type="String" />
+      <Parameter Name="chartno" Mode="In" Type="Int32" />
+      <Parameter Name="xaxislabel" Mode="InOut" Type="String" />
+      <Parameter Name="yaxislabel" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getEmployeePerformance" ReturnType="Collection(AmpbidevModel.sp_getEmployeePerformance_Result)">
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="kpi" Mode="In" Type="String" />
+      <Parameter Name="recmonth" Mode="In" Type="String" />
+      <Parameter Name="recyear" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getEmployeePerformance_Coachinggrid" ReturnType="Collection(AmpbidevModel.sp_getEmployeePerformance_Coachinggrid_Result)">
+      <Parameter Name="companyguid" Mode="In" Type="String" />
+      <Parameter Name="email" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getEmployeePerformance_Comparision" ReturnType="Collection(AmpbidevModel.sp_getEmployeePerformance_Comparision_Result)">
+      <Parameter Name="companyguid" Mode="In" Type="String" />
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="comparisiontype" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getEmployeePerformance_Daily" ReturnType="Collection(AmpbidevModel.sp_getEmployeePerformance_Daily_Result)">
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="kpi" Mode="In" Type="String" />
+      <Parameter Name="recdate" Mode="In" Type="DateTime" />
+      <Parameter Name="programname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getEmployeePerformance_Details_Daily" ReturnType="Collection(AmpbidevModel.sp_getEmployeePerformance_Details_Daily_Result)">
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="recdate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getEmployeePerformance_Details_IntraDay" ReturnType="Collection(AmpbidevModel.sp_getEmployeePerformance_Details_IntraDay_Result)">
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="ReportHour" Mode="In" Type="String" />
+      <Parameter Name="ReportDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getEmployeePerformance_Details_Monthly" ReturnType="Collection(AmpbidevModel.sp_getEmployeePerformance_Details_Monthly_Result)">
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="recmonth" Mode="In" Type="String" />
+      <Parameter Name="recyear" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getEmployeePerformance_Details_Weekly" ReturnType="Collection(AmpbidevModel.sp_getEmployeePerformance_Details_Weekly_Result)">
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="WkStartdate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getEmployeePerformance_Intraday" ReturnType="Collection(AmpbidevModel.sp_getEmployeePerformance_Intraday_Result)">
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="kpi" Mode="In" Type="String" />
+      <Parameter Name="ReportHour" Mode="In" Type="String" />
+      <Parameter Name="ReportDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getEmployeePerformance_Monthly" ReturnType="Collection(AmpbidevModel.sp_getEmployeePerformance_Monthly_Result)">
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="kpi" Mode="In" Type="String" />
+      <Parameter Name="recmonth" Mode="In" Type="String" />
+      <Parameter Name="recyear" Mode="In" Type="Int32" />
+      <Parameter Name="programname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getEmployeePerformance_traininggrid" ReturnType="Collection(AmpbidevModel.sp_getEmployeePerformance_traininggrid_Result)">
+      <Parameter Name="companyguid" Mode="In" Type="String" />
+      <Parameter Name="email" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getEmployeePerformance_Weekly" ReturnType="Collection(AmpbidevModel.sp_getEmployeePerformance_Weekly_Result)">
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="kpi" Mode="In" Type="String" />
+      <Parameter Name="WkStartdate" Mode="In" Type="DateTime" />
+      <Parameter Name="programname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getKPIMenu" ReturnType="Collection(AmpbidevModel.sp_getKPIMenu_Result)">
+      <Parameter Name="companyguid" Mode="In" Type="String" />
+      <Parameter Name="InternalExternal" Mode="In" Type="String" />
+      <Parameter Name="KPIID" Mode="InOut" Type="Int32" />
+      <Parameter Name="KPIName" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getlistofvalues" ReturnType="Collection(AmpbidevModel.sp_getlistofvalues_Result)">
+      <Parameter Name="Modulename" Mode="In" Type="String" />
+      <Parameter Name="Columnname" Mode="In" Type="String" />
+      <Parameter Name="lkpseqid" Mode="InOut" Type="Int32" />
+      <Parameter Name="Description" Mode="InOut" Type="String" />
+      <Parameter Name="FinalAction" Mode="InOut" Type="Boolean" />
+      <Parameter Name="writerecord" Mode="InOut" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getMainMenu" ReturnType="Collection(String)">
+      <Parameter Name="email" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getParameterlist" ReturnType="Collection(AmpbidevModel.sp_getParameterlist_Result)">
+      <Parameter Name="CompanyGUID" Mode="In" Type="String" />
+      <Parameter Name="modulename" Mode="In" Type="String" />
+      <Parameter Name="dashboardname" Mode="In" Type="String" />
+      <Parameter Name="parametername" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getprogram" ReturnType="Collection(AmpbidevModel.sp_getprogram_Result)">
+      <Parameter Name="companyguid" Mode="In" Type="String" />
+      <Parameter Name="programid" Mode="InOut" Type="Int32" />
+      <Parameter Name="programname" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getslidervalues">
+      <Parameter Name="interval" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(AmpbidevModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(AmpbidevModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_ins_acessrecord">
+      <Parameter Name="Modulename" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="companyGuid" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_insertregnflwpoutcomerecord">
+      <Parameter Name="outcome" Mode="In" Type="String" />
+      <Parameter Name="companyguid" Mode="In" Type="String" />
+      <Parameter Name="contactname" Mode="In" Type="String" />
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="notes" Mode="In" Type="String" />
+      <Parameter Name="contactedby" Mode="In" Type="String" />
+      <Parameter Name="noofemployee" Mode="In" Type="Int32" />
+      <Parameter Name="nooflicence" Mode="In" Type="Int32" />
+      <Parameter Name="companyname" Mode="In" Type="String" />
+      <Parameter Name="contactphone" Mode="In" Type="String" />
+      <Parameter Name="address1" Mode="In" Type="String" />
+      <Parameter Name="address2" Mode="In" Type="String" />
+      <Parameter Name="city" Mode="In" Type="String" />
+      <Parameter Name="state" Mode="In" Type="String" />
+      <Parameter Name="zip" Mode="In" Type="Int32" />
+      <Parameter Name="PrefferedContactmethod" Mode="In" Type="String" />
+      <Parameter Name="calldashboard" Mode="In" Type="Boolean" />
+      <Parameter Name="ticketdashboard" Mode="In" Type="Boolean" />
+      <Parameter Name="qadashboard" Mode="In" Type="Boolean" />
+      <Parameter Name="virtualassistant" Mode="In" Type="Boolean" />
+      <Parameter Name="employeeperformance" Mode="In" Type="Boolean" />
+      <Parameter Name="appointmentsdashboard" Mode="In" Type="Boolean" />
+      <Parameter Name="knowledgebase" Mode="In" Type="Boolean" />
+      <Parameter Name="performancedashboard" Mode="In" Type="Boolean" />
+      <Parameter Name="createdby" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_populate_QAReqdvalues">
+      <Parameter Name="ReportMonth" Mode="In" Type="Int32" />
+      <Parameter Name="ReportYear" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_QABehavioralChart1" ReturnType="Collection(AmpbidevModel.sp_QABehavioralChart1_Result)">
+      <Parameter Name="chartno" Mode="In" Type="Int32" />
+      <Parameter Name="CompanyGUID" Mode="In" Type="String" />
+      <Parameter Name="site" Mode="In" Type="String" />
+      <Parameter Name="Program" Mode="In" Type="String" />
+      <Parameter Name="Agent" Mode="In" Type="String" />
+      <Parameter Name="year" Mode="In" Type="String" />
+      <Parameter Name="Month" Mode="In" Type="String" />
+      <Parameter Name="week" Mode="In" Type="String" />
+      <Parameter Name="QuestionCategory" Mode="InOut" Type="String" />
+      <Parameter Name="DefectPercent" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_QABehavioralChart2" ReturnType="Collection(AmpbidevModel.sp_QABehavioralChart2_Result)">
+      <Parameter Name="chartno" Mode="In" Type="Int32" />
+      <Parameter Name="CompanyGUID" Mode="In" Type="String" />
+      <Parameter Name="site" Mode="In" Type="String" />
+      <Parameter Name="Program" Mode="In" Type="String" />
+      <Parameter Name="Agent" Mode="In" Type="String" />
+      <Parameter Name="year" Mode="In" Type="String" />
+      <Parameter Name="Month" Mode="In" Type="String" />
+      <Parameter Name="week" Mode="In" Type="String" />
+      <Parameter Name="QuestionCategory" Mode="In" Type="String" />
+      <Parameter Name="Questiontext" Mode="InOut" Type="String" />
+      <Parameter Name="DefectPercent" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_QABehavioralChart2_Dec" ReturnType="Collection(AmpbidevModel.sp_QABehavioralChart2_Dec_Result)">
+      <Parameter Name="chartno" Mode="In" Type="Int32" />
+      <Parameter Name="CompanyGUID" Mode="In" Type="String" />
+      <Parameter Name="site" Mode="In" Type="String" />
+      <Parameter Name="Program" Mode="In" Type="String" />
+      <Parameter Name="Agent" Mode="In" Type="String" />
+      <Parameter Name="year" Mode="In" Type="String" />
+      <Parameter Name="Month" Mode="In" Type="String" />
+      <Parameter Name="week" Mode="In" Type="String" />
+      <Parameter Name="QuestionCategory" Mode="In" Type="String" />
+      <Parameter Name="Questiontext" Mode="InOut" Type="String" />
+      <Parameter Name="DefectPercent" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_QABehavioralChart3" ReturnType="Collection(AmpbidevModel.sp_QABehavioralChart3_Result)">
+      <Parameter Name="chartno" Mode="In" Type="Int32" />
+      <Parameter Name="CompanyGUID" Mode="In" Type="String" />
+      <Parameter Name="site" Mode="In" Type="String" />
+      <Parameter Name="Program" Mode="In" Type="String" />
+      <Parameter Name="Agent" Mode="In" Type="String" />
+      <Parameter Name="year" Mode="In" Type="String" />
+      <Parameter Name="Month" Mode="In" Type="String" />
+      <Parameter Name="week" Mode="In" Type="String" />
+      <Parameter Name="QuestionCategory" Mode="In" Type="String" />
+      <Parameter Name="Questiontext" Mode="In" Type="String" />
+      <Parameter Name="outagent" Mode="InOut" Type="String" />
+      <Parameter Name="DefectPercent" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_QABehavioralChart4" ReturnType="Collection(AmpbidevModel.sp_QABehavioralChart4_Result)">
+      <Parameter Name="chartno" Mode="In" Type="Int32" />
+      <Parameter Name="CompanyGUID" Mode="In" Type="String" />
+      <Parameter Name="site" Mode="In" Type="String" />
+      <Parameter Name="Program" Mode="In" Type="String" />
+      <Parameter Name="Agent" Mode="In" Type="String" />
+      <Parameter Name="year" Mode="In" Type="String" />
+      <Parameter Name="Month" Mode="In" Type="String" />
+      <Parameter Name="week" Mode="In" Type="String" />
+      <Parameter Name="QuestionCategory" Mode="In" Type="String" />
+      <Parameter Name="Questiontext" Mode="In" Type="String" />
+      <Parameter Name="inagent" Mode="In" Type="String" />
+      <Parameter Name="outmonth" Mode="InOut" Type="String" />
+      <Parameter Name="DefectPercent" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_QADBListofValues" ReturnType="Collection(AmpbidevModel.sp_QADBListofValues_Result)">
+      <Parameter Name="CompanyGUID" Mode="In" Type="String" />
+      <Parameter Name="Type" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_qaperf_mlydata" ReturnType="Collection(AmpbidevModel.sp_qaperf_mlydata_Result)">
+      <Parameter Name="CompanyGUID" Mode="In" Type="String" />
+      <Parameter Name="employeename" Mode="In" Type="String" />
+      <Parameter Name="question" Mode="In" Type="String" />
+      <Parameter Name="reportmonth" Mode="In" Type="Int32" />
+      <Parameter Name="reportyear" Mode="In" Type="Int32" />
+      <Parameter Name="chartno" Mode="In" Type="Int32" />
+      <Parameter Name="Displevel1" Mode="In" Type="String" />
+      <Parameter Name="Displevel2" Mode="In" Type="String" />
+      <Parameter Name="Displevel3" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_QAScores" ReturnType="Collection(AmpbidevModel.sp_QAScores_Result)">
+      <Parameter Name="chartno" Mode="In" Type="Int32" />
+      <Parameter Name="CompanyGUID" Mode="In" Type="String" />
+      <Parameter Name="site" Mode="In" Type="String" />
+      <Parameter Name="Program" Mode="In" Type="String" />
+      <Parameter Name="Agent" Mode="In" Type="String" />
+      <Parameter Name="year" Mode="In" Type="String" />
+      <Parameter Name="Month" Mode="In" Type="String" />
+      <Parameter Name="week" Mode="In" Type="String" />
+      <Parameter Name="AgentName" Mode="InOut" Type="String" />
+      <Parameter Name="Goal" Mode="InOut" Type="Int32" />
+      <Parameter Name="Actual" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_QAScoresChart1" ReturnType="Collection(AmpbidevModel.sp_QAScoresChart1_Result)">
+      <Parameter Name="chartno" Mode="In" Type="Int32" />
+      <Parameter Name="CompanyGUID" Mode="In" Type="String" />
+      <Parameter Name="site" Mode="In" Type="String" />
+      <Parameter Name="Program" Mode="In" Type="String" />
+      <Parameter Name="Agent" Mode="In" Type="String" />
+      <Parameter Name="year" Mode="In" Type="String" />
+      <Parameter Name="Month" Mode="In" Type="String" />
+      <Parameter Name="week" Mode="In" Type="String" />
+      <Parameter Name="Client" Mode="InOut" Type="String" />
+      <Parameter Name="DefectPercent" Mode="InOut" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="sp_QAScoresChart2" ReturnType="Collection(AmpbidevModel.sp_QAScoresChart2_Result)">
+      <Parameter Name="chartno" Mode="In" Type="Int32" />
+      <Parameter Name="CompanyGUID" Mode="In" Type="String" />
+      <Parameter Name="site" Mode="In" Type="String" />
+      <Parameter Name="Program" Mode="In" Type="String" />
+      <Parameter Name="Agent" Mode="In" Type="String" />
+      <Parameter Name="year" Mode="In" Type="String" />
+      <Parameter Name="Month" Mode="In" Type="String" />
+      <Parameter Name="week" Mode="In" Type="String" />
+      <Parameter Name="Client" Mode="In" Type="String" />
+      <Parameter Name="scaletoGoal" Mode="InOut" Type="String" />
+      <Parameter Name="DefectPercent" Mode="InOut" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="sp_QAScoresChart3" ReturnType="Collection(AmpbidevModel.sp_QAScoresChart3_Result)">
+      <Parameter Name="chartno" Mode="In" Type="Int32" />
+      <Parameter Name="CompanyGUID" Mode="In" Type="String" />
+      <Parameter Name="site" Mode="In" Type="String" />
+      <Parameter Name="Program" Mode="In" Type="String" />
+      <Parameter Name="Agent" Mode="In" Type="String" />
+      <Parameter Name="year" Mode="In" Type="String" />
+      <Parameter Name="Month" Mode="In" Type="String" />
+      <Parameter Name="week" Mode="In" Type="String" />
+      <Parameter Name="scaletoGoal" Mode="In" Type="String" />
+      <Parameter Name="agentname" Mode="InOut" Type="String" />
+      <Parameter Name="DefectScoreperc" Mode="InOut" Type="Decimal" />
+      <Parameter Name="noofdefects" Mode="InOut" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="sp_QAScoresChart4" ReturnType="Collection(AmpbidevModel.sp_QAScoresChart4_Result)">
+      <Parameter Name="chartno" Mode="In" Type="Int32" />
+      <Parameter Name="CompanyGUID" Mode="In" Type="String" />
+      <Parameter Name="site" Mode="In" Type="String" />
+      <Parameter Name="Program" Mode="In" Type="String" />
+      <Parameter Name="Agent" Mode="In" Type="String" />
+      <Parameter Name="year" Mode="In" Type="String" />
+      <Parameter Name="Month" Mode="In" Type="String" />
+      <Parameter Name="week" Mode="In" Type="String" />
+      <Parameter Name="agentname" Mode="In" Type="String" />
+      <Parameter Name="outmonth" Mode="InOut" Type="String" />
+      <Parameter Name="defectpercent" Mode="InOut" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="sp_QATrackerGoalVsActual" ReturnType="Collection(AmpbidevModel.sp_QATrackerGoalVsActual_Result)">
+      <Parameter Name="CompanyGUID" Mode="In" Type="String" />
+      <Parameter Name="site" Mode="In" Type="String" />
+      <Parameter Name="Program" Mode="In" Type="String" />
+      <Parameter Name="Agent" Mode="In" Type="String" />
+      <Parameter Name="year" Mode="In" Type="String" />
+      <Parameter Name="Month" Mode="In" Type="String" />
+      <Parameter Name="week" Mode="In" Type="String" />
+      <Parameter Name="AgentName" Mode="InOut" Type="String" />
+      <Parameter Name="Goal" Mode="InOut" Type="Int32" />
+      <Parameter Name="Actual" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_QATrackerGoalVsActual_BAK">
+      <Parameter Name="CompanyGUID" Mode="In" Type="String" />
+      <Parameter Name="site" Mode="In" Type="String" />
+      <Parameter Name="Program" Mode="In" Type="String" />
+      <Parameter Name="Agent" Mode="In" Type="String" />
+      <Parameter Name="year" Mode="In" Type="String" />
+      <Parameter Name="Month" Mode="In" Type="String" />
+      <Parameter Name="week" Mode="In" Type="String" />
+      <Parameter Name="AgentName" Mode="InOut" Type="String" />
+      <Parameter Name="Goal" Mode="InOut" Type="Int32" />
+      <Parameter Name="Actual" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="tsp_QATrackerGoalVsActual" ReturnType="Collection(AmpbidevModel.tsp_QATrackerGoalVsActual_Result)">
+      <Parameter Name="CompanyGUID" Mode="In" Type="String" />
+      <Parameter Name="site" Mode="In" Type="String" />
+      <Parameter Name="Program" Mode="In" Type="String" />
+      <Parameter Name="Agent" Mode="In" Type="String" />
+      <Parameter Name="year" Mode="In" Type="String" />
+      <Parameter Name="Month" Mode="In" Type="String" />
+      <Parameter Name="week" Mode="In" Type="String" />
+      <Parameter Name="AgentName" Mode="InOut" Type="String" />
+      <Parameter Name="Goal" Mode="InOut" Type="Int32" />
+      <Parameter Name="Actual" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="AgentSummary">
+    <Key>
+      <PropertyRef Name="AgentSummaryId" />
+    </Key>
+    <Property Name="AgentSummaryId" Type="Int32" Nullable="false" />
+    <Property Name="Agent" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="LoginCount" Type="Int32" />
+    <Property Name="CallsHandled" Type="Int32" />
+    <Property Name="staffhoursinsecs" Type="Int32" />
+    <Property Name="StaffHours" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="InitialLoginTime" Type="DateTime" Precision="3" />
+    <Property Name="FinalLogoutTime" Type="DateTime" Precision="3" />
+    <Property Name="Occupancy" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="IdleCount" Type="Int32" />
+    <Property Name="TotalIdleTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalIdleTimeinsecs" Type="Int32" />
+    <Property Name="AverageIdleTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageIdleTimeinsecs" Type="Int32" />
+    <Property Name="AvailableCount" Type="Int32" />
+    <Property Name="TotalAvailableTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalAvailableTimeinsecs" Type="Int32" />
+    <Property Name="AverageAvailableTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageAvailableTimeinsecs" Type="Int32" />
+    <Property Name="InboundReservedCount" Type="Int32" />
+    <Property Name="TotalInboundReservedTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalInboundReservedTimeinsecs" Type="Int32" />
+    <Property Name="AverageInboundReservedTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageInboundReservedTimeinsecs" Type="Int32" />
+    <Property Name="InboundHoldCount" Type="Int32" />
+    <Property Name="InboundConnectedCount" Type="Int32" />
+    <Property Name="TotalInboundTalkTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalInboundTalkTimeinsecs" Type="Int32" />
+    <Property Name="TotalInboundHoldTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalInboundHoldTimeinsecs" Type="Int32" />
+    <Property Name="TotalInboundConnectedTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalInboundConnectedTimeinsecs" Type="Int32" />
+    <Property Name="AverageInboundHoldTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageInboundHoldTimeinsecs" Type="Int32" />
+    <Property Name="AverageInboundConnectedTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageInboundConnectedTimeinsecs" Type="Int32" />
+    <Property Name="OutDialReservedCount" Type="Int32" />
+    <Property Name="TotalOutDialReservedTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalOutDialReservedTimeinsecs" Type="Int32" />
+    <Property Name="AverageOutDialReservedTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageOutDialReservedTimeinsecs" Type="Int32" />
+    <Property Name="OutdialAttemptedCount" Type="Int32" />
+    <Property Name="OutdialConnectedCount" Type="Int32" />
+    <Property Name="OutdialHoldCount" Type="Int32" />
+    <Property Name="TotalOutdialTalkTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalOutdialTalkTimeinsecs" Type="Int32" />
+    <Property Name="TotalOutdialHoldTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalOutdialHoldTimeinsecs" Type="Int32" />
+    <Property Name="TotalOutdialConnectedTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalOutdialConnectedTimeinsecs" Type="Int32" />
+    <Property Name="AverageOutdialHoldTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageOutdialHoldTimeinsecs" Type="Int32" />
+    <Property Name="AverageOutdialConnectedTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageOutdialConnectedTimeinsecs" Type="Int32" />
+    <Property Name="DisconnectedCount" Type="Int32" />
+    <Property Name="InboundWrapUpCount" Type="Int32" />
+    <Property Name="TotalInboundWrapUpTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalInboundWrapUpTimeinsecs" Type="Int32" />
+    <Property Name="AverageInboundWrapUpTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageInboundWrapUpTimeinsecs" Type="Int32" />
+    <Property Name="OutdialWrapUpCount" Type="Int32" />
+    <Property Name="TotalOutdialWrapUptime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalOutdialWrapUptimeinsecs" Type="Int32" />
+    <Property Name="AverageOutdialWrapUpTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageOutdialWrapUpTimeinsecs" Type="Int32" />
+    <Property Name="NotRespondingCount" Type="Int32" />
+    <Property Name="TotalNotRespondingTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalNotRespondingTimeinsecs" Type="Int32" />
+    <Property Name="AverageNotRespondingTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageNotRespondingTimeinsecs" Type="Int32" />
+    <Property Name="ConsultAnswerCount" Type="Int32" />
+    <Property Name="TotalConsultAnswerTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalConsultAnswerTimeinsecs" Type="Int32" />
+    <Property Name="AverageConsultAnswerTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageConsultAnswerTimeinsecs" Type="Int32" />
+    <Property Name="ConsultRequestCount" Type="Int32" />
+    <Property Name="TotalConsultRequestTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalConsultRequestTimeinsecs" Type="Int32" />
+    <Property Name="AverageConsultRequestTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageConsultRequestTimeinsecs" Type="Int32" />
+    <Property Name="ConsultCount" Type="Int32" />
+    <Property Name="TotalConsultTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalConsultTimeinsecs" Type="Int32" />
+    <Property Name="AverageConsultTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageConsultTimeinsecs" Type="Int32" />
+    <Property Name="Conference" Type="Int32" />
+    <Property Name="InboundCTQRequestCount" Type="Int32" />
+    <Property Name="TotalInboundCTQRequestTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalInboundCTQRequestTimeinsecs" Type="Int32" />
+    <Property Name="InboundCTQAnswerCount" Type="Int32" />
+    <Property Name="TotalInboundCTQAnswerTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalInboundCTQAnswerTimeinsecs" Type="Int32" />
+    <Property Name="OutdialCTQRequestCount" Type="Int32" />
+    <Property Name="TotalOutdialCTQRequestTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalOutdialCTQRequestTimeinsecs" Type="Int32" />
+    <Property Name="OutdialCTQAnswerCount" Type="Int32" />
+    <Property Name="TotalOutdialCTQAnswerTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalOutdialCTQAnswerTimeinsecs" Type="Int32" />
+    <Property Name="AgentTransfer" Type="Int32" />
+    <Property Name="AgentRequeue" Type="Int32" />
+    <Property Name="BlindTransfer" Type="Int32" />
+    <Property Name="InboundAvgHandleTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="InboundAvgHandleTimeinsecs" Type="Int32" />
+    <Property Name="OutdialAvgHandleTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="OutdialAvgHandleTimeinsecs" Type="Int32" />
+  </EntityType>
+  <EntityType Name="bak_qatracker">
+    <Key>
+      <PropertyRef Name="LoadID" />
+      <PropertyRef Name="CompanyGUID" />
+    </Key>
+    <Property Name="LoadID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Site" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Program" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Year" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="Month" Type="Decimal" Precision="2" Scale="0" />
+    <Property Name="Week" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="AgentName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Status" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="TotalQAReqd" Type="Int32" />
+    <Property Name="ActualQA" Type="Int32" />
+    <Property Name="TotalScore" Type="Decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="bakqatracker">
+    <Key>
+      <PropertyRef Name="LoadID" />
+      <PropertyRef Name="CompanyGUID" />
+    </Key>
+    <Property Name="LoadID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Site" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Program" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Year" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="Month" Type="Decimal" Precision="2" Scale="0" />
+    <Property Name="Week" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="AgentName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Status" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="TotalQAReqd" Type="Int32" />
+    <Property Name="ActualQA" Type="Int32" />
+    <Property Name="TotalScore" Type="Decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="bkp_tblmetric">
+    <Key>
+      <PropertyRef Name="KPIMetricId" />
+    </Key>
+    <Property Name="KPIMetricId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="companyguid" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="KPIMetricName" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="ShortName" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="displayorder" Type="Int32" />
+    <Property Name="InternalExternalAccess" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="DefaultKPI" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="DIM_EMPLOYEE">
+    <Key>
+      <PropertyRef Name="Empid" />
+      <PropertyRef Name="Employeenumber" />
+    </Key>
+    <Property Name="Empid" Type="Int32" Nullable="false" />
+    <Property Name="Employeenumber" Type="Double" Nullable="false" />
+    <Property Name="LocationName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Startdate" Type="DateTime" Precision="3" />
+    <Property Name="EmployeeName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="employeeFirstname" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="employeeLastname" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="mgr_lev1_id" Type="Int32" />
+    <Property Name="mgr_lev2_id" Type="Int32" />
+    <Property Name="mgr_lev3_id" Type="Int32" />
+    <Property Name="mgr_lev4_id" Type="Int32" />
+    <Property Name="mgr_lev5_id" Type="Int32" />
+    <Property Name="mgr_lev1_name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="mgr_lev2_name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="mgr_lev3_name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="mgr_lev4_name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="mgr_lev5_name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="project_number" Type="Int32" />
+    <Property Name="job_id" Type="Int32" />
+    <Property Name="Employeetitle" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="employee_type" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="assignment_status" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="hire_date" Type="DateTime" Precision="3" />
+    <Property Name="term_date" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="leaving_code" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="leaving_reason" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="employee_code" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="companyGUID" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="assignedprimaryprogram" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="DlyIdleReport">
+    <Key>
+      <PropertyRef Name="DlyTblIdleRptSeqid" />
+    </Key>
+    <Property Name="DlyTblIdleRptSeqid" Type="Int32" Nullable="false" />
+    <Property Name="RecordDate" Type="DateTime" Precision="3" />
+    <Property Name="AgentName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="AgentID" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="AftercallCount" Type="Int32" />
+    <Property Name="AftercallDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AftercallDurationinsecs" Type="Int32" />
+    <Property Name="BreakCount" Type="Int32" />
+    <Property Name="BreakDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="BreakDurationinsecs" Type="Int32" />
+    <Property Name="CITICancelAuditCount" Type="Int32" />
+    <Property Name="CITICancelAuditDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="CITICancelAuditDurationinsecs" Type="Int32" />
+    <Property Name="coachingCount" Type="Int32" />
+    <Property Name="coachingDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="coachingDurationinsecs" Type="Int32" />
+    <Property Name="coachingBerkleyCount" Type="Int32" />
+    <Property Name="coachingBerkleyDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="coachingBerkleyDurationinsecs" Type="Int32" />
+    <Property Name="FloorSupportCount" Type="Int32" />
+    <Property Name="FloorSupportDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="FloorSupportDurationinsecs" Type="Int32" />
+    <Property Name="logoutCount" Type="Int32" />
+    <Property Name="logoutDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="logoutDurationinsecs" Type="Int32" />
+    <Property Name="lunchCount" Type="Int32" />
+    <Property Name="lunchDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="lunchDurationinsecs" Type="Int32" />
+    <Property Name="meetingCount" Type="Int32" />
+    <Property Name="meetingDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="meetingDurationinsecs" Type="Int32" />
+    <Property Name="outdialreturningcallsCount" Type="Int32" />
+    <Property Name="outdialreturningcallsDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="outdialreturningcallsDurationinsecs" Type="Int32" />
+    <Property Name="preshiftCount" Type="Int32" />
+    <Property Name="preshiftDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="preshiftDurationinsecs" Type="Int32" />
+    <Property Name="ProcessingBenefitsCount" Type="Int32" />
+    <Property Name="ProcessingBenefitsDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ProcessingBenefitsDurationinsecs" Type="Int32" />
+    <Property Name="ProcessingEscalationsCount" Type="Int32" />
+    <Property Name="ProcessingEscalationsDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ProcessingEscalationsDurationinsecs" Type="Int32" />
+    <Property Name="projectCount" Type="Int32" />
+    <Property Name="projectDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="projectDurationinsecs" Type="Int32" />
+    <Property Name="restroomCount" Type="Int32" />
+    <Property Name="restroomDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="restroomDurationinsecs" Type="Int32" />
+    <Property Name="TrainingCount" Type="Int32" />
+    <Property Name="TrainingDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TrainingDurationinsecs" Type="Int32" />
+    <Property Name="TrainingNewHireCount" Type="Int32" />
+    <Property Name="TrainingNewHireDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TrainingNewHireDurationinsecs" Type="Int32" />
+  </EntityType>
+  <EntityType Name="DlyIdleReportTotal">
+    <Key>
+      <PropertyRef Name="DlyTblIdleRptTotSeqid" />
+    </Key>
+    <Property Name="DlyTblIdleRptTotSeqid" Type="Int32" Nullable="false" />
+    <Property Name="RecordDate" Type="DateTime" Precision="3" />
+    <Property Name="AgentName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="AgentID" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="AftercallCount" Type="Int32" />
+    <Property Name="AftercallDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AftercallDurationinsecs" Type="Int32" />
+    <Property Name="BreakCount" Type="Int32" />
+    <Property Name="BreakDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="BreakDurationinsecs" Type="Int32" />
+    <Property Name="CITICancelAuditCount" Type="Int32" />
+    <Property Name="CITICancelAuditDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="CITICancelAuditDurationinsecs" Type="Int32" />
+    <Property Name="coachingCount" Type="Int32" />
+    <Property Name="coachingDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="coachingDurationinsecs" Type="Int32" />
+    <Property Name="coachingBerkleyCount" Type="Int32" />
+    <Property Name="coachingBerkleyDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="coachingBerkleyDurationinsecs" Type="Int32" />
+    <Property Name="FloorSupportCount" Type="Int32" />
+    <Property Name="FloorSupportDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="FloorSupportDurationinsecs" Type="Int32" />
+    <Property Name="logoutCount" Type="Int32" />
+    <Property Name="logoutDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="logoutDurationinsecs" Type="Int32" />
+    <Property Name="lunchCount" Type="Int32" />
+    <Property Name="lunchDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="lunchDurationinsecs" Type="Int32" />
+    <Property Name="meetingCount" Type="Int32" />
+    <Property Name="meetingDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="meetingDurationinsecs" Type="Int32" />
+    <Property Name="outdialreturningcallsCount" Type="Int32" />
+    <Property Name="outdialreturningcallsDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="outdialreturningcallsDurationinsecs" Type="Int32" />
+    <Property Name="preshiftCount" Type="Int32" />
+    <Property Name="preshiftDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="preshiftDurationinsecs" Type="Int32" />
+    <Property Name="ProcessingBenefitsCount" Type="Int32" />
+    <Property Name="ProcessingBenefitsDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ProcessingBenefitsDurationinsecs" Type="Int32" />
+    <Property Name="ProcessingEscalationsCount" Type="Int32" />
+    <Property Name="ProcessingEscalationsDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ProcessingEscalationsDurationinsecs" Type="Int32" />
+    <Property Name="projectCount" Type="Int32" />
+    <Property Name="projectDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="projectDurationinsecs" Type="Int32" />
+    <Property Name="restroomCount" Type="Int32" />
+    <Property Name="restroomDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="restroomDurationinsecs" Type="Int32" />
+    <Property Name="TrainingCount" Type="Int32" />
+    <Property Name="TrainingDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TrainingDurationinsecs" Type="Int32" />
+    <Property Name="TrainingNewHireCount" Type="Int32" />
+    <Property Name="TrainingNewHireDuration" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TrainingNewHireDurationinsecs" Type="Int32" />
+  </EntityType>
+  <EntityType Name="DynamicParameterList">
+    <Key>
+      <PropertyRef Name="Listid" />
+    </Key>
+    <Property Name="Listid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGuid" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="ModuleName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DashboardName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ParameterName" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="ParamValue" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="displayorder" Type="Int32" />
+    <Property Name="isactive" Type="Boolean" />
+    <Property Name="startdate" Type="DateTime" Precision="3" />
+    <Property Name="enddate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="QA_Data_SummaryTable">
+    <Key>
+      <PropertyRef Name="RowId" />
+    </Key>
+    <Property Name="RowId" Type="Int32" Nullable="false" />
+    <Property Name="TenantId" Type="Int32" />
+    <Property Name="Period" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Manager_Level_Id" Type="Int32" />
+    <Property Name="employee_name" Type="String" MaxLength="511" Unicode="true" FixedLength="false" />
+    <Property Name="Offset" Type="Int32" />
+    <Property Name="ScoreValue" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="AgentId" Type="Int32" />
+    <Property Name="QuestionId" Type="Int32" />
+    <Property Name="Question" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="Filter" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="companyguid" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="QATracker1">
+    <Key>
+      <PropertyRef Name="LoadID" />
+      <PropertyRef Name="CompanyGUID" />
+    </Key>
+    <Property Name="LoadID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Site" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Program" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Year" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="Month" Type="Decimal" Precision="2" Scale="0" />
+    <Property Name="Week" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="AgentName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Status" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="TotalQAReqd" Type="Int32" />
+    <Property Name="ActualQA" Type="Int32" />
+    <Property Name="TotalScore" Type="Decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="ref_charts_axislabels">
+    <Key>
+      <PropertyRef Name="tblseq" />
+    </Key>
+    <Property Name="tblseq" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="companyguid" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="modulename" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="ChartName" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="xaxislabel" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="yaxislabel" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="chartno" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ref_LookupValues">
+    <Key>
+      <PropertyRef Name="Lkpseqid" />
+    </Key>
+    <Property Name="Lkpseqid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Modulename" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Columnname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ActualValue" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="active" Type="Boolean" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="Createdby" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="Updatedby" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="Updatedon" Type="DateTime" Precision="3" />
+    <Property Name="Genericvarchar1" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Genericvarchar2" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Genericvarchar3" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="GenericDate1" Type="DateTime" Precision="3" />
+    <Property Name="GenericDate2" Type="DateTime" Precision="3" />
+    <Property Name="GenericDate3" Type="DateTime" Precision="3" />
+    <Property Name="Genericbit1" Type="Boolean" />
+    <Property Name="Genericbit2" Type="Boolean" />
+    <Property Name="Genericbit3" Type="Boolean" />
+    <Property Name="GenericNumeric1" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="GenericNumeric2" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="GenericNumeric3" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="displayorder" Type="Int32" />
+    <Property Name="finalaction" Type="Boolean" />
+    <Property Name="WriteRecord" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="ref_LookupValues_Hist">
+    <Key>
+      <PropertyRef Name="Lkphistseqid" />
+      <PropertyRef Name="Lkpseqid" />
+    </Key>
+    <Property Name="Lkphistseqid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Lkpseqid" Type="Int32" Nullable="false" />
+    <Property Name="Modulename" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Columnname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ActualValue" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="active" Type="Boolean" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="Createdby" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="Updatedby" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="Updatedon" Type="DateTime" Precision="3" />
+    <Property Name="Genericvarchar1" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Genericvarchar2" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Genericvarchar3" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="GenericDate1" Type="DateTime" Precision="3" />
+    <Property Name="GenericDate2" Type="DateTime" Precision="3" />
+    <Property Name="GenericDate3" Type="DateTime" Precision="3" />
+    <Property Name="Genericbit1" Type="Boolean" />
+    <Property Name="Genericbit2" Type="Boolean" />
+    <Property Name="Genericbit3" Type="Boolean" />
+    <Property Name="GenericNumeric1" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="GenericNumeric2" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="GenericNumeric3" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="displayorder" Type="Int32" />
+    <Property Name="finalaction" Type="Boolean" />
+    <Property Name="WriteRecord" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="ref_Modules">
+    <Key>
+      <PropertyRef Name="Moduleid" />
+    </Key>
+    <Property Name="Moduleid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ModuleName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="DisplayOrder" Type="Int32" />
+    <Property Name="DefaultModule" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="ref_Modules_hist">
+    <Key>
+      <PropertyRef Name="ModuleHistid" />
+    </Key>
+    <Property Name="ModuleHistid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Moduleid" Type="Int32" />
+    <Property Name="ModuleName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="DisplayOrder" Type="Int32" />
+    <Property Name="defaultmodule" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="ref_programlist">
+    <Key>
+      <PropertyRef Name="programid" />
+    </Key>
+    <Property Name="programid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="programname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="active" Type="Boolean" />
+    <Property Name="startdate" Type="DateTime" Precision="3" />
+    <Property Name="enddate" Type="DateTime" Precision="3" />
+    <Property Name="displayorder" Type="Int32" />
+    <Property Name="companyguid" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ref_SecretQuestion">
+    <Key>
+      <PropertyRef Name="SecSeq" />
+    </Key>
+    <Property Name="SecSeq" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SecretQuestion" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ref_SecretQuestion_hist">
+    <Key>
+      <PropertyRef Name="SecSeq" />
+    </Key>
+    <Property Name="SecSeq" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SecretQuestion" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ref_UserType">
+    <Key>
+      <PropertyRef Name="UserTypeID" />
+      <PropertyRef Name="UserTypeName" />
+    </Key>
+    <Property Name="UserTypeID" Type="Int32" Nullable="false" />
+    <Property Name="UserTypeName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ref_UserType_hist">
+    <Key>
+      <PropertyRef Name="UserTypeID" />
+      <PropertyRef Name="UserTypeName" />
+    </Key>
+    <Property Name="UserTypeID" Type="Int32" Nullable="false" />
+    <Property Name="UserTypeName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="SiteSummary">
+    <Key>
+      <PropertyRef Name="SiteSummaryId" />
+    </Key>
+    <Property Name="SiteSummaryId" Type="Int32" Nullable="false" />
+    <Property Name="Site" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="CallsHandled" Type="Int32" />
+    <Property Name="StaffHours" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="staffhoursinsecs" Type="Int32" />
+    <Property Name="Occupancy" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="IdleCount" Type="Int32" />
+    <Property Name="TotalIdleTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalIdleTimeinsecs" Type="Int32" />
+    <Property Name="AverageIdleTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageIdleTimeinsecs" Type="Int32" />
+    <Property Name="AvailableCount" Type="Int32" />
+    <Property Name="TotalAvailableTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalAvailableTimeinsecs" Type="Int32" />
+    <Property Name="AverageAvailableTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageAvailableTimeinsecs" Type="Int32" />
+    <Property Name="InboundReservedCount" Type="Int32" />
+    <Property Name="TotalInboundReservedTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalInboundReservedTimeinsecs" Type="Int32" />
+    <Property Name="AverageInboundReservedTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageInboundReservedTimeinsecs" Type="Int32" />
+    <Property Name="InboundHoldCount" Type="Int32" />
+    <Property Name="InboundConnectedCount" Type="Int32" />
+    <Property Name="TotalInboundTalkTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalInboundTalkTimeinsecs" Type="Int32" />
+    <Property Name="TotalInboundHoldTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalInboundHoldTimeinsecs" Type="Int32" />
+    <Property Name="TotalInboundConnectedTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalInboundConnectedTimeinsecs" Type="Int32" />
+    <Property Name="AverageInboundHoldTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageInboundHoldTimeinsecs" Type="Int32" />
+    <Property Name="AverageInboundConnectedTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageInboundConnectedTimeinsecs" Type="Int32" />
+    <Property Name="OutDialReservedCount" Type="Int32" />
+    <Property Name="TotalOutDialReservedTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalOutDialReservedTimeinsecs" Type="Int32" />
+    <Property Name="AverageOutDialReservedTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageOutDialReservedTimeinsecs" Type="Int32" />
+    <Property Name="OutdialAttemptedCount" Type="Int32" />
+    <Property Name="OutdialConnectedCount" Type="Int32" />
+    <Property Name="OutdialHoldCount" Type="Int32" />
+    <Property Name="TotalOutdialTalkTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalOutdialTalkTimeinsecs" Type="Int32" />
+    <Property Name="TotalOutdialHoldTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalOutdialHoldTimeinsecs" Type="Int32" />
+    <Property Name="TotalOutdialConnectedTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalOutdialConnectedTimeinsecs" Type="Int32" />
+    <Property Name="AverageOutdialHoldTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageOutdialHoldTimeinsecs" Type="Int32" />
+    <Property Name="AverageOutdialConnectedTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageOutdialConnectedTimeinsecs" Type="Int32" />
+    <Property Name="DisconnectedCount" Type="Int32" />
+    <Property Name="InboundWrapUpCount" Type="Int32" />
+    <Property Name="TotalInboundWrapUpTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalInboundWrapUpTimeinsecs" Type="Int32" />
+    <Property Name="AverageInboundWrapUpTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageInboundWrapUpTimeinsecs" Type="Int32" />
+    <Property Name="OutdialWrapUpCount" Type="Int32" />
+    <Property Name="TotalOutdialWrapUptime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalOutdialWrapUptimeinsecs" Type="Int32" />
+    <Property Name="AverageOutdialWrapUpTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageOutdialWrapUpTimeinsecs" Type="Int32" />
+    <Property Name="NotRespondingCount" Type="Int32" />
+    <Property Name="TotalNotRespondingTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalNotRespondingTimeinsecs" Type="Int32" />
+    <Property Name="AverageNotRespondingTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageNotRespondingTimeinsecs" Type="Int32" />
+    <Property Name="ConsultAnswerCount" Type="Int32" />
+    <Property Name="TotalConsultAnswerTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalConsultAnswerTimeinsecs" Type="Int32" />
+    <Property Name="AverageConsultAnswerTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageConsultAnswerTimeinsecs" Type="Int32" />
+    <Property Name="ConsultRequestCount" Type="Int32" />
+    <Property Name="TotalConsultRequestTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalConsultRequestTimeinsecs" Type="Int32" />
+    <Property Name="AverageConsultRequestTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageConsultRequestTimeinsecs" Type="Int32" />
+    <Property Name="ConsultCount" Type="Int32" />
+    <Property Name="TotalConsultTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalConsultTimeinsecs" Type="Int32" />
+    <Property Name="AverageConsultTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AverageConsultTimeinsecs" Type="Int32" />
+    <Property Name="Conference" Type="Int32" />
+    <Property Name="InboundCTQRequestCount" Type="Int32" />
+    <Property Name="TotalInboundCTQRequestTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalInboundCTQRequestTimeinsecs" Type="Int32" />
+    <Property Name="InboundCTQAnswerCount" Type="Int32" />
+    <Property Name="TotalInboundCTQAnswerTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalInboundCTQAnswerTimeinsecs" Type="Int32" />
+    <Property Name="OutdialCTQRequestCount" Type="Int32" />
+    <Property Name="TotalOutdialCTQRequestTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalOutdialCTQRequestTimeinsecs" Type="Int32" />
+    <Property Name="OutdialCTQAnswerCount" Type="Int32" />
+    <Property Name="TotalOutdialCTQAnswerTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TotalOutdialCTQAnswerTimeinsecs" Type="Int32" />
+    <Property Name="AgentTransfer" Type="Int32" />
+    <Property Name="AgentRequeue" Type="Int32" />
+    <Property Name="BlindTransfer" Type="Int32" />
+    <Property Name="InboundAvgHandleTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="InboundAvgHandleTimeinsecs" Type="Int32" />
+    <Property Name="OutdialAvgHandleTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="OutdialAvgHandleTimeinsecs" Type="Int32" />
+  </EntityType>
+  <EntityType Name="statelist">
+    <Key>
+      <PropertyRef Name="statecode" />
+    </Key>
+    <Property Name="statecode" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="statename" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="Updatedby" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="Updatedon" Type="DateTime" Precision="3" />
+    <Property Name="active" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="statelist_hist">
+    <Key>
+      <PropertyRef Name="Statecodehistid" />
+    </Key>
+    <Property Name="Statecodehistid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="statecode" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="statename" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="Updatedby" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="Updatedon" Type="DateTime" Precision="3" />
+    <Property Name="active" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="stgtbl_fact_chimes_behavior">
+    <Key>
+      <PropertyRef Name="tblseqid" />
+    </Key>
+    <Property Name="tblseqid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="QuestionCategory" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Site" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="Client" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Agent" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="CallDate" Type="DateTime" Precision="3" />
+    <Property Name="oppurtunity" Type="Int32" />
+    <Property Name="Meeting" Type="Int32" />
+    <Property Name="Coaching" Type="Int32" />
+    <Property Name="Unacceptable" Type="Int32" />
+    <Property Name="Yes" Type="Int32" />
+    <Property Name="No" Type="Int32" />
+    <Property Name="NotApplicable" Type="Int32" />
+    <Property Name="Defects" Type="Int32" />
+    <Property Name="DefectPercent" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="companyguid" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Year" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="Month" Type="Int32" />
+    <Property Name="Week" Type="Int32" />
+    <Property Name="evaluationdate" Type="DateTime" Precision="3" />
+    <Property Name="calldateload" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="evaldateload" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Supervisor" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="stgtbl_fact_chimes_behaviordetail">
+    <Key>
+      <PropertyRef Name="tblseqid" />
+    </Key>
+    <Property Name="tblseqid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="QuestionCategory" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="QuestionText" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Site" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="Client" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Agent" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="CallDate" Type="DateTime" Precision="3" />
+    <Property Name="oppurtunity" Type="Int32" />
+    <Property Name="Meeting" Type="Int32" />
+    <Property Name="Coaching" Type="Int32" />
+    <Property Name="Unacceptable" Type="Int32" />
+    <Property Name="Yes" Type="Int32" />
+    <Property Name="No" Type="Int32" />
+    <Property Name="NotApplicable" Type="Int32" />
+    <Property Name="Defects" Type="Int32" />
+    <Property Name="DefectPercent" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="companyguid" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Year" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="Month" Type="Int32" />
+    <Property Name="Week" Type="Int32" />
+    <Property Name="evaluationdate" Type="DateTime" Precision="3" />
+    <Property Name="evaldateload" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="calldateload" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Supervisor" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="stgtbl_fact_chimes_callaudit">
+    <Key>
+      <PropertyRef Name="tlbseqid" />
+    </Key>
+    <Property Name="tlbseqid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Site" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="Evaluationid" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="EvaluationDate" Type="DateTime" Precision="3" />
+    <Property Name="Client" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Language" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Agent" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="Reviewer" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="oppurtunity" Type="Int32" />
+    <Property Name="Meeting" Type="Int32" />
+    <Property Name="Coaching" Type="Int32" />
+    <Property Name="Unacceptable" Type="Int32" />
+    <Property Name="Yes" Type="Int32" />
+    <Property Name="No" Type="Int32" />
+    <Property Name="NotApplicable" Type="Int32" />
+    <Property Name="Defects" Type="Int32" />
+    <Property Name="DefectPercent" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="companyguid" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Year" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="Month" Type="Decimal" Precision="2" Scale="0" />
+    <Property Name="Week" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="calldate" Type="DateTime" Precision="3" />
+    <Property Name="supervisor" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="calldateload" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_AppLog">
+    <Key>
+      <PropertyRef Name="logSeq" />
+    </Key>
+    <Property Name="logSeq" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="UserEmailID" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PropertyName1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PropertyValue1" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PropertyName2" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PropertyValue2" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PropertyName3" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PropertyValue3" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PropertyName4" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PropertyValue4" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PropertyName5" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PropertyValue5" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PropertyName6" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PropertyValue6" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PropertyName7" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PropertyValue7" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PropertyName8" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PropertyValue8" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="DashboardName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_chimes_qareqdbyweek">
+    <Key>
+      <PropertyRef Name="tblid" />
+    </Key>
+    <Property Name="tblid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="site" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="agent" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="month" Type="Int32" />
+    <Property Name="week" Type="Int32" />
+    <Property Name="year" Type="Int32" />
+    <Property Name="previousmonthscore" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="QAreqd" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_chimesworkweeks">
+    <Key>
+      <PropertyRef Name="Seqid" />
+    </Key>
+    <Property Name="Seqid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="year" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="month" Type="Int32" />
+    <Property Name="startdate" Type="DateTime" Precision="3" />
+    <Property Name="enddate" Type="DateTime" Precision="3" />
+    <Property Name="weekno" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_coaching">
+    <Key>
+      <PropertyRef Name="coachingid" />
+    </Key>
+    <Property Name="coachingid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGuid" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="EmployeeNumber" Type="Int32" />
+    <Property Name="CoachingAssignedDate" Type="DateTime" Precision="3" />
+    <Property Name="KPIMetricId" Type="Int32" />
+    <Property Name="Reason" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Goal" Type="Int32" />
+    <Property Name="commitment" Type="Int32" />
+    <Property Name="Actual" Type="Int32" />
+    <Property Name="CoachingCompletionDate" Type="DateTime" Precision="3" />
+    <Property Name="Recording" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="type" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="articlename" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="TargetedCompletionDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_Company">
+    <Key>
+      <PropertyRef Name="CompanySeq" />
+    </Key>
+    <Property Name="CompanySeq" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="CompanyName" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="ContactName" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="ContactPhone" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Address1" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="Address2" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="State" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Zip" Type="Int32" />
+    <Property Name="NoofEmployee" Type="Int32" />
+    <Property Name="NoofLicence" Type="Int32" />
+    <Property Name="TrialStartDate" Type="DateTime" Precision="0" />
+    <Property Name="TrialEndDate" Type="DateTime" Precision="0" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="CreatedBy" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="PrefferedContactMethod" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_Company_hist">
+    <Key>
+      <PropertyRef Name="CompanyHistSeq" />
+      <PropertyRef Name="CompanySeq" />
+    </Key>
+    <Property Name="CompanyHistSeq" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanySeq" Type="Int32" Nullable="false" />
+    <Property Name="CompanyGUID" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="CompanyName" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="ContactName" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="ContactPhone" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Address1" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="Address2" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="State" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Zip" Type="Int32" />
+    <Property Name="NoofEmployee" Type="Int32" />
+    <Property Name="NoofLicence" Type="Int32" />
+    <Property Name="TrialStartDate" Type="DateTime" Precision="0" />
+    <Property Name="TrialEndDate" Type="DateTime" Precision="0" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="CreatedBy" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="PrefferedContactMethod" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_CompanyChartInfo">
+    <Key>
+      <PropertyRef Name="cciseq" />
+      <PropertyRef Name="CompanyGUID" />
+      <PropertyRef Name="ModuleID" />
+    </Key>
+    <Property Name="cciseq" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="String" Nullable="false" MaxLength="70" Unicode="true" FixedLength="false" />
+    <Property Name="ModuleID" Type="Int32" Nullable="false" />
+    <Property Name="Chart1" Type="Boolean" />
+    <Property Name="Chart1Name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Chart2" Type="Boolean" />
+    <Property Name="Chart2Name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Chart3" Type="Boolean" />
+    <Property Name="Chart3Name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Chart4" Type="Boolean" />
+    <Property Name="Chart4Name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_companymodule">
+    <Key>
+      <PropertyRef Name="companymoduleid" />
+    </Key>
+    <Property Name="companymoduleid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="moduleid" Type="Int32" />
+    <Property Name="DisplayName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_companymodule_hist">
+    <Key>
+      <PropertyRef Name="companymodulehistid" />
+    </Key>
+    <Property Name="companymodulehistid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="companymoduleid" Type="Int32" />
+    <Property Name="CompanyGUID" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="moduleid" Type="Int32" />
+    <Property Name="DisplayName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_empcomparision">
+    <Key>
+      <PropertyRef Name="EmpCompid" />
+    </Key>
+    <Property Name="EmpCompid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="kpimetricid" Type="Int32" />
+    <Property Name="RecDate" Type="DateTime" Precision="3" />
+    <Property Name="ComparisionType" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="Best" Type="Int32" />
+    <Property Name="Average" Type="Int32" />
+    <Property Name="Me" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_empperfdata">
+    <Key>
+      <PropertyRef Name="CompanyGUID" />
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="CompanyGUID" Type="String" Nullable="false" MaxLength="36" Unicode="false" FixedLength="false" />
+    <Property Name="AgentID" Type="Int32" />
+    <Property Name="MetricName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="value" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="goal" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="PercentageToGoal" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="Period" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Current_Date" Type="DateTime" Precision="0" />
+    <Property Name="Offset" Type="Int32" />
+    <Property Name="Tenure" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Manager_Level_Id" Type="Int32" />
+    <Property Name="emp_last_name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="emp_first_name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="RowID" Type="Int32" Nullable="false" />
+    <Property Name="employee_name" Type="String" MaxLength="511" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_fact_chimes_behavior">
+    <Key>
+      <PropertyRef Name="tblseqid" />
+    </Key>
+    <Property Name="tblseqid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="QuestionCategory" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Site" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="Client" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Agent" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="CallDate" Type="DateTime" Precision="3" />
+    <Property Name="oppurtunity" Type="Int32" />
+    <Property Name="Meeting" Type="Int32" />
+    <Property Name="Coaching" Type="Int32" />
+    <Property Name="Unacceptable" Type="Int32" />
+    <Property Name="Yes" Type="Int32" />
+    <Property Name="No" Type="Int32" />
+    <Property Name="NotApplicable" Type="Int32" />
+    <Property Name="Defects" Type="Int32" />
+    <Property Name="DefectPercent" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="companyguid" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Year" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="Month" Type="Int32" />
+    <Property Name="Week" Type="Int32" />
+    <Property Name="evaluationdate" Type="DateTime" Precision="3" />
+    <Property Name="Supervisor" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_fact_chimes_behaviordetail">
+    <Key>
+      <PropertyRef Name="tblseqid" />
+    </Key>
+    <Property Name="tblseqid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="QuestionText" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="QuestionCategory" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Site" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="Client" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Agent" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="CallDate" Type="DateTime" Precision="3" />
+    <Property Name="oppurtunity" Type="Int32" />
+    <Property Name="Meeting" Type="Int32" />
+    <Property Name="Coaching" Type="Int32" />
+    <Property Name="Unacceptable" Type="Int32" />
+    <Property Name="Yes" Type="Int32" />
+    <Property Name="No" Type="Int32" />
+    <Property Name="NotApplicable" Type="Int32" />
+    <Property Name="Defects" Type="Int32" />
+    <Property Name="DefectPercent" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="companyguid" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Year" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="Month" Type="Int32" />
+    <Property Name="Week" Type="Int32" />
+    <Property Name="evaluationdate" Type="DateTime" Precision="3" />
+    <Property Name="Supervisor" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_fact_chimes_callaudit">
+    <Key>
+      <PropertyRef Name="tlbseqid" />
+    </Key>
+    <Property Name="tlbseqid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="companyguid" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Site" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="Evaluationid" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="EvaluationDate" Type="DateTime" Precision="3" />
+    <Property Name="Client" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Language" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Agent" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="Reviewer" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="oppurtunity" Type="Int32" />
+    <Property Name="Meeting" Type="Int32" />
+    <Property Name="Coaching" Type="Int32" />
+    <Property Name="Unacceptable" Type="Int32" />
+    <Property Name="Yes" Type="Int32" />
+    <Property Name="No" Type="Int32" />
+    <Property Name="NotApplicable" Type="Int32" />
+    <Property Name="Defects" Type="Int32" />
+    <Property Name="DefectPercent" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="Year" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="Month" Type="Decimal" Precision="2" Scale="0" />
+    <Property Name="Week" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="calldate" Type="DateTime" Precision="3" />
+    <Property Name="supervisor" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_fact_empperf_All">
+    <Key>
+      <PropertyRef Name="Tblid" />
+      <PropertyRef Name="KPIMetricId" />
+    </Key>
+    <Property Name="Tblid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="KPIMetricId" Type="Int32" Nullable="false" />
+    <Property Name="ReportDate" Type="DateTime" Precision="3" />
+    <Property Name="Email" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="EmployeeNumber" Type="Int32" />
+    <Property Name="LastName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="FirstName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Title" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Goal" Type="Int32" />
+    <Property Name="Actual" Type="Int32" />
+    <Property Name="PerctoGoal" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="NoofTasks" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_fact_empperf_Daily">
+    <Key>
+      <PropertyRef Name="Tblid" />
+      <PropertyRef Name="KPIMetricId" />
+    </Key>
+    <Property Name="Tblid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="KPIMetricId" Type="Int32" Nullable="false" />
+    <Property Name="RecDate" Type="DateTime" Precision="3" />
+    <Property Name="Email" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="EmployeeNumber" Type="Int32" />
+    <Property Name="LastName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="FirstName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Title" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Goal" Type="Int32" />
+    <Property Name="Actual" Type="Int32" />
+    <Property Name="PerctoGoal" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="NoofTasks" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_fact_empperf_Intraday">
+    <Key>
+      <PropertyRef Name="Tblid" />
+      <PropertyRef Name="KPIMetricId" />
+    </Key>
+    <Property Name="Tblid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="KPIMetricId" Type="Int32" Nullable="false" />
+    <Property Name="ReportDate" Type="DateTime" Precision="3" />
+    <Property Name="ReportHour" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="EmployeeNumber" Type="Int32" />
+    <Property Name="LastName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="FirstName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Title" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Goal" Type="Int32" />
+    <Property Name="Actual" Type="Int32" />
+    <Property Name="PerctoGoal" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="NoofTasks" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_fact_empperf_Monthly">
+    <Key>
+      <PropertyRef Name="Tblid" />
+      <PropertyRef Name="KPIMetricId" />
+    </Key>
+    <Property Name="Tblid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="KPIMetricId" Type="Int32" Nullable="false" />
+    <Property Name="RecMonth" Type="Decimal" Precision="4" Scale="0" />
+    <Property Name="RecYear" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="EmployeeNumber" Type="Int32" />
+    <Property Name="LastName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="FirstName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Title" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Goal" Type="Int32" />
+    <Property Name="Actual" Type="Int32" />
+    <Property Name="PerctoGoal" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="NoofTasks" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_fact_empperf_weekly">
+    <Key>
+      <PropertyRef Name="Tblid" />
+      <PropertyRef Name="KPIMetricId" />
+    </Key>
+    <Property Name="Tblid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="KPIMetricId" Type="Int32" Nullable="false" />
+    <Property Name="RecWeekStartDate" Type="DateTime" Precision="3" />
+    <Property Name="RecMonth" Type="Decimal" Precision="4" Scale="0" />
+    <Property Name="RecYear" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="EmployeeNumber" Type="Int32" />
+    <Property Name="LastName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="FirstName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Title" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Goal" Type="Int32" />
+    <Property Name="Actual" Type="Int32" />
+    <Property Name="PerctoGoal" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="NoofTasks" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_FactCalls_All">
+    <Key>
+      <PropertyRef Name="TblId" />
+    </Key>
+    <Property Name="TblId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="SourceReferenceId" Type="Int32" />
+    <Property Name="ContactDate" Type="DateTime" Precision="3" />
+    <Property Name="SourceTimeZone" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="ContactDate_Est" Type="DateTime" Precision="3" />
+    <Property Name="ContactDate_Cst" Type="DateTime" Precision="3" />
+    <Property Name="ContactDate_Mst" Type="DateTime" Precision="3" />
+    <Property Name="ContactDate_Pst" Type="DateTime" Precision="3" />
+    <Property Name="RecordCreatedby" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Dnis" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DnisDescription" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="DispositionLevelID1" Type="Int32" />
+    <Property Name="DispositionLevel1" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="DispositionLevelID2" Type="Int32" />
+    <Property Name="DispositionLevel2" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="DispositionLevelID3" Type="Int32" />
+    <Property Name="DispositionLevel3" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Dealershipdid" Type="Int32" />
+    <Property Name="DealerName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Marketid" Type="Int32" />
+    <Property Name="MarketName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="LoadDate" Type="DateTime" Precision="3" />
+    <Property Name="IntraDayprocessed" Type="Boolean" />
+    <Property Name="DailyProcessed" Type="Boolean" />
+    <Property Name="WklyProcessed" Type="Boolean" />
+    <Property Name="MlyProcessed" Type="Boolean" />
+    <Property Name="DispositionLevelID4" Type="Int32" />
+    <Property Name="DispositionLevel4" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_FactCalls_Daily">
+    <Key>
+      <PropertyRef Name="TblId" />
+    </Key>
+    <Property Name="TblId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="SourceReferenceId" Type="Int32" />
+    <Property Name="ReportDate" Type="DateTime" Precision="3" />
+    <Property Name="Dnis" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DnisDescription" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="DispositionLevelID1" Type="Int32" />
+    <Property Name="DispositionLevel1" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="DispositionLevelID2" Type="Int32" />
+    <Property Name="DispositionLevel2" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="DispositionLevelID3" Type="Int32" />
+    <Property Name="DispositionLevel3" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Dealershipdid" Type="Int32" />
+    <Property Name="DealerName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Marketid" Type="Int32" />
+    <Property Name="MarketName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="DispositionLevelID4" Type="Int32" />
+    <Property Name="DispositionLevel4" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_FactCalls_Intraday">
+    <Key>
+      <PropertyRef Name="TblId" />
+    </Key>
+    <Property Name="TblId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="ReportDate" Type="DateTime" Precision="3" />
+    <Property Name="RecHour" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="DispositionLevelID1" Type="Int32" />
+    <Property Name="DispositionLevel1" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="DispositionLevelID2" Type="Int32" />
+    <Property Name="DispositionLevel2" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="DispositionLevelID3" Type="Int32" />
+    <Property Name="DispositionLevel3" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="DispositionLevelID4" Type="Int32" />
+    <Property Name="DispositionLevel4" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Dealershipdid" Type="Int32" />
+    <Property Name="DealerName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Marketid" Type="Int32" />
+    <Property Name="MarketName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_FactCalls_Monthly">
+    <Key>
+      <PropertyRef Name="TblId" />
+    </Key>
+    <Property Name="TblId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="SourceReferenceId" Type="Int32" />
+    <Property Name="RecMonth" Type="Decimal" Precision="2" Scale="0" />
+    <Property Name="RecYear" Type="Decimal" Precision="4" Scale="0" />
+    <Property Name="RecMnthYear" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="Dnis" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DnisDescription" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="DispositionLevelID1" Type="Int32" />
+    <Property Name="DispositionLevel1" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="DispositionLevelID2" Type="Int32" />
+    <Property Name="DispositionLevel2" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="DispositionLevelID3" Type="Int32" />
+    <Property Name="DispositionLevel3" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Dealershipdid" Type="Int32" />
+    <Property Name="DealerName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Marketid" Type="Int32" />
+    <Property Name="MarketName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="DispositionLevelID4" Type="Int32" />
+    <Property Name="DispositionLevel4" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_FactCalls_Weekly">
+    <Key>
+      <PropertyRef Name="TblId" />
+    </Key>
+    <Property Name="TblId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyGUID" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="RecWeekStartDate" Type="DateTime" Precision="3" />
+    <Property Name="RecMonth" Type="Decimal" Precision="2" Scale="0" />
+    <Property Name="RecYear" Type="Decimal" Precision="4" Scale="0" />
+    <Property Name="DispositionLevelID1" Type="Int32" />
+    <Property Name="DispositionLevel1" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="DispositionLevelID2" Type="Int32" />
+    <Property Name="DispositionLevel2" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="DispositionLevelID3" Type="Int32" />
+    <Property Name="DispositionLevel3" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="DispositionLevelID4" Type="Int32" />
+    <Property Name="DispositionLevel4" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Dealershipdid" Type="Int32" />
+    <Property Name="DealerName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Marketid" Type="Int32" />
+    <Property Name="MarketName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_KPIMetric">
+    <Key>
+      <PropertyRef Name="KPIMetricId" />
+    </Key>
+    <Property Name="KPIMetricId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="companyguid" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="KPIMetricName" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="ShortName" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="displayorder" Type="Int32" />
+    <Property Name="InternalExternalAccess" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="DefaultKPI" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_KPIMetricGoal">
+    <Key>
+      <PropertyRef Name="CompanyGuid" />
+    </Key>
+    <Property Name="CompanyGuid" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="KPIMetricId" Type="Int32" />
+    <Property Name="Goal" Type="Int32" />
+    <Property Name="CoachingColorbelowGoal" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="CoachingColormeetGoal" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="CoachingColorAboveGoal" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="programname" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_LicenceInfo">
+    <Key>
+      <PropertyRef Name="Licenceseq" />
+    </Key>
+    <Property Name="Licenceseq" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="LicenceKey" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CompanyGUID" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="0" />
+    <Property Name="ValidFromDate" Type="DateTime" Precision="0" />
+    <Property Name="ValideToDate" Type="DateTime" Precision="0" />
+    <Property Name="AssignedTo" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Trial" Type="Boolean" />
+    <Property Name="TrialStartDate" Type="DateTime" Precision="3" />
+    <Property Name="TrialEndDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_LicenceInfo_hist">
+    <Key>
+      <PropertyRef Name="Licencehistseq" />
+    </Key>
+    <Property Name="Licencehistseq" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Licenceseq" Type="Int32" />
+    <Property Name="LicenceKey" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CompanyGUID" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="0" />
+    <Property Name="ValidFromDate" Type="DateTime" Precision="0" />
+    <Property Name="ValidToDate" Type="DateTime" Precision="0" />
+    <Property Name="AssignedTo" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Trial" Type="Boolean" />
+    <Property Name="TrialStartDate" Type="DateTime" Precision="3" />
+    <Property Name="TrialEndDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_licencemoduleInfo">
+    <Key>
+      <PropertyRef Name="Licencemoduleseq" />
+    </Key>
+    <Property Name="Licencemoduleseq" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Licencekey" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CompanyGUID" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Moduleid" Type="Int32" />
+    <Property Name="Active" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tbl_licencemoduleInfo_hist">
+    <Key>
+      <PropertyRef Name="LicencemoduleseqHistid" />
+    </Key>
+    <Property Name="LicencemoduleseqHistid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Licencemoduleseq" Type="Int32" />
+    <Property Name="Licencekey" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CompanyGUID" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Moduleid" Type="Int32" />
+    <Property Name="Active" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tbl_moodicontransaction">
+    <Key>
+      <PropertyRef Name="TransactionId" />
+    </Key>
+    <Property Name="TransactionId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Datecreated" Type="DateTime" Precision="3" />
+    <Property Name="Moodiconselected" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_noofchartsbydbcompany">
+    <Key>
+      <PropertyRef Name="tblseq" />
+    </Key>
+    <Property Name="tblseq" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Modulename" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="NoOfCharts" Type="Int32" />
+    <Property Name="isactive" Type="Boolean" />
+    <Property Name="companyGUID" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="ChartDisplayName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_qaperfdata_Daily">
+    <Key>
+      <PropertyRef Name="tblid" />
+      <PropertyRef Name="companyguid" />
+    </Key>
+    <Property Name="tblid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="companyguid" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="question" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="EmployeeNumber" Type="Int32" />
+    <Property Name="Recdate" Type="DateTime" Precision="3" />
+    <Property Name="Score" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="employeename" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_qaperfdata_Intraday">
+    <Key>
+      <PropertyRef Name="tblid" />
+      <PropertyRef Name="companyguid" />
+    </Key>
+    <Property Name="tblid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="companyguid" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="question" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="EmployeeNumber" Type="Int32" />
+    <Property Name="RecDate" Type="DateTime" Precision="3" />
+    <Property Name="RecHour" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="Score" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="employeename" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_qaperfdata_Monthly">
+    <Key>
+      <PropertyRef Name="tblid" />
+      <PropertyRef Name="companyguid" />
+    </Key>
+    <Property Name="tblid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="companyguid" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="question" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="EmployeeNumber" Type="Int32" />
+    <Property Name="RecMonth" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="Recyear" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="Recdate" Type="DateTime" Precision="3" />
+    <Property Name="Score" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="employeename" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_qaperfdata_Weekly">
+    <Key>
+      <PropertyRef Name="tblid" />
+      <PropertyRef Name="companyguid" />
+    </Key>
+    <Property Name="tblid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="companyguid" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="question" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="EmployeeNumber" Type="Int32" />
+    <Property Name="RecWkStartDate" Type="DateTime" Precision="3" />
+    <Property Name="RecMonth" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="RecYear" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="Score" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="employeename" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_selchartdispname">
+    <Key>
+      <PropertyRef Name="selchartdispnameseq" />
+      <PropertyRef Name="tblseq" />
+    </Key>
+    <Property Name="selchartdispnameseq" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="tblseq" Type="Int32" Nullable="false" />
+    <Property Name="Chart1name" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Chart2name" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Chart3name" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Chart4name" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_User">
+    <Key>
+      <PropertyRef Name="UserSeq" />
+    </Key>
+    <Property Name="UserSeq" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="FirstName" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Password" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="UserStatus" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="UserType" Type="Int32" />
+    <Property Name="CompanyGuid" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="SecretQuestion1" Type="Int32" />
+    <Property Name="SecretAnswer1" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="SecretQuestion2" Type="Int32" />
+    <Property Name="SecretAnswer2" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="SecretQuestion3" Type="Int32" />
+    <Property Name="SecretAnswer3" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="PasswordUpdatedDate" Type="DateTime" Precision="0" />
+    <Property Name="SecurityQuestionSet" Type="Boolean" />
+    <Property Name="FstTimeLogin" Type="Boolean" />
+    <Property Name="searchfield" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="InternalExternalAccess" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_User_hist">
+    <Key>
+      <PropertyRef Name="UserSeq" />
+    </Key>
+    <Property Name="UserSeq" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="FirstName" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Password" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="UserStatus" Type="Boolean" />
+    <Property Name="UserType" Type="Int32" />
+    <Property Name="CompanyGuid" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="SecretQuestion1" Type="Int32" />
+    <Property Name="SecretAnswer1" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="SecretQuestion2" Type="Int32" />
+    <Property Name="SecretAnswer2" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="SecretQuestion3" Type="Int32" />
+    <Property Name="SecretAnswer3" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="PasswordUpdatedDate" Type="DateTime" Precision="0" />
+    <Property Name="SecurityQuestionSet" Type="Boolean" />
+    <Property Name="FstTimeLogin" Type="Boolean" />
+    <Property Name="searchfield" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="InternalExternalAccess" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_UserRegistration">
+    <Key>
+      <PropertyRef Name="USRSeq" />
+    </Key>
+    <Property Name="USRSeq" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="300" Unicode="false" FixedLength="false" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="300" Unicode="false" FixedLength="false" />
+    <Property Name="CompanyGUID" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Logo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Address1" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+    <Property Name="Address2" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="State" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Zip" Type="Int32" />
+    <Property Name="ContactPhone" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PrefferedContactMethod" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="NoOfEmployee" Type="Int32" />
+    <Property Name="NoOfLicence" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="RecordStatus" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_UserRegistration_hist">
+    <Key>
+      <PropertyRef Name="USRSeq" />
+      <PropertyRef Name="Email" />
+      <PropertyRef Name="FirstName" />
+      <PropertyRef Name="LastName" />
+      <PropertyRef Name="Password" />
+      <PropertyRef Name="CompanyName" />
+    </Key>
+    <Property Name="USRSeq" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="300" Unicode="false" FixedLength="false" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="300" Unicode="false" FixedLength="false" />
+    <Property Name="CompanyGUID" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Logo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Address1" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+    <Property Name="Address2" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="State" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Zip" Type="Int32" />
+    <Property Name="ContactPhone" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PrefferedContactMethod" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="NoOfEmployee" Type="Int32" />
+    <Property Name="NoOfLicence" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="RecordStatus" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_UserRegistrationFollowup">
+    <Key>
+      <PropertyRef Name="USRFLWPSeq" />
+    </Key>
+    <Property Name="USRFLWPSeq" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="USRSeq" Type="Int32" Nullable="false" />
+    <Property Name="CompanyGUID" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="ContactDate" Type="DateTime" Precision="0" />
+    <Property Name="Notes" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="ContactedBy" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Contactedon" Type="DateTime" Precision="3" />
+    <Property Name="OutCome" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_UserRegistrationFollowup_hist">
+    <Key>
+      <PropertyRef Name="USRFLWPHistSeq" />
+      <PropertyRef Name="USRFLWPSeq" />
+      <PropertyRef Name="USRSeq" />
+    </Key>
+    <Property Name="USRFLWPHistSeq" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="USRFLWPSeq" Type="Int32" Nullable="false" />
+    <Property Name="USRSeq" Type="Int32" Nullable="false" />
+    <Property Name="CompanyGUID" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="ContactDate" Type="DateTime" Precision="0" />
+    <Property Name="Notes" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="ContactedBy" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Contactedon" Type="DateTime" Precision="3" />
+    <Property Name="OutCome" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <ComplexType Name="bksp_QAScoresChart4_Result">
+    <Property Type="String" Name="outMonth" Nullable="true" MaxLength="3" />
+    <Property Type="Decimal" Name="DefectScoreperc" Nullable="false" Precision="10" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="getRegistrationFollowUpGridRecord_Result">
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="300" />
+    <Property Type="String" Name="CompanyGUID" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CompanyName" Nullable="false" MaxLength="300" />
+    <Property Type="String" Name="ContactName" Nullable="true" MaxLength="8000" />
+    <Property Type="Int32" Name="NoofLicences" Nullable="true" />
+    <Property Type="String" Name="LastContactDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="LastOutcome" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="LastContactChannel" Nullable="true" MaxLength="1" />
+    <Property Type="Int32" Name="NoofAttempts" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_callsdashboard_dlydata_Result">
+    <Property Type="String" Name="Disposition" Nullable="false" />
+    <Property Type="Int32" Name="DispCount" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_callsdashboard_Intraday_Result">
+    <Property Type="String" Name="Disposition" Nullable="false" />
+    <Property Type="Int32" Name="DispCount" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_callsdashboard_listofvalues_Result">
+    <Property Type="Int32" Name="DisplayOrder" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="sp_callsdashboard_mlydata_Result">
+    <Property Type="String" Name="Disposition" Nullable="false" />
+    <Property Type="Int32" Name="DispCount" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_callsdashboard_wkydata_Result">
+    <Property Type="String" Name="Disposition" Nullable="false" />
+    <Property Type="Int32" Name="DispCount" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_callsdb_callcount_Result">
+    <Property Type="Int32" Name="TotalCallswithDisposition" Nullable="true" />
+    <Property Type="Int32" Name="TotalCalls" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_chimes_UtilizationChart1_Result">
+    <Property Type="String" Name="ProgramName" Nullable="false" MaxLength="33" />
+    <Property Type="String" Name="UtilizationPerc" Nullable="false" MaxLength="5" />
+  </ComplexType>
+  <ComplexType Name="sp_chimes_UtilizationChart2_Result">
+    <Property Type="String" Name="Aux" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Value" Nullable="false" MaxLength="3" />
+  </ComplexType>
+  <ComplexType Name="sp_chimes_UtilizationChart3_Result">
+    <Property Type="String" Name="Selcolor" Nullable="false" MaxLength="6" />
+    <Property Type="String" Name="Value" Nullable="false" MaxLength="4" />
+  </ComplexType>
+  <ComplexType Name="sp_chimes_UtilizationChart4_Result">
+    <Property Type="String" Name="Agentname" Nullable="false" MaxLength="14" />
+    <Property Type="String" Name="Seltime" Nullable="false" MaxLength="5" />
+  </ComplexType>
+  <ComplexType Name="sp_companyprofile_listofvalues_Result">
+    <Property Type="Int32" Name="Licenceseq" Nullable="false" />
+    <Property Type="String" Name="LicenceKey" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CompanyGUID" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" />
+    <Property Type="DateTime" Name="ValidFromDate" Nullable="true" />
+    <Property Type="DateTime" Name="ValideToDate" Nullable="true" />
+    <Property Type="String" Name="AssignedTo" Nullable="true" MaxLength="200" />
+    <Property Type="Boolean" Name="Trial" Nullable="true" />
+    <Property Type="DateTime" Name="TrialStartDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="TrialEndDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="sp_getchartaxislabels_Result">
+    <Property Type="String" Name="xaxislabel" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="yaxislabel" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="sp_getEmployeePerformance_Result">
+    <Property Type="Int32" Name="KPIMetricId" Nullable="false" />
+    <Property Type="String" Name="KPIName" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="sp_getEmployeePerformance_Coachinggrid_Result">
+    <Property Type="String" Name="coachingassigneddate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="KPIMetricName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="Reason" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="Goal" Nullable="false" />
+    <Property Type="Int32" Name="Commitment" Nullable="false" />
+    <Property Type="Int32" Name="Actual" Nullable="false" />
+    <Property Type="Binary" Name="Recording" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_getEmployeePerformance_Comparision_Result">
+    <Property Type="String" Name="Metric" Nullable="false" MaxLength="250" />
+    <Property Type="Int32" Name="Best" Nullable="true" />
+    <Property Type="Int32" Name="average" Nullable="true" />
+    <Property Type="Int32" Name="me" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_getEmployeePerformance_Daily_Result">
+    <Property Type="Int32" Name="KPIMetricId" Nullable="false" />
+    <Property Type="String" Name="KPIName" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="sp_getEmployeePerformance_Details_Daily_Result">
+    <Property Type="String" Name="firstname" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="lastname" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="title" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="KPIMetricName" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="goal" Nullable="true" />
+    <Property Type="Int32" Name="actual" Nullable="true" />
+    <Property Type="Int32" Name="coachings" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_getEmployeePerformance_Details_IntraDay_Result">
+    <Property Type="String" Name="firstname" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="lastname" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="title" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="KPIMetricName" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="goal" Nullable="true" />
+    <Property Type="Int32" Name="actual" Nullable="true" />
+    <Property Type="Int32" Name="coachings" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_getEmployeePerformance_Details_Monthly_Result">
+    <Property Type="String" Name="firstname" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="lastname" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="title" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="KPIMetricName" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="goal" Nullable="true" />
+    <Property Type="Int32" Name="actual" Nullable="true" />
+    <Property Type="Int32" Name="coachings" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_getEmployeePerformance_Details_Weekly_Result">
+    <Property Type="String" Name="firstname" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="lastname" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="title" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="KPIMetricName" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="goal" Nullable="true" />
+    <Property Type="Int32" Name="actual" Nullable="true" />
+    <Property Type="Int32" Name="coachings" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_getEmployeePerformance_Intraday_Result">
+    <Property Type="Int32" Name="KPIMetricId" Nullable="false" />
+    <Property Type="String" Name="KPIName" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="sp_getEmployeePerformance_Monthly_Result">
+    <Property Type="Int32" Name="KPIMetricId" Nullable="false" />
+    <Property Type="String" Name="KPIName" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="sp_getEmployeePerformance_traininggrid_Result">
+    <Property Type="String" Name="TargetedCompletionDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="CoachingAssignedDate" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="ActualCompletionDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="articlename" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="AssociatedMetric" Nullable="false" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="sp_getEmployeePerformance_Weekly_Result">
+    <Property Type="Int32" Name="KPIMetricId" Nullable="false" />
+    <Property Type="String" Name="KPIName" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="sp_getKPIMenu_Result">
+    <Property Type="Int32" Name="KPIID" Nullable="false" />
+    <Property Type="String" Name="KPIName" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="sp_getlistofvalues_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Genericvarchar1" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Genericvarchar2" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Genericvarchar3" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="GenericDate1" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="GenericDate2" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="GenericDate3" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Genericbit1" Nullable="true" />
+    <Property Type="Boolean" Name="Genericbit2" Nullable="true" />
+    <Property Type="Boolean" Name="Genericbit3" Nullable="true" />
+    <Property Type="Decimal" Name="GenericNumeric1" Nullable="true" Precision="10" Scale="0" />
+    <Property Type="Decimal" Name="GenericNumeric2" Nullable="true" Precision="10" Scale="0" />
+    <Property Type="Decimal" Name="GenericNumeric3" Nullable="true" Precision="10" Scale="0" />
+    <Property Type="Boolean" Name="FinalAction" Nullable="true" />
+    <Property Type="Boolean" Name="WriteRecord" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_getParameterlist_Result">
+    <Property Type="Int32" Name="Listid" Nullable="false" />
+    <Property Type="String" Name="Paramvalue" Nullable="false" MaxLength="22" />
+  </ComplexType>
+  <ComplexType Name="sp_getprogram_Result">
+    <Property Type="Int32" Name="programid" Nullable="false" />
+    <Property Type="String" Name="programname" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_QABehavioralChart1_Result">
+    <Property Type="String" Name="QuestionCategory" Nullable="true" MaxLength="4000" />
+    <Property Type="Int32" Name="DefectPercent" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_QABehavioralChart2_Result">
+    <Property Type="String" Name="Questiontext" Nullable="true" MaxLength="4000" />
+    <Property Type="Int32" Name="DefectPercent" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_QABehavioralChart2_Dec_Result">
+    <Property Type="String" Name="Questiontext" Nullable="true" MaxLength="4000" />
+    <Property Type="Decimal" Name="DefectPercent" Nullable="true" Precision="38" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="sp_QABehavioralChart3_Result">
+    <Property Type="String" Name="Outagent" Nullable="true" MaxLength="4000" />
+    <Property Type="Double" Name="DefectPercent" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_QABehavioralChart4_Result">
+    <Property Type="String" Name="outMonth" Nullable="true" MaxLength="3" />
+    <Property Type="Double" Name="DefectPercent" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_QADBListofValues_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Value" Nullable="true" MaxLength="511" />
+  </ComplexType>
+  <ComplexType Name="sp_qaperf_mlydata_Result">
+    <Property Type="String" Name="RecMonth" Nullable="true" MaxLength="3" />
+    <Property Type="Decimal" Name="Value" Nullable="true" Precision="5" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="sp_QAScores_Result">
+    <Property Type="String" Name="ProgramName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="Goal" Nullable="true" />
+    <Property Type="Int32" Name="actual" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_QAScoresChart1_Result">
+    <Property Type="String" Name="Client" Nullable="true" MaxLength="4000" />
+    <Property Type="Decimal" Name="DefectPercent" Nullable="false" Precision="10" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="sp_QAScoresChart2_Result">
+    <Property Type="String" Name="scaletoGoal" Nullable="false" MaxLength="6" />
+    <Property Type="Decimal" Name="DefectPercent" Nullable="true" Precision="10" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="sp_QAScoresChart3_Result">
+    <Property Type="String" Name="agentname" Nullable="true" MaxLength="60" />
+    <Property Type="Decimal" Name="DefectScoreperc" Nullable="true" Precision="10" Scale="2" />
+    <Property Type="Int32" Name="noofdefects" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_QAScoresChart4_Result">
+    <Property Type="String" Name="outMonth" Nullable="true" MaxLength="3" />
+    <Property Type="Decimal" Name="DefectScoreperc" Nullable="true" Precision="10" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="sp_QATrackerGoalVsActual_Result">
+    <Property Type="String" Name="AgentName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Goal" Nullable="true" />
+    <Property Type="Int32" Name="Actual" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="tsp_QATrackerGoalVsActual_Result">
+    <Property Type="String" Name="companyguid" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="site" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="AgentName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="month" Nullable="true" />
+    <Property Type="Int32" Name="week" Nullable="true" />
+    <Property Type="Int32" Name="year" Nullable="true" />
+    <Property Type="Int32" Name="Quarter" Nullable="true" />
+    <Property Type="Int32" Name="totalqareqd" Nullable="true" />
+    <Property Type="Int32" Name="Actualqa" Nullable="true" />
+  </ComplexType>
+</Schema>

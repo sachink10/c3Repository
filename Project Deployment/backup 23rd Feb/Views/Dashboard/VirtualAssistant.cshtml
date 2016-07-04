@@ -1,0 +1,423 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+@using (@Html.BeginForm("VirtualAssistant", "DashBoard"))
+{
+
+
+    <!-- START CONTAINER -->
+    <div class="page-container row-fluid">
+        <!-- START CONTENT -->
+        <section id="main-content" class="sidebar_shift sidebar_shift-reg">
+            <section class="wrapper wrap-box">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pan0 top-box-search">
+                    <div class="page-title">
+                        <div class="pull-left col-md-8 col-sm-12 col-xs-12 mart10">
+                            <div class="pull-left"><strong class="fonts24">Sep 2015</strong></div>
+                            <div class="clearfix">
+                                <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="12" data-slider-step="1" data-slider-value="5" />
+                            </div>
+                        </div>
+                        @*<div class="btn-group pull-right col-md-4 col-sm-12 col-xs-12 mart15" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default pull-right col-sm-12 col-xs-12 col-md-3 col-lg-3 border-btn">Month</button>
+                            <button type="button" class="btn btn-default pull-right col-sm-12 col-xs-12 col-md-3 col-lg-3 border-btn">Weekly</button>
+                            <button type="button" class="btn btn-default pull-right col-sm-12 col-xs-12 col-md-3 col-lg-3 border-btn">Daily</button>
+                            <button type="button" class="btn btn-default pull-right col-sm-12 col-xs-12 col-md-3 col-lg-3 border-btn">Intraday</button>
+                        </div>*@
+                        <nav class="navbar-default" role="navigation">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbarCollapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+
+                            <div class="pull-right">
+                                <ul class="nav navbar-nav navbar-right btn-group">
+                                    <li><a href="#">Intraday</a></li>
+                                    <li class="active"><a href="#">Daily</a></li>
+                                    <li><a href="#">Weekly</a></li>
+                                    <li><a href="#">Month</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bhoechie-tab-container">
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 bhoechie-tab-menu">
+                        <div href="#" class="list-group-item border-less text-center" style="background: #ff6531; color: #fff; padding: 2px !important;">
+                            <h4 class="fa fa-server" style="color: #fff;"></h4>
+                        </div>
+                        <div class="list-group pull-left" style="height:600px;">
+
+
+                            <a href="#" class="list-group-item border-less active text-center">
+                                <h4 class="fa fa-bell"></h4>
+                                <br />
+                                Alert
+                            </a>
+
+                            <a href="#" class="list-group-item border-less text-center">
+                                <h4 class="fa fa-user"></h4>
+                                <br />
+                                Analysis
+                            </a>
+                            <a href="#" class="list-group-item border-less text-center">
+                                <h4 class="fa fa-user-plus"></h4>
+                                <br />
+                                Analysis
+                            </a>
+                            <a href="#" class="list-group-item border-less text-center">
+                                <h4 class="fa fa-pie-chart"></h4>
+                                <br />
+                                Coaching Breakdown
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 bhoechie-tab pan0">
+                        <!-- Alert section -->
+                        <div class="bhoechie-tab-content active pan0">
+                            <div class="table-responsive" id="OrderPackages">
+                                <table align="center" class="table table-condensed" id="tableSearchResults">
+                                    <tbody>
+                                        <!--Strat Time-->
+                                        <tr id="package1" class="accordion-toggle main-heading-box" data-toggle="collapse" data-parent="#OrderPackages" data-target=".packageDetails1">
+                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                            <td align="left" valign="middle" style="width: 1%;"><i class="indicator glyphicon glyphicon-chevron-up"></i></td>
+                                            <td align="left" valign="middle" style="width: 23%;"><strong>Time</strong></td>
+                                            <td align="left" valign="middle" style="width: 23%;"><strong>Employess</strong></td>
+                                            <td align="left" valign="middle" style="width: 26%;"><strong>Alert</strong></td>
+                                            <td align="left" valign="middle" style="width: 23%;"><strong>Action</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="6" class="hiddenRow" style="padding: 0px !important;">
+                                                <div class="accordion-body collapse in packageDetails1" id="accordion1">
+                                                    <table class="table">
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- Start Task  -->
+                                        <tr id="package2" class="accordion-toggle main-heading-box" data-toggle="collapse" data-parent="#OrderPackages" data-target=".packageDetails2">
+                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                            <td align="left" valign="middle" style="width: 1%;"><i class="indicator glyphicon glyphicon-chevron-up"></i></td>
+                                            <td align="left" valign="middle" style="width: 23%;"><strong>Task</strong></td>
+                                            <td align="left" valign="middle" style="width: 23%;"><strong>&nbsp;</strong></td>
+                                            <td align="left" valign="middle" style="width: 26%;"><strong>&nbsp;</strong></td>
+                                            <td align="left" valign="middle" style="width: 23%;"><strong>&nbsp;</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="6" class="hiddenRow" style="padding: 0px !important;">
+                                                <div class="accordion-body collapse packageDetails2" id="accordion2">
+                                                    <table class="table">
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!--Start Watch-->
+                                        <tr id="package3" class="accordion-toggle main-heading-box" data-toggle="collapse" data-parent="#OrderPackages" data-target=".packageDetails3">
+                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                            <td align="left" valign="middle" style="width: 1%;"><i class="indicator glyphicon glyphicon-chevron-up"></i></td>
+                                            <td align="left" valign="middle" style="width: 23%;"><strong>Watch</strong></td>
+                                            <td align="left" valign="middle" style="width: 23%;"><strong>&nbsp;</strong></td>
+                                            <td align="left" valign="middle" style="width: 26%;"><strong>&nbsp;</strong></td>
+                                            <td align="left" valign="middle" style="width: 23%;"><strong>&nbsp;</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="6" class="hiddenRow" style="padding: 0px !important;">
+                                                <div class="accordion-body collapse packageDetails3" id="accordion3">
+                                                    <table class="table">
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 4%;">&nbsp;</td>
+                                                            <td align="left" valign="middle" class="wht-spc" style="width: 1%;">*</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">8:53 AM</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">Jone Martin</td>
+                                                            <td align="left" valign="middle" style="width: 26%;">Poor Performance - Appointment Setting</td>
+                                                            <td align="left" valign="middle" style="width: 23%;">***</td>
+                                                        </tr>
+
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- Analysis section -->
+                        <div class="bhoechie-tab-content">
+                            <center>Coming Soon</center>
+                        </div>
+                        <!-- Analysis search -->
+                        <div class="bhoechie-tab-content">
+                            <center>Coming Soon</center>
+                        </div>
+                        <!-- Coaching Breakdown search -->
+                        <div class="bhoechie-tab-content">
+                            <center>Coming Soon</center>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+
+
+            </section>
+        </section>
+        <!-- END CONTENT -->
+
+    </div>
+    <!-- END CONTAINER --> 
+    
+    <script>
+        $(document).ready(function () {
+            $("div.bhoechie-tab-menu>div.list-group>a").click(function (e) {
+                e.preventDefault();
+                $(this).siblings('a.active').removeClass("active");
+                $(this).addClass("active");
+                var index = $(this).index();
+                $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+                $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+            });
+        });
+    </script>
+}

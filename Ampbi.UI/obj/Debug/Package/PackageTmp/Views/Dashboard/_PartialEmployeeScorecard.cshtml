@@ -1,0 +1,205 @@
+﻿@model Ampbi.DataAccess.ViewModel.DashBoard
+@using System.Web.UI.WebControls
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active simplePagerContainer" id="IntSet">
+        <div class="panel-body">
+
+            <ul class="pagination1">
+                @if (Model.employeePerformanceCardList != null)
+                {
+                    foreach (var tabMetric in Model.employeePerformanceCardList)
+                    {
+                        if (Convert.ToDecimal(tabMetric.Actual) <= Convert.ToDecimal(tabMetric.Goal))
+                        {
+                      
+                    <li>
+                        <div class="col-md-3 m-bottom">
+                            <div class="clearfix green-light round-corner-emp">
+                                <div class="clearfix">
+                                    <div class="pull-left" style="width: 50%; padding: 0 0 0 10px; border-right: #000 solid 1px; line-height: 28px; color: #000;">
+                                        @*@Html.ActionLink(tabMetric.FirstName + "," + tabMetric.LastName, "", "Dashboard")*@
+                                        @*@Html.ActionLink(tabMetric.FirstName, "IndividualEmpPerf", "Dashboard", new { @id = tabMetric.email, @anc = "1", @class = "test" }, null)*@
+                                       @* <a href="@Url.Action("IndividualEmpPerf", "Dashboard", new { email = @tabMetric.email })">*@
+                                         <a href="@Url.Action("IndividualEmpPerf", "Dashboard", new { email = @tabMetric.email })">
+                                            <div style="text-decoration:underline;cursor: pointer; cursor: hand;" itemid = "@tabMetric.email">@tabMetric.FirstName @tabMetric.LastName</div>
+                                        </a>
+                                    </div>
+                                    <div class="pull-right" style="width: 50%; line-height: 28px; color: #000;">
+                                        <ul class="days-plus">
+                                            <li>0</li>
+                                            <li>0</li>
+                                            <li>#Days</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="pull-left emp-pic green-dark">
+                                        <img src="~/Content/assets/images/pic.png">
+                                    </div>
+                                    <div class="pull-right" style="width: 73%;">
+                                        <div class="clearfix">
+                                            <div class="table-responsive">
+                                                <table class="table table-green">
+                                                    <tr>
+                                                        <td>Goal</td>
+                                                        <td>@tabMetric.Goal</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Actual</td>
+                                                        <td>@tabMetric.Actual</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>% to Goal</td>
+                                                        <td>@tabMetric.perctoGoal</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="pull-left" style="width: 50%; padding: 0 0 0 10px; text-align: left; line-height: 28px; color: #000;">TASKS</div>
+                                    <div class="pull-right" style="width: 50%; padding: 0 10px 0 0; text-align: right; line-height: 28px; color: #000;">@tabMetric.NoOfTasks</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                           
+                        }
+
+
+
+                        if (Convert.ToDecimal(tabMetric.Actual) > Convert.ToDecimal(tabMetric.Goal))
+                        {
+                       
+                    <li>
+
+                        <div class="col-md-3 m-bottom">
+                            <div class="clearfix orange-light">
+                                <div class="clearfix">
+                                    <div class="pull-left" style="width: 50%; padding: 0 0 0 10px; border-right: #000 solid 1px; line-height: 28px; color: #000;">
+                                        @*@Html.ActionLink(tabMetric.FirstName, "IndividualEmpPerf", "Dashboard", new { @id = tabMetric.email, @anc = "1", @class = "test" }, null)*@
+                                        <a href="@Url.Action("IndividualEmpPerf", "Dashboard", new { email = @tabMetric.email })">
+                                            <div style="text-decoration:underline;cursor: pointer; cursor: hand;" itemid = "@tabMetric.email">@tabMetric.FirstName @tabMetric.LastName</div>
+                                        </a>
+                                    </div>
+                                    <div class="pull-right" style="width: 50%; line-height: 28px; color: #000;">
+                                        <ul class="days-plus">
+                                            <li>0</li>
+                                            <li>0</li>
+                                            <li>#Days</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="pull-left emp-pic orange-dark">
+                                        <img src="~/Content/assets/images/pic.png">
+                                    </div>
+                                    <div class="pull-right" style="width: 73%;">
+                                        <div class="clearfix">
+                                            <div class="table-responsive">
+                                                <table class="table table-orange">
+                                                    <tr>
+                                                        <td>Goal</td>
+                                                        <td>@tabMetric.Goal</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Actual</td>
+                                                        <td>@tabMetric.Actual</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>% to Goal</td>
+                                                        <td>@tabMetric.perctoGoal</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="pull-left" style="width: 50%; padding: 0 0 0 10px; text-align: left; line-height: 28px; color: #000;">TASKS</div>
+                                    <div class="pull-right" style="width: 50%; padding: 0 10px 0 0; text-align: right; line-height: 28px; color: #000;">@tabMetric.NoOfTasks</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                           
+                        }
+                    }
+                }
+              
+            </ul>
+
+             @if (Model.employeePerformanceCardList.Count == 0)
+             {
+                 <table id="tblNodata" style="width: 90%; position: absolute;">
+                        <tbody>
+                            <tr>
+                                <td colspan="6" style="vertical-align: middle; text-align: center; font-size: medium;">
+                                    <br />
+                                    <span style="background-color: #396b9e; color: white; border-radius: 5px; padding: 6px; white-space: nowrap; font-size: 16px;">No Data</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+             }
+
+            @*<div class="pull-right padlr5">
+                <ul class="pagination paganation-box">
+                    <li><a href="#">Previous</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li class="disabled"><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">Next</a></li>
+                </ul>
+            </div>*@
+        </div>
+
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    $("ul.pagination1").quickPagination();
+    $('.test').click(function (e) {
+
+       // SetEmployeeScorecard('', $(this).attr('href'));
+
+     
+        
+        var slidervalue;
+        var T = $('#typeID').val();
+        if (T == 'D') {
+            slidervalue = $('#DailyID').html();
+                
+        }
+        if (T == 'W') {
+            slidervalue = $('#WeekID').html();
+        }
+        if (T == 'M') {
+            slidervalue = $('#MonthID').html();
+        }
+        if (T == 'I') {
+            slidervalue = $('#IntradayID').html();
+        }
+
+        var selectedValue = $(this).attr("itemid");
+
+        var email = $(this).attr('href');
+        $.ajax({
+            url: '@Url.Action("IndividualEmpPerf", "Dashboard")',
+            cache: false,
+            data: { 'email': email, 'sliderValue': slidervalue, 'type': T },
+
+            success: function (result) {
+                window.location.href = '/Dashboard/IndividualEmpPerf/';
+            },
+            error: function (result) {
+                alert('Cannot update selection values now!!');
+            }
+        })
+    });
+</script>

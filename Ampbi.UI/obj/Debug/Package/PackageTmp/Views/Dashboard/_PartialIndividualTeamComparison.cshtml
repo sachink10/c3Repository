@@ -1,0 +1,299 @@
+﻿@model Ampbi.DataAccess.ViewModel.DashBoard
+@using System.Web.UI.WebControls
+
+
+
+    <div class="col-md-9" style="max-height: 546px; overflow-y: auto;">
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="Organization">
+
+
+                @foreach (var item in Model.getTeamComp)
+                {
+
+                    if (item.cardcolor == "BLUE")
+                    { 
+                         
+                    <div class="col-md-4 padlr5" style="margin-bottom: 10px;">
+                        <div class="main-box-emp box-blue">
+                            <div class="clearfix box-blue-heading">
+                                <h5 class="pull-left"><strong>@item.Metricname</strong></h5>
+                                <p class="pull-right anchor-icon"><a href="#"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></p>
+                                <ul class="average">
+                                    <li>
+                                        <div class="color-persent-sky" style="@item.Me%; position:relative; text-align:center;"><span class="text-left">Me</span></div>
+                                        <span class="text-count">@item.Youraveragevalue</span>
+                                    </li>
+                                    <li>
+                                        <div class="color-persent-sky" style="width: @item.TeamAverage + %; position:relative; text-align:center;">@item.Teamaveragevalue<span class="text-left-avg">Average</span></div>
+                                    </li>
+                                    <li>
+                                        <div class="color-persent-sky" style="width: @item.TeamBest + %; position:relative; text-align:center;">@item.Bestinteamaveragevalue <span class="text-left-best">Best</span></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>                                    
+                    }
+
+                    if (item.cardcolor == "GREEN")
+                    {
+                        
+                    <div class="col-md-4 m-bottom">
+                        <div class="clearfix green-light">
+                            <div class="clearfix">
+                                <div style="width: 90%; padding: 0 0 0 10px; line-height: 28px; color: #000;" class="pull-left">@item.Metricname</div>
+                                <div style="width: 10%; line-height: 28px; color: #000;" class="pull-right">
+                                    <a href="#" style="float: right; margin: 0 10px 0 0;"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a>
+                                    @*<a style="color:#000;" href="@Url.Action("TeamComparision", "Dashboard")" ><strong>Team Rank -@perfDetails.teamrank </strong></a>*@
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-green">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <ul class="average average-card">
+                                                    <li>
+                                                        <div class="color-persent-green-card" style="@item.Me%;  position:relative; text-align:center;"><span class="text-left">Me</span></div>
+                                                        <span class="text-count-card">@item.Youraveragevalue </span>
+                                                    </li>
+
+                                                </ul>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <ul class="average average-card">
+                                                    <li>
+                                                        <div class="color-persent-green-card" style="width: @item.TeamAverage%;  position:relative; text-align:center;"><span class="text-left-avg">Average</span></div>
+                                                        <span class="text-count-card">@item.Teamaveragevalue </span>
+                                                    </li>
+                                                </ul>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <ul class="average average-card">
+                                                    <li>
+                                                        <div class="color-persent-green-card" style="width: @item.TeamBest%;  position:relative; text-align:center;"><span class="text-left-best">Best</span></div>
+                                                        <span class="text-count-card">@item.Bestinteamaveragevalue</span>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                        
+@*<div class="col-md-4 padlr5" style="margin-bottom: 10px;">
+                        <div class="main-box-emp box-sky">
+                            <div class="clearfix box-sky-heading">
+                                <h5 class="pull-left"><strong>@item.Metricname</strong></h5>
+                                <p class="pull-right anchor-icon"><a href="#"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></p>
+                                <ul class="average">
+                                    <li>
+                                        <div class="color-persent-sky" style="width: @item.Me%; position:relative; text-align:center;"><span class="text-left">Me</span></div>
+                                    <span class="text-count">@item.Youraveragevalue</span>
+                                         </li>
+                                    <li>
+                                       <div class="color-persent-sky" style="width: @item.TeamAverage%; position:relative; text-align:center;"><span class="text-left-avg">Average</span></div>
+                                    <span class="text-count">@item.Teamaveragevalue</span>
+                                    </li>
+                                    <li>
+                                      <div class="color-persent-sky" style="width: @item.TeamBest%; position:relative; text-align:center;"><span class="text-left-best">Best</span></div>
+                                       <span class="text-count">@item.Bestinteamaveragevalue </span> 
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>*@
+                                    
+                    }
+
+                    if (item.cardcolor == "YELLOW")
+                    {
+                    <div class="col-md-4 m-bottom">
+                        <div class="clearfix yellow-light">
+                            <div class="clearfix">
+                                <div style="width: 90%; padding: 0 0 0 10px; line-height: 28px; color: #000;" class="pull-left">@item.Metricname</div>
+                                <div style="width: 10%; line-height: 28px; color: #000;" class="pull-right">
+                                    <a href="#" style="float: right; margin: 0 10px 0 0;"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a>
+                                    @*<a style="color:#000;" href="@Url.Action("TeamComparision", "Dashboard")" ><strong>Team Rank -@perfDetails.teamrank </strong></a>*@
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-yellow">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <ul class="average average-card">
+                                                    <li>
+                                                        <div class="color-persent-yellow-card" style="@item.Me%;  position:relative; text-align:center;"><span class="text-left">Me</span></div>
+                                                        <span class="text-count-card">@item.Youraveragevalue </span>
+                                                    </li>
+
+                                                </ul>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <ul class="average average-card">
+                                                    <li>
+                                                        <div class="color-persent-pink-card" style="width: @item.TeamAverage%;  position:relative; text-align:center;"><span class="text-left-avg">Average</span></div>
+                                                        <span class="text-count-card">@item.Teamaveragevalue </span>
+                                                    </li>
+                                                </ul>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <ul class="average average-card">
+                                                    <li>
+                                                        <div class="color-persent-pink-card" style="width: @item.TeamBest%;  position:relative; text-align:center;"><span class="text-left-best">Best</span></div>
+                                                        <span class="text-count-card">@item.Bestinteamaveragevalue</span>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+@*<div class="col-md-4 padlr5" style="margin-bottom: 10px;">
+                        <div class="main-box-emp box-yellow">
+                            <div class="clearfix box-yellow-heading">
+                                <h5 class="pull-left"><strong>@item.Metricname</strong></h5>
+                                <p class="pull-right anchor-icon"><a href="#"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></p>
+                                <ul class="average">
+                                    <li>
+                                        <div class="color-persent-yellow" style="@item.Me%; position:relative; text-align:center;"> <span class="text-left">Me</span></div>
+                                      <span class="text-count">@item.Youraveragevalue </span> 
+                                         </li>  
+                                    <li>
+                                        <div class="color-persent-yellow" style="width: @item.TeamAverage%; position:relative; text-align:center;"><span class="text-left-avg">Average</span></div>
+                                        <span class="text-count">@item.Teamaveragevalue</span> 
+                                         </li> 
+                                    <li>
+                                        <div class="color-persent-yellow" style="width: @item.TeamBest%; position:relative; text-align:center;"><span class="text-left-best">Best</span></div>
+                                        <span class="text-count">@item.Bestinteamaveragevalue </span> 
+                                    </li>                                     
+                                </ul>
+                            </div>
+                        </div>
+                    </div>*@
+                                    
+                    }
+
+                    if (item.cardcolor == "RED" || item.cardcolor == "PINK")
+                    {
+                    <div class="col-md-4 m-bottom">
+                        <div class="clearfix orange-light">
+                            <div class="clearfix">
+                                <div style="width: 90%; padding: 0 0 0 10px; line-height: 28px; color: #000;" class="pull-left">@item.Metricname</div>
+                                <div style="width: 10%; line-height: 28px; color: #000;" class="pull-right">
+                                    <a href="#" style="float: right; margin: 0 10px 0 0;"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a>
+                                    @*<a style="color:#000;" href="@Url.Action("TeamComparision", "Dashboard")" ><strong>Team Rank -@perfDetails.teamrank </strong></a>*@
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-orange">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <ul class="average average-card">
+                                                    <li>
+                                                        <div class="color-persent-pink-card" style="@item.Me%;  position:relative; text-align:center;"><span class="text-left">Me</span></div>
+                                                        <span class="text-count-card">@item.Youraveragevalue </span>
+                                                    </li>
+
+                                                </ul>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <ul class="average average-card">
+                                                    <li>
+                                                        <div class="color-persent-pink-card" style="width: @item.TeamAverage%;  position:relative; text-align:center;"><span class="text-left-avg">Average</span></div>
+                                                        <span class="text-count-card">@item.Teamaveragevalue </span>
+                                                    </li>
+                                                </ul>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <ul class="average average-card">
+                                                    <li>
+                                                        <div class="color-persent-pink-card" style="width: @item.TeamBest%;  position:relative; text-align:center;"><span class="text-left-best">Best</span></div>
+                                                        <span class="text-count-card">@item.Bestinteamaveragevalue</span>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+@*<div class="col-md-4 padlr5" style="margin-bottom: 10px;">
+                        <div class="main-box-emp box-pink">
+                            <div class="clearfix box-pink-heading">
+                                <h5 class="pull-left"><strong>@item.Metricname</strong></h5>
+                                <p class="pull-right anchor-icon"><a href="#"><i class="glyphicon glyphicon-modal-window" aria-hidden="true"></i></a></p>
+                                <ul class="average">
+                                    <li>
+                                        <div class="color-persent-pink" style="@item.Me%;  position:relative; text-align:center;"><span class="text-left">Me</span></div>
+                                    <span class="text-count">@item.Youraveragevalue </span>     
+                                    </li>                                    
+                                    <li>
+                                        <div class="color-persent-pink" style="width: @item.TeamAverage%;  position:relative; text-align:center;"><span class="text-left-avg">Average</span></div>
+                                    <span class="text-count">@item.Teamaveragevalue </span>     
+                                    </li> 
+                                    <li>
+                                        <div class="color-persent-pink" style="width: @item.TeamBest%;  position:relative; text-align:center;"><span class="text-left-best">Best</span></div>
+                                       <span class="text-count">@item.Bestinteamaveragevalue</span> 
+                                         </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>*@
+                    }
+
+                }
+
+
+            </div>
+        </div>
+    </div>
+
+@if (Model.getTeamComp.Count == 0)
+{
+    <table id="tblNodata" style="width: 100%; position: absolute; margin-top: 5%;">
+        <tbody>
+            <tr>
+
+                <td colspan="6" style="vertical-align: middle; text-align: center; font-size: medium;">
+                    <br />
+                    <span style="background-color: #396b9e; color: white; border-radius: 5px; padding: 6px; white-space: nowrap; font-size: 16px;">No Data</span>
+
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+}

@@ -1,0 +1,2021 @@
+﻿@model Ampbi.DataAccess.ViewModel.DashBoard
+@{
+    ViewBag.Title = "QADashBoard";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+@using (Html.BeginForm("QADashBoard", "DashBoard"))
+{
+    <!-- START CONTAINER -->
+    <div class="page-container row-fluid">
+        <!-- START CONTENT -->
+        <section id="main-content" class="sidebar_shift sidebar_shift-reg">
+            <section class="wrapper wrap-box">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pan0 top-box-search">
+                    <div class="page-title">
+
+                        <div class="tab-content pull-left col-md-8 col-sm-12 col-xs-12 mart10">
+
+
+                            <!--Intraday-->
+
+                            <div role="tabpanel" class="tab-pane" id="Intraday">
+                                <div class="pull-left"><strong class="fonts24" id="IntradayID"></strong></div>
+                                <div class="clearfix">
+                                    <input id="ex4" data-slider-id='ex1Slider' type="text" data-slider-min="-13" data-slider-max="0" data-slider-value="0" data-slider-step="1" />
+                                </div>
+                            </div>
+
+                            <!--Daily-->
+
+                            <div role="tabpanel" class="tab-pane active" id="Daily">
+                                <div class="pull-left"><strong class="fonts24" id="DailyID"></strong></div>
+                                <div class="clearfix">
+                                    <input id="ex3" data-slider-id='ex1Slider' type="text" data-slider-min="-13" data-slider-max="0" data-slider-value="-1" data-slider-step="1">
+                                </div>
+                            </div>
+
+                            <!--Weekly-->
+
+                            <div role="tabpanel" class="tab-pane" id="Weekly">
+                                <div class="pull-left"><strong class="fonts24" id="WeekID"></strong></div>
+                                <div class="clearfix">
+                                    <input id="ex2" data-slider-id='ex1Slider' type="text" data-slider-min="-12" data-slider-max="0" data-slider-value="0" data-slider-step="1" />
+                                </div>
+                            </div>
+
+                            <!--Month-->
+
+                            <div role="tabpanel" class="tab-pane" id="Month">
+                                <div class="pull-left"><strong class="fonts24" id="MonthID"></strong></div>
+                                <div class="clearfix">
+                                    <input id="ex1" data-slider-id='ex1Slider' data-slider-min="-13" data-slider-max="0" data-slider-value="0" data-slider-step="1" />
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <nav class="navbar-default" role="navigation">                           
+                            <div class="pull-right">
+                                <ul class="nav navbar-nav navbar-right btn-group nav-tabs" role="tablist">
+                                    <li role="presentation"><a style="margin: 0px;" href="#Intraday" aria-controls="Intraday" onclick="getIntraday();" role="tab" data-toggle="tab" id="btnIntraday">Intraday</a></li>
+                                    <li role="presentation" class="active"><a style="margin: 0px;" href="#Daily" aria-controls="Daily" role="tab" data-toggle="tab" id="btnDaily">Daily</a></li>
+                                    <li role="presentation"><a style="margin: 0px;" href="#Weekly" aria-controls="Weekly" onclick="GetWeekINfo();" role="tab" data-toggle="tab" id="btnWeekly">Weekly</a></li>
+                                    <li role="presentation"><a style="margin: 0px;" href="#Month" aria-controls="Month" role="tab" onclick="GetMonthINfo();" data-toggle="tab" id="btnMonth">Month</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+
+
+
+
+
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <form action="#" method="get">
+                    <div class="col-md-2">
+                        <div class="col-md-12" style="padding: 25px 0 0 10px;">
+                            <button type="reset" class="clear">Clear Selection</button>
+
+                            <ul id="tree2" style="height: 410px; overflow: auto;">
+
+                                <li id="site"><a href="#">Site</a>
+                                    @{
+    string[] sites = @Model.parameters[0].Split(',');
+                                    }
+                                    <ul>
+                                        @for (int i = 0; i < sites.Count(); i++)
+                                        {
+                                            if (sites.Count() == 1 || sites.Count() == 0)
+                                            {
+                                            <li class="treecs selected">
+                                                <a href="#"><span></span>All Sites</a></li>
+                                            }
+                                            else
+                                            {
+                                            <li class="treecs selected">
+                                                <a href="#"><span></span>@sites[i]</a></li>
+                                            }
+
+                                        }
+                                    </ul>
+                                </li>
+                                <li id="program"><a href="#">Program</a>
+                                    @{
+                                        string[] program = @Model.parameters[1].Split(',');
+                                    }
+                                    <ul>
+                                        @for (int i = 0; i < program.Count(); i++)
+                                        {
+                                            if (sites.Count() == 1 || program.Count() == 0)
+                                            {
+                                            <li class="treecs selected">
+                                                <a href="#"><span></span>All</a></li>
+                                            }
+                                            else
+                                            {
+                                            <li class="treecs selected">
+                                                <a href="#"><span></span>@program[i]</a></li>
+                                            }
+                                        }
+
+                                    </ul>
+                                </li>
+                                <li id="agent"><a href="#">Agent</a>
+                                    @{
+                                        string[] agent = @Model.parameters[2].Split(',');
+                                    }
+                                    <ul>
+
+                                        @for (int i = 0; i < agent.Count(); i++)
+                                        {
+                                            if (agent.Count() == 1 || agent.Count() == 0)
+                                            {
+                                            <li class="treecs selected">
+                                                <a href="#"><span></span>All</a></li>
+                                            }
+                                            else
+                                            {
+                                            <li class="treecs selected">
+                                                <a href="#"><span></span>@agent[i]</a></li>
+                                            }
+                                        }
+
+
+                                    </ul>
+                                </li>
+                                <li id="review"><a href="#">Reviewer</a>
+                                    @{
+                                        string[] Reviewer = @Model.parameters[3].Split(',');
+                                    }
+                                    <ul>
+
+                                        @for (int i = 0; i < Reviewer.Count(); i++)
+                                        {
+                                            if (Reviewer.Count() == 1 || Reviewer.Count() == 0)
+                                            {
+                                            <li class="treecs selected">
+                                                <a href="#"><span></span>All</a></li>
+                                            }
+                                            else
+                                            {
+                                            <li class="treecs selected">
+                                                <a href="#"><span></span>@Reviewer[i]</a></li>
+                                            }
+                                        }
+
+                                    </ul>
+                                </li>
+                                <li id="year"><a href="#">Year</a>
+                                    @{
+                                        string[] Year = @Model.parameters[4].Split(',');
+                                    }
+                                    <ul>
+
+                                        @for (int i = 0; i < Year.Count(); i++)
+                                        {
+                                            if (Year.Count() == 1 || Year.Count() == 0)
+                                            {
+                                            <li class="treecs selected">
+                                                <a href="#"><span></span>2015</a></li>
+                                            }
+                                            else
+                                            {
+                                            <li class="treecs selected">
+                                                <a href="#"><span></span>@Year[i]</a></li>
+                                            }
+                                        }
+
+                                    </ul>
+                                </li>
+                                <li id="month"><a href="#">Month</a>
+                                    @{
+                                        string[] Month = @Model.parameters[5].Split(',');
+                                    }
+                                    <ul>
+
+                                        @for (int i = 0; i < Month.Count(); i++)
+                                        {
+                                            if (Month.Count() == 1 || Month.Count() == 0)
+                                            {
+                                            <li class="treecs selected">
+                                                <a href="#"><span></span>12</a></li>
+                                            }
+                                            else
+                                            {
+                                            <li class="treecs selected">
+                                                <a href="#"><span></span>@Month[i]</a></li>
+                                            }
+                                        }
+
+                                    </ul>
+                                </li>
+                                <li id="week"><a href="#">Week</a>
+                                    @{
+                                        string[] Week = @Model.parameters[6].Split(',');
+                                    }
+                                    <ul>
+
+                                        @for (int i = 0; i < Week.Count(); i++)
+                                        {
+                                            if (Week.Count() == 1 || Week.Count() == 0)
+                                            {
+                                            <li class="treecs selected">
+                                                <a href="#"><span></span>1</a></li>
+                                            }
+                                            else
+                                            {
+                                            <li class="treecs selected">
+                                                <a href="#"><span></span>@Week[i]</a></li>
+                                            }
+                                        }
+
+                                    </ul>
+                                </li>
+                                <li id="quarter"><a href="#">Quarter</a>
+                                    @{
+                                        string[] Quarter = @Model.parameters[7].Split(',');
+                                    }
+                                    <ul>
+
+                                        @for (int i = 0; i < Quarter.Count(); i++)
+                                        {
+                                            if (Quarter.Count() == 1 || Quarter.Count() == 0)
+                                            {
+                                            <li class="treecs selected">
+                                                <a href="#"><span></span>1</a></li>
+                                            }
+                                            else
+                                            {
+                                            <li class="treecs selected">
+                                                <a href="#"><span></span>@Quarter[i]</a></li>
+                                            }
+                                        }
+
+
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+
+@*                        <div class="clearfix martb-20" style="margin: 30px 0 0 25px; float: left; width: 96%;">
+                            <div class="clearfix">
+                                <button type="button" style="padding: 5px 46px;" class="btn btn-primary">Goal</button>
+                            </div>
+                            <ul class="genesl-box">
+                                <!-- <li class="treecs selected"><input type="checkbox" class="example" style="visibility:hidden;" />            
+              <input name="Gensel1" type="radio" value="">
+              <label style="float:left; width:100%;">0</label>
+            </li>-->
+                                <li>
+                                    <input name="Gensel1" type="radio" value="">
+                                    <label style="float: left; width: 100%;">1</label>
+                                </li>
+                                <li>
+                                    <input name="Gensel1" type="radio" value="">
+                                    <label style="float: left; width: 100%;">2</label>
+                                </li>
+                                <li>
+                                    <input name="Gensel1" type="radio" value="">
+                                    <label style="float: left; width: 100%;">3</label>
+                                </li>
+                                <li>
+                                    <input name="Gensel1" type="radio" value="">
+                                    <label style="float: left; width: 100%;">4</label>
+                                </li>
+                                <li>
+                                    <input name="Gensel1" type="radio" value="">
+                                    <label style="float: left; width: 100%;">5</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clearfix martb-20" style="margin: 30px 0 0 25px; float: left; width: 96%;">
+                            <div class="clearfix">
+                                <button type="button" style="padding: 5px 40px;" class="btn btn-primary">Actual </button>
+                            </div>
+                            <ul class="genesl-box">
+                                <!--<li>
+              <input name="Gensel2" type="radio" value="">
+              <label style="float:left; width:100%;">0</label>
+            </li>-->
+                                <li>
+                                    <input name="Gensel2" type="radio" value="">
+                                    <label style="float: left; width: 100%;">1</label>
+                                </li>
+                                <li>
+                                    <input name="Gensel2" type="radio" value="">
+                                    <label style="float: left; width: 100%;">2</label>
+                                </li>
+                                <li>
+                                    <input name="Gensel2" type="radio" value="">
+                                    <label style="float: left; width: 100%;">3</label>
+                                </li>
+                                <li>
+                                    <input name="Gensel2" type="radio" value="">
+                                    <label style="float: left; width: 100%;">4</label>
+                                </li>
+                                <li>
+                                    <input name="Gensel2" type="radio" value="">
+                                    <label style="float: left; width: 100%;">5</label>
+                                </li>
+                            </ul>
+                        </div>*@
+                    </div>
+                </form>
+                <div class="col-md-10">
+                    <ul id="draggablePanelList" class="list-unstyled col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <li class="panel panel-info col-md-6">
+                            <section class="box mart20">
+                                <header class="panel_header box-heading">
+                                    <!--<h2 class="title pull-left">Calls</h2>-->
+                                    <div class="pull-left col-md-3 pantb20">
+                                        <select class="select-box input-sm">
+                                            <option>Chart Type</option>
+                                            <option>Pie</option>
+                                            <option>Stacked</option>
+                                            <option>Donut</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-left col-md-6 pantb20 text-color-whiite">Behavior</div>
+                                    <div class="pull-right col-md-3 pantb20">
+                                        <select class="select-box input-sm">
+                                            <option>Export</option>
+                                            <option>JPEG</option>
+                                            <option>PDF</option>
+                                            <option>PNG</option>
+                                            <option>Excel</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-right"></div>
+                                </header>
+                                <div class="content-body" style="height: 300px;">
+                                    <div class="row">
+                                        <div id="container" class="col-lg-3 col-md-3 col-sm-12 col-xs-12 col-md-offset-2 col-lg-offset-2 mart10 pic-width" style="padding: 0 0 0 0;">
+                                            @* <img src="~/Content/assets/images/Chart3.png" alt="">*@
+                                        </div>
+                                        @* <div class="pull-right" style="margin-right: 44px;">
+
+                                            <img src="~/Content/assets/images/point.jpg" alt="" id="imgzoom">
+                                        </div>*@
+                                    </div>
+                                </div>
+                            </section>
+                        </li>
+                        <li class="panel panel-info col-md-6">
+                            <section class="box mart20">
+                                <header class="panel_header box-heading">
+                                    <div class="pull-left col-md-3 pantb20">
+                                        <select class="select-box input-sm">
+                                            <option>Chart Type</option>
+                                            <option>Pie</option>
+                                            <option>Stacked</option>
+                                            <option>Donut</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-left col-md-6 pantb20 text-color-whiite" id="txtchart2"><span>Behavior Detail</span></div>
+                                    <div class="pull-right col-md-3 pantb20">
+                                        <select class="select-box input-sm">
+                                            <option>Export</option>
+                                            <option>JPEG</option>
+                                            <option>PDF</option>
+                                            <option>PNG</option>
+                                            <option>Excel</option>
+                                        </select>
+                                    </div>
+                                </header>
+                                <div class="content-body" style="height: 300px;">
+                                    <div class="row">
+                                        <div id="container2" class="col-lg-3 col-md-3 col-sm-12 col-xs-12 col-md-offset-2 col-lg-offset-2 mart10 pic-width" style="padding: 0 0 0 0;">
+                                            @*  <img src="~/Content/assets/images/Chart2.png" alt="">*@
+                                        </div>
+                                        @* <div class="pull-right" style="margin-right: 44px;">
+                                            <img src="~/Content/assets/images/point.jpg" alt="" id="imgzoom2">
+                                        </div>*@
+                                    </div>
+                                </div>
+                            </section>
+                        </li>
+                        <li class="panel panel-info col-md-6">
+                            <section class="box mart20">
+                                <header class="panel_header box-heading">
+                                    <div class="pull-left col-md-3 pantb20">
+                                        <select class="select-box input-sm">
+                                            <option>Chart Type</option>
+                                            <option>Pie</option>
+                                            <option>Stacked</option>
+                                            <option>Donut</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-left col-md-6 pantb20 text-color-whiite" id="txtchart3"><span>Defects by Agent</span></div>
+                                    <div class="pull-right col-md-3 pantb20">
+                                        <select class="select-box input-sm">
+                                            <option>Export</option>
+                                            <option>JPEG</option>
+                                            <option>PDF</option>
+                                            <option>PNG</option>
+                                            <option>Excel</option>
+                                        </select>
+                                    </div>
+                                </header>
+                                <div class="content-body" style="height: 300px;">
+                                    <div class="row">
+                                        <div id="container3" class="col-lg-3 col-md-3 col-sm-12 col-xs-12 col-md-offset-2 col-lg-offset-2 mart10 pic-width" style="padding: 0 0 0 0;">
+                                            @*<img src="~/Content/assets/images/Chart2.png" alt="">*@
+                                        </div>
+                                        @* <div class="pull-right" style="margin-right: 44px;">
+                                            <img src="~/Content/assets/images/point.jpg" alt="" id="imgzoom3">
+                                        </div>*@
+                                    </div>
+                                </div>
+                            </section>
+                        </li>
+                        <li class="panel panel-info col-md-6">
+                            <section class="box mart20">
+                                <header class="panel_header box-heading">
+                                    <div class="pull-left col-md-3 pantb20">
+                                        <select class="select-box input-sm">
+                                            <option>Chart Type</option>
+                                            <option>Pie</option>
+                                            <option>Stacked</option>
+                                            <option>Donut</option>
+                                        </select>
+                                    </div>
+                                    <div class="pull-left col-md-6 pantb20 text-color-whiite" id="txtchart4"><span>Defects by Agent (by month)</span></div>
+                                    <div class="pull-right col-md-3 pantb20">
+                                        <select class="select-box input-sm">
+                                            <option>Export</option>
+                                            <option>JPEG</option>
+                                            <option>PDF</option>
+                                            <option>PNG</option>
+                                            <option>Excel</option>
+                                        </select>
+                                    </div>
+                                </header>
+                                <div class="content-body" style="height: 300px;">
+                                    <div class="row">
+                                        <div id="container4" class="col-lg-3 col-md-3 col-sm-12 col-xs-12 col-md-offset-2 col-lg-offset-2 mart10 pic-width" style="padding: 0 0 0 0;">
+                                            @*  <img src="~/Content/assets/images/Chart1.jpg" alt="">*@
+                                        </div>
+                                        @*<div class="pull-right" style="margin-right: 44px;">
+                                            <img src="~/Content/assets/images/point.jpg" alt="" id="imgzoom4">
+                                        </div>*@
+                                    </div>
+                                </div>
+                            </section>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </section>
+        </section>
+        <!-- END CONTENT -->
+        <input name="hdnSrvtDtime" id="hdnSrvtDtime" type="hidden">
+        <input name="Type" id="typeID" type="hidden" />
+        <input name="Type" id="siteID" type="hidden" />
+        <input name="Type" id="programID" type="hidden" />
+        <input name="Type" id="agentID" type="hidden" />
+        <input name="Type" id="reviewID" type="hidden" />
+        <input name="Type" id="yearID" type="hidden" />
+        <input name="Type" id="monthID" type="hidden" />
+        <input name="Type" id="weekID" type="hidden" />
+        <input name="Type" id="quarterID" type="hidden" />
+    </div>@*
+    
+    <script>
+        $(function () {
+            var id = "ddlMarkets";
+            $('#' + id).after("<ul id='temp' />")
+                .children("option").each(function () {
+                    $("#temp").append("i>");
+                })
+                .end().remove();
+            $('#temp').attr("id", id);
+        });
+    </script>*@
+   
+    <!-- END CONTAINER --> 
+        
+    <script>
+
+        $(document).ready(function () {
+            var d = new Date();
+
+            var month = d.getMonth() + 1;
+            var day = d.getDate();
+            var year = d.getFullYear();
+            var hr = d.getHours();
+            var mi = d.getMinutes();
+            var sec = d.getSeconds();
+            $('#hdnSrvtDtime').val(year + ',' + month + ',' + day + ',' + hr + ',' + mi + ',' + sec);
+        });
+        setInterval(function () { SonicDashboard_getDate(); }, 250);
+        function SonicDashboard_getDate(slider, type) {
+            var servrDat = $("#hdnSrvtDtime").val();
+            var sliderVal = $("#" + slider).val();;
+            if (servrDat != '') {
+                var mySplitResult = servrDat.split(",");
+                var a = new Date(mySplitResult[0], (mySplitResult[1] - 1).toString(), mySplitResult[2], mySplitResult[3], mySplitResult[4], mySplitResult[5]);
+                //var selected = $("input[type='radio'][name='radio-choice-h-230']:checked");
+                var mydate;
+                switch (type) {
+                    case 'MONTHLY':
+                        $('#typeID').val('M');
+                        mydate = a.addMonths(parseInt(sliderVal));
+                        $("#MonthID").html(mydate.toString('MMM yyyy'));
+                        //$("#hdnDateSelected").val(mydate.toString('MM/dd/yyyy'));
+                        break;
+                    case 'DAILY':
+                        $('#typeID').val('D');
+                        var dt = a.addDays(sliderVal);
+                        var dy = dt.toString('d');
+                        var mt = dt.toString('MMM');
+                        var yr = dt.toString('yyyy');
+                        //$("#hdnDateSelected").val(dt.toString('MM/dd/yyyy'));
+                        $('#DailyID').html((mt + ' ' + dy + ' ' + yr).toString('MMM/d/yyyy'));
+
+                        break;
+                    case 'WEEKLY':
+                        $('#typeID').val('W');
+                        var dt;
+                        if (sliderVal == 0) {
+                            dt = a;
+                        }
+                        else {
+                            dt = a.sunday();
+                            dt.addWeeks(sliderVal);
+                        }
+                        var dy = dt.toString('d');
+                        var mt = dt.toString('MMM');
+                        var yr = dt.toString('yyyy');
+                        //$("#hdnDateSelected").val(dt.toString('MM/dd/yyyy'));
+                        $("#WeekID").html(mt + ' ' + dy + ' ' + yr);
+
+
+                        break;
+
+                    case 'INTRADAY':
+                        $('#typeID').val('I');
+                        var dt = a.addHours(sliderVal);
+                        var dy = dt.toString('d');
+                        var mt = dt.toString('MMM');
+                        var yr = dt.toString('yyyy');
+                        var hr = dt.toString('h');
+                        var tt = dt.toString('tt');
+                        var hour = dt.toString('hh');
+                        if (tt == "PM" && hour < 12) {
+                            hour = parseInt(hour) + 12;
+                        }
+                        $("#hdnDateSelected").val(dt.toString('MM/dd/yyyy') + " " + hour + ":" + dt.toString('mm') + ":" + dt.toString('ss'));
+                        if (hr == 0) { hr = 12; }
+
+                        $('#IntradayID').html(hr + ' ' + tt + ' ' + mt + ' ' + dy + ' ' + yr);
+
+                        break;
+                }
+            }
+        }
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+
+
+            //$('#imgzoom').click(function () {ZoomIn()});
+
+
+            //function ZoomIn(event) {
+
+            //    $("#container").width(
+            //        $("#container").width() * 1.2
+            //    );
+
+            //    $("#container").height(
+            //        $("#container").height() * 1.2
+            //    );
+            //};
+
+
+            $(".clear").click(function () {
+                $(".tree ul li").removeClass("selecttree");
+                $(".tree ul li").addClass("selected");
+                $('#siteID').val('All Sites');
+                $('#programID').val('All');
+                $('#agentID').val('All');
+                $('#yearID').val('2016');
+                $('#monthID').val('1');
+                $('#weekID').val('');
+                $('#container2').hide();
+                $('#container3').hide();
+                $('#container4').hide();
+                bindGraph1();
+            });
+
+
+
+
+            bindGraph1();
+            $('#siteID').val('All Sites');
+            $('#programID').val('All');
+            $('#agentID').val('All');
+            $('#yearID').val('2016');
+            $('#monthID').val('1');
+            $('#weekID').val('');
+            //$('#yearID').val('2015');
+            // bindGraph1(site, program, agent, year, month, week, Goal, Actual)
+            $("#site ul li a").click(function () {
+                // alert($(this).eq(0).text());
+                var value = $(this).eq(0).text();
+                if ($(this).eq(0).text() == $('#siteID').val()) {
+                    value = 'All Sites';
+                    $('#siteID').val(value);
+                }
+                else {
+                    value = $(this).eq(0).text();
+                    $('#siteID').val($(this).eq(0).text());
+                }
+                $('#container2').hide();
+                $('#container3').hide();
+                $('#container4').hide();
+                // value = value.replace("↵ ", "");
+                bindGraph1(value, $('#programID').val(), $('#agentID').val(), $('#yearID').val(), $('#monthID').val(), $('#weekID').val(), '', '', $('#reviewID').val())
+            });
+            $("#program ul li").click(function () {
+                //alert($(this).eq(0).text());
+                var value = $(this).eq(0).text();
+                if ($(this).eq(0).text() == $('#programID').val()) {
+                    value = 'All';
+                    $('#programID').val(value);
+                }
+                else {
+                    value = $(this).eq(0).text();
+                    $('#programID').val($(this).eq(0).text());
+                }
+                $('#container2').hide();
+                $('#container3').hide();
+                $('#container4').hide();
+                bindGraph1($('#siteID').val(), value, $('#agentID').val(), $('#yearID').val(), $('#monthID').val(), $('#weekID').val(), '', '', $('#reviewID').val())
+            });
+            $("#agent ul li").click(function () {
+                //alert($(this).eq(0).text());
+                var value = $(this).eq(0).text();
+                if ($(this).eq(0).text() == $('#agentID').val()) {
+                    value = 'All';
+                    $('#agentID').val(value);
+                }
+                else {
+                    value = $(this).eq(0).text();
+                    $('#agentID').val($(this).eq(0).text());
+                }
+                $('#container2').hide();
+                $('#container3').hide();
+                $('#container4').hide();
+                bindGraph1($('#siteID').val(), $('#programID').val(), value, $('#yearID').val(), $('#monthID').val(), $('#weekID').val(), '', '', $('#reviewID').val())
+            });
+            $("#year ul li").click(function () {
+                //alert($(this).eq(0).text());
+                var value = $(this).eq(0).text();
+                if ($(this).eq(0).text() == $('#yearID').val()) {
+                    value = '2005';
+                    $('#yearID').val(value);
+                }
+                else {
+                    value = $(this).eq(0).text();
+                    $('#yearID').val($(this).eq(0).text());
+                }
+                $('#container2').hide();
+                $('#container3').hide();
+                $('#container4').hide();
+                bindGraph1($('#siteID').val(), $('#programID').val(), $('#agentID').val(), value, $('#monthID').val(), $('#weekID').val(), '', '', $('#reviewID').val())
+            });
+            $("#month ul li").click(function () {
+                //alert($(this).eq(0).text());
+                var value = $(this).eq(0).text();
+                if ($(this).eq(0).text() == $('#monthID').val()) {
+                    value = '12';
+                    $('#monthID').val(value);
+                }
+                else {
+                    value = $(this).eq(0).text();
+                    $('#monthID').val($(this).eq(0).text());
+                }
+                $('#container2').hide();
+                $('#container3').hide();
+                $('#container4').hide();
+                bindGraph1($('#siteID').val(), $('#programID').val(), $('#agentID').val(), $('#yearID').val(), value, $('#weekID').val(), '', '', $('#reviewID').val())
+            });
+            $("#week ul li").click(function () {
+                //alert($(this).eq(0).text());
+                var value = $(this).eq(0).text();
+                if ($(this).eq(0).text() == $('#weekID').val()) {
+                    value = '';
+                    $('#weekID').val(value);
+                }
+                else {
+                    value = $(this).eq(0).text();
+                    $('#weekID').val($(this).eq(0).text());
+                }
+                $('#container2').hide();
+                $('#container3').hide();
+                $('#container4').hide();
+                bindGraph1($('#siteID').val(), $('#programID').val(), $('#agentID').val(), $('#yearID').val(), $('#monthID').val(), value, '', '', $('#reviewID').val())
+            });
+            $("#review ul li").click(function () {
+                //alert($(this).eq(0).text());
+                var value = $(this).eq(0).text();
+                if ($(this).eq(0).text() == $('#reviewID').val()) {
+                    value = 'All';
+                    $('#reviewID').val(value);
+                }
+                else {
+                    value = $(this).eq(0).text();
+                    $('#reviewID').val($(this).eq(0).text());
+                }
+                $('#container2').hide();
+                $('#container3').hide();
+                $('#container4').hide();
+                bindGraph1($('#siteID').val(), $('#programID').val(), $('#agentID').val(), $('#yearID').val(), $('#monthID').val(), $('#weekID').val(), '', '', value)
+            });
+
+
+
+            var sliderValue = $('#ex1').val();
+            var d = new Date();
+            getDaily();
+
+            //Type: -
+            //D= Daily
+            //W=Weekly
+            //I = Intraday
+            //M = Monthly
+            $("#btnMonth").on("click", function () {
+                SonicDashboard_getDate('ex1', 'MONTHLY');
+
+            });
+            $("#btnWeekly").on("click", function () {
+                SonicDashboard_getDate('ex2', 'WEEKLY');
+
+            });
+            $("#btnDaily").on("click", function () {
+                SonicDashboard_getDate('ex3', 'DAILY');
+
+            });
+            $("#btnIntraday").on("click", function () {
+                SonicDashboard_getDate('ex4', 'INTRADAY');
+
+            });
+            ///Change event of Slider
+            $('#ex1').on('change', function () {
+                SonicDashboard_getDate('ex1', 'MONTHLY');
+
+            });
+            $('#ex2').on('change', function () {
+                SonicDashboard_getDate('ex2', 'WEEKLY');
+
+            });
+            $('#ex3').on('change', function () {
+                SonicDashboard_getDate('ex3', 'DAILY');
+
+            });
+            $('#ex4').on('change', function () {
+                SonicDashboard_getDate('ex4', 'INTRADAY');
+
+            });
+
+
+            //Type: -
+            //D= Daily
+            //W=Weekly
+            //I = Intraday
+            //M = Monthly
+            function bindGraph1(site, program, agent, year, month, week, Goal, Actual, reviewer) {
+                var bsite, bprogram, bagent, byear, bmonth;
+
+                if (site == "" || site == undefined) {
+
+                    bsite = "All Sites";
+
+                    site = bsite;
+                }
+
+                if (program == "" || program == undefined) {
+                    bprogram = "All";
+                    program = bprogram;
+                }
+                if (agent == "" || agent == undefined) {
+                    bagent = "All";
+                    agent = bagent;
+                }
+                if (year == "" || year == undefined) {
+                    byear = "2016";
+                    year = byear;
+                }
+                if (month == "" || month == undefined) {
+                    bmonth = "1";
+                    month = bmonth;
+                }
+                ajaxindicatorstart("Data is loading....");
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("QABehavioronBindChartData", "Dashboard")',
+                    cache: false,
+                    dataType: "json",
+                    data: { 'site': site, 'program': program, 'agent': agent, 'year': year, 'month': month, 'week': week, 'type': 'Score' },
+                    success: function (data) {
+
+                        var data1 = new Array();
+                        var data2 = new Array();
+                        var processed_json = new Array();
+                        if (data.length == 0) {
+                            $('#chartType').prop('disabled', true);
+
+                        }
+                        else {
+                            $('#chartType').prop('disabled', false);
+                        }
+
+                        for (i = 0; i < data.length; i++) {
+                            processed_json.push([data[i].QuestionCategory, parseInt(data[i].DefectPercent)]);
+                            data1[i] = data[i].QuestionCategory;
+                            data2[i] = parseInt(data[i].DefectPercent);
+
+                        }
+
+                        //InsertLog($('#chartType').val());
+                        ajaxindicatorstop();
+                        createGraph({
+                            chart: {
+                                renderTo: 'container',
+                                defaultSeriesType: 'column',
+                                events: {
+                                    drilldown: function (e) {
+                                        if (!e.seriesOptions) {
+                                            var chart = this;
+                                            //Show the loading label
+                                            //chart.showLoading('Loading ...');
+                                            setTimeout(function () {
+                                                chart.hideLoading();
+                                                chart.addSeriesAsDrilldown(e.point, series);
+                                            }, 100);
+                                        }
+                                    }
+                                },
+                                //plotBorderWidth: 1,                               
+                                height: 200,
+                            },
+                            title: {
+                                text: '',
+
+                            },
+                            //
+                            subtitle: {
+                                //   text: 'Subtitle'
+                            },
+                            //
+                            xAxis: {
+                                categories: data1,
+
+                            },
+
+                            plotOptions: {
+                                series: {
+                                    name: "",
+                                    cursor: 'pointer',
+                                    point: {
+                                        events: {
+                                            click: function () {
+                                                var charttype = $('#chartType').val();
+
+                                                var T = $('#typeID').val();
+                                                $('#container3').hide();
+                                                $('#container4').hide();
+                                                $('#txtchart2 span').text(this.name.toString());
+                                                // alert(this.name);
+                                                bindGraphdisposition1(this.name, $('#siteID').val(), $('#programID').val(), $('#agentID').val(), $('#yearID').val(), $('#monthID').val(), $('#weekID').val());
+                                            }
+                                        }
+                                    }
+                                },
+
+                                pie:
+                                {
+                                    innerSize: 60,
+                                    depth: 25
+                                },
+
+                                column: {
+                                    stacking: 'normal',
+                                    dataLabels: {
+                                        enabled: true,
+                                        color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                                        style: {
+                                            textShadow: '0 0 3px black'
+                                        }
+                                    }
+                                }
+                            },
+
+
+                            //
+                            series: [{
+                                //name: 'Case',
+                                showInLegend: false,
+                                colorByPoint: true,
+                                data: processed_json
+
+                            }],
+                            credits: {
+                                enabled: false
+                            },
+                            navigation: {
+                                buttonOptions: {
+                                    enabled: false
+                                }
+                            },
+                            exportButton: {
+                                enabled: false
+                            },
+                            //
+                            drilldown: {
+                                series: []
+                            }
+
+                        });
+
+
+
+                        // Column chart
+                        //   options.chart.renderTo = 'container';
+                        // options.chart.Width = "100";
+                        // options.chart.Height = "100";
+                        // options.chart.type = "column";
+                        //var chart1 = new Highcharts.Chart(options);
+
+                        function createGraph(chartOptions) {
+                            // open the basic chart
+                            $(document).ready(function () {
+                                // set the click event for the parent chart
+                                if (data.length != 0) {
+                                    chartOptions.chart.events.click = function () {
+                                        hs.htmlExpand(document.getElementById(chartOptions.chart.renderTo), {
+                                            width: 4000,
+                                            height: 2000,
+                                            allowWidthReduction: true,
+                                            preserveContent: false
+                                        }, {
+                                            chartOptions: chartOptions
+                                        });
+                                    };
+                                }
+                                var chart = new Highcharts.Chart(chartOptions);
+                            });
+                        }
+
+                        // Create a new chart on Highslide popup open
+                        hs.Expander.prototype.onAfterExpand = function () {
+                            if (this.custom.chartOptions) {
+                                var chartOptions = this.custom.chartOptions;
+                                if (!this.hasChart) {
+                                    chartOptions.chart.renderTo = $('.highslide-body')[0];
+                                    chartOptions.chart.events.click = function () { };
+                                    var hsChart = new Highcharts.Chart(chartOptions);
+                                }
+                                this.hasChart = true;
+                            }
+                        };
+
+
+                        //$('#chart1Export').change(function () {
+                        //    var type = this.value;
+
+                        //    var chart = $('#container').highcharts();
+                        //    if (type == "JPEG") {
+                        //        chart.exportChart({ type: "application/jpg" });
+                        //    }
+                        //    if (type == "PNG") {
+                        //        chart.exportChart({ type: "application/png" });
+                        //    }
+                        //    if (type == "PDF") {
+                        //        chart.exportChart({ type: "application/pdf" });
+                        //    }
+                        //    if (type == "Excel") {
+
+                        //        //alert('df');
+                        //        //chart.exportChart({ type: "text/csv" });
+                        //    }
+
+
+                        //});
+
+
+
+                        //$("#chartType").change(function () {
+                        //    var type = this.value;
+
+                        //    if (type !== '0') {
+                        //        if (type == "column") {
+                        //            // InsertLog(type);
+                        //            options.chart.renderTo = 'container';
+                        //            options.chart.type = 'column';
+                        //            var chart1 = new Highcharts.Chart(options);
+                        //        }
+                        //            //else if (type == "bar") {
+                        //            //    InsertLog(type);
+                        //            //    options.chart.renderTo = 'container';
+                        //            //    options.chart.type = 'bar';
+                        //            //    var chart1 = new Highcharts.Chart(options);
+                        //            //}
+                        //        else if (type == "pie") {
+                        //            //InsertLog(type);
+                        //            options.chart.renderTo = 'container';
+                        //            options.chart.type = 'pie';
+                        //            var chart1 = new Highcharts.Chart(options);
+                        //        }
+                        //        //else if (type == "line") {
+                        //        //    InsertLog(type);
+                        //        //    options.chart.renderTo = 'container';
+                        //        //    options.chart.type = 'line';
+                        //        //    var chart1 = new Highcharts.Chart(options);
+                        //        //}
+                        //    }
+                        //});
+                    },
+                    error: function (result) {
+                        alert('Cannot update selection values now!!');
+                    }
+                })
+
+
+            }
+
+
+
+            function bindGraphdisposition1(selectedChartDispVal1, site, program, agent, year, month, week) {
+                $('#container2').show();
+                //var slidervalue;
+                //if (type == 'D') {
+                //    slidervalue = $('#DailyID').html();
+                //}
+                //if (type == 'W') {
+                //    slidervalue = $('#WeekID').html();
+                //}
+                //if (type == 'M') {
+                //    slidervalue = $('#MonthID').html();
+                //}
+                //if (type == 'I') {
+                //    slidervalue = $('#IntradayID').html();
+                //    //alert(slidervalue);
+                //}
+                ajaxindicatorstart("Data is loading...");
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("QABehavioronBindChartDatadispositionlvl1", "Dashboard")',
+                    cache: false,
+                    dataType: "json",
+                    data: { 'site': site, 'program': program, 'agent': agent, 'year': year, 'month': month, 'week': week, 'type': 'Score', 'selectedChartDispVal1': selectedChartDispVal1 },
+                    success: function (data) {
+
+                        var processed_json = new Array();
+                        if (data.length == 0) {
+                            $('#chartType2').prop('disabled', true);
+
+                        }
+                        else {
+                            $('#chartType2').prop('disabled', false);
+                        }
+
+                        for (i = 0; i < data.length; i++) {
+                            processed_json.push([data[i].Questiontext, parseInt(data[i].DefectPercent)]);
+                        }
+                        ajaxindicatorstop();
+                        createGraph({
+                            chart: {
+                                renderTo: 'container2',
+                                defaultSeriesType: 'pie',
+                                events: {
+                                    drilldown: function (e) {
+                                        if (!e.seriesOptions) {
+                                            var chart = this;
+                                            // Show the loading label
+                                            //chart.showLoading('Loading ...');
+                                            setTimeout(function () {
+                                                chart.hideLoading();
+                                                chart.addSeriesAsDrilldown(e.point, series);
+                                            }, 1000);
+                                        }
+                                    }
+                                },
+                                //plotBorderWidth: 1,
+                                //width: 370,
+                                height: 220,
+                            },
+
+
+
+
+                            title: {
+                                text: '',
+
+                            },
+                            //
+                            subtitle: {
+                                //   text: 'Subtitle'
+                            },
+                            //
+                            xAxis: {
+                                //   type: 'category',
+                            },
+                            //
+                            //  yAxis: {
+
+                            //   title: {
+                            //          margin: 2,
+                            //          text: 'No. of user'
+                            //     },
+                            //  },
+                            //
+                            //  legend: {
+                            //  enabled: true,
+                            //   },
+                            //
+                            plotOptions: {
+                                series: {
+                                    name: "",
+                                    cursor: 'pointer',
+                                    point: {
+                                        events: {
+                                            click: function () {
+                                                var charttype = $('#chartType').val();
+                                                //$('#container3').hide();
+                                                //$("#container3 img").remove()
+                                                var T = $('#typeID').val();
+                                                //bindGraphdisposition2(this.name, charttype, T);
+                                                $('#txtchart3 span').text(this.name.toString());
+                                                bindGraphdisposition2(this.name, $('#siteID').val(), $('#programID').val(), $('#agentID').val(), $('#yearID').val(), $('#monthID').val(), $('#weekID').val());
+                                            }
+                                        }
+                                    }
+                                },
+                                //series:
+                                //    {
+                                //        pointPadding: 0.2,
+                                //        borderWidth: 0,
+                                //        dataLabels: {
+                                //            enabled: true
+                                //        }
+                                //    },
+                                pie:
+                                {
+
+                                    innerSize: 60,
+                                    depth: 25
+
+                                },
+
+                                column: {
+                                    stacking: 'normal',
+                                    dataLabels: {
+                                        enabled: true,
+                                        color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                                        style: {
+                                            textShadow: '0 0 3px black'
+                                        }
+                                    }
+                                }
+                            },
+
+
+                            //
+                            series: [{
+                                //name: 'Case',
+                                colorByPoint: true,
+
+                                data: processed_json
+                            }],
+                            navigation: {
+                                buttonOptions: {
+                                    enabled: false
+                                }
+                            },
+                            credits: {
+                                enabled: false
+                            },
+                            exportButton: {
+                                enabled: false
+                            },
+                            //
+                            drilldown: {
+                                series: []
+                            }
+
+                        });
+
+
+
+                        function createGraph(chartOptions) {
+                            // open the basic chart
+                            $(document).ready(function () {
+                                // set the click event for the parent chart
+                                if (data.length != 0) {
+                                    chartOptions.chart.events.click = function () {
+                                        hs.htmlExpand(document.getElementById(chartOptions.chart.renderTo), {
+                                            width: 4000,
+                                            height: 2000,
+                                            allowWidthReduction: true,
+                                            preserveContent: false
+                                        }, {
+                                            chartOptions: chartOptions
+                                        });
+                                    };
+                                }
+                                var chart = new Highcharts.Chart(chartOptions);
+                            });
+                        }
+
+                        // Create a new chart on Highslide popup open
+                        hs.Expander.prototype.onAfterExpand = function () {
+                            if (this.custom.chartOptions) {
+                                var chartOptions = this.custom.chartOptions;
+                                if (!this.hasChart) {
+                                    chartOptions.chart.renderTo = $('.highslide-body')[0];
+                                    chartOptions.chart.events.click = function () { };
+                                    var hsChart = new Highcharts.Chart(chartOptions);
+                                }
+                                this.hasChart = true;
+                            }
+                        };
+
+
+
+
+
+                        //$('#chart2Export').change(function () {
+                        //    var type = this.value;
+
+                        //    var chart = $('#container2').highcharts();
+                        //    if (type == "JPEG") {
+                        //        chart.exportChart({ type: "application/jpg" });
+                        //    }
+                        //    if (type == "PNG") {
+                        //        chart.exportChart({ type: "application/png" });
+                        //    }
+                        //    if (type == "PDF") {
+                        //        chart.exportChart({ type: "application/pdf" });
+                        //    }
+
+
+                        //});
+
+
+                        //$("#chartType2").change(function () {
+                        //    var type = this.value;
+                        //    if (type !== '0') {
+                        //        if (type == "column") {
+
+                        //            options.chart.renderTo = 'container2';
+                        //            options.chart.type = 'column';
+                        //            var chart1 = new Highcharts.Chart(options);
+                        //        }
+                        //        else if (type == "bar") {
+                        //            options.chart.renderTo = 'container2';
+                        //            options.chart.type = 'bar';
+                        //            var chart1 = new Highcharts.Chart(options);
+                        //        }
+                        //        else if (type == "pie") {
+                        //            options.chart.renderTo = 'container2';
+                        //            options.chart.type = 'pie';
+                        //            var chart1 = new Highcharts.Chart(options);
+                        //        }
+                        //        else if (type == "line") {
+                        //            options.chart.renderTo = 'container2';
+                        //            options.chart.type = 'line';
+                        //            var chart1 = new Highcharts.Chart(options);
+                        //        }
+                        //    }
+                        //});
+                    },
+                    error: function (result) {
+                        alert('Cannot update selection values now!!');
+                    }
+                })
+
+
+            }
+
+
+
+            function bindGraphdisposition2(selectedChartDispVal2, site, program, agent, year, month, week) {
+                $('#container3').show();
+                //$('#chartType3').val(charttype);
+                //var selectedMarketVal = $("#ddlMarkets option:selected").text();
+                //var selectedDealerVal = $("#delearshipselection option:selected").text();
+
+                //var slidervalue;
+                //if (type == 'D') {
+                //    slidervalue = $('#DailyID').html();
+                //}
+                //if (type == 'W') {
+                //    slidervalue = $('#WeekID').html();
+                //}
+                //if (type == 'M') {
+                //    slidervalue = $('#MonthID').html();
+                //}
+                //if (type == 'I') {
+                //    slidervalue = $('#IntradayID').html();
+                //    //alert(slidervalue);
+                //}
+                ajaxindicatorstart("Data is loading...");
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("QABehavioronBindChartDatadispositionlvl2", "Dashboard")',
+                    cache: false,
+                    dataType: "json",
+                    data: { 'site': site, 'program': program, 'agent': agent, 'year': year, 'month': month, 'week': week, 'type': 'Score', 'selectedChartDispVal2': selectedChartDispVal2 },
+                    success: function (data) {
+                        var data1 = new Array();
+                        var data2 = new Array();
+                        var processed_json = new Array();
+                        if (data.length == 0) {
+                            $('#chartType3').prop('disabled', true);
+
+                        }
+                        else {
+                            $('#chartType3').prop('disabled', false);
+                        }
+
+                        for (i = 0; i < data.length; i++) {
+                            processed_json.push([data[i].Outagent, parseInt(data[i].DefectPercent)]);
+                            data1[i] = data[i].Outagent;
+                            data2[i] = parseInt(data[i].DefectPercent);
+                        }
+                        ajaxindicatorstop();
+                        createGraph({
+                            chart: {
+                                renderTo: 'container3',
+                                defaultSeriesType: 'column',
+                                events: {
+
+                                    drilldown: function (e) {
+                                        if (!e.seriesOptions) {
+                                            var chart = this;
+                                            // Show the loading label
+                                            //chart.showLoading('Loading ...');
+                                            setTimeout(function () {
+                                                chart.hideLoading();
+                                                chart.addSeriesAsDrilldown(e.point, series);
+                                            }, 1000);
+                                        }
+                                    }
+                                },
+                                //plotBorderWidth: 1,
+                                //width: 370,
+                                height: 220,
+                            },
+
+
+
+
+                            title: {
+                                text: '',
+
+                            },
+                            //
+                            subtitle: {
+                                //   text: 'Subtitle'
+                            },
+                            //
+                            xAxis: {
+                                categories: data1,
+                            },
+                            //
+                            //  yAxis: {
+
+                            //   title: {
+                            //          margin: 2,
+                            //          text: 'No. of user'
+                            //     },
+                            //  },
+                            //
+                            //  legend: {
+                            //  enabled: true,
+                            //   },
+                            //
+                            plotOptions: {
+                                series: {
+                                    name: "",
+                                    cursor: 'pointer',
+                                    point: {
+                                        events: {
+                                            click: function () {
+                                                var charttype = $('#chartType').val();
+                                                var T = $('#typeID').val();
+                                                $('#txtchart4 span').text('Defects by ' + this.name.toString() + ' (by month)');
+                                                bindGraphdisposition3(this.name, $('#siteID').val(), $('#programID').val(), $('#agentID').val(), $('#yearID').val(), $('#monthID').val(), $('#weekID').val());
+                                            }
+                                        }
+                                    }
+                                },
+                                //series:
+                                //    {
+                                //        pointPadding: 0.2,
+                                //        borderWidth: 0,
+                                //        dataLabels: {
+                                //            enabled: true
+                                //        }
+                                //    },
+                                pie:
+                                {
+
+                                    innerSize: 60,
+                                    depth: 25
+
+                                },
+
+                                column: {
+                                    stacking: 'normal',
+                                    dataLabels: {
+                                        enabled: true,
+                                        color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                                        style: {
+                                            textShadow: '0 0 3px black'
+                                        }
+                                    }
+                                }
+                            },
+
+                            //
+                            series: [{
+                                //name: 'Case',
+                                showInLegend: false,
+                                colorByPoint: true,
+                                data: processed_json
+                            }],
+                            navigation: {
+                                buttonOptions: {
+                                    enabled: false
+                                }
+                            },
+                            credits: {
+                                enabled: false
+                            },
+                            exportButton: {
+                                enabled: false
+                            },
+                            //
+                            drilldown: {
+                                series: []
+                            }
+
+                        });
+
+                        function createGraph(chartOptions) {
+                            // open the basic chart
+                            $(document).ready(function () {
+                                // set the click event for the parent chart
+                                if (data.length != 0) {
+                                    chartOptions.chart.events.click = function () {
+                                        hs.htmlExpand(document.getElementById(chartOptions.chart.renderTo), {
+                                            width: 4000,
+                                            height: 2000,
+                                            allowWidthReduction: true,
+                                            preserveContent: false
+                                        }, {
+                                            chartOptions: chartOptions
+                                        });
+                                    };
+                                }
+                                var chart = new Highcharts.Chart(chartOptions);
+                            });
+                        }
+
+
+                        // Create a new chart on Highslide popup open
+                        hs.Expander.prototype.onAfterExpand = function () {
+                            if (this.custom.chartOptions) {
+                                var chartOptions = this.custom.chartOptions;
+                                if (!this.hasChart) {
+                                    chartOptions.chart.renderTo = $('.highslide-body')[0];
+                                    chartOptions.chart.events.click = function () { };
+                                    var hsChart = new Highcharts.Chart(chartOptions);
+                                }
+                                this.hasChart = true;
+                            }
+                        };
+
+
+
+
+                        //$('#chart3Export').change(function () {
+                        //    var type = this.value;
+
+                        //    var chart = $('#container3').highcharts();
+                        //    if (type == "JPEG") {
+                        //        chart.exportChart({ type: "application/jpg" });
+                        //    }
+                        //    if (type == "PNG") {
+                        //        chart.exportChart({ type: "application/png" });
+                        //    }
+                        //    if (type == "PDF") {
+                        //        chart.exportChart({ type: "application/pdf" });
+                        //    }
+
+
+                        //});
+
+
+                        //$("#chartType3").change(function () {
+                        //    var type = this.value;
+                        //    if (type !== '0') {
+                        //        if (type == "column") {
+
+                        //            options.chart.renderTo = 'container3';
+                        //            options.chart.type = 'column';
+                        //            var chart1 = new Highcharts.Chart(options);
+                        //        }
+                        //        else if (type == "bar") {
+                        //            options.chart.renderTo = 'container3';
+                        //            options.chart.type = 'bar';
+                        //            var chart1 = new Highcharts.Chart(options);
+                        //        }
+                        //        else if (type == "pie") {
+                        //            options.chart.renderTo = 'container3';
+                        //            options.chart.type = 'pie';
+                        //            var chart1 = new Highcharts.Chart(options);
+                        //        }
+                        //        else if (type == "line") {
+                        //            options.chart.renderTo = 'container3';
+                        //            options.chart.type = 'line';
+                        //            var chart1 = new Highcharts.Chart(options);
+                        //        }
+                        //    }
+                        //});
+                    },
+                    error: function (result) {
+                        alert('Cannot update selection values now!!');
+                    }
+                })
+            }
+            function bindGraphdisposition3(selectedChartDispVal3, site, program, agent, year, month, week) {
+                $('#container4').show();
+                //$('#chartType4').val(charttype);
+                //var selectedMarketVal = $("#ddlMarkets option:selected").text();
+                //var selectedDealerVal = $("#delearshipselection option:selected").text();
+
+                //var slidervalue;
+                //if (type == 'D') {
+                //    slidervalue = $('#DailyID').html();
+                //}
+                //if (type == 'W') {
+                //    slidervalue = $('#WeekID').html();
+                //}
+                //if (type == 'M') {
+                //    slidervalue = $('#MonthID').html();
+                //}
+                //if (type == 'I') {
+                //    slidervalue = $('#IntradayID').html();
+                //    //alert(slidervalue);
+                //}
+                ajaxindicatorstart("Data is loading...");
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("QABehavioronBindChartDatadispositionlvl3", "Dashboard")',
+                    cache: false,
+                    dataType: "json",
+                    data: { 'site': site, 'program': program, 'agent': agent, 'year': year, 'month': month, 'week': week, 'type': 'Score', 'selectedChartDispVal3': selectedChartDispVal3 },
+                    success: function (data) {
+                        var data1 = new Array();
+                        var data2 = new Array();
+                        var processed_json = new Array();
+                        //if (data.length == 0) {
+                        //    $('#chartType4').prop('disabled', true);
+
+                        //}
+                        //else {
+                        //    $('#chartType4').prop('disabled', false);
+                        //}
+
+                        for (i = 0; i < data.length; i++) {
+                            processed_json.push([data[i].outMonth, parseInt(data[i].DefectPercent)]);
+                            data1[i] = data[i].outMonth;
+                            data2[i] = parseInt(data[i].DefectPercent);
+                        }
+                        ajaxindicatorstop();
+                        createGraph({
+                            chart: {
+                                renderTo: 'container4',
+                                defaultSeriesType: 'column',
+                                events: {
+                                    drilldown: function (e) {
+                                        if (!e.seriesOptions) {
+                                            var chart = this;
+                                            // Show the loading label
+                                            //chart.showLoading('Loading ...');
+                                            setTimeout(function () {
+                                                chart.hideLoading();
+                                                chart.addSeriesAsDrilldown(e.point, series);
+                                            }, 1000);
+                                        }
+                                    }
+                                },
+                                //plotBorderWidth: 1,
+                                //width: 370,
+                                height: 220,
+                            },
+                            title: {
+                                text: '',
+
+                            },
+                            //
+                            subtitle: {
+                                //   text: 'Subtitle'
+                            },
+                            //
+                            xAxis: {
+                                categories: data1
+                            },
+                            //
+                            //  yAxis: {
+
+                            //   title: {
+                            //          margin: 2,
+                            //          text: 'No. of user'
+                            //     },
+                            //  },
+                            //
+                            //  legend: {
+                            //  enabled: true,
+                            //   },
+                            //
+                            plotOptions: {
+                                series: {
+                                    name: "",
+                                    cursor: 'pointer',
+                                    point: {
+                                        events: {
+                                            click: function () {
+
+
+
+
+
+                                            }
+                                        }
+                                    }
+                                },
+                                //series:
+                                //    {
+                                //        pointPadding: 0.2,
+                                //        borderWidth: 0,
+                                //        dataLabels: {
+                                //            enabled: true
+                                //        }
+                                //    },
+                                pie:
+                                {
+
+                                    innerSize: 60,
+                                    depth: 25
+
+                                },
+
+                                column: {
+                                    stacking: 'normal',
+                                    dataLabels: {
+                                        enabled: true,
+                                        color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                                        style: {
+                                            textShadow: '0 0 3px black'
+                                        }
+                                    }
+                                }
+                            },
+
+
+                            //
+                            series: [{
+                                //name: 'Case',
+                                showInLegend: false,
+                                colorByPoint: true,
+                                data: processed_json
+                            }],
+                            navigation: {
+                                buttonOptions: {
+                                    enabled: false
+                                }
+                            },
+                            credits: {
+                                enabled: false
+                            },
+                            exportButton: {
+                                enabled: false
+                            },
+                            //
+                            drilldown: {
+                                series: []
+                            }
+
+                        });
+
+
+
+                        function createGraph(chartOptions) {
+                            // open the basic chart
+                            $(document).ready(function () {
+                                // set the click event for the parent chart
+                                if (data.length != 0) {
+                                    chartOptions.chart.events.click = function () {
+                                        hs.htmlExpand(document.getElementById(chartOptions.chart.renderTo), {
+                                            width: 4000,
+                                            height: 2000,
+                                            allowWidthReduction: true,
+                                            preserveContent: false
+                                        }, {
+                                            chartOptions: chartOptions
+                                        });
+                                    };
+                                }
+                                var chart = new Highcharts.Chart(chartOptions);
+                            });
+                        }
+
+
+                        // Create a new chart on Highslide popup open
+                        hs.Expander.prototype.onAfterExpand = function () {
+                            if (this.custom.chartOptions) {
+                                var chartOptions = this.custom.chartOptions;
+                                if (!this.hasChart) {
+                                    chartOptions.chart.renderTo = $('.highslide-body')[0];
+                                    chartOptions.chart.events.click = function () { };
+                                    var hsChart = new Highcharts.Chart(chartOptions);
+                                }
+                                this.hasChart = true;
+                            }
+                        };
+
+
+
+
+
+
+                        //$('#chart4Export').change(function () {
+                        //    var type = this.value;
+
+                        //    var chart = $('#container4').highcharts();
+                        //    if (type == "JPEG") {
+                        //        chart.exportChart({ type: "application/jpg" });
+                        //    }
+                        //    if (type == "PNG") {
+                        //        chart.exportChart({ type: "application/png" });
+                        //    }
+                        //    if (type == "PDF") {
+                        //        chart.exportChart({ type: "application/pdf" });
+                        //    }
+                        //    //if (type == "Excel") {
+                        //    //    chart.exportChart({ type: "application/xls" });
+                        //    //}
+
+
+                        //});
+
+                        //$("#chartType4").change(function () {
+                        //    var type = this.value;
+                        //    if (type !== '0') {
+                        //        if (type == "column") {
+
+                        //            options.chart.renderTo = 'container4';
+                        //            options.chart.type = 'column';
+                        //            var chart1 = new Highcharts.Chart(options);
+                        //        }
+                        //        else if (type == "bar") {
+                        //            options.chart.renderTo = 'container4';
+                        //            options.chart.type = 'bar';
+                        //            var chart1 = new Highcharts.Chart(options);
+                        //        }
+                        //        else if (type == "pie") {
+                        //            options.chart.renderTo = 'container4';
+                        //            options.chart.type = 'pie';
+                        //            var chart1 = new Highcharts.Chart(options);
+                        //        }
+                        //        else if (type == "line") {
+                        //            options.chart.renderTo = 'container4';
+                        //            options.chart.type = 'line';
+                        //            var chart1 = new Highcharts.Chart(options);
+                        //        }
+                        //    }
+                        //});
+                    },
+                    error: function (result) {
+                        alert('Cannot update selection values now!!');
+                    }
+                })
+
+
+            }
+
+        });
+
+        function GetMonthINfo() {
+            SonicDashboard_getDate('ex1', 'MONTHLY');
+
+        };
+
+        function GetWeekINfo() {
+            SonicDashboard_getDate('ex2', 'WEEKLY');
+        };
+
+        function getDaily() {
+            SonicDashboard_getDate('ex3', 'DAILY');
+
+        };
+        function getIntraday() {
+            SonicDashboard_getDate('ex4', 'INTRADAY');
+        };
+    </script>
+    
+    <script>
+
+
+
+        $(document).ready(function () {
+
+
+            $('#slides').hover(
+                function () {
+                    clearInterval(run);
+                },
+                function () {
+                    run = setInterval('rotate()', speed);
+                }
+            );
+
+        });
+
+
+    </script> 
+    <script>
+        function ajaxindicatorstart(text) {
+            if (jQuery('body').find('#resultLoading').attr('id') != 'resultLoading') {
+                jQuery('body').append('<div id="resultLoading" style="color:#121331"><div><img src="@Url.Content("~/Content/assets/images/ajax-loader.gif")"><div>' + text + '</div></div><div class="bg"></div></div>');
+            }
+
+            jQuery('#resultLoading').css({
+                'width': '100%',
+                'height': '100%',
+                'position': 'fixed',
+                'z-index': '10000000',
+                'top': '0',
+                'left': '0',
+                'right': '0',
+                'bottom': '0',
+                'margin': 'auto'
+            });
+
+            jQuery('#resultLoading .bg').css({
+                // 'background': '#121331',
+                'opacity': '0.7',
+                'width': '100%',
+                'height': '100%',
+                'position': 'absolute',
+                'top': '0'
+            });
+
+            jQuery('#resultLoading>div:first').css({
+                'width': '250px',
+                'height': '75px',
+                'text-align': 'center',
+                'position': 'fixed',
+                'top': '0',
+                'left': '0',
+                'right': '0',
+                'bottom': '0',
+                'margin': 'auto',
+                'font-size': '16px',
+                'z-index': '10',
+                'color': '#ffffff'
+
+            });
+
+            jQuery('#resultLoading .bg').height('100%');
+            jQuery('#resultLoading').fadeIn(300);
+            jQuery('body').css('cursor', 'wait');
+        }
+
+        function ajaxindicatorstop() {
+            jQuery('#resultLoading .bg').height('100%');
+            jQuery('#resultLoading').fadeOut(300);
+            jQuery('body').css('cursor', 'default');
+        }
+
+
+
+        //jQuery(document).ajaxStart(function () {
+        //    //show ajax indicator
+        //    ajaxindicatorstart('loading data.. please wait..');
+        //}).ajaxStop(function () {
+        //    //hide ajax indicator
+        //    ajaxindicatorstop();
+        //});
+    </script>
+    <script>
+        $.fn.extend({
+            treed: function (o) {
+
+                var openedClass = 'glyphicon-minus-sign';
+                var closedClass = 'glyphicon-plus-sign';
+
+                if (typeof o != 'undefined') {
+                    if (typeof o.openedClass != 'undefined') {
+                        openedClass = o.openedClass;
+                    }
+                    if (typeof o.closedClass != 'undefined') {
+                        closedClass = o.closedClass;
+                    }
+                };
+
+                //initialize each of the top levels
+                var tree = $(this);
+                tree.addClass("tree");
+                tree.find('li').has("ul").each(function () {
+                    var branch = $(this); //li with children ul
+                    branch.prepend("<i class='indicator glyphicon " + closedClass + "'></i>");
+                    branch.addClass('branch');
+                    branch.on('click', function (e) {
+                        if (this == e.target) {
+                            var icon = $(this).children('i:first');
+                            icon.toggleClass(openedClass + " " + closedClass);
+                            $(this).children().children().toggle();
+                        }
+                    })
+                    branch.children().children().toggle();
+                });
+                //fire event from the dynamically added icon
+                tree.find('.branch .indicator').each(function () {
+                    $(this).on('click', function () {
+                        $(this).closest('li').click();
+                    });
+                });
+                //fire event to open branch if the li contains an anchor instead of text
+                tree.find('.branch>a').each(function () {
+                    $(this).on('click', function (e) {
+                        $(this).closest('li').click();
+                        e.preventDefault();
+                    });
+                });
+                //fire event to open branch if the li contains a button instead of text
+                tree.find('.branch>button').each(function () {
+                    $(this).on('click', function (e) {
+                        $(this).closest('li').click();
+                        e.preventDefault();
+                    });
+                });
+            }
+        });
+
+        //Initialization of treeviews
+        $('#tree2').treed({ openedClass: 'glyphicon-folder-open', closedClass: 'glyphicon-folder-close' });
+    </script>
+    <script>
+        $(".treecs").click(function (e) {
+
+            if ($(this).hasClass("selecttree")) {
+                $(this).removeClass("selecttree").addClass("selected");
+            } else {
+                // if other menus are open remove open class and add closed
+                $(this).siblings().removeClass("selecttree").addClass("selected");
+                $(this).removeClass("selected").addClass("selecttree");
+            }
+
+        });
+        //$('label input.example').on('change', function () {
+        //    $('label input.example').not(this).prop('checked', false);
+        //});
+    </script>@*
+    
+      <script>
+          $(document).ready(function () {
+              $(".clear").click(function () {
+                  $(".tree ul li").removeClass("selecttree");
+                  $(".tree ul li").addClass("selected");
+                 
+              });
+          });
+</script>*@
+    <style>
+        .treecs {
+            /*padding: 10px;
+    width: 100px;
+    cursor: pointer;*/
+            display: block;
+        }
+
+            .treecs.selecttree {
+                font-weight: bold;
+                color: #f00;
+            }
+
+            .treecs.selected {
+                font-weight: normal;
+            }
+    </style>
+}

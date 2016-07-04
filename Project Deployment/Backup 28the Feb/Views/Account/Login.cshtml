@@ -1,0 +1,42 @@
+﻿@model Ampbi.DataAccess.ViewModel.UserSecrect
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+@using (Html.BeginForm("Login", "Account"))
+{
+    @Html.ValidationSummary()
+    <form id="Login" action="first-time-login.html" class="form-signin">
+        <div class="logo">
+            <img src="~/Content/assets/images/logo.png" alt="">
+        </div>
+
+        <div class="form-group">
+            @*<input type="email" placeholder="Email" class="form-control input-sm" required="required">*@
+            @Html.TextBoxFor(u => u.loginModel.Email, new { @id = "loginEmail", @class = "form-control input-sm", @placeholder = "Email", @required = "required" })
+        </div>
+        <div class="form-group">
+            @*<input type="password" placeholder="Password" class="form-control input-sm" required="required">*@
+            @Html.TextBoxFor(u => u.loginModel.Password, new { @id = "loginPassword", @type = "password", @class = "form-control input-sm", @placeholder = "Password", @required = "required" })
+        </div>
+        <button class="btn btn-success input-sm" type="submit" style="width: 100%;">Submit</button>
+        <div class="change-password">
+            <label class="checkbox">
+                <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe">
+                Remember Username
+            </label>
+            <div class="clearfix">
+                @*<a class="pull-left" href="forgotpassword.html">Forgot your password?</a>*@
+                @Html.ActionLink("Forgot your password","ForgotPassowd","Account")
+            </div>
+            <div class="clearfix">
+                <a class="clearfix" href="@Url.Action("Register","Account")">New User ? Register Now</a>
+                
+               @* @Html.ActionLink("New User ? Register Now","Register","Account")*@
+            </div>
+        </div>
+
+    </form>
+}

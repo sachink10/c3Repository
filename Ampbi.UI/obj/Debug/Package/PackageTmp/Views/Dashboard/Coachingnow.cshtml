@@ -1,0 +1,231 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+@using (@Html.BeginForm("Coachingnow", "DashBoard"))
+{
+
+    <!-- START CONTAINER -->
+    <div class="page-container row-fluid">
+        <!-- START CONTENT -->
+        <section id="main-content" class="sidebar_shift sidebar_shift-reg">
+            <section class="wrapper wrap-box-user">
+                <div class="col-md-5">
+                    <div class="clearfix">
+                        <div class="col-md-8">
+                            <span class="pull-left" style="margin: 0 8px 0 0;">
+                                <img src="assets/images/pic.png" alt=""></span>
+                            <h3 style="padding: 10px 0 0 0;">Dunlevy, Chelsea</h3>
+                            <p>Customer Service Representative</p>
+                        </div>
+                        <h3 class="col-md-4 pull-right" style="margin: 40px 0 0 0;">Mar 12 2016 </h3>
+                    </div>
+                    <div class="clearfix" style="margin: 10px 0 0 0;">
+                        <input name="" class="btn btn-default active col-md-offset-4" value="Blueprint Knowledge Base" type="button">
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 pan0" style="margin: 20px 0 0 0;">
+                        <div class="clearfix">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs text-color" id="myTab">
+                                <li class="active"><a data-target="#ArticleID" data-toggle="tab">ArticleID</a></li>
+                                <li><a data-target="#Article" data-toggle="tab">Article</a></li>
+                                <li><a data-target="#Metric" data-toggle="tab">Metric</a></li>
+                                <li><a data-target="#Review" data-toggle="tab">Review</a></li>
+                                <li><a data-target="#Assign" data-toggle="tab">Assign</a></li>
+                                <li><a data-target="#Date" data-toggle="tab">Date</a></li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="ArticleID">ArticleID</div>
+                                <div class="tab-pane" id="Article">Article</div>
+                                <div class="tab-pane" id="Metric">Metric</div>
+                                <div class="tab-pane" id="Review">Review</div>
+                                <div class="tab-pane" id="Metric">Metric</div>
+                                <div class="tab-pane" id="Review">Review</div>
+                            </div>
+                            <!-- Tab panes -->
+                        </div>
+                    </div>
+                </div>
+
+                <form class="form-horizontal">
+                    <div class="col-md-7 box-color-inner">
+                        <div class="col-md-12" style="padding: 20px 0px;">
+                            <div class="col-md-3">
+                                <label class="control-label label-pan">&nbsp;</label>
+                                <label class="control-label label-pan">Metric(s) <span class="red">*</span></label>
+                                <label class="control-label label-pan">Reason Code <span class="red">*</span></label>
+                                <label class="control-label label-pan">Goal <span class="red">*</span></label>
+                                <label class="control-label label-pan">Actual <span class="red">*</span></label>
+                                <label class="control-label label-pan">Email <span class="red">*</span></label>
+                                <label class="control-label label-pan">Commitment <span class="red">*</span></label>
+                                <label class="control-label label-pan">Date <span class="red">*</span></label>
+                                <label class="control-label label-pan">Mandatory Fields <span class="red">*</span></label>
+                            </div>
+                            <div class="col-md-3">
+                                <div style="width: 100%; text-align: center; margin: 0 0 5px 0;">
+                                    <img src="assets/images/min-round.png" alt=""></div>
+                                <input type="text" required name="" placeholder="" class="form-control input-sm input-mar">
+                                <select name="Select" class="form-control input-sm input-mar">
+                                    <option>Select</option>
+                                </select>
+                                <input type="text" required name="" placeholder="" class="form-control input-sm input-mar">
+                                <input type="text" required name="" placeholder="" class="form-control input-sm input-mar">
+                                <input type="text" required name="" placeholder="" class="form-control input-sm input-mar">
+                                <input type="text" required name="" placeholder="" class="form-control input-sm input-mar">
+                                <input type="text" required name="" placeholder="" class="form-control input-sm input-mar">
+                                <div style="width: 100%; text-align: center; margin: 0 0 5px 0;">
+                                    <img src="assets/images/cancel-round.png" alt=""></div>
+                            </div>
+                            <div class="col-md-3">
+                                <div style="width: 100%; text-align: center; margin: 0 0 5px 0;">
+                                    <img src="assets/images/plus-round.png" alt=""></div>
+                                <input type="text" required name="" placeholder="" class="form-control input-sm input-mar" disabled>
+                                <input type="text" required name="" placeholder="" class="form-control input-sm input-mar" disabled>
+                                <input type="text" required name="" placeholder="" class="form-control input-sm input-mar" disabled>
+                                <input type="text" required name="" placeholder="" class="form-control input-sm input-mar" disabled>
+                                <input type="text" required name="" placeholder="" class="form-control input-sm input-mar" disabled>
+                                <input type="text" required name="" placeholder="" class="form-control input-sm input-mar" disabled>
+                                <input type="text" required name="" placeholder="" class="form-control input-sm input-mar" disabled>
+                                <!--<input type="text" required name="" placeholder="" class="form-control input-sm input-mar" disabled>-->
+                            </div>
+                            <div class="col-md-3">
+                                <div style="width: 100%; text-align: center; margin: 0 0 5px 0;">
+                                    <img src="assets/images/mic-round.png" alt=""></div>
+                                <textarea name="" class="form-control" cols="" rows="9" style="margin: 0 0 5px 0;"></textarea>
+                                <input name="" class="form-control input-sm btn btn-default active" style="font-size: 11px;" value="Complete Coaching Session" type="button">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 mart20">
+                    <ul class="nav nav-tabs text-color" role="tablist">
+                        <li role="presentation" class="active"><a href="#Coaching" aria-controls="Coaching" role="tab" data-toggle="tab">Coaching Hstory</a></li>
+                        <li role="presentation"><a href="#Training" aria-controls="Training" role="tab" data-toggle="tab">Training History</a></li>
+                        <li role="presentation"><a href="#Task" aria-controls="Task" role="tab" data-toggle="tab">Task</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="Coaching">
+                            <div class="table-responsive">
+                                <table width="100%" class="table table-bordered table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-ok" aria-hidden="true"></i></th>
+                                            <td align="center" valign="middle">Date </td>
+                                            <td align="center" valign="middle">Matric(s)</td>
+                                            <td align="center" valign="middle">Reason</td>
+                                            <td align="center" valign="middle">Goal</td>
+                                            <td align="center" valign="middle">Commitment</td>
+                                            <td align="center" valign="middle">Actual</td>
+                                            <td align="right"><i class="glyphicon glyphicon-volume-up" aria-hidden="true"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></th>
+                                            <td align="center" valign="middle">10/11/2015</td>
+                                            <td align="center" valign="middle">Int Set</td>
+                                            <td align="center" valign="middle">Int Set2</td>
+                                            <td align="center" valign="middle">20</td>
+                                            <td align="center" valign="middle">51</td>
+                                            <td align="center" valign="middle">25</td>
+                                            <td align="right"><i class="glyphicon glyphicon-play-circle" aria-hidden="true"></i></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="Training">
+                            <div class="table-responsive">
+                                <table width="100%" class="table table-bordered table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-ok" aria-hidden="true"></i></th>
+                                            <td align="center" valign="middle">Date </td>
+                                            <td align="center" valign="middle">Matric(s)</td>
+                                            <td align="center" valign="middle">Reason</td>
+                                            <td align="center" valign="middle">Goal</td>
+                                            <td align="center" valign="middle">Commitment</td>
+                                            <td align="center" valign="middle">Actual</td>
+                                            <td align="right"><i class="glyphicon glyphicon-volume-up" aria-hidden="true"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></th>
+                                            <td align="center" valign="middle">10/11/2015</td>
+                                            <td align="center" valign="middle">Int Set</td>
+                                            <td align="center" valign="middle">Int Set2</td>
+                                            <td align="center" valign="middle">20</td>
+                                            <td align="center" valign="middle">51</td>
+                                            <td align="center" valign="middle">25</td>
+                                            <td align="right"><i class="glyphicon glyphicon-play-circle" aria-hidden="true"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></th>
+                                            <td align="center" valign="middle">10/11/2015</td>
+                                            <td align="center" valign="middle">Int Set</td>
+                                            <td align="center" valign="middle">Int Set2</td>
+                                            <td align="center" valign="middle">20</td>
+                                            <td align="center" valign="middle">51</td>
+                                            <td align="center" valign="middle">25</td>
+                                            <td align="right"><i class="glyphicon glyphicon-play-circle" aria-hidden="true"></i></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="Task">
+                            <div class="table-responsive">
+                                <table width="100%" class="table table-bordered table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-ok" aria-hidden="true"></i></th>
+                                            <td align="center" valign="middle">Date </td>
+                                            <td align="center" valign="middle">Matric(s)</td>
+                                            <td align="center" valign="middle">Reason</td>
+                                            <td align="center" valign="middle">Goal</td>
+                                            <td align="center" valign="middle">Commitment</td>
+                                            <td align="center" valign="middle">Actual</td>
+                                            <td align="right"><i class="glyphicon glyphicon-volume-up" aria-hidden="true"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></th>
+                                            <td align="center" valign="middle">10/11/2015</td>
+                                            <td align="center" valign="middle">Int Set</td>
+                                            <td align="center" valign="middle">Int Set2</td>
+                                            <td align="center" valign="middle">20</td>
+                                            <td align="center" valign="middle">51</td>
+                                            <td align="center" valign="middle">25</td>
+                                            <td align="right"><i class="glyphicon glyphicon-play-circle" aria-hidden="true"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></th>
+                                            <td align="center" valign="middle">10/11/2015</td>
+                                            <td align="center" valign="middle">Int Set</td>
+                                            <td align="center" valign="middle">Int Set2</td>
+                                            <td align="center" valign="middle">20</td>
+                                            <td align="center" valign="middle">51</td>
+                                            <td align="center" valign="middle">25</td>
+                                            <td align="right"><i class="glyphicon glyphicon-play-circle" aria-hidden="true"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></th>
+                                            <td align="center" valign="middle">10/11/2015</td>
+                                            <td align="center" valign="middle">Int Set</td>
+                                            <td align="center" valign="middle">Int Set2</td>
+                                            <td align="center" valign="middle">20</td>
+                                            <td align="center" valign="middle">51</td>
+                                            <td align="center" valign="middle">25</td>
+                                            <td align="right"><i class="glyphicon glyphicon-play-circle" aria-hidden="true"></i></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- END CONTENT -->
+
+    </div>
+    <!-- END CONTAINER --> 
+}

@@ -1,0 +1,99 @@
+﻿@model Ampbi.DataAccess.ViewModel.UserSecrect
+@{
+    ViewBag.Title = "ForgotPassowd";
+    Layout = "~/Views/Shared/_LayoutPassword.cshtml";
+}
+@using (Html.BeginForm("ForgotPassowd", "Account"))
+{
+    <form id="Forgot" class="form-horizontal" action="#">
+        <div class="content-body border-box">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Email <span class="red">*</span></label>
+                        <div class="col-md-8">
+                            @*<input type="email" class="form-control input-sm" id="usrEmail" placeholder="Email" name="uid" required="required">*@
+                            @Html.TextBoxFor(u => u.userModel.Email, new { @id = "usrEmail", @class = "form-control input-sm", @required = "required", @placeholder = "John.Smith@noreply.com" })
+                            <div id="divUserStatus"></div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Security Question 1 <span class="red">*</span></label>
+                        <div class="col-md-8">
+                            @*<input type="text" class="form-control input-sm" placeholder="Security Question 1" name="ques1" required="required">*@
+                            @Html.TextBoxFor(u => u.userModel.SecretQuestion1, new { @id = "SecQuestion1", @name = "ques1", @placeholder = "Security Question 1", @class = "form-control input-sm", @readonly = "readonly", @required = "required" })
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Security Answer 1 <span class="red">*</span></label>
+                        <div class="col-md-8">
+                            @*<input type="text" class="form-control input-sm" placeholder="Security Answer 1" name="ans1" required="required">*@
+                            @Html.TextBoxFor(u => u.userModel.SecretAnswer1, new { @id = "SecretAnswer1", @name = "ans1", @class = "form-control input-sm", @placeholder = "Security Answer 1", @required = "required" })
+                            <div id="divAns1Status"></div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Security Question 2 <span class="red">*</span></label>
+                        <div class="col-md-8">
+                            @*<input type="text" class="form-control input-sm" placeholder="Security Question 2" name="ques2" required="required">*@
+                            @Html.TextBoxFor(u => u.userModel.SecretQuestion2, new { @id = "SecQuestion2", @name = "ques2", @placeholder = "Security Question 2", @class = "form-control input-sm", @readonly = "readonly", @required = "required" })
+                            
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Security Answer 2 <span class="red">*</span></label>
+                        <div class="col-md-8">
+                            @*<input type="text" class="form-control input-sm" placeholder="Security Answer 2 " name="ans2" required="required">*@
+                            @Html.TextBoxFor(u => u.userModel.SecretAnswer2, new { @id = "SecretAnswer2", @name = "ans2", @class = "form-control input-sm", @placeholder = "Security Answer 2", @required = "required" })
+                            <div id="divAns2Status"></div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Security Question 3 <span class="red">*</span></label>
+                        <div class="col-md-8">
+                            @*<input type="text" class="form-control input-sm" placeholder="Security Question 3" name="ques3" required="required">*@
+                            @Html.TextBoxFor(u => u.userModel.SecretQuestion3, new { @id = "SecQuestion3", @name = "ques3", @placeholder = "Security Question 3", @class = "form-control input-sm", @readonly = "readonly", @required = "required" })
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Security Answer 3 <span class="red">*</span></label>
+                        <div class="col-md-8">
+                            @*<input type="text" class="form-control input-sm" placeholder="Security Answer 3" name="ans3" required="required">*@
+                            @Html.TextBoxFor(u => u.userModel.SecretAnswer3, new { @id = "SecretAnswer3", @name = "ans3", @class = "form-control input-sm", @placeholder = "Security Answer 3", @required = "required" })
+                            <div id="divAns3Status"></div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">New Password <span class="red">*</span></label>
+                        <div class="col-md-8">
+                            @*<input type="password" class="form-control input-sm" placeholder="New Password " name="password" required="required">*@
+                            @Html.TextBoxFor(u => u.userModel.Password, new { @id = "usrPassword", @class = "form-control input-sm", @placeholder = "Password", @type = "password", @required = "required" })
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Confirm Password <span class="red">*</span></label>
+                        <div class="col-md-8">
+                            @*<input type="password" class="form-control input-sm" placeholder="Confirm Password" name="cpassword" required="required">*@
+                            @Html.TextBoxFor(u => u.userModel.ConfirmPassword, new { @id = "usrConfirmPassword", @class = "form-control input-sm", @placeholder = "Confirm Password", @type = "password", @required = "required" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 page-footer-box clearfix">
+            <div class="pull-left"><a href="#">Send me an email link</a></div>
+            <div class="pull-right col-md-offset-4">
+                <button type="submit" class="btn btn-success input-sm">Submit</button>
+                <button type="reset" class="btn btn-success input-sm">Cancel</button>
+            </div>
+        </div>
+    </form>
+}

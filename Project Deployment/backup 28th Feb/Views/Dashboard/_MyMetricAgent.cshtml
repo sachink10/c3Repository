@@ -1,0 +1,196 @@
+﻿@model Ampbi.DataAccess.ViewModel.DashBoard
+@using System.Web.UI.WebControls
+
+  <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 mart20">
+                    @if (Model.agentMyMetric.Count != 0)
+                    {
+                        <div class="col-md-3" style="border:solid 1px #ccc; padding:10px;">
+                            <div class="clearfix"></div>
+                            <div class="pull-left pad0 col-md-3">
+                                <img src="/Content/assets/images/pic.png" alt="">
+                            </div>
+                            <div class="pull-right col-md-9 padr mart10">
+                                <h3>@Model.IndividualPerfCardObjects.FirstName @Model.IndividualPerfCardObjects.LastName</h3>
+                                <p>@Model.IndividualPerfCardObjects.Title</p>
+                            </div>
+                            <div class="clearfix"></div>
+                            @* <ul class="nav nav-tabs text-align-box know-align-box-emp" style="background: #ccccca; border-bottom: none; font-size: 12px; line-height: 30px !important; height: 30px;" role="tablist">
+                                <li id="teamComp" role="presentation" class="col-md-6 pad0 active"><a class="pad0" style="line-height: 30px;" href="#IntSet" aria-controls="IntSet" role="tab" data-toggle="tab">Team Comparison</a></li>
+                                <li id="orgComp" role="presentation" class="col-md-6 pad0"><a class="pad0" style="line-height: 30px;" href="#IntShow" aria-controls="IntShow" role="tab" data-toggle="tab">Organization Comparison</a></li>
+                            </ul>*@
+                            <div class="clearfix mart10"></div>
+                            <h5 class="col-md-12" style="width:100%; text-align:center; font-weight:bold;">@Model.IndividualPerfCardObjectsOtherDetails.companyname</h5>
+                            <ul class="color-box col-md-8">
+                                <li class="red-tdt">@Model.IndividualPerfCardObjectsOtherDetails.IntApt</li>
+                                @*<li class="green-tdt">@Model.IndividualPerfCardObjectsOtherDetails.PhoneApt</li>*@
+                            </ul>
+                        </div>
+
+                        <div id="EmpPerfCards">
+                            @Html.Partial("_PartialEmpPerfCardsagent", Model)
+                        </div> 
+                        
+                    }
+                </div>
+
+                @if (Model.agentMyMetric.Count == 0)
+                {
+                    <table id="tblNodata" style="width: 100%; position: absolute; margin-top: 14%;">
+                        <tbody>
+                            <tr>
+
+                                <td colspan="6" style="vertical-align: middle; text-align: center; font-size: medium;">
+                                    <br />
+                                    <span style="background-color: #396b9e; color: white; border-radius: 5px; padding: 6px; white-space: nowrap; font-size: 16px;">No Data</span>
+
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                }
+                @if (Model.agentMyMetric.Count != 0)
+                {
+
+                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 mart20" id="tblCoaching">
+
+                        @*     -----------------------------------------Code for Grid-----------------------------------------*@
+
+
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 mart20">
+                            <ul class="nav nav-tabs text-color" role="tablist">
+                                <li role="presentation" class="active"><a href="#Coaching" aria-controls="Coaching" role="tab" data-toggle="tab">Coaching History</a></li>
+                                <li role="presentation"><a href="#Training" aria-controls="Training" role="tab" data-toggle="tab">Training History</a></li>
+                                <li role="presentation"><a href="#Task" aria-controls="Task" role="tab" data-toggle="tab">Task</a></li>
+
+                            </ul>
+
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="Coaching">
+                                    <div class="table-responsive">
+                                        <table width="100%" class="table table-bordered">
+                                            <tbody>
+                                                <tr class="blue-t">
+                                                    <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-ok" aria-hidden="true"></i></th>
+                                                    <td align="center" valign="middle">Date </td>
+                                                    <td align="center" valign="middle">Matric(s)</td>
+                                                    <td align="center" valign="middle">Reason</td>
+                                                    <td align="center" valign="middle">Goal</td>
+                                                    <td align="center" valign="middle">Commitment</td>
+                                                    <td align="center" valign="middle">Actual</td>
+                                                    <td align="right"><i class="glyphicon glyphicon-volume-up" aria-hidden="true"></i></td>
+                                                </tr>
+                                                @foreach (var item in Model.getCoachingGrid)
+                                                {
+                                                    <tr class="red-tdt">
+                                                        <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></th>
+                                                        <td align="center" valign="middle">@item.coachingassigneddate</td>
+                                                        <td align="center" valign="middle">@item.KPIMetricName</td>
+                                                        <td align="center" valign="middle"@item.Reason></td>
+                                                        <td align="center" valign="middle">@item.Goal</td>
+                                                        <td align="center" valign="middle">@item.Commitment</td>
+                                                        <td align="center" valign="middle">@item.Actual</td>
+                                                        <td align="right"><i class="glyphicon glyphicon-play-circle" aria-hidden="true"></i></td>
+                                                    </tr>
+                                                }
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="Training">
+                                    <div class="table-responsive">
+                                        <table width="100%" class="table table-bordered">
+                                            <tbody>
+                                                <tr class="blue-t">
+                                                    <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-ok" aria-hidden="true"></i></th>
+                                                    <td align="center" valign="middle">Targeted Completion Date </td>
+                                                    <td align="center" valign="middle">Date Assigned</td>
+                                                    <td align="center" valign="middle">Actual Completion Date</td>
+                                                    <td align="center" valign="middle">Article Name</td>
+                                                    <td align="center" valign="middle">Associated Metric</td>
+                                                    <td align="right"><i class="glyphicon glyphicon-volume-up" aria-hidden="true"></i></td>
+                                                </tr>
+
+                                                @foreach (var item in Model.getTrainingGrid)
+                                                {
+                                                    <tr class="red-tdt">
+                                                        <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></th>
+                                                        <td align="center" valign="middle">@item.TargetedCompletionDate</td>
+                                                        <td align="center" valign="middle">@item.CoachingAssignedDate</td>
+                                                        <td align="center" valign="middle">@item.ActualCompletionDate</td>
+                                                        <td align="center" valign="middle">@item.articlename</td>
+                                                        <td align="center" valign="middle">@item.AssociatedMetric</td>
+
+                                                        <td align="right"><i class="glyphicon glyphicon-play-circle" aria-hidden="true"></i></td>
+                                                    </tr>
+                                                }
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="Task">
+                                    <div class="table-responsive">
+                                        <table width="100%" class="table table-bordered">
+                                            <tbody>
+                                                <tr class="blue-t">
+                                                    <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-ok" aria-hidden="true"></i></th>
+                                                    <td align="center" valign="middle">Date </td>
+                                                    <td align="center" valign="middle">Matric(s)</td>
+                                                    <td align="center" valign="middle">Reason</td>
+                                                    <td align="center" valign="middle">Goal</td>
+                                                    <td align="center" valign="middle">Commitment</td>
+                                                    <td align="center" valign="middle">Actual</td>
+                                                    <td align="right"><i class="glyphicon glyphicon-volume-up" aria-hidden="true"></i></td>
+                                                </tr>
+                                                <tr class="red-tdt">
+                                                    <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></th>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="right"><i class="glyphicon glyphicon-play-circle" aria-hidden="true"></i></td>
+                                                </tr>
+                                                <tr class="red-tdt">
+                                                    <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></th>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="right"><i class="glyphicon glyphicon-play-circle" aria-hidden="true"></i></td>
+                                                </tr>
+                                                <tr class="red-tdt">
+                                                    <th align="center" valign="middle" scope="row"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></th>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="center" valign="middle"></td>
+                                                    <td align="right"><i class="glyphicon glyphicon-play-circle" aria-hidden="true"></i></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+                        @* @Html.Partial("_PartialEmpPerfGrid", Model)*@
+
+
+                    </div>
+                    
+
+                }

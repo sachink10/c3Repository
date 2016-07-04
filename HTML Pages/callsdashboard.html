@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<meta charset="utf-8" />
+<title>Calls Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta content="" name="description" />
+<meta content="" name="author" />
+<!-- CORE CSS FRAMEWORK - START -->
+<link href="assets/css/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="assets/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+<link href="assets/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="assets/css/animate.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="assets/css/dataTables.bootstrap.min.css">
+<link href="assets/css/datepicker.css" rel="stylesheet">
+<link href="assets/css/bootstrap-slider.css" rel="stylesheet">
+<!-- CORE CSS FRAMEWORK - END -->
+<!-- CORE CSS TEMPLATE - START -->
+<link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
+<!-- CORE CSS TEMPLATE - END -->
+</head>
+<body class="login">
+<!-- START TOPBAR -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid header-top-box">
+    <div class="logo-top pull-left"><a href="#"><img src="assets/images/logo-sign.png" alt=""></a></div>
+    <div class="pull-right admin-icon"><a href="#"><img src="assets/images/user.png" alt=""></a></div>
+  </div>
+  <div class="container-fluid nav-box">
+    <div class="navbar-header">
+      <div class="col-md-12 pull-left hidden-md hidden-lg container-box">
+        <ul class="nav navbar-nav pull-left col-xs-9 pad0 mar0">
+          <li><a class="user-name" href="#">John Smith</a></li>
+          <li><a class="user-mood" href="#"><i class="fa fa-smile-o"></i></a></li>
+        </ul>
+      </div>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse col-md-9">
+      <ul class="nav navbar-nav">
+        <li><a href="administration.html">Administration</a></li>
+        <li><a href="calls-dashboard.html">Calls Dashboard</a></li>
+        <li><a href="appointments-dashboard.html">Appointments Dashboard</a></li>
+        <li><a href="qa-dashboard.html">QA Dashboard</a></li>
+        <li><a href="employee-performance.html">Employee Performance</a></li>
+        <li><a href="virtual-assistant.html">Virtual Assistant</a></li>
+        <li><a href="ticket-dashboard.html">Ticket Dashboard</a></li>
+        <li><a class="back-none" href="knowledge-base.html">Knowledge Base</a></li>
+      </ul>
+    </div>
+    <div class="col-md-2 pull-right hidden-sm hidden-xs pad pan0">
+      <ul class="smile-mood pull-right">
+        <li><a href="#"><img src="assets/images/smile1.png" alt=""></a></li>
+        <li><a href="#"><img src="assets/images/smile2.png" alt=""></a></li>
+        <li><a href="#"><img src="assets/images/smile3.png" alt=""></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- END TOPBAR --> 
+<!-- START CONTAINER -->
+<div class="page-container row-fluid"> 
+  <!-- START CONTENT -->
+  <section id="main-content" class="sidebar_shift sidebar_shift-reg">
+    <section class="wrapper wrap-box-user">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pan0 top-box-search">
+        <div class="page-title">
+          <div class="pull-left col-md-8 col-sm-12 col-xs-12 mart10">
+            <div class="pull-left"><strong class="fonts24">Sep 2015</strong></div>
+            <div class="clearfix">
+              <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="12" data-slider-step="1" data-slider-value="12"/>
+            </div>
+          </div>
+          <div class="btn-group pull-right col-md-4 col-sm-12 col-xs-12 mart15" role="group" aria-label="...">
+            <button type="button" class="btn btn-default pull-right active col-sm-12 col-xs-12 col-md-3 col-lg-3 border-btn">Month</button>
+            <button type="button" class="btn btn-default pull-right col-sm-12 col-xs-12 col-md-3 col-lg-3 border-btn">Weekly</button>
+            <button type="button" class="btn btn-default pull-right col-sm-12 col-xs-12 col-md-3 col-lg-3 border-btn">Daily</button>
+            <button type="button" class="btn btn-default pull-right col-sm-12 col-xs-12 col-md-3 col-lg-3 border-btn">Intraday</button>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 mart10">
+        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+          <div class="tile-counter bg-orange border-box-call">
+            <div class="content">
+              <h5 data-to="3304" data-from="1001" data-speed="3000" class="number_counter start_timer counted text-color">Calls with Disposition <span class="text-color">235</span> </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+          <div class="tile-counter bg-orange border-box-call">
+            <div class="content">
+              <h5 data-to="7504" data-from="1001" data-speed="3000" class="number_counter start_timer counted text-color" >Total Calls <span class="text-color">5492</span></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="clearfix"></div>
+      <ul id="draggablePanelList" class="list-unstyled col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <li class="panel panel-info col-md-6">
+          <section class="box mart20">
+            <header class="panel_header box-heading"> 
+              <!--<h2 class="title pull-left">Calls</h2>-->
+              <div class="pull-left col-md-3 pantb20">
+                <select class="select-box input-sm">
+                  <option>Chart Type</option>
+                  <option>Pie</option>
+                  <option>Stacked</option>
+                  <option>Donut</option>
+                </select>
+              </div>
+              <div class="pull-left col-md-6 pantb20 text-color-whiite">CALLS </div>
+              <div class="pull-right col-md-3 pantb20">
+                <select class="select-box input-sm">
+                  <option>Export</option>
+                  <option>JPEG</option>
+                  <option>PDF</option>
+                  <option>PNG</option>
+                  <option>Excel</option>
+                </select>
+              </div>
+              <div class="pull-right"></div>
+            </header>
+            <div class="content-body" style="height:264px;">
+              <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 pan0">
+                  <div class="clearfix">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-5">
+                      <div class="col-md-12 clearfix marb10">
+                        <select class="select-box input-sm" >
+                          <option>ALL-Dealerships</option>
+                          <option>ALL-Dealerships1</option>
+                          <option>ALL-Dealerships2</option>
+                        </select>
+                      </div>
+                      <div class="clearfix">
+                        <div class="col-md-12" >
+                          <div id="carousel">
+                            <div id="buttons"> <a href="#" id="prev"><img src="assets/images/arrow-1.png" alt=""></a> <a href="#" id="next"><img src="assets/images/arrow-2.png" alt=""></a> </div>
+                            <div id="slides" >
+                              <ul>
+                                <li>
+                                  <select class="select-box input-sm">
+                                    <option>All Marketing Campaigns</option>
+                                    <option>All Marketing Campaigns1</option>
+                                    <option>All Marketing Campaigns2</option>
+                                  </select>
+                                </li>
+                                <li>
+                                  <select class="select-box input-sm">
+                                    <option>All Dealerships</option>
+                                    <option>All Dealerships1</option>
+                                    <option>All Dealerships2</option>
+                                  </select>
+                                </li>
+                                <li>
+                                  <select class="select-box input-sm">
+                                    <option>All Dealerships</option>
+                                    <option>All Dealerships1</option>
+                                    <option>All Dealerships2</option>
+                                  </select>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                  </div>
+                  <div class="sm-device col-lg-12 col-md-12 col-sm-12 col-xs-12 pant20 pic-width mart20"><img src="assets/images/pie-chart.png" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </li>
+        <li class="panel panel-info col-md-6">
+          <section class="box mart20">
+            <header class="panel_header box-heading">
+              <div class="pull-left col-md-3 pantb20">
+                <select class="select-box input-sm">
+                  <option>Chart Type</option>
+                  <option>Pie</option>
+                  <option>Stacked</option>
+                  <option>Donut</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="pull-left col-md-6 pantb20 text-color-whiite">PIE</div>
+              <div class="pull-right col-md-3 pantb20">
+                <select class="select-box input-sm">
+                  <option>Export</option>
+                  <option>JPEG</option>
+                  <option>PDF</option>
+                  <option>PNG</option>
+                  <option>Excel</option>
+                  </optgroup>
+                </select>
+              </div>
+            </header>
+            <div class="content-body" style="height:264px;">
+              <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 col-md-offset-2 col-lg-offset-2 mart10 pic-width" style="padding:40px 0 0 0;"> <img src="assets/images/pie-chart1.png" alt=""></div>
+              </div>
+            </div>
+          </section>
+        </li>
+        <li class="panel panel-info col-md-6">
+          <section class="box mart20">
+            <header class="panel_header box-heading">
+              <div class="pull-left col-md-3 pantb20">
+                <select class="select-box input-sm">
+                  <option>Chart Type</option>
+                  <option>Pie</option>
+                  <option>Stacked</option>
+                  <option>Donut</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="pull-left col-md-6 pantb20 text-color-whiite">PIE</div>
+              <div class="pull-right col-md-3 pantb20">
+                <select class="select-box input-sm">
+                  <option>Export</option>
+                  <option>JPEG</option>
+                  <option>PDF</option>
+                  <option>PNG</option>
+                  <option>Excel</option>
+                  </optgroup>
+                </select>
+              </div>
+            </header>
+            <div class="content-body" style="height:264px;">
+              <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 col-md-offset-2 col-lg-offset-2 mart10 pic-width" style="padding:40px 0 0 0;"> <img src="assets/images/pie-chart1.png" alt=""></div>
+              </div>
+            </div>
+          </section>
+        </li>
+        <li class="panel panel-info col-md-6">
+          <section class="box mart20">
+            <header class="panel_header box-heading">
+              <div class="pull-left col-md-3 pantb20">
+                <select class="select-box input-sm">
+                  <option>Chart Type</option>
+                  <option>Pie</option>
+                  <option>Stacked</option>
+                  <option>Donut</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="pull-left col-md-6 pantb20 text-color-whiite">STACKED </div>
+              <div class="pull-right col-md-3 pantb20">
+                <select class="select-box input-sm">
+                  <option>Export</option>
+                  <option>JPEG</option>
+                  <option>PDF</option>
+                  <option>PNG</option>
+                  <option>Excel</option>
+                  </optgroup>
+                </select>
+              </div>
+            </header>
+            <div class="content-body" style="height:264px;">
+              <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 mart10 pic-width" style="padding:40px 0 0 0;"> <img src="assets/images/pie-chart2.png" alt=""></div>
+              </div>
+            </div>
+          </section>
+        </li>
+      </ul>
+      <div class="clearfix"></div>
+    </section>
+  </section>
+  <!-- END CONTENT --> 
+  
+</div>
+<!-- END CONTAINER --> 
+<!-- START FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <p class="text-muted">Copyright © 2015</p>
+  </div>
+</footer>
+<!-- END FOOTER --> 
+<!-- CORE JS FRAMEWORK - START --> 
+<script src="assets/js/jquery-1.11.2.min.js" type="text/javascript"></script> 
+<script src="assets/js/bootstrap.min.js" type="text/javascript"></script> 
+<script src="assets/js/bootstrap-datepicker.js"></script> 
+<script src="assets/js/jquery.dataTables.min.js"></script> 
+<script src="assets/js/dataTables.bootstrap.min.js"></script> 
+<script type='text/javascript' src="assets/js/bootstrap-slider.js"></script> 
+<!-- CORE JS FRAMEWORK - END --> 
+
+<!-- CORE TEMPLATE JS - START --> 
+<script src="assets/js/scripts.js" type="text/javascript"></script> 
+<!-- END CORE TEMPLATE JS - END --> 
+<script>
+$(document).ready(function() {
+	var speed = 5000000;
+	var run = setInterval('rotate()', speed);
+	var item_width = $('#slides li').outerWidth(); 
+	var left_value = item_width * (-1);         
+	$('#slides li:first').before($('#slides li:last'));
+	$('#slides ul').css({'left' : left_value});
+	$('#prev').click(function() {
+		var left_indent = parseInt($('#slides ul').css('left')) + item_width;
+		$('#slides ul:not(:animated)').animate({'left' : left_indent}, 200,function(){
+			$('#slides li:first').before($('#slides li:last'));
+			$('#slides ul').css({'left' : left_value});
+		});
+		return false;            
+	}); 
+	$('#next').click(function() {
+		var left_indent = parseInt($('#slides ul').css('left')) - item_width;
+		$('#slides ul:not(:animated)').animate({'left' : left_indent}, 200, function () {
+			$('#slides li:last').after($('#slides li:first')); 
+			$('#slides ul').css({'left' : left_value});
+		});
+		return false;
+	}); 
+	$('#slides').hover(
+		function() {
+			clearInterval(run);
+		}, 
+		function() {
+			run = setInterval('rotate()', speed);	
+		}
+	); 
+        
+});
+</script> 
+<script type='text/javascript' src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script> 
+<script type='text/javascript'>
+        
+        $(document).ready(function() {
+        
+                jQuery(function($) {
+        var panelList = $('#draggablePanelList');
+
+        panelList.sortable({
+            // Only make the .panel-heading child elements support dragging.
+            // Omit this to make then entire <li>...</li> draggable.
+            handle: '.panel_header', 
+            update: function() {
+                $('.panel', panelList).each(function(index, elem) {
+                     var $listItem = $(elem),
+                         newIndex = $listItem.index();
+
+                     // Persist the new indices.
+                });
+            }
+        });
+    });
+        
+        });
+        
+        </script>
+</body>
+</html>

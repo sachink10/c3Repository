@@ -1,0 +1,242 @@
+﻿@model Ampbi.DataAccess.ViewModel.DashBoard
+@{
+    ViewBag.Title = "CompanyProfile";
+    Layout = "~/Views/Shared/_LayoutMain1.cshtml";
+}
+@Html.BeginForm("CompanyProfile", "Dashboard"))
+{
+<!-- START CONTAINER -->
+<div class="page-container row-fluid" id="companyProfile">
+    <!-- START CONTENT -->
+    <section id="main-content" class="sidebar_shift sidebar_shift-reg">
+        <section class="wrapper wrap-box-user">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pan0 top-box-search">
+                <div class="page-title">
+                    <div class="col-md-4 pull-right mart10">
+                        <form class="form-horizontal">
+                            @* <div class="form-group">
+                                <label class="control-label col-sm-5" style="text-align: right;">Company Search</label>
+                                <div class="col-sm-7">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control input-sm" placeholder="Company Search" id="compSearch" onclick="loadCompanyName();" />
+
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-info input-sm" type="button"><i class="glyphicon glyphicon-search" onclick="SearchCompanyProfile();"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>*@
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfixf marb20"></div>
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 mart10">
+                <div class="col-md-12 col-sm-12 col-xs-12 pan0">
+                    <div class="clearfix">
+
+
+
+                        <div id="CompanyProfile">
+                            @Html.Partial("_PartialCompanyProfile", Model)
+                        </div>
+
+
+
+
+                        
+                    </div>
+
+                    <div class="clearfix mart30"></div>
+                    <div class="col-md-6">
+                        <header class="panel_header box-heading">
+                            <h2 class="title pull-left">User</h2>
+                        </header>
+                        <div class="content-body border-box">
+                            <div class="table-responsive">
+                                <table class="table table-striped mar0">
+                                    <thead>
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Email</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>User Type</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">
+                                                <input name="" type="checkbox" value=""></th>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <input name="" type="checkbox" value=""></th>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <input name="" type="checkbox" value=""></th>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <input name="" type="checkbox" value=""></th>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <input name="" type="checkbox" value=""></th>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                            <td>Table cell</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                        </div>
+                        <div class="col-md-12 col-sm-12 page-footer-box clearfix">
+                            <div class="pull-right col-md-offset-4">
+                                <button class="btn btn-success input-sm" type="submit">Assign</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <header class="panel_header box-heading">
+                            <h2 class="title pull-left">License  Dashboard Access</h2>
+                        </header>
+                        <div class="content-body border-box" style="height: 247px;">
+                            <div class="row">
+                                <form action="#" class="form-horizontal" id="modules">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <!--first Name-->
+                                        <div class="form-group">
+                                            <label class="control-label col-md-6 pull-left">Calls Dashboard </label>
+                                            <div class="col-md-4 pull-right">
+                                                <label class="col-md-6">
+                                                    <input type="radio" name="calls" checked>
+                                                    &nbsp; Yes
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="calls">
+                                                    &nbsp;No
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-6 pull-left">Ticket Dashboard</label>
+                                            <div class="col-md-4 pull-right">
+                                                <label class="col-md-6">
+                                                    <input type="radio" name="ticket" checked>
+                                                    &nbsp; Yes
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="ticket">
+                                                    &nbsp;No
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-6 pull-left">QA Dashboard</label>
+                                            <div class="col-md-4 pull-right">
+                                                <label class="col-md-6">
+                                                    <input type="radio" name="qa" checked>
+                                                    &nbsp; Yes
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="qa">
+                                                    &nbsp;No
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-6 pull-left">Employess Performance</label>
+                                            <div class="col-md-4 pull-right">
+                                                <label class="col-md-6">
+                                                    <input type="radio" name="emp" checked>
+                                                    &nbsp; Yes
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="emp">
+                                                    &nbsp;No
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-6 pull-left">Virtual Assistant</label>
+                                            <div class="col-md-4 pull-right">
+                                                <label class="col-md-6">
+                                                    <input type="radio" name="vir" checked>
+                                                    &nbsp; Yes
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="vir">
+                                                    &nbsp;No
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-6 pull-left">Knowledge Base</label>
+                                            <div class="col-md-4 pull-right">
+                                                <label class="col-md-6">
+                                                    <input type="radio" name="know" checked>
+                                                    &nbsp; Yes
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="know">
+                                                    &nbsp;No
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <!--last Name-->
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- END CONTENT -->
+
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax({
+            //url: hostAddress + "/ApprovalTask/CreateMetadata_Test",
+            url: '@Url.Action("LoadCompanyProfile", "DashBoard")',
+                success: function (data) {
+                    $('#CompanyProfile').html(data);
+                },
+                error: function (result) {
+                    alert('Cannot update selection values now!!');
+                }
+            });
+    });
+</script>
+<!-- END CONTAINER -->
+}

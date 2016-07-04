@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "ModelPopup";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+@using (Html.BeginForm("ModelPopup", "DashBoard"))
+{
+    <!-- END TOPBAR -->
+    <!-- START CONTAINER -->
+    <div class="page-container row-fluid">
+        <!-- START CONTENT -->
+        <section id="main-content" class="sidebar_shift sidebar_shift-reg">
+            <section class="wrapper wrap-box">
+            </section>
+        </section>
+        <!-- END CONTENT -->
+
+    </div>
+    <!-- END CONTAINER -->
+    <div class="modal fade" id="myModal" aria-hidden="false">
+        <div class="clearfix"></div>
+        <div class="modal-dialog modal-md model-box-padt12">
+            <div class="modal-content">
+                <div class="modal-header box-heading">
+                   @* <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>*@
+                    <h4 class="title modal-title" id="myModalLabel">How do you feel today?</h4>
+                </div>
+                <div class="modal-body modal-mood-box-height" style="padding:0px !important">
+                      <p style="width:100%; text-align:center; font-weight:bold; padding:10px 0 0 0;"> </p>
+                    <div class="pad pan0 col-md-offset-5 col-lg-offset-5 col-sm-offset-5 col-xs-offset-5">
+                      
+                        <ul class="smile-mood mooding">
+                            <li >
+                                <a href="@Url.Action("DefaultPage", new {id=1, Controller = "Dashboard" })" class="last-smile" >
+                                          <img alt="" src="~/Content/assets/images/smile3.png" id="redsmile"   ></a>
+                            </li>
+                            <li><a href="@Url.Action("DefaultPage", new {id=2, Controller = "Dashboard" })" >
+                                <img alt="" src="~/Content/assets/images/smile2.png" id="yellowsmile"></a></li>
+                            <li><a href="@Url.Action("DefaultPage", new {id=3, Controller = "Dashboard" })"  >
+                                <img alt="" src="~/Content/assets/images/smile1.png" id="greensmile"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--<div class="modal-footer">
+        <button type="button" class="btn btn-primary input-sm" data-dismiss="modal">Close</button>
+      </div>-->
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+       
+    </script>
+}
